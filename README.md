@@ -64,12 +64,13 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
           * [1.1.1. Descripción de la Startup](#111-descripci%C3%B3n-de-la-startup)
           * [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-los-integrantes-del-equipo)
       * [1.2. Solution Profile](#12-solution-profile)
-          * [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problem%C3%A1tica)
-          * [1.2.2. Lean UX Process](#122-lean-ux-process)
-              * [1.2.2.1. Lean UX Problem Statements](#12221-lean-ux-problem-statements)
-              * [1.2.2.2. Lean UX Assumptions](#12222-lean-ux-assumptions)
-              * [1.2.2.3. Lean UX Hypothesis Statements](#12223-lean-ux-hypothesis-statements)
-              * [1.2.2.4. Lean UX Canvas](#12224-lean-ux-canvas)
+          * [1.2.1. Nombre del producto](#121-nombre-del-producto)
+          * [1.2.2. Antecedentes y problemática](#122-antecedentes-y-problem%C3%A1tica)
+          * [1.2.3. Lean UX Process](#123-lean-ux-process)
+              * [1.2.3.1. Lean UX Problem Statements](#1231-lean-ux-problem-statements)
+              * [1.2.3.2. Lean UX Assumptions](#1232-lean-ux-assumptions)
+              * [1.2.3.3. Lean UX Hypothesis Statements](#1233-lean-ux-hypothesis-statements)
+              * [1.2.3.4. Lean UX Canvas](#1234-lean-ux-canvas)
       * [1.3. Segmentos objetivo](#13-segmentos-objetivo)
   - [CAPÍTULO II: REQUIREMENTS ELICITATION & ANALYSIS](capítulo-ii-requirements-elicitation--analysis)
       * [2.1. Competidores](#21-competidores)
@@ -115,7 +116,18 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 
 # STUDENT OUTCOME
 
+El curso contribuye al cumplimiento del Student Outcome **ABET: ABET – EAC - Student Outcome 7: Aprendizaje Continuo y Autónomo** <br>
+**Criterio:**  *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos* <br>
+En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del equipo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome.
 
+<center>
+
+| Criterio Específico | Acciones Realizadas | Conclusiones |
+|---|---|---|
+| a | b | c |
+
+</center>
+<br>
 
 # CAPÍTULO I: INTRODUCCIÓN
 
@@ -123,31 +135,104 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 
 ### 1.1.1. Descripción de la Startup
 
+Nexora es una startup peruana integrada por estudiantes de la UPC, dedicada a redefinir la seguridad y la convivencia en entornos residenciales mediante soluciones avanzadas de Internet de las Cosas (IoT). Nuestra misión es transformar espacios convencionales, como edificios multifamiliares y condominios, en entornos inteligentes y altamente funcionales.
+
+Para lograrlo, nos enfocamos en reemplazar los sistemas tradicionales de intercomunicación por plataformas digitales modernas que permiten una gestión de accesos más eficiente y segura. Mediante el uso de dispositivos embebidos, aplicaciones web y notificaciones en tiempo real, ofrecemos una propuesta de valor centrada en la escalabilidad y la reducción de costos de mantenimiento. En Nexora, conectamos lo físico con lo digital para optimizar la experiencia de residentes y personal de seguridad, garantizando soluciones tecnológicas accesibles y de alto impacto. <br>
+
+### Misión
+Desarrollar soluciones tecnológicas innovadoras basadas en IoT que mejoren la seguridad y gestión de accesos en entornos residenciales, ofreciendo productos eficientes, accesibles y fáciles de usar.
+
+### Visión
+Ser una startup líder en Latinoamérica en soluciones inteligentes de seguridad residencial, destacando por la innovación, confiabilidad y accesibilidad de sus productos tecnológicos.
 
 ### 1.1.2. Perfiles de los integrantes del equipo
 
+| Raúl Bellido | Ingeniería de Software |
+| -- | --|
+| <img src="#" height=200px width=200px> | Hola mundo |
+
+| Gabriel Borja | Ingeniería de Software |
+| -- | --|
+| <img src="#" height=200px width=200px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
+
+| Santiago Suárez | Ingeniería de Software |
+| -- | --|
+| <img src="#" height=200px width=200px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
+
+| Daniela Gómez | Ingeniería de Software |
+| -- | --|
+| <img src="#" height=200px width=200px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
+
+| Anaely Burga | Ingeniería de Software |
+| -- | --|
+| <img src="#" height=200px width=200px> | Hola mundo |
 
 ## 1.2. Solution Profile
 
-### 1.2.1. Antecedentes y problemática
+### 1.2.1. Nombre del producto
+
+NexBell, el producto insignia de nuestra startup, es una solución integral de videoportero inteligente basada en tecnología IoT y una robusta plataforma web, diseñada para transformar la seguridad en edificios residenciales y condominios. Este sistema redefine la gestión de accesos al eliminar por completo la necesidad de cableado interno tradicional, lo que se traduce en una reducción drástica de los costos de instalación y mantenimiento para las juntas de propietarios.
+
+La propuesta de valor de NexBell se centra en empoderar al personal de seguridad y conserjería, permitiéndoles validar visitas mediante video en tiempo real y enrutar las alertas de acceso directamente a los smartphones de los residentes a través de notificaciones móviles. Al integrar un registro digital detallado de cada ingreso, NexBell no solo agiliza la comunicación, sino que eleva los estándares de seguridad y moderniza la experiencia de vivir en comunidad mediante una gestión digitalizada, eficiente y escalable.
+
+### 1.2.2. Antecedentes y problemática
+
+Los edificios multifamiliares y condominios en Lima suelen depender de sistemas de intercomunicadores cableados tradicionales. Estos sistemas presentan múltiples puntos de falla (cables rotos en las paredes, teléfonos malogrados en los departamentos), su mantenimiento es altamente costoso para la junta de propietarios, y no ofrecen registro visual de quién ingresa al edificio. El problema central es la ineficiencia y vulnerabilidad en el control de accesos de edificios residenciales, causada por infraestructura analógica obsoleta que impide al personal de seguridad tener herramientas modernas de validación visual, registro auditable y comunicación asíncrona con los residentes.
+
+<br>
+
+Como parte del proceso de definición de la problemática, se aplicó la técnica The 5 W’s and 2 H’s (Who, What, Where, When, Why, How, How Much), permitiendo estructurar de manera preliminar la descripción de los antecedentes y el planteamiento del problema. 
+
+#### Who?
 
 
-### 1.2.2. Lean UX Process
-
-#### 1.2.2.1. Lean UX Problem Statements
+#### What?
 
 
-#### 1.2.2.2. Lean UX Assumptions
+#### Where?
 
 
-#### 1.2.2.3. Lean UX Hypothesis Statements
+#### When?
 
 
-#### 1.2.2.4. Lean UX Canvas
+#### Why?
+
+
+#### How?
+
+
+#### How much?
+
+
+### 1.2.3. Lean UX Process
+
+#### 1.2.3.1. Lean UX Problem Statements
+
+
+#### 1.2.3.2. Lean UX Assumptions
+
+
+#### 1.2.3.3. Lean UX Hypothesis Statements
+
+
+#### 1.2.3.4. Lean UX Canvas
 
 
 ## 1.3. Segmentos objetivo
 
+Para asegurar que la solución propuesta responda de manera efectiva a las necesidades del entorno residencial moderno, se han identificado dos segmentos clave dentro del dominio del problema. Estos segmentos representan tanto al cliente que adquiere la solución como al usuario que interactúa directamente con el sistema. <br>
+A continuación, se detallan los perfiles estratégicos considerando sus características demográficas, geográficas y psicográficas, las cuales justifican su relevancia dentro del modelo de negocio.
+
+
+1) **El Cliente Principal (Quién paga):** Juntas de Propietarios y Empresas Administradoras de Inmuebles
+* **Perfil:** Administradores de edificios residenciales modernos o condominios en distritos de clase media/alta en Lima (ej. Miraflores, San Isidro, Surco, Lince).
+* **Necesidad:** Reducir los gastos comunes del edificio (mantenimiento de cableado) y aumentar el valor/percepción de seguridad del inmueble mediante tecnología moderna.
+
+2) **El Usuario Principal (Quién opera el sistema):** Personal de Seguridad / Conserjería
+* **Perfil:** Hombres y mujeres entre 25 y 60 años, que trabajan en turnos rotativos en las recepciones de los edificios. Su nivel de habilidad tecnológica es variable (desde básico hasta intermedio).
+* **Necesidad:** Una herramienta que sea rápida, a prueba de fallos y que les permita registrar visitantes sin tener que usar papel y lápiz, además de contactar al residente incluso si este no está en su departamento.
+
+<br>
 
 # CAPÍTULO II: REQUIREMENTS ELICITATION & ANALYSIS
 
@@ -189,6 +274,7 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 
 ## 2.5. Ubiquitous Language
 
+<br>
 
 # CAPÍTULO III: REQUIREMENTS SPECIFICATION
 
@@ -200,6 +286,7 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 
 ## 3.3. Product Backlog
 
+<br>
 
 # CAPÍTULO IV: SOLUTION HADWARE DESIGN
 
@@ -223,14 +310,14 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 ### 4.1.3. Software Architecture
 
 
-#### 4.1.3.1. Software Architecture System Langscape Diagram
+#### 4.1.3.1. Software Architecture System Landscape Diagram
 
 
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
 
 
-### 4.1.3.3. Software Architecture Deployment Diagrams
+#### 4.1.3.3. Software Architecture Deployment Diagrams
 
 
 ## 4.2. Tactical-Level Domain-Driven Design
@@ -238,7 +325,7 @@ Aquí tienes la continuación del índice en formato Markdown, manteniendo la es
 
 <!-- copiar por número de bcs -->
 
-### 4.2.1. Bounded Context: <!-- nombre -->
+### 4.2.1. Bounded Context: [Nombre]
 
 #### 4.2.1.1. Domain Layer
 
