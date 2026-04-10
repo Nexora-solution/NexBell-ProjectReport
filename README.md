@@ -24,11 +24,11 @@
 ## Integrantes
 | **Código**  | **Apellidos y nombres**  |
 | :---: | :---: |
-| U20231b866  | Bellido Salas, Raúl |
-| U202311184  | Borja Molina, Gabriel Sebastián |
-| U202318049  | Suárez Romero, Santiago Manuel |
-| U202314513  | Gómez Flores, Daniela Araceli |
-| U202318615  | Burga Loarte, Anaely Zarely |
+| U202310931  | Bellido Salas, Raúl |
+| U202310308 | Borja Molina, Gabriel Sebastián |
+| U202311532  | Suárez Romero, Santiago Manuel |
+| U202311184  | Gómez Flores, Daniela Araceli |
+| U202118264  | Burga Loarte, Anaely Zarely |
 
 </center>
 
