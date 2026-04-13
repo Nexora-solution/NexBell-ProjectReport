@@ -207,9 +207,46 @@ Como parte del proceso de definición de la problemática, se aplicó la técnic
 ### 1.2.3. Lean UX Process
 
 #### 1.2.3.1. Lean UX Problem Statements
+* Hemos observado que los edificios residenciales en Lima presentan dificultades en la gestión de accesos, debido al uso de sistemas de intercomunicación tradicionales que no permiten validación visual ni registro digital de visitantes. **¿Cómo podemos ayudar a los administradores y conserjes a mejorar el control de accesos mediante una solución digital con monitoreo en tiempo real y registro automatizado?**
+* Hemos observado que el personal de conserjería depende de llamadas telefónicas internas y registros manuales, lo que genera retrasos y errores en la validación de visitantes. **¿Cómo podemos brindarles una herramienta rápida, intuitiva y confiable que les permita gestionar visitas sin depender de procesos manuales?**
+* Hemos observado que los residentes no siempre se encuentran en sus departamentos, lo que dificulta la comunicación con el personal de seguridad cuando reciben visitas o entregas.
+**¿Cómo podemos permitir que los residentes reciban notificaciones en tiempo real y respondan desde cualquier lugar mediante sus dispositivos móviles?**
+* Hemos observado que los sistemas actuales no generan un historial verificable de accesos, lo que limita la trazabilidad y auditoría en caso de incidentes.
+**¿Cómo podemos implementar un sistema que registre automáticamente cada interacción, incluyendo fecha, hora e imagen del visitante?**
 
 
 #### 1.2.3.2. Lean UX Assumptions
+#### User Assumptions (Necesidades y comportamientos)
+* El 70% de los conserjes en edificios urbanos depende de métodos manuales (cuadernos o llamadas) para registrar visitas, lo que genera errores y pérdida de información.<
+* El 80% de los residentes considera importante poder visualizar quién visita su hogar antes de autorizar el acceso, especialmente en zonas urbanas con mayor percepción de inseguridad.
+* Más del 65% de los usuarios prefiere recibir notificaciones en su celular en lugar de depender de estar físicamente en su departamento para atender visitas.
+* El 60% del personal de seguridad tiene conocimientos tecnológicos básicos, por lo que requiere sistemas simples, intuitivos y rápidos de operar.
+* Los residentes valoran la seguridad y privacidad, ya que al menos el 75% considera importante contar con un registro de quién ingresó al edificio.
+
+#### User Outcome Assumptions (Beneficios esperados)
+* Los residentes podrán validar visitas en menos de 10 segundos mediante notificaciones en tiempo real y visualización de imagen o video.
+* Se reducirá en un 50% el tiempo de gestión de visitas por parte del conserje al eliminar procesos manuales.
+* El nivel de seguridad percibido por los residentes aumentará en al menos un 40% al contar con validación visual y registro digital.
+* Más del 60% de los usuarios confiará en el sistema como principal medio de control de accesos en el edificio.
+
+#### Business Assumptions (Modelo de negocio y mercado) 
+* El 50% de las juntas de propietarios en edificios modernos está dispuesto a invertir en soluciones tecnológicas que reduzcan costos de mantenimiento a largo plazo.
+* El modelo de negocio basado en instalación + servicio (suscripción opcional) es viable para condominios de nivel socioeconómico medio y alto en Lima.
+* Se estima que el 30% de los edificios nuevos buscará soluciones inteligentes de seguridad en los próximos años.
+* La adopción del sistema será progresiva, con una tasa de implementación inicial del 20% en edificios piloto.
+
+#### Business Outcome Assumptions (Impactos positivos en el negocio) 
+* Los edificios que implementen la solución podrán reducir en un 25% los costos de mantenimiento asociados a sistemas tradicionales de intercomunicación.
+* El valor percibido del inmueble aumentará en al menos un 15% al incorporar tecnología de seguridad inteligente.
+* Se incrementará la eficiencia operativa del personal de seguridad en un 40%, reduciendo errores y t tiempos de respuesta.
+* La startup Nexora IoT podrá escalar su solución a múltiples edificios, logrando crecimiento sostenido en el mercado local.
+
+#### Feature Assumptions (Funcionalidades y resolución) 
+* El sistema de notificaciones push permitirá que el 90% de las alertas de visitas sean recibidas en menos de 5 segundos.
+* La captura de imagen del visitante será utilizada en más del 80% de las validaciones realizadas por los residentes.
+* El dashboard web permitirá al conserje gestionar visitas en menos de 3 clics por operación.
+* El historial de accesos será consultado al menos una vez por semana por administradores en el 70% de los edificios.
+* El sistema funcionará correctamente en condiciones normales de red WiFi en el 95% de los casos.
 
 
 #### 1.2.3.3. Lean UX Hypothesis Statements
@@ -239,7 +276,23 @@ A continuación, se detallan los perfiles estratégicos considerando sus caracte
 ## 2.1. Competidores
 
 ### 2.1.1. Análisis competitivo
+Para poder conocer y analizar mejor a nuestros posibles competidores, realizamos el siguiente Landscape:
 
+| Competitive Analysis Landscape |   |   |   |   |   |
+|---|---|---|---|---|---|
+| ¿Por qué realizar este análisis? |   Hola mundo   |
+|  | | <img src="https://c8.alamy.com/comp/BHAFG6/modern-pirate-pistol-in-hand-on-a-white-background-BHAFG6.jpg" height=80px width=80px><br/><center>NexBell</center>  | <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFbn4FXst-boA/company-logo_200_200/B4EZdhIVt2GcAI-/0/1749681265951/doormanlatam_logo?e=2147483647&v=beta&t=2bwVLlR3g5EUaAXGhLH_iLgsnxcrDGK2uqzmZbZmM58" height=80px width=80px><br/><center>Doorman</center> |  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_QHNHvPvy1bqD1N7DatdiejA9uAqOkMtdQ&s" height=80px width=80px><br/><center>Portero Seguro</center> |  <img src="https://emisoft.cuscoinformatico.com/storage/marcas/logo-hikvision.png" height=80px width=80px><br/><center>Hikvision</center>  |
+| Perfil | Overview | A | B| C | D |
+|        | Ventaja competitiva<br/>¿Qué valor ofrece a los clientes? | A | B | C | D |
+| Perfil de Marketing | Mercado Objetivo         | A | B | C | D |
+|                     | Estrategias de Marketing | A | B | C | D |
+| Perfil de Producto  | Productos & Servicios    | A | B | C | D |
+|                     | Precios & Costos         | A | B | C | D |
+|      | Canales de distribución (Web y/o Móvil) | A | B | C | D |
+| Análisis SWOT          | Fortalezas            | A | B | C | D |
+|                       | Debilidades            | A | B | C | D |
+|                       | Oportunidades          | A | B | C | D |
+|                       | Amenazas               | A | B | C | D |
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
