@@ -5,7 +5,7 @@
 <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" alt="Descripción de la imagen" style="width: 50%; height: auto;"></p>
 
 <h4 align="center"><strong>Ingeniería de Software</strong></h4>
-<h4 align="center"><strong>Desarrollo de Soluciones IoT- 4388</strong></h4>
+<h4 align="center"><strong>Desarrollo de Soluciones IoT- 6785</strong></h4>
 <h4 align="center"><strong>Docente: Marco Antonio Leon Baca</h4>
 <h4 align="center"><strong>Startup: Nexora</strong></h4>
 <h4 align="center">Product: NexBell</strong></h4>
@@ -33,7 +33,7 @@
   </tr>  
   <tr>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">Gómez Flores, Daniela Araceli</td>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">U</td>  
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">U202311184</td>  
   </tr>
     <tr>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">Burga Loarte, Anaely Zarely</td>
@@ -277,21 +277,55 @@ Como parte del proceso de definición de la problemática, se aplicó la técnic
 
 ## **1.3. Segmentos Objetivos**
 
-<ins>**Segmento Objetivo 1:**</ins>  
+Para garantizar que la solución tecnológica propuesta responda de manera efectiva a las necesidades del entorno residencial actual, se han identificado y analizado dos segmentos clave que enfrentan problemáticas en la gestión de accesos y seguridad en edificios multifamiliares.
 
-Aspectos demográficos: 
+A continuación, se detallan los perfiles estratégicos que forman parte del modelo de negocio, profundizando en sus características demográficas, geográficas y psicográficas, las cuales sustentan su relevancia dentro del dominio del problema.
 
-Aspectos geográficos: 
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
+ 
+ **- Aspectos demográficos:**
 
-Aspectos psicográficos: 
+  - **Sexo:** Masculino y femenino.
+  - **Rango de edad:** 30 años a más.
+  - **Nivel socioeconómico:** Clases A y B (administradores de edificios, representantes de juntas de propietarios y gestores inmobiliarios).
+  - **Nivel educativo:** Educación técnica o universitaria, con conocimientos en gestión administrativa o inmobiliaria.
 
-<ins>**Segmento Objetivo 2:**</ins> 
+ **- Aspectos geográficos:**
 
-Aspectos Demográficos: 
+  - **Nacionalidad:** Peruana.
+  - **Zona geográfica:** Distritos urbanos de Lima Metropolitana con alta densidad residencial, tales como Miraflores, San Isidro, Surco y Lince.
+  - **Entorno laboral:** Edificios multifamiliares y condominios ubicados en zonas urbanas consolidadas.
 
-Aspectos Geográficos: 
+ **- Aspectos psicográficos:** 
 
-Aspectos Psicográficos: 
+  - **Dolor principal:** Altos costos de mantenimiento de sistemas tradicionales de intercomunicación, así como la falta de herramientas modernas para el control eficiente de accesos.
+  - **Intereses:** Implementación de soluciones tecnológicas que mejoren la seguridad del inmueble, optimicen los procesos operativos y aumenten el valor del edificio.
+  - **Actitudes:** Son analíticos y orientados a resultados, valoran soluciones confiables, escalables y que representen una inversión rentable a largo plazo.
+  - **Necesidades clave:** Reducción de costos operativos, mejora en la seguridad del edificio, acceso a registros digitales de visitas y control centralizado de accesos.
+
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins> 
+
+ **- Aspectos demográficos:**
+
+  - **Sexo:** Masculino y femenino.
+  - **Rango de edad:** 25 a 60 años.
+  - **Nivel socioeconómico:** Clases C y D (trabajadores del sector servicios).
+  - **Nivel educativo:** Educación secundaria completa o técnica básica.
+
+ **- Aspectos geográficos:**
+
+  - **Nacionalidad:** Peruana.
+  - **Zona geográfica:** Edificios residenciales ubicados en zonas urbanas de Lima Metropolitana.
+  - **Entorno laboral:** Recepciones, porterías o garitas de seguridad en edificios multifamiliares y condominios.
+
+ **- Aspectos psicográficos:**  
+
+  - **Dolor principal:** Dependencia de procesos manuales como registros en papel y llamadas internas, lo que genera errores, retrasos y dificultad en la gestión de visitas.
+  - **Estilo de vida:** Laboral, con turnos rotativos y alta responsabilidad en el control de accesos y seguridad del edificio.
+  - **Actitudes:** Buscan herramientas simples, rápidas y confiables que no requieran conocimientos técnicos avanzados.
+  - **Intereses:** Facilitar su trabajo diario, reducir errores operativos y mejorar la comunicación con los residentes.
+  - **Necesidades clave:** Sistema intuitivo, validación rápida de visitantes, registro automático de accesos y capacidad de comunicación eficiente con los residentes.
 
 <hr>
 
@@ -324,34 +358,74 @@ Para poder conocer y analizar mejor a nuestros posibles competidores, realizamos
 
 ## **2.2 Entrevistas.** 
 
+Esta sección detalla el proceso de investigación cualitativa realizado con el objetivo de validar las hipótesis planteadas sobre la problemática de seguridad y control de accesos en edificios residenciales.
+A través de entrevistas a representantes de los segmentos objetivo, se busca comprender sus necesidades, experiencias actuales y percepciones frente a soluciones tecnológicas, obteniendo información clave para el desarrollo del sistema propuesto.
+
 ### ***2.2.1. Diseño de entrevistas***
 
+Se presenta la elaboración de guías de preguntas estructuradas, dirigidas a los dos segmentos principales del proyecto: administradores de edificios residenciales y personal de seguridad o conserjería.
 
-**Segmento objetivo \#1:**
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins> 
 
-**Objetivo de la entrevista:** 
-
-***Características demográficas:***
-
-***Preguntas sobre la problemática:***
-
-***Preguntas sobre la solución:*** 
-
-
-**Segmento objetivo \#2:**
-
-**Objetivo de la entrevista:**
+**Objetivo de la entrevista:** Comprender los principales problemas en la gestión de seguridad del edificio, evaluar los costos y limitaciones de los sistemas actuales, y validar el interés en implementar una solución tecnológica basada en IoT para el control de accesos.
 
 ***Características demográficas:***
 
+ - ¿Cuál es su nombre?
+ - ¿Cuál es su edad?
+ - ¿Qué cargo ocupa dentro del edificio o empresa administradora?
+ - ¿En qué distrito se encuentra el edificio que administra?
+ - ¿Cuántos departamentos o residentes aproximadamente tiene el edificio?
+
 ***Preguntas sobre la problemática:***
+
+ - ¿Qué tipo de sistema utilizan actualmente para el control de accesos (intercomunicador, registro manual, otros)?
+ - ¿Cuáles son los principales problemas que ha identificado en este sistema?
+ - ¿Qué tan frecuentes son las fallas o inconvenientes en la comunicación entre portería y residentes?
+ - ¿Qué dificultades existen para llevar un registro de las visitas?
+ - ¿Qué tan costoso resulta el mantenimiento del sistema actual?
+ - ¿Ha ocurrido alguna situación de inseguridad relacionada con el control de accesos?
 
 ***Preguntas sobre la solución:*** 
 
+ - Si existiera un sistema que permita validar visitantes mediante imagen y notificaciones en tiempo real, ¿qué tan útil le parecería?
+ - ¿Qué funcionalidades consideraría indispensables en una solución de este tipo?
+ - ¿Qué beneficios esperaría obtener al implementar un sistema digital de control de accesos?
+ - ¿Qué factores influirían en su decisión de adquirir una solución como esta (costo, facilidad de uso, seguridad, etc.)?
+ - ¿Estaría dispuesto a invertir en una solución que reduzca costos de mantenimiento a largo plazo? ¿En qué rango?
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins> 
+
+**Objetivo de la entrevista:** Identificar las dificultades operativas en la gestión de visitas, comprender su nivel de interacción con herramientas tecnológicas y validar la usabilidad de un sistema digital de control de accesos.
+
+***Características demográficas:***
+
+ - ¿Cuál es su nombre?
+ - ¿Cuál es su edad?
+ - ¿Cuánto tiempo lleva trabajando como conserje o personal de seguridad?
+ - ¿En qué distrito trabaja actualmente?
+ - ¿Qué turnos suele cubrir (día, noche, rotativo)?
+
+***Preguntas sobre la problemática:***
+
+ - ¿Cómo registra actualmente el ingreso de visitantes al edificio?
+ - ¿Qué dificultades encuentra al momento de identificar o validar a un visitante?
+ - ¿Qué tan frecuente es que tenga que comunicarse con los residentes para autorizar ingresos?
+ - ¿Qué problemas se presentan cuando el residente no se encuentra en su departamento?
+ - ¿Ha tenido errores o confusiones al registrar visitas? ¿Por qué cree que suceden?
+ - ¿Qué tan cómodo se siente usando tecnología en su trabajo diario?
+
+***Preguntas sobre la solución:*** 
+
+ - Si tuviera una pantalla donde pudiera ver la imagen del visitante antes de atenderlo, ¿le sería útil? ¿Por qué?
+ - ¿Qué tan fácil cree que sería usar un sistema digital para registrar visitas en lugar de cuadernos?
+ - ¿Qué funcionalidades le ayudarían a hacer su trabajo más rápido o sencillo?
+ - ¿Le gustaría que el sistema registre automáticamente la información de cada visitante?
+ - ¿Qué le preocuparía al usar un sistema como este (fallas, complejidad, tiempo de uso)?
 
 ### ***2.2.2. Registro de Entrevistas.***
 
-**Segmento objetivo \#1:** 
+**Segmento objetivo \#1:**  
 
 **Entrevista \#1:** 
 
