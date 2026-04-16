@@ -651,19 +651,121 @@ Datos y gráficas
 
 ## **2.3. Needfinding**
 
+En esta sección, se transforma la información recolectada durante la investigación en hallazgos estratégicos mediante el uso de artefactos clave de experiencia de usuario. A través de herramientas como User Personas, User Task Matrix, User Journey Maps y Empathy Maps, se analiza el contexto actual en el que se desenvuelven los usuarios, así como sus necesidades, comportamientos y principales problemáticas.
+
+Estos artefactos permiten comprender de manera integral a los actores involucrados en la gestión de accesos en entornos residenciales, proporcionando una base sólida para la toma de decisiones de diseño. De esta forma, se asegura que la propuesta de solución de Nexora esté alineada con las necesidades reales de los usuarios y contribuya a mejorar su experiencia y eficiencia operativa.
+
 ### ***2.3.1. User Personas***
 
+Se presentan los User Personas de Nexora, construidos a partir del análisis de entrevistas realizadas a los segmentos objetivo y la revisión de soluciones existentes en el ámbito de seguridad residencial. Cada arquetipo representa de manera estructurada las características, motivaciones, frustraciones y comportamientos de los actores clave dentro del ecosistema del edificio, como administradores y personal de conserjería.
+
+Estas representaciones permiten comprender de forma más profunda las necesidades reales de los usuarios, asegurando que el diseño de la solución tecnológica responda de manera efectiva a los problemas identificados en la gestión de accesos y seguridad. De esta manera, los User Personas funcionan como una guía estratégica para el desarrollo de funcionalidades alineadas con el contexto operativo del proyecto.
+
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
+
+**Figura**
+
+*User persona de María Fernández*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296243/Mar%C3%ADa_Fern%C3%A1ndez_hjtdj0.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
+
+**Figura**
+
+*User persona de José Ramírez*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296233/Jos%C3%A9_Ram%C3%ADrez_mfmy85.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
 
 ### ***2.3.2. User Task Matrix***
 
-| TASK MATRIX |  |   |  |  |  |
-| ----- | ----- | :---- | :---- | :---- | :---- |
+En esta sección se describen las principales tareas que realizan los segmentos objetivo dentro del contexto de seguridad y control de accesos en edificios residenciales. Estas actividades forman parte de su rutina diaria y se ejecutan independientemente de la existencia de una solución tecnológica como Nexora, ya sea mediante procesos manuales, sistemas tradicionales de intercomunicación o herramientas básicas de registro.
+
+El análisis considera a dos actores principales: la administradora del edificio, responsable de la supervisión y toma de decisiones, y el personal de conserjería, encargado de la operación directa del control de accesos. La identificación de estas tareas permite entender la frecuencia e importancia de cada actividad, proporcionando una base sólida para priorizar funcionalidades dentro del sistema propuesto.
+
+
+| User Tasks                                                        | María Fernández         | María Fernández           | José Ramírez |  José Ramírez            |
+| ----------------------------------------------------------------- | ------------------------------------- | ----------- | ---------------------------- | ----------- |
+|                                                                   | **Frecuencia**             |  **Importancia** |         **Frecuencia**          |  **Importancia** |
+| Identificar fallas en el sistema de intercomunicación tradicional | Alta                                  | Alta        | Media                        | Media       |
+| Evaluar costos de mantenimiento del sistema de seguridad          | Alta                                  | Alta        | Baja                         | Media       |
+| Supervisar el control de accesos del edificio                     | Media                                 | Alta        | Alta                         | Alta        |
+| Registrar visitas y controlar ingresos manualmente                | Baja                                  | Media       | Alta                         | Alta        |
+| Validar la identidad de visitantes antes de permitir el acceso    | Media                                 | Alta        | Alta                         | Alta        |
+| Comunicarse con residentes para autorizar visitas                 | Baja                                  | Media       | Alta                         | Alta        |
+| Llevar un registro de ingresos y salidas del edificio             | Media                                 | Alta        | Alta                         | Alta        |
+| Detectar situaciones de riesgo o accesos no autorizados           | Media                                 | Alta        | Alta                         | Alta        |
+| Evaluar nuevas soluciones tecnológicas para mejorar la seguridad  | Media                                 | Alta        | Baja                         | Media       |
+| Revisar reportes o historial de accesos del edificio              | Media                                 | Alta        | Media                        | Media       |
+
 
 ### ***2.3.3. User Journey Mapping***
 
+En esta sección se representa de manera integral la experiencia actual de los usuarios a través de un User Journey Map, donde se analizan sus acciones, pensamientos y emociones a lo largo de las distintas etapas del proceso de gestión de accesos en el edificio. Este recorrido permite visualizar cómo interactúan con los sistemas tradicionales y qué dificultades enfrentan en cada fase.
+
+Al identificar los puntos de dolor (pains) y oportunidades de mejora (gains), se logra transformar la información obtenida en la investigación en insumos clave para el diseño de la solución. Este enfoque facilita la detección de ineficiencias, momentos críticos y necesidades no cubiertas, orientando el desarrollo de Nexora hacia una experiencia más eficiente, segura y centrada en el usuario.
+
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
+
+**Figura**
+
+*User Journey Mapping de María Fernández*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776303068/Journey_Mapping_de_Juntas_de_propietarios_y_administradores_de_muebles_wrswek.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
+
+**Figura**
+
+*User Journey Mapping de José Ramírez*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776307102/Jouney_Mapping_de_Personal_de_seguridad_o_conserjeria_2_w3bow9.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
 
 ### ***2.3.4. Empathy Mapping***
 
+El Empathy Map permite profundizar en la comprensión de los usuarios al analizar lo que piensan, sienten, dicen y hacen en relación con la problemática del control de accesos en edificios residenciales. A través de esta herramienta, se identifican percepciones, preocupaciones y comportamientos que no siempre son evidentes en un análisis superficial.
+
+Esta representación facilita una visión más humana del usuario, destacando sus frustraciones frente a sistemas tradicionales y sus expectativas respecto a soluciones tecnológicas modernas. Como resultado, se obtienen insights valiosos que contribuyen a diseñar una propuesta alineada con sus verdaderas necesidades y mejorar significativamente su experiencia en el entorno residencial.
+
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
+
+**Figura**
+
+*Empathy Mapping de María Fernández*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776304501/Empathy_map_de_junta_de_propietarios_y_admintradores_de_inmuebles_kqdw1b.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
+
+**Figura**
+
+*Empathy Mapping de José Ramírez*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776303068/Empathy_map_de_persona_de_seguridad_l52v13.png" alt="Class Diagram">
+</p>
+
+*Nota. Elavoración propia de UXPressia*
 
 ## **2.4. Big Picture EventStorming**
 
