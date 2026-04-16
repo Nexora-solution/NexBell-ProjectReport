@@ -1,16 +1,16 @@
-<h1 align="center"><strong>Informe del Trabajo Final</strong></h1>
+<h1 align="center">Informe del Trabajo Final</h1>
 <h3 align="center"><strong>Universidad Peruana de Ciencias Aplicadas</strong></h1>
 
 <p align="center">
 <img align="center" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" alt="Descripción de la imagen" style="width: 50%; height: auto;"></p>
 
-<h4 align="center"><strong>Ingeniería de Software</strong></h4>
-<h4 align="center"><strong>Desarrollo de Soluciones IoT- 6785</strong></h4>
-<h4 align="center"><strong>Docente: Marco Antonio Leon Baca</h4>
-<h4 align="center"><strong>Startup: Nexora</strong></h4>
-<h4 align="center">Product: NexBell</strong></h4>
+<h4 align="center">Ingeniería de Software</h4>
+<h4 align="center">Desarrollo de Soluciones IoT- 6785</h4>
+<h4 align="center">Docente: Marco Antonio Leon Baca</h4>
+<h4 align="center">Startup: Nexora</h4>
+<h4 align="center">Product: NexBell</h4>
 
-<p align="center"><strong>Team members:</strong></p>
+<p align="center">Team members:</p>
 
 <table align="center"; style="width: 100%; border-collapse: collapse; margin: 0 auto;">
   <tr>
@@ -443,7 +443,7 @@ El impacto se traduce en una optimización radical de los recursos del edificio:
 
 #### 1.2.3.4. Lean UX Canvas
 <p align="center">
-  <img src="" alt="UH" width="1000">
+  <img src="https://i.imgur.com/D4JC1HD.png" alt="Lean UX Canvas" width="1000">
 </p>
 
 ## 1.3. Segmentos Objetivo
@@ -511,7 +511,7 @@ Con el fin de entender el entorno del mercado y la posición de nuestra solució
 | Competitive Analysis Landscape |   |   |   |   |   |
 |---|---|---|---|---|---|
 | ¿Por qué realizar este análisis? |   Hola mundo   |
-|  | | <img src="https://c8.alamy.com/comp/BHAFG6/modern-pirate-pistol-in-hand-on-a-white-background-BHAFG6.jpg" height=80px width=80px><br/><center>NexBell</center>  | <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFbn4FXst-boA/company-logo_200_200/B4EZdhIVt2GcAI-/0/1749681265951/doormanlatam_logo?e=2147483647&v=beta&t=2bwVLlR3g5EUaAXGhLH_iLgsnxcrDGK2uqzmZbZmM58" height=80px width=80px><br/><center>Doorman</center> |  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_QHNHvPvy1bqD1N7DatdiejA9uAqOkMtdQ&s" height=80px width=80px><br/><center>Portero Seguro</center> |  <img src="https://emisoft.cuscoinformatico.com/storage/marcas/logo-hikvision.png" height=80px width=80px><br/><center>Hikvision</center>  |
+|  | | <img src="https://i.imgur.com/V5ax3EN.png" width=80px><br/><center>NexBell</center>  | <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFbn4FXst-boA/company-logo_200_200/B4EZdhIVt2GcAI-/0/1749681265951/doormanlatam_logo?e=2147483647&v=beta&t=2bwVLlR3g5EUaAXGhLH_iLgsnxcrDGK2uqzmZbZmM58" width=80px><br/><center>Doorman</center> |  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_QHNHvPvy1bqD1N7DatdiejA9uAqOkMtdQ&s" width=80px><br/><center>Portero Seguro</center> |  <img src="https://emisoft.cuscoinformatico.com/storage/marcas/logo-hikvision.png" width=80px><br/><center>Hikvision</center>  |
 | Perfil | Overview | A | B| C | D |
 |        | Ventaja competitiva<br/>¿Qué valor ofrece a los clientes? | A | B | C | D |
 | Perfil de Marketing | Mercado Objetivo         | A | B | C | D |
@@ -743,7 +743,7 @@ Estas representaciones permiten comprender de forma más profunda las necesidade
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296243/Mar%C3%ADa_Fern%C3%A1ndez_hjtdj0.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 <ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
 
@@ -755,7 +755,7 @@ Estas representaciones permiten comprender de forma más profunda las necesidade
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296233/Jos%C3%A9_Ram%C3%ADrez_mfmy85.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 ### 2.3.2. User Task Matrix
 
@@ -795,7 +795,7 @@ Al identificar los puntos de dolor (pains) y oportunidades de mejora (gains), se
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776303068/Journey_Mapping_de_Juntas_de_propietarios_y_administradores_de_muebles_wrswek.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 <ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
 
@@ -807,7 +807,7 @@ Al identificar los puntos de dolor (pains) y oportunidades de mejora (gains), se
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776307102/Jouney_Mapping_de_Personal_de_seguridad_o_conserjeria_2_w3bow9.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 ### 2.3.4. Empathy Mapping
 
@@ -825,7 +825,7 @@ Esta representación facilita una visión más humana del usuario, destacando su
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776304501/Empathy_map_de_junta_de_propietarios_y_admintradores_de_inmuebles_kqdw1b.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 <ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
 
@@ -837,7 +837,7 @@ Esta representación facilita una visión más humana del usuario, destacando su
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776303068/Empathy_map_de_persona_de_seguridad_l52v13.png" alt="Class Diagram">
 </p>
 
-*Nota. Elavoración propia de UXPressia*
+*Nota. Elaboración propia de UXPressia*
 
 ## 2.4. Big Picture EventStorming
 
