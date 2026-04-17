@@ -601,40 +601,47 @@ Se presenta la elaboración de guías de preguntas estructuradas, dirigidas a lo
 
 **Entrevista \#1:** 
 
-* **Nombre:**   
-* **Apellido:**   
-* **Distrito:** 
+* **Nombre:** Nicolas 
+* **Apellido:** Deza
+* **Distrito:** Miraflroes
 
-**Figura 2** 
+**Figura** 
 
 *Entrevista \#1 para NexBell* 
 
-imagen  
+<p align="center">
+  <img src="https://res.cloudinary.com/dbsohlwoq/image/upload/v1776468840/entrevista_raul_1_blaqjt.jpg" width="1000">
+</p>
 
-* **URL:**  
-* **Inicio:**  
-* **Fin:**  
-* **Resumen:**  
+* **URL:** https://goo.su/uUlzE  
+* **Inicio:** 0:04
+* **Fin:** 4:50
+* **Resumen:**
+
+El entrevistado es Nicolás, administrador en una empresa de gestión inmobiliaria a cargo de tres proyectos, incluyendo un edificio de 64 departamentos en Miraflores. Actualmente, utilizan un sistema de intercomunicadores analógicos y registro manual en cuaderno, lo cual genera graves problemas de trazabilidad y fiabilidad. El desafío principal es el deterioro del cableado, cuyo mantenimiento es costoso y requiere reparaciones constantes que no solucionan el problema de fondo. Además, se reportó una brecha de seguridad reciente donde un repartidor ingresó sin autorización por errores en la comunicación verbal. Nicolás considera indispensable una solución digital con interfaz sencilla, respaldo en la nube y notificaciones en tiempo real para los residentes. El factor decisivo para la compra sería el costo-beneficio, priorizando un sistema que no requiera obra civil (romper paredes) y que se amortice en máximo un año y medio mediante el ahorro en técnicos.
 
 
 **Entrevista \#2:** 
 
-* **Nombre:** ola   
-* **Apellido:** ola   
-* **Distrito:** ola 
+* **Nombre:** Mariel Fernanda   
+* **Apellido:** Casoida Alegria
+* **Distrito:** San Borja 
 
 **Figura 3** 
 
 *Entrevista \#2 para NexBell* 
 
-imagen 
+<p align="center">
+  <img src="https://res.cloudinary.com/dbsohlwoq/image/upload/v1776468840/entrevista_raul_2_woc1as.jpg" width="1000">
+</p>
 
-* **URL:**   
-* **Inicio:**   
-* **Fin:**   
-* **Resumen:**  
+* **URL:** https://goo.su/azYMZt   
+* **Inicio:** 0:09  
+* **Fin:** 5:15  
+* **Resumen:**
 
-ola 
+La entrevistada es Mariel, quien cumple el doble rol de administradora y tesorera de un edificio pequeño de 12 departamentos en San Borja. Al ser una comunidad reducida, el principal problema es que los costos de mantenimiento del sistema analógico actual son muy altos al prorratearse entre pocos vecinos; cualquier reparación de cables o placas impacta fuertemente en su presupuesto. Los desafíos clave incluyen la mala calidad del audio, la falta de un registro formal de visitas que dependen de la memoria del portero y la falta de movilidad, ya que los residentes (muchos de ellos profesionales que viajan) no pueden contestar si no están físicamente en el departamento. Mariel busca una solución inalámbrica que no requiera romper paredes, que permita la apertura remota desde el celular y que genere un registro fotográfico de quienes ingresan. Para este segmento, la prioridad es la simplicidad de uso para evitar quejas de los vecinos y "modernizar" el edificio para que se sienta premium, con una inversión única de entre 20 y 50 dólares por departamento.
+
 
 **Entrevista \#3:** 
 
@@ -646,7 +653,9 @@ ola
 
 *Entrevista \#3 para NexBell* 
 
-imagen 
+<p align="center">
+  <img src="" width="1000">
+</p> 
 
 * **URL:** a   
 * **Inicio:** 0:05   
@@ -667,7 +676,9 @@ ola
 
 *Entrevista \#4 para NexBell* 
 
- imagen 
+<p align="center">
+  <img src="" width="1000">
+</p>
 
 * **URL:**   
 * **Inicio:**  
@@ -685,7 +696,9 @@ ola
 
 *Entrevista \#5 para NexBell*
 
-imagen  
+<p align="center">
+  <img src="" width="1000">
+</p>
 
 * **URL:**   
 * **Inicio:**  
@@ -703,7 +716,9 @@ imagen
 
 *Entrevista \#6 para NexBell* 
 
-imagen  
+<p align="center">
+  <img src="" width="1000">
+</p> 
 
 * **URL:**   
 * **Inicio:**  
@@ -844,7 +859,30 @@ Esta representación facilita una visión más humana del usuario, destacando su
 
 ## 2.5. Ubiquitous Language
 
-<hr>
+En esta sección se define el Ubiquitous Language del proyecto, el cual consiste en un conjunto de términos y conceptos clave utilizados dentro del dominio de la solución propuesta. Este lenguaje común permite que todos los miembros del equipo y stakeholders compartan una misma comprensión del problema y de la solución, evitando ambigüedades en la comunicación.
+
+| Ubiquitous Term                                | Definition of Functional Domain                                                                                                                       |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Resident (Residente)**                       | Persona que vive en el edificio y utiliza la aplicación móvil para registrar visitas y recibir notificaciones sobre la llegada de visitantes.         |
+| **Doorman (Conserje)**                         | Persona encargada de la portería que valida la identidad de los visitantes y controla el acceso al edificio mediante el sistema web.                  |
+| **Visitor (Visitante)**                        | Persona externa al edificio que desea ingresar y cuyos datos son previamente registrados por el residente o capturados por el sistema.                |
+| **Visit (Visita)**                             | Registro creado por el residente que contiene la información de un visitante esperado, como nombre, documento de identidad y departamento de destino. |
+| **Visit Request (Solicitud de visita)**        | Evento generado cuando un visitante llega al edificio y es detectado por el sistema, iniciando el proceso de validación.                              |
+| **Access Validation (Validación de acceso)**   | Proceso en el cual el conserje verifica la identidad del visitante utilizando la información registrada y la evidencia capturada (foto y audio).      |
+| **Access Decision (Decisión de acceso)**       | Resultado del proceso de validación, donde se determina si el visitante es aprobado o rechazado para ingresar al edificio.                            |
+| **Access Record (Registro de acceso)**         | Información almacenada sobre la visita, incluyendo hora, estado (aprobado o rechazado), evidencia y departamento asociado.                            |
+| **Notification (Notificación)**                | Alerta enviada al residente para informarle sobre la llegada de un visitante o el estado de su solicitud de acceso.                                   |
+| **Visitor Evidence (Evidencia del visitante)** | Conjunto de datos capturados por el sistema al momento de la llegada del visitante, incluyendo fotografía y audio.                                    |
+| **Motion Detection (Detección de movimiento)** | Evento que ocurre cuando el sensor identifica la presencia de una persona frente al dispositivo.                                                      |
+| **Entry Point (Punto de acceso)**              | Ubicación física donde se encuentra el dispositivo de captura (puerta o ingreso del edificio).                                                        |
+| **Door Status (Estado de la puerta)**          | Condición actual de la puerta de acceso (abierta o cerrada), monitoreada por el sistema.                                                              |
+| **Access Log (Historial de accesos)**          | Registro histórico de todas las visitas procesadas, incluyendo detalles del visitante y decisiones de acceso.                                         |
+| **User Profile (Perfil de usuario)**           | Información personal del usuario (residente o conserje) dentro del sistema.                                                                           |
+| **Apartment (Departamento)**                   | Unidad habitacional dentro del edificio asociada a un residente y utilizada para dirigir las visitas.                                                 |
+| **Visit Detail (Detalle de visita)**           | Información completa de una visita específica, incluyendo datos del visitante, evidencia y estado de acceso.                                          |
+| **Approval (Aprobación)**                      | Acción mediante la cual se permite el ingreso del visitante al edificio.                                                                              |
+| **Rejection (Rechazo)**                        | Acción mediante la cual se niega el ingreso del visitante al edificio.                                                                                |
+| **Visit History (Historial de visitas)**       | Lista de visitas asociadas a un residente o gestionadas por el conserje.                                                                              |
 
 # Capítulo III: Requirements Specification
 
