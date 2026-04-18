@@ -352,20 +352,16 @@ El impacto se traduce en una optimización radical de los recursos del edificio:
 #### 1.2.3.1. Lean UX Problem Statements
 
  - Hemos observado que los edificios residenciales en Lima presentan dificultades en la gestión de accesos, debido al uso de sistemas de intercomunicación tradicionales que no permiten validación visual ni registro digital de visitantes.
-
-**¿Cómo podemos ayudar a los administradores y conserjes a mejorar el control de accesos mediante una solución digital con monitoreo en tiempo real y registro automatizado?**
+ **¿Cómo podemos ayudar a los administradores y conserjes a mejorar el control de accesos mediante una solución digital con monitoreo en tiempo real y registro automatizado?**
   
  - Hemos observado que el personal de conserjería depende de llamadas telefónicas internas y registros manuales, lo que genera retrasos y errores en la validación de visitantes.
-  
-**¿Cómo podemos brindarles una herramienta rápida, intuitiva y confiable que les permita gestionar visitas sin depender de procesos manuales?**
+ **¿Cómo podemos brindarles una herramienta rápida, intuitiva y confiable que les permita gestionar visitas sin depender de procesos manuales?**
 
  - Hemos observado que los residentes no siempre se encuentran en sus departamentos, lo que dificulta la comunicación con el personal de seguridad cuando reciben visitas o entregas.
-
-**¿Cómo podemos permitir que los residentes reciban notificaciones en tiempo real y respondan desde cualquier lugar mediante sus dispositivos móviles?**
+ **¿Cómo podemos permitir que los residentes reciban notificaciones en tiempo real y respondan desde cualquier lugar mediante sus dispositivos móviles?**
 
  - Hemos observado que los sistemas actuales no generan un historial verificable de accesos, lo que limita la trazabilidad y auditoría en caso de incidentes.
-  
-**¿Cómo podemos implementar un sistema que registre automáticamente cada interacción, incluyendo fecha, hora e imagen del visitante?**
+ **¿Cómo podemos implementar un sistema que registre automáticamente cada interacción, incluyendo fecha, hora e imagen del visitante?**
 
 #### 1.2.3.2. Lean UX Assumptions
 
@@ -510,19 +506,19 @@ Con el fin de entender el entorno del mercado y la posición de nuestra solució
 
 | Competitive Analysis Landscape |   |   |   |   |   |
 |---|---|---|---|---|---|
-| ¿Por qué realizar este análisis? |   Hola mundo   |
+| ¿Por qué realizar este análisis? |   Identificar brechas de mercado frente a soluciones de software locales y hardware tradicional, permitiendo que Nexora se posicione como la opción más accesible y de mejor experiencia de usuario (UX) para juntas de propietarios en Lima.   |
 |  | | <img src="https://i.imgur.com/V5ax3EN.png" width=80px><br/><center>NexBell</center>  | <img src="https://media.licdn.com/dms/image/v2/D4E0BAQFbn4FXst-boA/company-logo_200_200/B4EZdhIVt2GcAI-/0/1749681265951/doormanlatam_logo?e=2147483647&v=beta&t=2bwVLlR3g5EUaAXGhLH_iLgsnxcrDGK2uqzmZbZmM58" width=80px><br/><center>Doorman</center> |  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg_QHNHvPvy1bqD1N7DatdiejA9uAqOkMtdQ&s" width=80px><br/><center>Portero Seguro</center> |  <img src="https://emisoft.cuscoinformatico.com/storage/marcas/logo-hikvision.png" width=80px><br/><center>Hikvision</center>  |
-| Perfil | Overview | A | B| C | D |
-|        | Ventaja competitiva<br/>¿Qué valor ofrece a los clientes? | A | B | C | D |
-| Perfil de Marketing | Mercado Objetivo         | A | B | C | D |
-|                     | Estrategias de Marketing | A | B | C | D |
-| Perfil de Producto  | Productos & Servicios    | A | B | C | D |
-|                     | Precios & Costos         | A | B | C | D |
-|      | Canales de distribución (Web y/o Móvil) | A | B | C | D |
-| Análisis SWOT          | Fortalezas            | A | B | C | D |
-|                       | Debilidades            | A | B | C | D |
-|                       | Oportunidades          | A | B | C | D |
-|                       | Amenazas               | A | B | C | D |
+| Perfil | Overview | Startup de la UPC enfocada en IoT y "Zero Hardware" en departamentos para modernizar edificios. | Startup consolidada que usa IA e IoT para portería virtual y gestión integral. | Empresa de "Teleportería" con vigilancia remota 24/7 y tótems de seguridad. | Gigante global de hardware de seguridad y videoporteros IP. |
+|        | Ventaja competitiva<br/>¿Qué valor ofrece a los clientes? | Reducción drástica de costos de instalación (App-centric) y enfoque en UX para adultos mayores. | IA para automatizar procesos y una red de partners para servicios del edificio. | Seguridad activa 24/7 con respuesta rápida y ahorro de hasta 40% vs. portero físico. | Durabilidad industrial y ecosistema completo de seguridad (CCTV, alarmas). |
+| Perfil de Marketing | Mercado Objetivo         | Edificios antiguos y nuevos en distritos como San Miguel, Pueblo Libre y Magdalena. | Condominios modernos y edificios de alta gama en Miraflores y San Isidro. | Edificios medianos (hasta 40 dptos.) que buscan eliminar el gasto de vigilantes físicos. | Constructoras e inmobiliarias que instalan sistemas desde los planos. |
+|                     | Estrategias de Marketing | B2B con administradoras de edificios y marketing directo a Juntas de Propietarios. | Growth hacking en LinkedIn, alianzas con inmobiliarias y presencia en eventos Tech. | Venta basada en el ahorro de costos directos (ROI rápido) y seguridad perimetral. | Distribución masiva mediante canales técnicos (Wilson, centros comerciales tecnológicos). |
+| Perfil de Producto  | Productos & Servicios    | Citofonía virtual, apertura remota vía App y panel de gestión para conserjes. | App para residentes, gestión de paquetes, portería remota y marketplace de servicios. | Vigilancia por cámaras con audio bidireccional, control de accesos y tótems. | Videoporteros físicos, cámaras IP, software Hik-Connect y biometría. |
+|                     | Precios & Costos         | Modelo SaaS (Suscripción mensual baja) con costo de instalación mínimo. | Contratos anuales. Suscripción por departamento (SaaS + Hardware inicial). | Planes mensuales desde S/ 1,190 (12x7) hasta S/ 2,490 (24x7) por edificio. | Inversión inicial alta en equipos ($500 - $3,000+). Sin mensualidades obligatorias. |
+|      | Canales de distribución (Web y/o Móvil) | App Móvil (iOS/Android) y Web de administración. | App nativa, Web y Central de Operaciones. | Hardware propietario en sitio + App de monitoreo para el residente. | Distribuidores oficiales y tiendas de seguridad electrónica. |
+| Análisis SWOT          | Fortalezas            | Agilidad de startup, conocimiento del usuario local y bajo costo de entrada. | Marca posicionada, tecnología de IA robusta y expansión regional. | Servicio humano real detrás de la tecnología (sensación de seguridad). | Marca líder mundial, alta calidad de video y soporte técnico extenso. |
+|                       | Debilidades            | Marca nueva en el mercado y dependencia de la conexión a internet del usuario. | Costo puede ser elevado para edificios con presupuestos ajustados. | Modelo menos escalable al requerir personal humano en la central. | Instalación compleja; requiere cableado y mantenimiento físico recurrente. |
+|                       | Oportunidades          | Gran cantidad de edificios antiguos en Lima con intercomunicadores malogrados. | Alianzas con empresas de seguros y banca. | Expansión a provincias donde la seguridad física es muy cara. | Integración de sus equipos con plataformas SaaS de terceros (como Nexora). |
+|                       | Amenazas               | Ingreso de funciones similares en apps de administración como ComunidadFeliz. | Competencia de empresas de seguridad tradicionales (Prosegur). | Posibles fallas en la red eléctrica o de internet que inhabiliten el sistema. | Guerra de precios de fabricantes chinos genéricos (Dahua, etc.). |
 
 #
 
