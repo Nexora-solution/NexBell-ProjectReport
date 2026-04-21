@@ -239,7 +239,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Anaely Burga | Ingeniería de Software |
 | -- | --|
-| <img src="#" height=200px width=200px> | Hola mundo |
+| <img src="#" height=200px width=200px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
 
 ## 1.2. Solution Profile
 
