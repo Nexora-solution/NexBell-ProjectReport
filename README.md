@@ -727,9 +727,60 @@ Uno de los mayores problemas es la alta carga de trabajo en horas pico, especial
 
 ### 2.2.3. Análisis de entrevistas
 
-**Segmento objetivo \#1:** 
+Esta sección detalla el análisis cualitativo derivado de las entrevistas a los administradores de los distritos de Miraflores, San Borja y Lince. Los datos obtenidos permiten validar las hipótesis de negocio y entender los motivadores de compra del sistema NexBell.
 
-Datos y gráficas 
+
+**Segmento objetivo \#1:** 
+---
+
+## A. Tabla Comparativa de Entrevistas
+
+| Variable | Entrevista #1 (Miraflores) | Entrevista #2 (San Borja) | Entrevista #3 (Lince) |
+| :--- | :--- | :--- | :--- |
+| **Perfil del Edificio** | Alta densidad (64 dptos) | Baja densidad (12 dptos) | Mediana densidad (28 dptos) |
+| **Problema Principal** | Deterioro de cableado y falta de trazabilidad. | Alto costo de mantenimiento por pocos vecinos. | Fallas por humedad e inseguridad (suplantación). |
+| **Sistema Actual** | Analógico + Cuaderno manual. | Analógico (Solo audio). | Intercomunicador + Excel/Cuaderno. |
+| **Funcionalidad Vital** | Notificaciones en tiempo real y respaldo en la nube. | Apertura remota y registro fotográfico. | Historial de fotos y acceso para el administrador. |
+| **Disponibilidad de Inversión** | $30 - $40 por departamento. | $20 - $50 por departamento. | $15 - $30 (Financiado). |
+| **Factor de Decisión** | Retorno de inversión (ROI) en 1.5 años. | Simplicidad y estética "Premium". | Reducción de cuota de mantenimiento técnica. |
+
+---
+
+## B. Hallazgos Clave del Segmento
+
+### 1. Obsolescencia de la Infraestructura Física
+El **100% de los entrevistados** identificó el cableado como el mayor punto de dolor. El mantenimiento no solo es costoso, sino ineficiente, ya que las reparaciones son "parches" que no solucionan la degradación del cobre o las fallas por humedad.
+
+### 2. Necesidad de Validación Visual
+Se confirmó que el audio no es suficiente para garantizar la seguridad. Los administradores reportaron incidentes de **suplantación de identidad** (técnicos falsos) y accesos no autorizados de repartidores de delivery debido a la mala calidad de comunicación de los intercomunicadores tradicionales.
+
+### 3. El Cambio hacia la Movilidad (Smartphone)
+Existe una demanda creciente por parte de los residentes (especialmente jóvenes y profesionales) de gestionar el acceso desde el celular. La incapacidad de atender visitas cuando el residente no está físicamente en el departamento se percibe como una limitación crítica del sistema actual.
+
+### 4. Viabilidad Financiera
+Los administradores están dispuestos a invertir en tecnología siempre que:
+* **No requiera obra civil:** Evitar romper paredes es una prioridad absoluta (15% del peso en la decisión).
+* **Ahorro operativo:** El sistema debe pagarse solo mediante la eliminación de los costos fijos de técnicos y repuestos analógicos.
+
+---
+
+## C. Resumen de Validación de Hipótesis
+
+> | Hipótesis Planteada | Estado | Sustento de la Entrevista |
+> | :--- | :--- | :--- |
+> | El mantenimiento analógico es un gasto crítico. | **Validada** | Los tres administradores coinciden en que el gasto técnico anual es elevado e improductivo. |
+> | La seguridad es la principal preocupación. | **Validada** | Se mencionaron brechas de seguridad reales por falta de registro visual. |
+> | Los residentes prefieren usar su smartphone. | **Validada** | Es la solución a la falta de comunicación cuando el residente viaja o trabaja fuera. |
+
+---
+
+## D. Conclusión del Análisis
+El segmento de administradores actúa como el **decisor económico**. NexBell no debe venderse solo como un "intercomunicador inteligente", sino como una **solución de eficiencia presupuestaria** que profesionaliza la seguridad del edificio sin los costos logísticos de la infraestructura cableada.
+
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Gemini_Generated_Image_8rnw3g8rnw3g8rnw_1_tyaluk" width="1000">
+</p> 
 
 **Segmento objetivo \#2:** 
 
