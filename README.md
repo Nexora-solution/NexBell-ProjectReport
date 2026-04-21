@@ -784,7 +784,35 @@ El segmento de administradores actúa como el **decisor económico**. NexBell no
 
 **Segmento objetivo \#2:** 
 
-Datos y gráficas 
+# 2.2.4. Análisis de Resultados: Segmento 2 (Personal de Seguridad)
+
+Este análisis se centra en la viabilidad operativa de NexBell desde la perspectiva de quienes utilizarán el sistema diariamente: los conserjes.
+
+## 1. Puntos de Dolor Identificados
+* **El "Cuello de Botella" del Delivery:** En las tres entrevistas se identificó que el flujo de repartidores genera caos. El conserje debe abandonar otras tareas (vigilancia, rondas) para marcar repetidamente a departamentos que no contestan.
+* **Fallas de Comunicación:** El ruido, la estática de los citófonos viejos y los cruces de líneas provocan errores en el registro y malentendidos con los residentes.
+* **Responsabilidad Compartida:** Los conserjes temen ser culpados si un paquete se pierde o alguien entra sin permiso. Actualmente, el cuaderno manual es su única "prueba", la cual es fácilmente cuestionable.
+
+## 2. Expectativas sobre la Solución
+* **Autogestión del Residente:** Lo más valorado es que el sistema envíe la alerta directamente al celular del dueño. Esto quita al conserje el rol de "operador telefónico" y le permite enfocarse en la vigilancia.
+* **Identificación Visual:** Poder ver quién está afuera antes de interactuar reduce el riesgo de agresiones o ingresos por presión social (cuando el visitante exige entrar rápido).
+* **Digitalización del Registro:** El reemplazo del cuaderno por una interfaz táctil se percibe como una mejora en la limpieza y profesionalismo de su trabajo.
+
+## 3. Barreras de Adopción
+* **Estabilidad Tecnológica:** Existe un temor genuino a que la caída del internet deje al edificio incomunicado.
+* **Brecha Generacional:** Se identificó la preocupación de que residentes adultos mayores tengan dificultades con la App, lo que generaría fricciones que el conserje tendría que resolver.
+
+## 4. Validación de Hipótesis (Segmento 2)
+
+| Hipótesis | Estado | Sustento |
+| :--- | :--- | :--- |
+| El registro manual es ineficiente y propenso a errores. | **Validada** | Los conserjes admiten que por el apuro omiten datos o escriben de forma ilegible. |
+| El personal de seguridad está dispuesto a usar tablets/pantallas. | **Validada** | Incluso los perfiles de mayor edad ya usan WhatsApp y ven con buenos ojos la modernización. |
+| La validación visual reduce el estrés laboral. | **Validada** | Saber quién está en la puerta antes de atender da una sensación de control y seguridad. | 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Gemini_Generated_Image_j87wfkj87wfkj87w_lw6qbd" alt="Class Diagram">
+</p>
 
 ## 2.3. Needfinding
 
