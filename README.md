@@ -641,45 +641,48 @@ La entrevistada es Mariel, quien cumple el doble rol de administradora y tesorer
 
 **Entrevista \#3:** 
 
-* **Nombre:** ola   
-* **Apellido:** ola   
-* **Distrito:** ola 
+* **Nombre:** Jose   
+* **Apellido:** Rodriguez 
+* **Distrito:** Lince
 
 **Figura 4** 
 
 *Entrevista \#3 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Captura_de_pantalla_2026-04-21_a_la_s_5.37.34_a._m._lenkzo" width="1000">
 </p> 
 
-* **URL:** a   
-* **Inicio:** 0:05   
-* **Fin:** 4:48   
-* **Resumen:**  
-
-ola 
+* **URL:** https://goo.su/ui0ETm
+* **Inicio:** 0:02
+* **Fin:** 6:17
+* **Resumen:**  El entrevistado es un administrador independiente de 32 años que gestiona tres edificios en Lince, uno de ellos con 28 departamentos habitados principalmente por parejas jóvenes y personas solteras. Actualmente, el edificio utiliza un sistema de control de accesos antiguo basado en intercomunicador de pared y registros en Excel, que en ocasiones se reemplaza por un cuaderno cuando hay fallas eléctricas o técnicas. Este sistema presenta múltiples problemas: fallas frecuentes en la comunicación, cableado deteriorado, y dificultades operativas cuando hay múltiples deliveries o visitas simultáneas.
+Uno de los principales problemas es la falta de verificación de identidad de los visitantes, ya que no existe registro visual, lo que ha generado incidentes de inseguridad como suplantación de técnicos. Además, el registro de visitas es lento y propenso a errores, lo que afecta la coordinación entre portero y residentes.
+El mantenimiento del sistema actual resulta costoso debido a constantes reparaciones, visitas técnicas y reemplazo de equipos obsoletos.
+Frente a una posible solución digital con verificación por imagen y notificaciones en tiempo real, el administrador la considera muy útil, especialmente para reducir su carga operativa y mejorar la seguridad. Valora especialmente funcionalidades como historial de visitas con fotos, acceso remoto para supervisión y facilidad de instalación.
+Los principales factores de decisión serían el costo y el modelo de pago, prefiriendo una solución accesible con cuotas bajas (entre $15 y $30 por departamento) o financiamiento incluido en el mantenimiento. Considera que si el sistema reduce costos de reparación, sería fácilmente aceptado por los propietarios.
 
 **Segmento objetivo \#2: Personal de seguridad o conserjería**
 
 **Entrevista \#4:** 
 
-* **Nombre:**   
-* **Apellido:**   
-* **Distrito:** 
+* **Nombre:** Gabriel
+* **Apellido:** Polanco
+* **Distrito:** Surco
 
 **Figura 5** 
 
 *Entrevista \#4 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Captura_de_pantalla_2026-04-21_a_la_s_5.37.56_a._m._lssgzz" width="1000">
 </p>
 
-* **URL:**   
-* **Inicio:**  
-* **Fin:**  
-* **Resumen:**
+* **URL:** https://goo.su/bvDM8p
+* **Inicio:**  0:02
+* **Fin:**  05:43
+* **Resumen:** El entrevistado es un conserje de 49 años con casi 15 años de experiencia en seguridad, de los cuales los últimos 4 trabaja en un edificio en Surco en turnos rotativos de 12 horas. Actualmente registra manualmente el ingreso de visitantes en un cuaderno, anotando datos como nombre, DNI, departamento, hora de ingreso y placas. Este sistema le genera varias dificultades, como errores por apuro, información incompleta o ilegible, y problemas de comunicación por interferencias en el intercomunicador.
+Uno de los mayores problemas es la alta carga de trabajo en horas pico, especialmente por deliveries, ya que debe contactar constantemente a los residentes para autorizar ingresos. Cuando no responden, se generan conflictos con visitantes o reclamos posteriores. Aunque tiene experiencia básica con tecnología (usa WhatsApp para su trabajo), considera que un sistema digital le facilitaría mucho las tareas. Le sería especialmente útil poder ver la imagen del visitante antes de autorizar el ingreso, automatizar el registro y enviar notificaciones directamente al celular del residente sin depender de llamadas. También valora la idea de eliminar el cuaderno y reemplazarlo por un sistema tipo tablet, ya que sería más ordenado y seguro, además de incluir registro automático y fotos de los visitantes. Sus principales preocupaciones son la estabilidad del sistema (caídas de internet), la lentitud en momentos de alta demanda y la resistencia del equipo para soportar el uso diario en la portería.
 
 
 **Entrevista \#5:** 
