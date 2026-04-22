@@ -143,58 +143,58 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><strong>ola</strong></td>
+    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta </strong></td>
     <td>
     	<p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
       <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola.</p>
       <p></p>
     	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
     </td>
     <td>
-      <p><ins><i><strong>TB1:</strong></i></ins></p>
+      <p><ins><i><strong>AV1:</strong></i></ins></p>
       <p><strong>Objetivo específico: </strong>ola</p>
       <p><strong>Conclusión: </strong>ola</p>
   </tr>
   <tr>
-    <td><strong>ola</strong></td>
+    <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
     <td>
     	<p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
       <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola.</p>
       <p></p>
     	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
     </td>
     <td>
-      <p><ins><i><strong>TB1:</strong></i></ins></p>
+      <p><ins><i><strong>AV1:</strong></i></ins></p>
       <p><strong>Objetivo específico: </strong>ola</p>
       <p><strong>Conclusión: </strong>ola</p>
   </tr>
@@ -700,30 +700,34 @@ El entrevistado es un conserje de 49 años con amplia experiencia en seguridad q
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776477309/entrevista_daniela_1_cfvce8.jpg" width="1000">
 </p>
 
-* **URL:**   
-* **Inicio:**  
-* **Fin:**   
+* **URL:** https://goo.su/75NbpG7   
+* **Inicio:** 0:01 
+* **Fin:** 5:29
 * **Resumen:**
+
+La entrevistada es Kylie Pizarro, conserje de 23 años que trabaja en turno nocturno en un edificio de Pueblo Libre. Actualmente, el control de accesos se realiza mediante un cuaderno y un intercomunicador, lo que le genera dificultades como errores en el registro, desorden de información y retrasos al validar visitas, especialmente cuando los residentes no responden. Además, expresa inseguridad al no contar con una forma visual de verificar la identidad de los visitantes, dependiendo únicamente de lo que estos declaran. El cansancio del turno nocturno también influye en posibles equivocaciones durante el proceso. Kylie considera que una solución digital que incluya captura de imagen, registro automático y notificaciones en tiempo real facilitaría significativamente su trabajo, haciéndolo más rápido, seguro y organizado. Para ella, es clave que el sistema sea simple, confiable y fácil de usar, ya que esto le permitiría adoptar la tecnología sin complicaciones en su rutina diaria.
 
 
 **Entrevista \#6:** 
 
-* **Nombre:**   
-* **Apellido:**   
-* **Distrito:**
+* **Nombre:** Mario  
+* **Apellido:** Villafuentes   
+* **Distrito:** Cercado de Lima
 
 **Figura 7** 
 
 *Entrevista \#6 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776825105/entrevista_mario_pvop8h.jpg" width="1000">
 </p> 
 
-* **URL:**   
-* **Inicio:**  
-* **Fin:**  
+* **URL:** https://goo.su/KG8QCzd   
+* **Inicio:** 0:02 
+* **Fin:** 6:41
 * **Resumen:**
+
+El entrevistado es Mario Villafuentes, conserje del condominio Parque Central, donde señala que la seguridad es deficiente y poco controlada. Actualmente, utiliza cuadernos para registrar visitas, lo que le genera desorden y falta de claridad en la información. Indica que los residentes muchas veces no responden cuando intenta comunicarse, lo que dificulta la validación de accesos. Además, menciona que en varias ocasiones no logra diferenciar si una persona es residente o visitante, lo que incrementa el riesgo de ingreso no autorizado. También comenta que algunas visitas se incomodan cuando se les solicita información, lo que complica aún más su trabajo. Durante su turno, reconoce que en momentos como su refrigerio la puerta puede quedar sin supervisión, lo que genera incertidumbre sobre quién ingresa o sale del edificio. Frente a esta situación, considera que una solución digital sería de gran ayuda, especialmente si permite llevar un historial de accesos, relacionar a los propietarios con sus departamentos y organizar mejor la gestión en condominios con múltiples torres, asignando control por cada una de ellas.
 
 
 ### 2.2.3. Análisis de entrevistas
@@ -1009,12 +1013,13 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 
 | Epic ID  | Título  |
 | :---: | :---: |
-| EP01  |  |
-| EP02  |  |
-| EP03  |  |
-| EP04  |  |
-| EP05  |  |
-| EP06  |  |
+| EP01  | Registro y autenticación de usuarios |
+| EP02  | Gestión de visitas |
+| EP03  | Captura de eventos del visitante |
+| EP04  | Validación y control de acceso |
+| EP05  | Notificaciones al usuario |
+| EP06  | Monitoreo e historial de visitas |
+| EP07  | Seguridad del sistema |
 
  
 
