@@ -143,58 +143,58 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><strong>ola</strong></td>
+    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta </strong></td>
     <td>
     	<p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
       <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola.</p>
       <p></p>
     	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
     </td>
     <td>
-      <p><ins><i><strong>TB1:</strong></i></ins></p>
+      <p><ins><i><strong>AV1:</strong></i></ins></p>
       <p><strong>Objetivo específico: </strong>ola</p>
       <p><strong>Conclusión: </strong>ola</p>
   </tr>
   <tr>
-    <td><strong>ola</strong></td>
+    <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
     <td>
     	<p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
       <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
       <p></p>
     	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola.</p>
       <p></p>
     	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>TB1:</i></p>
+      <p><i>AV1:</i></p>
       <p>ola</p>
     </td>
     <td>
-      <p><ins><i><strong>TB1:</strong></i></ins></p>
+      <p><ins><i><strong>AV1:</strong></i></ins></p>
       <p><strong>Objetivo específico: </strong>ola</p>
       <p><strong>Conclusión: </strong>ola</p>
   </tr>
@@ -223,7 +223,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Raúl Bellido | Ingeniería de Software |
 | -- | --|
-| <img src="#" height=200px width=200px> | Hola mundo |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792366/raul_lssksc.jpg" height=200px width=200px> | Soy un estudiante de ingeniería de software. Mi nombre es Raúl Bellido y tengo 19 años. Actualmente estudio en la UPC, donde vengo desarrollando mis habilidades en programación utilizando lenguajes como C# y C++. Mi principal enfoque es el desarrollo de aplicaciones móviles que contribuyan al crecimiento y bienestar del Perú, buscando generar un impacto positivo a través de la tecnología. |
 
 | Gabriel Borja | Ingeniería de Software |
 | -- | --|
@@ -235,7 +235,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Daniela Gómez | Ingeniería de Software |
 | -- | --|
-| <img src="#" height=200px width=200px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792340/yo_uzhre7.jpg" height=200px width=200px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
 
 | Anaely Burga | Ingeniería de Software |
 | -- | --|
@@ -656,11 +656,11 @@ La entrevistada es Mariel, quien cumple el doble rol de administradora y tesorer
 * **URL:** https://goo.su/ui0ETm
 * **Inicio:** 0:02
 * **Fin:** 6:17
-* **Resumen:**  El entrevistado es un administrador independiente de 32 años que gestiona tres edificios en Lince, uno de ellos con 28 departamentos habitados principalmente por parejas jóvenes y personas solteras. Actualmente, el edificio utiliza un sistema de control de accesos antiguo basado en intercomunicador de pared y registros en Excel, que en ocasiones se reemplaza por un cuaderno cuando hay fallas eléctricas o técnicas. Este sistema presenta múltiples problemas: fallas frecuentes en la comunicación, cableado deteriorado, y dificultades operativas cuando hay múltiples deliveries o visitas simultáneas.
-Uno de los principales problemas es la falta de verificación de identidad de los visitantes, ya que no existe registro visual, lo que ha generado incidentes de inseguridad como suplantación de técnicos. Además, el registro de visitas es lento y propenso a errores, lo que afecta la coordinación entre portero y residentes.
-El mantenimiento del sistema actual resulta costoso debido a constantes reparaciones, visitas técnicas y reemplazo de equipos obsoletos.
-Frente a una posible solución digital con verificación por imagen y notificaciones en tiempo real, el administrador la considera muy útil, especialmente para reducir su carga operativa y mejorar la seguridad. Valora especialmente funcionalidades como historial de visitas con fotos, acceso remoto para supervisión y facilidad de instalación.
-Los principales factores de decisión serían el costo y el modelo de pago, prefiriendo una solución accesible con cuotas bajas (entre $15 y $30 por departamento) o financiamiento incluido en el mantenimiento. Considera que si el sistema reduce costos de reparación, sería fácilmente aceptado por los propietarios.
+* **Resumen:**
+
+El entrevistado es un administrador de 32 años que gestiona un edificio de 28 departamentos en Lince, habitado principalmente por jóvenes. El problema central es un sistema de accesos obsoleto (intercomunicador y Excel) que falla ante visitas simultáneas y genera graves brechas de seguridad, como la suplantación de identidad por falta de registro visual. Los desafíos clave incluyen el cableado deteriorado y los altos costos recurrentes en reparaciones técnicas. Busca una solución digital con verificación por imagen, historial fotográfico y acceso remoto que reduzca su carga operativa y modernice el control de visitas. Para este perfil, la prioridad es la seguridad y la reducción de gastos de mantenimiento, prefiriendo un modelo de pago accesible de entre 15 y 30 dólares por departamento que sea fácil de aprobar por la junta de propietarios.
+
+---
 
 **Segmento objetivo \#2: Personal de seguridad o conserjería**
 
@@ -679,61 +679,70 @@ Los principales factores de decisión serían el costo y el modelo de pago, pref
 </p>
 
 * **URL:** https://goo.su/bvDM8p
-* **Inicio:**  0:02
-* **Fin:**  05:43
-* **Resumen:** El entrevistado es un conserje de 49 años con casi 15 años de experiencia en seguridad, de los cuales los últimos 4 trabaja en un edificio en Surco en turnos rotativos de 12 horas. Actualmente registra manualmente el ingreso de visitantes en un cuaderno, anotando datos como nombre, DNI, departamento, hora de ingreso y placas. Este sistema le genera varias dificultades, como errores por apuro, información incompleta o ilegible, y problemas de comunicación por interferencias en el intercomunicador.
-Uno de los mayores problemas es la alta carga de trabajo en horas pico, especialmente por deliveries, ya que debe contactar constantemente a los residentes para autorizar ingresos. Cuando no responden, se generan conflictos con visitantes o reclamos posteriores. Aunque tiene experiencia básica con tecnología (usa WhatsApp para su trabajo), considera que un sistema digital le facilitaría mucho las tareas. Le sería especialmente útil poder ver la imagen del visitante antes de autorizar el ingreso, automatizar el registro y enviar notificaciones directamente al celular del residente sin depender de llamadas. También valora la idea de eliminar el cuaderno y reemplazarlo por un sistema tipo tablet, ya que sería más ordenado y seguro, además de incluir registro automático y fotos de los visitantes. Sus principales preocupaciones son la estabilidad del sistema (caídas de internet), la lentitud en momentos de alta demanda y la resistencia del equipo para soportar el uso diario en la portería.
+* **Inicio:** 0:02
+* **Fin:** 05:43
+* **Resumen:**
+
+El entrevistado es un conserje de 49 años con amplia experiencia en seguridad que trabaja en un edificio en Surco. El problema principal es el registro manual en cuaderno, que resulta lento, propenso a errores de escritura y genera cuellos de botella críticos durante las horas pico de deliveries. Los desafíos clave incluyen las interferencias del intercomunicador y la dificultad para contactar a residentes, lo que deriva en conflictos con visitantes y una alta carga operativa en turnos de 12 horas. Busca una herramienta digital tipo tablet que automatice el registro, envíe notificaciones directas al celular de los vecinos y permita la verificación visual por imagen. Para este perfil, la prioridad es el orden y la agilidad del flujo en portería, siempre que el sistema sea estable ante caídas de internet y lo suficientemente resistente para el uso rudo diario.
 
 
 **Entrevista \#5:** 
 
-* **Nombre:**   
-* **Apellido:**   
-* **Distrito:** 
+* **Nombre:** Kylie 
+* **Apellido:** Pizarro
+* **Distrito:** Pueblo Libre
 
 **Figura 6** 
 
 *Entrevista \#5 para NexBell*
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776477309/entrevista_daniela_1_cfvce8.jpg" width="1000">
 </p>
 
-* **URL:**   
-* **Inicio:**  
-* **Fin:**   
+* **URL:** https://goo.su/75NbpG7   
+* **Inicio:** 0:01 
+* **Fin:** 5:29
 * **Resumen:**
+
+La entrevistada es Kylie Pizarro, conserje de 23 años que trabaja en turno nocturno en un edificio de Pueblo Libre. Actualmente, el control de accesos se realiza mediante un cuaderno y un intercomunicador, lo que le genera dificultades como errores en el registro, desorden de información y retrasos al validar visitas, especialmente cuando los residentes no responden. Además, expresa inseguridad al no contar con una forma visual de verificar la identidad de los visitantes, dependiendo únicamente de lo que estos declaran. El cansancio del turno nocturno también influye en posibles equivocaciones durante el proceso. Kylie considera que una solución digital que incluya captura de imagen, registro automático y notificaciones en tiempo real facilitaría significativamente su trabajo, haciéndolo más rápido, seguro y organizado. Para ella, es clave que el sistema sea simple, confiable y fácil de usar, ya que esto le permitiría adoptar la tecnología sin complicaciones en su rutina diaria.
 
 
 **Entrevista \#6:** 
 
-* **Nombre:**   
-* **Apellido:**   
-* **Distrito:**
+* **Nombre:** Mario  
+* **Apellido:** Villafuentes   
+* **Distrito:** Cercado de Lima
 
 **Figura 7** 
 
 *Entrevista \#6 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776825105/entrevista_mario_pvop8h.jpg" width="1000">
 </p> 
 
-* **URL:**   
-* **Inicio:**  
-* **Fin:**  
+* **URL:** https://goo.su/KG8QCzd   
+* **Inicio:** 0:02 
+* **Fin:** 6:41
 * **Resumen:**
+
+El entrevistado es Mario Villafuentes, conserje del condominio Parque Central, donde señala que la seguridad es deficiente y poco controlada. Actualmente, utiliza cuadernos para registrar visitas, lo que le genera desorden y falta de claridad en la información. Indica que los residentes muchas veces no responden cuando intenta comunicarse, lo que dificulta la validación de accesos. Además, menciona que en varias ocasiones no logra diferenciar si una persona es residente o visitante, lo que incrementa el riesgo de ingreso no autorizado. También comenta que algunas visitas se incomodan cuando se les solicita información, lo que complica aún más su trabajo. Durante su turno, reconoce que en momentos como su refrigerio la puerta puede quedar sin supervisión, lo que genera incertidumbre sobre quién ingresa o sale del edificio. Frente a esta situación, considera que una solución digital sería de gran ayuda, especialmente si permite llevar un historial de accesos, relacionar a los propietarios con sus departamentos y organizar mejor la gestión en condominios con múltiples torres, asignando control por cada una de ellas.
 
 
 ### 2.2.3. Análisis de entrevistas
 
+Esta sección presenta la documentación organizada de las entrevistas aplicadas a cada segmento objetivo. Aquí se detallan los perfiles, las respuestas obtenidas y las observaciones clave de cada sesión, garantizando la transparencia y el orden de la información recopilada.
+
+Esta estructura facilita el análisis de datos y sirve como base sólida para el desarrollo de herramientas de diseño centrado en el usuario, permitiendo construir con precisión User Personas, Mapas de Empatía y Matrices de Tareas.
+
+
+**Segmento objetivo \#1: Juntas de propietarios y administradores de inmuebles**
+
+
 Esta sección detalla el análisis cualitativo derivado de las entrevistas a los administradores de los distritos de Miraflores, San Borja y Lince. Los datos obtenidos permiten validar las hipótesis de negocio y entender los motivadores de compra del sistema NexBell.
 
-
-**Segmento objetivo \#1:** 
----
-
-## A. Tabla Comparativa de Entrevistas
+***- Tabla Comparativa de Entrevistas***
 
 | Variable | Entrevista #1 (Miraflores) | Entrevista #2 (San Borja) | Entrevista #3 (Lince) |
 | :--- | :--- | :--- | :--- |
@@ -744,65 +753,57 @@ Esta sección detalla el análisis cualitativo derivado de las entrevistas a los
 | **Disponibilidad de Inversión** | $30 - $40 por departamento. | $20 - $50 por departamento. | $15 - $30 (Financiado). |
 | **Factor de Decisión** | Retorno de inversión (ROI) en 1.5 años. | Simplicidad y estética "Premium". | Reducción de cuota de mantenimiento técnica. |
 
----
 
-## B. Hallazgos Clave del Segmento
+***- Hallazgos Clave del Segmento***
 
-### 1. Obsolescencia de la Infraestructura Física
-El **100% de los entrevistados** identificó el cableado como el mayor punto de dolor. El mantenimiento no solo es costoso, sino ineficiente, ya que las reparaciones son "parches" que no solucionan la degradación del cobre o las fallas por humedad.
+- **Obsolescencia de la Infraestructura Física:** El **100% de los entrevistados** identificó el cableado como el mayor punto de dolor. El mantenimiento no solo es costoso, sino ineficiente, ya que las reparaciones son "parches" que no solucionan la degradación del cobre o las fallas por humedad.
 
-### 2. Necesidad de Validación Visual
-Se confirmó que el audio no es suficiente para garantizar la seguridad. Los administradores reportaron incidentes de **suplantación de identidad** (técnicos falsos) y accesos no autorizados de repartidores de delivery debido a la mala calidad de comunicación de los intercomunicadores tradicionales.
+- **Necesidad de Validación Visual:** Se confirmó que el audio no es suficiente para garantizar la seguridad. Los administradores reportaron incidentes de **suplantación de identidad** (técnicos falsos) y accesos no autorizados de repartidores de delivery debido a la mala calidad de comunicación de los intercomunicadores tradicionales.
 
-### 3. El Cambio hacia la Movilidad (Smartphone)
-Existe una demanda creciente por parte de los residentes (especialmente jóvenes y profesionales) de gestionar el acceso desde el celular. La incapacidad de atender visitas cuando el residente no está físicamente en el departamento se percibe como una limitación crítica del sistema actual.
+- **El Cambio hacia la Movilidad (Smartphone):** Existe una demanda creciente por parte de los residentes (especialmente jóvenes y profesionales) de gestionar el acceso desde el celular. La incapacidad de atender visitas cuando el residente no está físicamente en el departamento se percibe como una limitación crítica del sistema actual.
 
-### 4. Viabilidad Financiera
-Los administradores están dispuestos a invertir en tecnología siempre que:
-* **No requiera obra civil:** Evitar romper paredes es una prioridad absoluta (15% del peso en la decisión).
-* **Ahorro operativo:** El sistema debe pagarse solo mediante la eliminación de los costos fijos de técnicos y repuestos analógicos.
+- **Viabilidad Financiera:** Los administradores están dispuestos a invertir en tecnología siempre que:
 
----
+  - **No requiera obra civil:** Evitar romper paredes es una prioridad absoluta (15% del peso en la decisión).
+  - **Ahorro operativo:** El sistema debe pagarse solo mediante la eliminación de los costos fijos de técnicos y repuestos analógicos.
 
-## C. Resumen de Validación de Hipótesis
+***- Resumen de Validación de Hipótesis***
 
-> | Hipótesis Planteada | Estado | Sustento de la Entrevista |
-> | :--- | :--- | :--- |
-> | El mantenimiento analógico es un gasto crítico. | **Validada** | Los tres administradores coinciden en que el gasto técnico anual es elevado e improductivo. |
-> | La seguridad es la principal preocupación. | **Validada** | Se mencionaron brechas de seguridad reales por falta de registro visual. |
-> | Los residentes prefieren usar su smartphone. | **Validada** | Es la solución a la falta de comunicación cuando el residente viaja o trabaja fuera. |
+| Hipótesis Planteada | Estado | Sustento de la Entrevista |
+| :--- | :--- | :--- |
+| El mantenimiento analógico es un gasto crítico. | **Validada** | Los tres administradores coinciden en que el gasto técnico anual es elevado e improductivo. |
+| La seguridad es la principal preocupación. | **Validada** | Se mencionaron brechas de seguridad reales por falta de registro visual. |
+| Los residentes prefieren usar su smartphone. | **Validada** | Es la solución a la falta de comunicación cuando el residente viaja o trabaja fuera. |
 
----
-
-## D. Conclusión del Análisis
+***- Conclusión del Análisis***
+   
 El segmento de administradores actúa como el **decisor económico**. NexBell no debe venderse solo como un "intercomunicador inteligente", sino como una **solución de eficiencia presupuestaria** que profesionaliza la seguridad del edificio sin los costos logísticos de la infraestructura cableada.
-
 
 <p align="center">
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Gemini_Generated_Image_8rnw3g8rnw3g8rnw_1_tyaluk" width="1000">
 </p> 
 
-**Segmento objetivo \#2:** 
-
-# 2.2.4. Análisis de Resultados: Segmento 2 (Personal de Seguridad)
+**Segmento objetivo \#2: Personal de seguridad o conserjería** 
 
 Este análisis se centra en la viabilidad operativa de NexBell desde la perspectiva de quienes utilizarán el sistema diariamente: los conserjes.
 
-## 1. Puntos de Dolor Identificados
-* **El "Cuello de Botella" del Delivery:** En las tres entrevistas se identificó que el flujo de repartidores genera caos. El conserje debe abandonar otras tareas (vigilancia, rondas) para marcar repetidamente a departamentos que no contestan.
-* **Fallas de Comunicación:** El ruido, la estática de los citófonos viejos y los cruces de líneas provocan errores en el registro y malentendidos con los residentes.
-* **Responsabilidad Compartida:** Los conserjes temen ser culpados si un paquete se pierde o alguien entra sin permiso. Actualmente, el cuaderno manual es su única "prueba", la cual es fácilmente cuestionable.
+***- Puntos de Dolor Identificados***
 
-## 2. Expectativas sobre la Solución
-* **Autogestión del Residente:** Lo más valorado es que el sistema envíe la alerta directamente al celular del dueño. Esto quita al conserje el rol de "operador telefónico" y le permite enfocarse en la vigilancia.
-* **Identificación Visual:** Poder ver quién está afuera antes de interactuar reduce el riesgo de agresiones o ingresos por presión social (cuando el visitante exige entrar rápido).
-* **Digitalización del Registro:** El reemplazo del cuaderno por una interfaz táctil se percibe como una mejora en la limpieza y profesionalismo de su trabajo.
+- **El "Cuello de Botella" del Delivery:** En las tres entrevistas se identificó que el flujo de repartidores genera caos. El conserje debe abandonar otras tareas (vigilancia, rondas) para marcar repetidamente a departamentos que no contestan.
+- **Fallas de Comunicación:** El ruido, la estática de los citófonos viejos y los cruces de líneas provocan errores en el registro y malentendidos con los residentes.
+- **Responsabilidad Compartida:** Los conserjes temen ser culpados si un paquete se pierde o alguien entra sin permiso. Actualmente, el cuaderno manual es su única "prueba", la cual es fácilmente cuestionable.
 
-## 3. Barreras de Adopción
-* **Estabilidad Tecnológica:** Existe un temor genuino a que la caída del internet deje al edificio incomunicado.
-* **Brecha Generacional:** Se identificó la preocupación de que residentes adultos mayores tengan dificultades con la App, lo que generaría fricciones que el conserje tendría que resolver.
+***- Expectativas sobre la Solución***
+- **Autogestión del Residente:** Lo más valorado es que el sistema envíe la alerta directamente al celular del dueño. Esto quita al conserje el rol de "operador telefónico" y le permite enfocarse en la vigilancia.
+- **Identificación Visual:** Poder ver quién está afuera antes de interactuar reduce el riesgo de agresiones o ingresos por presión social (cuando el visitante exige entrar rápido).
+- **Digitalización del Registro:** El reemplazo del cuaderno por una interfaz táctil se percibe como una mejora en la limpieza y profesionalismo de su trabajo.
 
-## 4. Validación de Hipótesis (Segmento 2)
+***- Barreras de Adopción***
+
+- **Estabilidad Tecnológica:** Existe un temor genuino a que la caída del internet deje al edificio incomunicado.
+- **Brecha Generacional:** Se identificó la preocupación de que residentes adultos mayores tengan dificultades con la App, lo que generaría fricciones que el conserje tendría que resolver.
+
+***- Validación de Hipótesis***
 
 | Hipótesis | Estado | Sustento |
 | :--- | :--- | :--- |
@@ -1012,12 +1013,13 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 
 | Epic ID  | Título  |
 | :---: | :---: |
-| EP01  |  |
-| EP02  |  |
-| EP03  |  |
-| EP04  |  |
-| EP05  |  |
-| EP06  |  |
+| EP01  | Registro y autenticación de usuarios |
+| EP02  | Gestión de visitas |
+| EP03  | Captura de eventos del visitante |
+| EP04  | Validación y control de acceso |
+| EP05  | Notificaciones al usuario |
+| EP06  | Monitoreo e historial de visitas |
+| EP07  | Seguridad del sistema |
 
  
 
