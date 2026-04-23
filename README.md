@@ -239,7 +239,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Anaely Burga | Ingeniería de Software |
 | -- | --|
-| <img src="#" height=200px width=200px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
+| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/foto_1_el130p" height=200px width=200px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
 
 ## 1.2. Solution Profile
 
@@ -1021,14 +1021,38 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 | EP06  | Monitoreo e historial de visitas |
 | EP07  | Seguridad del sistema |
 
- 
-
-| Epic / User  Story ID  | Título  | Descripción  | Criterios de Aceptación  | Relacionado con (Epic ID)  |
-| :---: | ----- | ----- | ----- | ----- |
-| US01  |   |   |   |   |
-| US02  |   |   |   |   |
-| US03  |   |   |   |   |
-
+|  Epic / User  Story ID | Título | Descripción | Criterios de Aceptación | ERelacionado con (Epic ID)  |
+| :--- | :--- | :--- | :--- | :---: |
+| **US01** | Registro de Residente | Yo como residente, quiero registrarme en la App con mi correo y departamento para gestionar mis visitas. | 1. Validar formato de correo. 2. El departamento debe existir en la BD. | EP01 |
+| **US02** | Login Multicanal | Yo como usuario, quiero iniciar sesión mediante biometría o contraseña para acceder rápido. | 1. Soporte para FaceID/Huella. 2. Token de sesión con expiración. | EP01 |
+| **US03** | Perfil de Conserje | Yo como administrador, quiero crear perfiles para el personal de seguridad para que operen el Dashboard Web. | 1. Asignación de roles. 2. Registro de turnos de ingreso. | EP01 |
+| **US04** | Recuperación de cuenta | Yo como usuario, quiero recuperar mi contraseña vía email para no perder acceso al sistema. | 1. Envío de link temporal único. 2. Registro de auditoría del cambio. | EP01 |
+| **US05** | Pre-registro de visita | Yo como residente, quiero registrar los datos de un invitado para agilizar su ingreso en portería. | 1. Generación de código de visita único. 2. Opción de establecer fecha de expiración. | EP02 |
+| **US06** | Generación de QR | Yo como residente, quiero generar un código QR para mi visitante para que se valide automáticamente. | 1. QR legible por la cámara IoT. 2. Notificación al escanear. | EP02 |
+| **US07** | Invitados frecuentes | Yo como residente, quiero guardar contactos frecuentes para no repetir el proceso de registro. | 1. Sección de "Favoritos". 2. Edición rápida de fechas de visita. | EP02 |
+| **US08** | Cancelación de visita | Yo como residente, quiero anular una visita programada para que no se permita el ingreso por error. | 1. Cambio de estado a "Cancelada" en tiempo real. 2. Desactivación del QR. | EP02 |
+| **US09** | Detección de presencia | Yo como sistema IoT, quiero detectar movimiento en la puerta para activar la cámara y ahorrar energía. | 1. Uso de sensor PIR para despertar el nodo. 2. Latencia de activación < 500ms. | EP03 |
+| **US10** | Captura fotográfica | Yo como conserje, quiero que el sistema tome una foto del visitante al sonar el timbre para tener evidencia. | 1. Resolución mínima 720p. 2. Almacenamiento automático en la nube. | EP03 |
+| **US11** | Registro de audio | Yo como residente, quiero escuchar un mensaje de voz del visitante para verificar su motivo de ingreso. | 1. Captura de audio clara. 2. Duración máxima de 15 segundos. | EP03 |
+| **US12** | Timestamp de llegada | Yo como administrador, quiero que cada interacción IoT registre la hora exacta para auditorías. | 1. Registro sincronizado con servidor. 2. Inmutabilidad del log temporal. | EP03 |
+| **US13** | Visualización Dashboard | Yo como conserje, quiero ver la foto del visitante en mi pantalla para validarlo con su documento físico. | 1. Actualización vía WebSockets en tiempo real. | EP04 |
+| **US14** | Apertura remota App | Yo como residente, quiero presionar un botón en mi celular para abrir la puerta principal. | 1. Envío de comando al actuador. 2. Confirmación visual de estado. | EP04 |
+| **US15** | Apertura desde Web | Yo como conserje, quiero abrir la puerta desde la web tras validar al visitante satisfactoriamente. | 1. Doble factor de confirmación en pantalla. | EP04 |
+| **US16** | Denegación de acceso | Yo como residente, quiero rechazar una visita desde la notificación para informar al conserje. | 1. Notificación inmediata al Dashboard de portería. | EP04 |
+| **US17** | Push Notification | Yo como residente, quiero recibir una alerta en mi smartphone cuando alguien timbre en mi departamento. | 1. Tiempo de entrega < 3 segundos. 2. Incluir nombre si es pre-registrado. | EP05 |
+| **US18** | Alerta puerta abierta | Yo como administrador, quiero recibir una notificación si la puerta queda abierta por más de 2 minutos. | 1. Integración con sensor magnético. 2. Alerta crítica sonora en Dashboard. | EP05 |
+| **US19** | Confirmación ingreso | Yo como residente, quiero recibir un mensaje cuando mi visita haya cruzado efectivamente la puerta. | 1. Disparo del evento al detectar cierre de puerta. | EP05 |
+| **US20** | Notificación reintento | Yo como conserje, quiero enviar una alerta de reintentos al residente si no contesta la primera vez. | 1. Botón de "Re-notificar" (Máximo 3 intentos). | EP05 |
+| **US21** | Historial residente | Yo como residente, quiero ver la lista de quiénes entraron a mi departamento en el último mes. | 1. Filtro por fecha. 2. Visualización de foto capturada. | EP06 |
+| **US22** | Reporte Administrador | Yo como administrador, quiero exportar un Excel con todos los movimientos para auditoría. | 1. Formatos CSV/XLSX. 2. Incluir datos de conserje encargado. | EP06 |
+| **US23** | Métricas de uso | Yo como administrador, quiero ver gráficos de horas pico para optimizar turnos de seguridad. | 1. Gráfica de barras/calor por horarios. | EP06 |
+| **US24** | Búsqueda por DNI | Yo como conserje, quiero buscar si un visitante tiene ingresos previos mediante su documento. | 1. Resultados en < 1 segundo. 2. Mostrar alertas de "No deseado". | EP06 |
+| **US25** | Cifrado de datos | Yo como usuario, quiero que mis fotos y datos personales estén cifrados para proteger mi privacidad. | 1. Uso de HTTPS y cifrado AES-256. | EP07 |
+| **US26** | Monitoreo Online | Yo como conserje, quiero que el sistema me avise si el dispositivo IoT pierde conexión. | 1. Monitor "Heartbeat" cada 30 segundos. 2. Indicador visual Rojo/Verde. | EP07 |
+| **US27** | Lista Negra | Yo como residente, quiero marcar a una persona en "Lista Negra" para bloquear su acceso futuro. | 1. Bloqueo de pre-registro para ese DNI. | EP07 |
+| **US28** | Backup automático | Yo como administrador, quiero que el sistema realice copias de seguridad de las fotos diariamente. | 1. Respaldo automático programado a las 02:00 AM. | EP07 |
+| **US29** | Auditoría física | Yo como administrador, quiero saber si la puerta se abrió manualmente o vía software. | 1. Diferenciación en el log: "Software" vs "Manual". | EP07 |
+| **US30** | Actualización OTA | Yo como desarrollador, quiero enviar actualizaciones al hardware IoT de forma remota (Over-the-Air). | 1. Mecanismo de Rollback en caso de fallo. | EP07 |
 
 ## 3.2. Impact Mapping
 
