@@ -1198,392 +1198,530 @@ En este nivel se define la implementacion del dominio por Bounded Context, detal
 
 ### 4.2.1. Bounded Context: IAM (Identity & Access Management)
 
+Este bounded context gestiona las identidades y el acceso al sistema. Su responsabilidad es garantizar que únicamente usuarios registrados (residentes y porteros) puedan acceder a la plataforma y operar según su rol. Administra el ciclo completo de autenticación: registro, inicio de sesión, recuperación de contraseña y control de sesiones activas. Sirve como base sobre la cual los demás bounded contexts validan la identidad del usuario que realiza cada operación.
+
 #### 4.2.1.1. Domain Layer
 
-| Tipo | Elemento | Responsabilidad | Metodos clave |
-| --- | --- | --- | --- |
-| Entity | `UserAccount` | Representa la cuenta de usuario (residente/conserje), estado y credenciales. | `Register(...)`, `Activate()`, `ChangePassword(...)`, `AssignRole(...)`, `Deactivate()` |
-| Entity | `UserSession` | Gestiona ciclo de vida de sesion y refresh token. | `Open(...)`, `RotateRefreshToken(...)`, `Revoke(...)`, `IsExpired(...)` |
-| Entity | `PasswordResetTicket` | Maneja solicitudes de restablecimiento de clave con expiracion. | `Issue(...)`, `MarkAsUsed()`, `IsValid(...)` |
-| Value Object | `EmailAddress` | Encapsula formato/canonizacion de correo. | `Create(string value)` |
-| Value Object | `PasswordHash` | Encapsula hash BCrypt de credencial. | `FromHash(string value)` |
-| Value Object | `RefreshTokenValue` | Token de renovacion de sesion. | `Create()`, `Rotate()` |
-| Value Object | `RoleName` | Rol del usuario en el dominio (Resident, Doorman). | `Create(string value)` |
+**- Entities**
 
-**Interfaces de dominio**
+| Elemento | Propósito | Métodos clave |
+| ----- | ----- | ----- |
+| `UserAccount` | Representa la cuenta de un usuario del sistema (residente o portero), incluyendo sus credenciales y estado. | `Register(...)`, `Activate()`, `ChangePassword(...)`, `AssignRole(...)`, `Deactivate()` |
+| `UserSession` | Gestiona el ciclo de vida de una sesión activa, incluyendo el refresh token asociado. | `Open(...)`, `RotateRefreshToken(...)`, `Revoke(...)`, `IsExpired()` |
+| `PasswordResetTicket` | Representa una solicitud de restablecimiento de contraseña con tiempo de expiración. | `Issue(...)`, `MarkAsUsed()`, `IsValid()` |
 
-| Interface | Responsabilidad | Metodos clave |
-| --- | --- | --- |
-| `IUserAccountRepository` | Persistencia de cuentas. | `Task<UserAccount?> GetByEmailAsync(...)`, `Task<UserAccount?> GetByIdAsync(...)`, `Task AddAsync(...)`, `Task UpdateAsync(...)` |
-| `IUserSessionRepository` | Persistencia de sesiones y refresh tokens. | `Task<UserSession?> GetByRefreshTokenAsync(...)`, `Task AddAsync(...)`, `Task UpdateAsync(...)`, `Task RevokeAllByUserAsync(...)` |
-| `IPasswordHasher` | Politica de hash/validacion de password. | `string Hash(string plainPassword)`, `bool Verify(string plainPassword, string hash)` |
-| `ITokenIssuer` | Emision/validacion de JWT de acceso. | `string IssueAccessToken(UserAccount account)`, `TokenClaims Validate(string jwt)` |
+**- Value Objects**
 
-**Eventos de dominio**
+| Elemento | Propósito |
+| ----- | ----- |
+| `EmailAddress` | Encapsula y valida el formato del correo electrónico. |
+| `PasswordHash` | Almacena el hash BCrypt de la contraseña del usuario. |
+| `RefreshTokenValue` | Representa el token de renovación de sesión. |
+| `RoleName` | Define el rol del usuario dentro del sistema (`Resident`, `Doorman`). |
+
+
+**- Interfaces de dominio**
+
+| Interface | Responsabilidad | Métodos clave |
+| ----- | ----- | ----- |
+| `IUserAccountRepository` | Persistencia de cuentas de usuario. | `GetByEmailAsync(...)`, `GetByIdAsync(...)`, `AddAsync(...)`, `UpdateAsync(...)` |
+| `IUserSessionRepository` | Persistencia de sesiones y refresh tokens. | `GetByRefreshTokenAsync(...)`, `AddAsync(...)`, `UpdateAsync(...)`, `RevokeAllByUserAsync(...)` |
+| `IPasswordHasher` | Define la política de hashing y verificación de contraseñas. | `Hash(string plainPassword)`, `Verify(string plainPassword, string hash)` |
+| `ITokenIssuer` | Define la emisión y validación de tokens JWT. | `IssueAccessToken(UserAccount account)`, `Validate(string jwt)` |
+
+**- Eventos de dominio**
 
 | Evento | Disparador | Datos relevantes |
-| --- | --- | --- |
-| `UserRegisteredDomainEvent` | Registro exitoso de cuenta. | `UserId`, `Email`, `Role` |
-| `UserLoggedInDomainEvent` | Inicio de sesion exitoso. | `UserId`, `SessionId`, `OccurredAt` |
-| `PasswordResetRequestedDomainEvent` | Solicitud de recuperacion de contrasena. | `UserId`, `TicketId`, `ExpiresAt` |
-| `SessionRevokedDomainEvent` | Cierre/revocacion de sesion. | `UserId`, `SessionId`, `Reason` |
+| ----- | ----- | ----- |
+| `UserRegisteredDomainEvent` | Registro exitoso de una cuenta. | `UserId`, `Email`, `Role` |
+| `UserLoggedInDomainEvent` | Inicio de sesión exitoso. | `UserId`, `SessionId`, `OccurredAt` |
+| `PasswordResetRequestedDomainEvent` | Solicitud de recuperación de contraseña. | `UserId`, `TicketId`, `ExpiresAt` |
+| `SessionRevokedDomainEvent` | Cierre o revocación de sesión. | `UserId`, `SessionId`, `Reason` |
+
 
 #### 4.2.1.2. Interface Layer
 
-| Controlador | Endpoint principal | Metodo de aplicacion invocado |
-| --- | --- | --- |
-| `AuthController` | `POST /api/iam/register` | `RegisterUserCommandHandler.Handle(...)` |
-| `AuthController` | `POST /api/iam/login` | `LoginCommandHandler.Handle(...)` |
-| `AuthController` | `POST /api/iam/refresh` | `RefreshSessionCommandHandler.Handle(...)` |
-| `SessionController` | `POST /api/iam/logout` | `RevokeSessionCommandHandler.Handle(...)` |
-| `PasswordController` | `POST /api/iam/password/request-reset` | `RequestPasswordResetCommandHandler.Handle(...)` |
-| `PasswordController` | `POST /api/iam/password/confirm-reset` | `ConfirmPasswordResetCommandHandler.Handle(...)` |
+Esta capa expone los endpoints REST que permiten a los clientes (aplicación móvil del residente y dashboard web del portero) interactuar con las funcionalidades de autenticación.
+
+| Controlador | Endpoint | Handler invocado |
+| ----- | ----- | ----- |
+| `AuthController` | `POST /api/iam/register` | `RegisterUserCommandHandler` |
+| `AuthController` | `POST /api/iam/login` | `LoginCommandHandler` |
+| `AuthController` | `POST /api/iam/refresh` | `RefreshSessionCommandHandler` |
+| `SessionController` | `POST /api/iam/logout` | `RevokeSessionCommandHandler` |
+| `PasswordController` | `POST /api/iam/password/request-reset` | `RequestPasswordResetCommandHandler` |
+| `PasswordController` | `POST /api/iam/password/confirm-reset` | `ConfirmPasswordResetCommandHandler` |
 
 #### 4.2.1.3. Application Layer
 
-| Caso de uso | Responsabilidad | Metodo |
-| --- | --- | --- |
-| `RegisterUserCommandHandler` | Alta de cuenta validando unicidad de email y rol. | `Task<AuthResultDto> Handle(RegisterUserCommand command, CancellationToken ct)` |
-| `LoginCommandHandler` | Autenticacion y apertura de sesion. | `Task<AuthResultDto> Handle(LoginCommand command, CancellationToken ct)` |
-| `RefreshSessionCommandHandler` | Rotacion de refresh token y reemision de JWT. | `Task<AuthResultDto> Handle(RefreshSessionCommand command, CancellationToken ct)` |
-| `RevokeSessionCommandHandler` | Revocacion de sesion actual/todas las sesiones. | `Task Handle(RevokeSessionCommand command, CancellationToken ct)` |
-| `RequestPasswordResetCommandHandler` | Generacion de ticket de recuperacion. | `Task Handle(RequestPasswordResetCommand command, CancellationToken ct)` |
-| `ConfirmPasswordResetCommandHandler` | Cambio de clave con ticket vigente. | `Task Handle(ConfirmPasswordResetCommand command, CancellationToken ct)` |
+Esta capa orquesta los flujos de negocio relacionados con autenticación y gestión de cuentas, coordinando las entidades del dominio con los repositorios e interfaces de infraestructura.
+
+| Command Handler | Responsabilidad |
+| ----- | ----- |
+| `RegisterUserCommandHandler` | Valida unicidad de correo, crea la cuenta con rol asignado y emite el evento de registro. |
+| `LoginCommandHandler` | Verifica credenciales, abre una sesión activa y emite el JWT de acceso. |
+| `RefreshSessionCommandHandler` | Rota el refresh token y reemite un nuevo JWT sin requerir credenciales. |
+| `RevokeSessionCommandHandler` | Cierra la sesión activa del usuario o todas sus sesiones simultáneas. |
+| `RequestPasswordResetCommandHandler` | Genera un ticket de recuperación con tiempo de expiración y lo envía al correo registrado. |
+| `ConfirmPasswordResetCommandHandler` | Valida el ticket, actualiza la contraseña y lo marca como utilizado. |
+
 
 #### 4.2.1.4. Infrastructure Layer
 
-| Componente | Tecnologia | Metodo/Contrato |
-| --- | --- | --- |
-| `EfUserAccountRepository` | EF Core + SQL | Implementa `IUserAccountRepository` |
-| `EfUserSessionRepository` | EF Core + SQL | Implementa `IUserSessionRepository` |
-| `BcryptPasswordHasher` | BCrypt (EksBlowfish) | Implementa `IPasswordHasher` |
-| `JwtTokenIssuer` | JWT + HMAC/SHA | Implementa `ITokenIssuer` |
-| `OutboxEventPublisher` | Outbox + BackgroundService | `PublishPendingAsync(...)` |
+Esta capa implementa las interfaces definidas en el dominio y gestiona la conexión con la base de datos y servicios externos.
 
-#### 4.2.1.5. Bounded Context Software Architecture Component Level Diagrams
+| Componente | Tecnología | Contrato que implementa |
+| ----- | ----- | ----- |
+| `EfUserAccountRepository` | EF Core \+ SQL | `IUserAccountRepository` |
+| `EfUserSessionRepository` | EF Core \+ SQL | `IUserSessionRepository` |
+| `BcryptPasswordHasher` | BCrypt (EksBlowfish) | `IPasswordHasher` |
+| `JwtTokenIssuer` | JWT \+ HMAC/SHA-256 | `ITokenIssuer` |
+| `OutboxEventPublisher` | Outbox Pattern \+ Background Service | Publicación asíncrona de eventos de dominio |
 
-Flujo principal: `AuthController -> CommandHandler -> Aggregate (UserAccount/UserSession) -> Repository -> SQL`.
 
-#### 4.2.1.6. Bounded Context Software Architecture Container Level Diagrams
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-Contenedores involucrados: `IAM Service`, `IAM DB`, `NexBell API Core` y consumidores (`Resident Mobile App`, `Doorman Web Dashboard`).
+*Component Level Diagrams del Bounded Context IAM (Identity & Access Management)*
 
-##### 4.2.1.6.1. Bounded Context Domain Layer Class Diagrams
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983166/component_yrelzo.png" width="1000">
+</p> 
 
-Clases nucleares: `UserAccount`, `UserSession`, `PasswordResetTicket`, `EmailAddress`, `PasswordHash`, `RefreshTokenValue`.
+*Nota.* Elaboración propia
 
-##### 4.2.1.6.2. Bounded Context Database Design Diagram
+#### 4.2.5.6. Bounded Context Software Architecture Container Level Diagrams
 
-Tablas sugeridas: `user_accounts`, `user_roles`, `user_sessions`, `password_reset_tickets`, `outbox_events`.
+##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
----
+*Domain Layer Class Diagrams Bounded Context IAM (Identity & Access Management)*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983166/class_ue9jox.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+*Database Design Diagram del Bounded Context IAM (Identity & Access Management)*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983166/database_pxgnuq.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
 
 ### 4.2.2. Bounded Context: Security
 
+Este bounded context se encarga de la autorización de acciones críticas dentro del sistema y del control del dispositivo físico de entrada. Su responsabilidad es evaluar si un usuario autenticado tiene permiso para ejecutar una operación sensible, como aprobar el ingreso de un visitante, y traducir esa decisión en un comando físico enviado al dispositivo IoT de la puerta. No gestiona identidades ni sesiones, eso es responsabilidad de IAM. Security opera únicamente sobre la pregunta: ¿este usuario puede hacer esto ahora?
+
 #### 4.2.2.1. Domain Layer
 
-| Tipo | Elemento | Responsabilidad | Metodos clave |
-| --- | --- | --- | --- |
-| Entity | `AccessPolicy` | Define reglas de autorizacion por rol/permiso. | `GrantPermission(...)`, `RevokePermission(...)`, `CanExecute(...)` |
-| Entity | `DoorCommand` | Representa comando de apertura/cierre enviado a IoT. | `Request(...)`, `MarkDispatched(...)`, `MarkFailed(...)`, `MarkConfirmed(...)` |
-| Entity | `AuthorizationDecision` | Resultado de evaluacion de permisos. | `Allow(...)`, `Deny(...)` |
-| Value Object | `PermissionCode` | Identificador de permiso funcional. | `Create(string value)` |
-| Value Object | `CommandType` | Tipo de comando fisico (`Unlock`, `Lock`). | `Create(string value)` |
-| Value Object | `EntryPointId` | Identificador del punto de acceso fisico. | `Create(string value)` |
+**- Entities**
 
-**Interfaces de dominio**
+| Elemento | Propósito | Métodos clave |
+| ----- | ----- | ----- |
+| `AccessPolicy` | Define qué acciones puede ejecutar cada rol dentro del sistema. | `GrantPermission(...)`, `RevokePermission(...)`, `CanExecute(...)` |
+| `DoorCommand` | Representa un comando de apertura o cierre enviado al dispositivo IoT de la puerta. | `Request(...)`, `MarkDispatched(...)`, `MarkConfirmed(...)`, `MarkFailed(...)` |
 
-| Interface | Responsabilidad | Metodos clave |
-| --- | --- | --- |
-| `IAccessPolicyRepository` | Persistencia de reglas y permisos. | `Task<AccessPolicy?> GetByRoleAsync(...)`, `Task UpdateAsync(...)` |
-| `IDoorCommandRepository` | Persistencia de comandos de puerta. | `Task AddAsync(...)`, `Task<DoorCommand?> GetByIdAsync(...)`, `Task UpdateAsync(...)` |
-| `IIoTCommandGateway` | Envio seguro de comandos al dispositivo. | `Task<IoTCommandResult> SendAsync(DoorCommand command, CancellationToken ct)` |
+**- Value Objects**
 
-**Eventos de dominio**
+ Elemento | Propósito |
+| ----- | ----- |
+| `PermissionCode` | Identifica de forma única un permiso funcional dentro del sistema. |
+| `CommandType` | Tipo de comando físico que se enviará al dispositivo (`Unlock`, `Lock`). |
+| `EntryPointId` | Identifica el punto de acceso físico al que se dirige el comando. |
+
+**- Interfaces de dominio**
+
+| Interface | Responsabilidad | Métodos clave |
+| ----- | ----- | ----- |
+| `IAccessPolicyRepository` | Persistencia de las reglas de autorización por rol. | `GetByRoleAsync(...)`, `UpdateAsync(...)` |
+| `IDoorCommandRepository` | Persistencia del historial de comandos enviados al dispositivo. | `AddAsync(...)`, `GetByIdAsync(...)`, `UpdateAsync(...)` |
+| `IIoTCommandGateway` | Envío seguro de comandos al dispositivo IoT de la puerta. | `SendAsync(DoorCommand command, CancellationToken ct)` |
+
+**- Eventos de dominio**
 
 | Evento | Disparador |
-| --- | --- |
-| `AccessAuthorizedDomainEvent` | Permiso validado para accion solicitada. |
-| `AccessDeniedDomainEvent` | Permiso rechazado por politica. |
-| `DoorCommandDispatchedDomainEvent` | Comando enviado al IoT. |
-| `DoorCommandFailedDomainEvent` | Error de entrega/ejecucion del comando. |
+| ----- | ----- |
+| `AccessAuthorizedDomainEvent` | El sistema validó que el usuario tiene permiso para ejecutar la acción solicitada. |
+| `AccessDeniedDomainEvent` | El sistema rechazó la acción por no cumplir con las políticas de autorización. |
+| `DoorCommandDispatchedDomainEvent` | El comando físico fue enviado exitosamente al dispositivo IoT. |
+| `DoorCommandFailedDomainEvent` | El comando físico no pudo ser entregado o ejecutado por el dispositivo. |
 
 #### 4.2.2.2. Interface Layer
 
-| Controlador | Endpoint principal | Metodo de aplicacion invocado |
-| --- | --- | --- |
-| `AuthorizationController` | `POST /api/security/authorize` | `EvaluateAccessCommandHandler.Handle(...)` |
-| `DoorControlController` | `POST /api/security/door/unlock` | `DispatchDoorCommandHandler.Handle(...)` |
-| `DoorControlController` | `POST /api/security/door/lock` | `DispatchDoorCommandHandler.Handle(...)` |
-| `PoliciesController` | `PUT /api/security/policies/{role}` | `UpdatePolicyCommandHandler.Handle(...)` |
+Esta capa expone los endpoints que permiten evaluar permisos y enviar comandos físicos al dispositivo de entrada, consumidos principalmente por el dashboard web del portero.
+
+| Controlador | Endpoint | Handler invocado |
+| ----- | ----- | ----- |
+| `AuthorizationController` | `POST /api/security/authorize` | `EvaluateAccessCommandHandler` |
+| `DoorControlController` | `POST /api/security/door/unlock` | `DispatchDoorCommandHandler` |
+| `DoorControlController` | `POST /api/security/door/lock` | `DispatchDoorCommandHandler` |
 
 #### 4.2.2.3. Application Layer
 
-| Caso de uso | Responsabilidad | Metodo |
-| --- | --- | --- |
-| `EvaluateAccessCommandHandler` | Evalua permisos por rol y accion. | `Task<AuthorizationResultDto> Handle(EvaluateAccessCommand command, CancellationToken ct)` |
-| `DispatchDoorCommandHandler` | Autoriza y despacha comando fisico a IoT. | `Task<DoorCommandResultDto> Handle(DispatchDoorCommand command, CancellationToken ct)` |
-| `UpdatePolicyCommandHandler` | Actualiza matriz de permisos. | `Task Handle(UpdatePolicyCommand command, CancellationToken ct)` |
+Esta capa orquesta la evaluación de permisos y el despacho de comandos físicos, coordinando las políticas de acceso con el gateway del dispositivo IoT.
+
+| Command Handler | Responsabilidad |
+| ----- | ----- |
+| `EvaluateAccessCommandHandler` | Consulta la política del rol del usuario y determina si la acción solicitada está permitida. Emite `AccessAuthorizedDomainEvent` o `AccessDeniedDomainEvent` según el resultado. |
+| `DispatchDoorCommandHandler` | Crea el comando físico correspondiente, lo envía al dispositivo IoT a través del gateway y registra el resultado. |
 
 #### 4.2.2.4. Infrastructure Layer
 
-| Componente | Tecnologia | Metodo/Contrato |
-| --- | --- | --- |
-| `EfAccessPolicyRepository` | EF Core + SQL | Implementa `IAccessPolicyRepository` |
-| `EfDoorCommandRepository` | EF Core + SQL | Implementa `IDoorCommandRepository` |
-| `IoTHttpCommandGateway` | HTTP + firma HMAC | Implementa `IIoTCommandGateway` |
+| Componente | Tecnología | Contrato que implementa |
+| ----- | ----- | ----- |
+| `EfAccessPolicyRepository` | EF Core \+ SQL | `IAccessPolicyRepository` |
+| `EfDoorCommandRepository` | EF Core \+ SQL | `IDoorCommandRepository` |
+| `IoTHttpCommandGateway` | HTTP \+ firma HMAC | `IIoTCommandGateway` |
 
-#### 4.2.2.5. Bounded Context Software Architecture Component Level Diagrams
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-Flujo principal: `DoorControlController -> DispatchDoorCommandHandler -> AccessPolicy + DoorCommand -> IoTHttpCommandGateway`.
+*Component Level Diagrams del Bounded Context Security*
 
-#### 4.2.2.6. Bounded Context Software Architecture Container Level Diagrams
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983129/component_fblnm4.png" width="1000">
+</p> 
 
-Contenedores involucrados: `Security Service`, `Security DB`, `IoT Entry Point Device`, `NexBell API Core`.
+*Nota.* Elaboración propia
 
-##### 4.2.2.6.1. Bounded Context Domain Layer Class Diagrams
+#### 4.2.5.6. Bounded Context Software Architecture Container Level Diagrams
 
-Clases nucleares: `AccessPolicy`, `DoorCommand`, `AuthorizationDecision`, `PermissionCode`, `CommandType`, `EntryPointId`.
+##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-##### 4.2.2.6.2. Bounded Context Database Design Diagram
+*Domain Layer Class Diagrams Bounded Context Security*
 
-Tablas sugeridas: `access_policies`, `role_permissions`, `door_commands`, `door_command_attempts`.
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983128/class_k37pkt.png" width="1000">
+</p> 
 
----
+*Nota.* Elaboración propia
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+*Database Design Diagram del Bounded Context Security*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983129/database_tva66c.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
 
 ### 4.2.3. Bounded Context: Directory
 
+Este bounded context gestiona la información estructural del edificio: los departamentos que lo componen y los residentes asociados a cada uno. Su responsabilidad es servir como fuente de verdad para identificar a qué residente corresponde una visita y hacia dónde deben dirigirse las notificaciones. Directory no procesa solicitudes de acceso ni toma decisiones, únicamente provee y mantiene actualizada la información del directorio del edificio para que otros bounded contexts puedan consultarla.
+
 #### 4.2.3.1. Domain Layer
 
-| Tipo | Elemento | Responsabilidad | Metodos clave |
-| --- | --- | --- | --- |
-| Entity | `Apartment` | Unidad habitacional y estado de ocupacion. | `Create(...)`, `AssignResident(...)`, `UnassignResident(...)`, `UpdateLabel(...)` |
-| Entity | `ResidentDirectoryProfile` | Ficha de residente para direccionamiento de visitas/notificaciones. | `Create(...)`, `UpdateContact(...)`, `LinkApartment(...)` |
-| Entity | `BuildingDirectory` | Agregado raiz para topologia del edificio. | `AddApartment(...)`, `RemoveApartment(...)` |
-| Value Object | `ApartmentCode` | Identificador legible de departamento. | `Create(string value)` |
-| Value Object | `ResidentDocument` | Documento de identidad de residente. | `Create(string value)` |
-| Value Object | `ContactChannel` | Canal de contacto (telefono/email). | `Create(...)` |
+Esta capa representa la estructura del edificio y las reglas de negocio relacionadas con la asignación de residentes a departamentos. El agregado raíz es BuildingDirectory, que controla la consistencia de toda la topología del edificio.
 
-**Interfaces de dominio**
+**- Entities**
 
-| Interface | Responsabilidad | Metodos clave |
-| --- | --- | --- |
-| `IApartmentRepository` | Persistencia de departamentos. | `Task<Apartment?> GetByCodeAsync(...)`, `Task AddAsync(...)`, `Task UpdateAsync(...)` |
-| `IResidentDirectoryRepository` | Persistencia de perfiles de residentes. | `Task<ResidentDirectoryProfile?> GetByIdAsync(...)`, `Task<ResidentDirectoryProfile?> GetByApartmentAsync(...)`, `Task UpdateAsync(...)` |
+| Elemento | Propósito | Métodos clave |
+| ----- | ----- | ----- |
+| `BuildingDirectory` | Agregado raíz. Representa la topología completa del edificio y controla la integridad de sus departamentos. | `AddApartment(...)`, `RemoveApartment(...)` |
+| `Apartment` | Representa una unidad habitacional del edificio y su estado de ocupación. | `Create(...)`, `AssignResident(...)`, `UnassignResident(...)`, `UpdateLabel(...)` |
+| `ResidentDirectoryProfile` | Ficha del residente dentro del directorio, usada para direccionar visitas y notificaciones correctamente. | `Create(...)`, `UpdateContact(...)`, `LinkApartment(...)` |
 
-**Eventos de dominio**
+**- Value Objects**
+
+| Elemento | Propósito |
+| ----- | ----- |
+| `ApartmentCode` | Identificador legible y único de un departamento dentro del edificio (por ejemplo, "101", "B-3"). |
+| `ResidentDocument` | Documento de identidad del residente, usado para validación y búsqueda. |
+| `ContactChannel` | Encapsula el canal de contacto del residente (correo electrónico o teléfono) usado para notificaciones. |
+
+**- Interfaces de dominio**
+
+| Interface | Responsabilidad | Métodos clave |
+| ----- | ----- | ----- |
+| `IApartmentRepository` | Persistencia y consulta de departamentos del edificio. | `GetByCodeAsync(...)`, `AddAsync(...)`, `UpdateAsync(...)` |
+| `IResidentDirectoryRepository` | Persistencia y consulta de perfiles de residentes en el directorio. | `GetByIdAsync(...)`, `GetByApartmentAsync(...)`, `UpdateAsync(...)` |
+
+**- Eventos de dominio**
 
 | Evento | Disparador |
-| --- | --- |
-| `ApartmentCreatedDomainEvent` | Alta de nuevo departamento. |
-| `ResidentAssignedToApartmentDomainEvent` | Vinculo residente-departamento creado/actualizado. |
-| `ResidentContactUpdatedDomainEvent` | Cambios de contacto del residente. |
+| ----- | ----- |
+| `ApartmentCreatedDomainEvent` | Se registra un nuevo departamento en el edificio. |
+| `ResidentAssignedToApartmentDomainEvent` | Se vincula un residente a un departamento por primera vez o se actualiza el vínculo. |
+| `ResidentContactUpdatedDomainEvent` | El residente actualiza su información de contacto en el directorio. |
 
 #### 4.2.3.2. Interface Layer
 
-| Controlador | Endpoint principal | Metodo de aplicacion invocado |
-| --- | --- | --- |
-| `ApartmentsController` | `POST /api/directory/apartments` | `CreateApartmentCommandHandler.Handle(...)` |
-| `ApartmentsController` | `PUT /api/directory/apartments/{code}/resident` | `AssignResidentCommandHandler.Handle(...)` |
-| `ResidentsController` | `PUT /api/directory/residents/{id}/contact` | `UpdateResidentContactCommandHandler.Handle(...)` |
-| `DirectoryQueryController` | `GET /api/directory/apartments/{code}/resident` | `GetResidentByApartmentQueryHandler.Handle(...)` |
+Esta capa expone los endpoints que permiten administrar la estructura del edificio y consultar la información del directorio. Es consumida principalmente por el dashboard del portero y por otros bounded contexts que necesitan resolver a qué residente corresponde un departamento.
+
+| Controlador | Endpoint | Handler invocado |
+| ----- | ----- | ----- |
+| `ApartmentsController` | `POST /api/directory/apartments` | `CreateApartmentCommandHandler` |
+| `ApartmentsController` | `PUT /api/directory/apartments/{code}/resident` | `AssignResidentCommandHandler` |
+| `ResidentsController` | `PUT /api/directory/residents/{id}/contact` | `UpdateResidentContactCommandHandler` |
+| `DirectoryQueryController` | `GET /api/directory/apartments/{code}/resident` | `GetResidentByApartmentQueryHandler` |
 
 #### 4.2.3.3. Application Layer
 
-| Caso de uso | Responsabilidad | Metodo |
-| --- | --- | --- |
-| `CreateApartmentCommandHandler` | Registrar departamento en topologia. | `Task<ApartmentDto> Handle(CreateApartmentCommand command, CancellationToken ct)` |
-| `AssignResidentCommandHandler` | Asignar residente a departamento. | `Task Handle(AssignResidentCommand command, CancellationToken ct)` |
-| `UpdateResidentContactCommandHandler` | Actualizar datos de contacto. | `Task Handle(UpdateResidentContactCommand command, CancellationToken ct)` |
-| `GetResidentByApartmentQueryHandler` | Resolver residente destino de una visita. | `Task<ResidentDirectoryDto?> Handle(GetResidentByApartmentQuery query, CancellationToken ct)` |
+Esta capa orquesta los flujos de gestión del directorio del edificio. Incluye tanto comandos que modifican el estado del directorio como consultas que otros bounded contexts utilizan para resolver el destino de una visita o notificación.
+
+| Handler | Responsabilidad |
+| ----- | ----- |
+| `CreateApartmentCommandHandler` | Registra un nuevo departamento en la topología del edificio y emite `ApartmentCreatedDomainEvent`. |
+| `AssignResidentCommandHandler` | Vincula un residente a un departamento existente y emite `ResidentAssignedToApartmentDomainEvent`. |
+| `UpdateResidentContactCommandHandler` | Actualiza los datos de contacto del residente en el directorio y emite `ResidentContactUpdatedDomainEvent`. |
+| `GetResidentByApartmentQueryHandler` | Resuelve qué residente está asociado a un departamento dado, para que Intercom & Notifications pueda dirigir correctamente la notificación de llegada. |
 
 #### 4.2.3.4. Infrastructure Layer
 
-| Componente | Tecnologia | Metodo/Contrato |
-| --- | --- | --- |
-| `EfApartmentRepository` | EF Core + SQL | Implementa `IApartmentRepository` |
-| `EfResidentDirectoryRepository` | EF Core + SQL | Implementa `IResidentDirectoryRepository` |
-| `DirectoryReadModelProjection` | SQL Views | Proyecciones para consultas rapidas por departamento |
+Esta capa implementa la persistencia del directorio mediante EF Core y expone proyecciones optimizadas para consultas frecuentes por código de departamento.
 
-#### 4.2.3.5. Bounded Context Software Architecture Component Level Diagrams
+| Componente | Tecnología | Contrato que implementa |
+| ----- | ----- | ----- |
+| `EfApartmentRepository` | EF Core \+ SQL | `IApartmentRepository` |
+| `EfResidentDirectoryRepository` | EF Core \+ SQL | `IResidentDirectoryRepository` |
+| `DirectoryReadModelProjection` | SQL Views | Proyecciones optimizadas para consultas rápidas por departamento |
 
-Flujo principal: `Controller -> Command/Query Handler -> Aggregate -> Repository -> SQL`.
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-#### 4.2.3.6. Bounded Context Software Architecture Container Level Diagrams
+*Component Level Diagrams del Bounded Context Directory*
 
-Contenedores involucrados: `Directory Service`, `Directory DB`, `NexBell API Core`.
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983075/comoponene_prfmlo.png" width="1000">
+</p> 
 
-##### 4.2.3.6.1. Bounded Context Domain Layer Class Diagrams
+*Nota.* Elaboración propia
 
-Clases nucleares: `Apartment`, `ResidentDirectoryProfile`, `BuildingDirectory`, `ApartmentCode`, `ResidentDocument`, `ContactChannel`.
+#### 4.2.5.6. Bounded Context Software Architecture Container Level Diagrams
 
-##### 4.2.3.6.2. Bounded Context Database Design Diagram
+##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-Tablas sugeridas: `apartments`, `resident_profiles`, `apartment_resident_assignments`.
+*Domain Layer Class Diagrams Bounded Context Directory*
 
----
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983075/class_lhspv0.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+*Database Design Diagram del Bounded Context Directory*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983076/database_fhi3ub.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
 
 ### 4.2.4. Bounded Context: Intercom & Notifications
 
+Este bounded context representa el núcleo operativo del sistema. Se encarga de gestionar todo el flujo que ocurre desde que un visitante llega al edificio hasta que el residente toma una decisión sobre su acceso. Sus responsabilidades incluyen recibir el evento de llegada del dispositivo IoT, procesar y almacenar la evidencia capturada (imagen y audio), mantener la cola de atención del portero en tiempo real, notificar al residente correspondiente y registrar su respuesta. Intercom y Notifications se mantienen en un mismo bounded context porque forman parte de un flujo continuo e inseparable: la notificación siempre es consecuencia directa de la captura, y la decisión del residente siempre responde a esa notificación.
+
 #### 4.2.4.1. Domain Layer
 
-| Tipo | Elemento | Responsabilidad | Metodos clave |
-| --- | --- | --- | --- |
-| Entity | `VisitRequest` | Ciclo de vida de solicitud cuando el visitante llega al punto de acceso. | `Open(...)`, `AttachEvidence(...)`, `MarkNotified(...)`, `RegisterDecision(...)`, `Close(...)` |
-| Entity | `VisitorEvidence` | Evidencia multimedia asociada a una solicitud. | `Create(...)`, `ValidateIntegrity(...)` |
-| Entity | `NotificationDispatch` | Trazabilidad de entrega de notificacion push. | `Schedule(...)`, `MarkSent(...)`, `MarkDelivered(...)`, `MarkFailed(...)` |
-| Entity | `IntercomQueueItem` | Estado de atencion en cola para conserje. | `Enqueue(...)`, `AssignDoorman(...)`, `Dequeue(...)` |
-| Value Object | `VisitRequestId` | Identificador de solicitud de visita. | `Create(Guid value)` |
-| Value Object | `EvidenceUri` | Referencia a foto/audio almacenado. | `Create(string uri)` |
-| Value Object | `DoorStatus` | Estado fisico del punto de acceso. | `Create(string value)` |
+Esta capa modela el ciclo de vida completo de una solicitud de visita, desde su creación hasta el registro de la decisión final. El agregado raíz es VisitRequest, que coordina la evidencia capturada, la notificación enviada y la decisión del residente.
 
-**Interfaces de dominio**
+**- Entities**
 
-| Interface | Responsabilidad | Metodos clave |
-| --- | --- | --- |
-| `IVisitRequestRepository` | Persistencia de solicitudes/cola. | `Task AddAsync(...)`, `Task<VisitRequest?> GetByIdAsync(...)`, `Task UpdateAsync(...)`, `Task<IReadOnlyList<VisitRequest>> GetPendingAsync(...)` |
-| `INotificationGateway` | Envio de push notifications. | `Task<NotificationResult> SendAsync(NotificationDispatch notification, CancellationToken ct)` |
-| `IRealtimeQueueGateway` | Publicacion en tiempo real para dashboard. | `Task PublishQueueUpdateAsync(VisitRequest request, CancellationToken ct)` |
-| `IEvidenceStorage` | Almacenamiento de multimedia. | `Task<EvidenceUri> SaveAsync(...)` |
+| Elemento | Propósito | Métodos clave |
+| ----- | ----- | ----- |
+| `VisitRequest` | Agregado raíz. Representa el ciclo de vida completo de la llegada de un visitante: desde la detección IoT hasta la decisión de acceso. | `Open(...)`, `AttachEvidence(...)`, `MarkNotified(...)`, `RegisterDecision(...)`, `Close(...)` |
+| `VisitorEvidence` | Representa la evidencia multimedia (foto y audio) capturada durante el evento de llegada del visitante. | `Create(...)`, `ValidateIntegrity(...)` |
+| `NotificationDispatch` | Registra el intento de envío de notificación al residente, incluyendo su estado de entrega. | `Schedule(...)`, `MarkSent(...)`, `MarkDelivered(...)`, `MarkFailed(...)` |
+| `IntercomQueueItem` | Representa la posición de una solicitud en la cola de atención del portero, permitiendo gestionar el orden de atención. | `Enqueue(...)`, `AssignDoorman(...)`, `Dequeue(...)` |
 
-**Eventos de dominio**
+**- Value Objects**
+
+| Elemento | Propósito |
+| ----- | ----- |
+| `VisitRequestId` | Identificador único de una solicitud de visita. |
+| `EvidenceUri` | Referencia a la ubicación del archivo de foto o audio almacenado. |
+| `DoorStatus` | Representa el estado físico del punto de acceso en el momento del evento (`Open`, `Closed`). |
+
+**- Interfaces de dominio**
+
+ Interface | Responsabilidad | Métodos clave |
+| ----- | ----- | ----- |
+| `IVisitRequestRepository` | Persistencia y consulta de solicitudes de visita. | `AddAsync(...)`, `GetByIdAsync(...)`, `UpdateAsync(...)`, `GetPendingAsync(...)` |
+| `INotificationGateway` | Envío de notificaciones push al residente. | `SendAsync(NotificationDispatch notification, CancellationToken ct)` |
+| `IRealtimeQueueGateway` | Publicación en tiempo real de actualizaciones de cola para el dashboard del portero. | `PublishQueueUpdateAsync(VisitRequest request, CancellationToken ct)` |
+| `IEvidenceStorage` | Almacenamiento de archivos multimedia de evidencia. | `SaveAsync(...)` |
+
+**- Eventos de dominio**
 
 | Evento | Disparador |
-| --- | --- |
-| `VisitRequestReceivedDomainEvent` | Llegada de visitante detectada por IoT. |
-| `VisitorEvidenceCapturedDomainEvent` | Evidencia recibida y validada. |
-| `DoormanQueueUpdatedDomainEvent` | Cola operacional actualizada para conserje. |
-| `ResidentNotificationSentDomainEvent` | Notificacion push emitida al residente. |
-| `AccessDecisionReceivedDomainEvent` | Residente responde aprobacion/rechazo. |
+| ----- | ----- |
+| `VisitRequestReceivedDomainEvent` | El dispositivo IoT detecta la llegada de un visitante y crea la solicitud. |
+| `VisitorEvidenceCapturedDomainEvent` | La evidencia multimedia fue recibida, validada y adjuntada a la solicitud. |
+| `DoormanQueueUpdatedDomainEvent` | La cola operacional del portero fue actualizada con una nueva solicitud o cambio de estado. |
+| `ResidentNotificationSentDomainEvent` | La notificación push fue emitida exitosamente al residente correspondiente. |
+| `AccessDecisionReceivedDomainEvent` | El residente registró su decisión de aprobación o rechazo desde la aplicación móvil. |
 
 #### 4.2.4.2. Interface Layer
 
-| Controlador / Hub | Endpoint principal | Metodo de aplicacion invocado |
-| --- | --- | --- |
-| `IoTIngressController` | `POST /api/intercom/visit-requests` | `CreateVisitRequestCommandHandler.Handle(...)` |
-| `IoTIngressController` | `POST /api/intercom/visit-requests/{id}/evidence` | `AttachVisitorEvidenceCommandHandler.Handle(...)` |
-| `ResidentDecisionController` | `POST /api/intercom/visit-requests/{id}/decision` | `RegisterAccessDecisionCommandHandler.Handle(...)` |
-| `IntercomQueueController` | `GET /api/intercom/queue/pending` | `GetPendingQueueQueryHandler.Handle(...)` |
+Esta capa expone los endpoints consumidos por el dispositivo IoT, la aplicación móvil del residente y el dashboard web del portero. Incluye además un hub de SignalR para la comunicación en tiempo real con el dashboard.
+
+| Controlador / Hub | Endpoint | Handler invocado |
+| ----- | ----- | ----- |
+| `IoTIngressController` | `POST /api/intercom/visit-requests` | `CreateVisitRequestCommandHandler` |
+| `IoTIngressController` | `POST /api/intercom/visit-requests/{id}/evidence` | `AttachVisitorEvidenceCommandHandler` |
+| `ResidentDecisionController` | `POST /api/intercom/visit-requests/{id}/decision` | `RegisterAccessDecisionCommandHandler` |
+| `IntercomQueueController` | `GET /api/intercom/queue/pending` | `GetPendingQueueQueryHandler` |
 | `DoormanHub` (SignalR) | Canal en tiempo real | `PublishQueueUpdateAsync(...)` |
 
 #### 4.2.4.3. Application Layer
 
-| Caso de uso | Responsabilidad | Metodo |
-| --- | --- | --- |
-| `CreateVisitRequestCommandHandler` | Crear solicitud desde evento IoT. | `Task<VisitRequestDto> Handle(CreateVisitRequestCommand command, CancellationToken ct)` |
-| `AttachVisitorEvidenceCommandHandler` | Adjuntar foto/audio a solicitud. | `Task Handle(AttachVisitorEvidenceCommand command, CancellationToken ct)` |
-| `NotifyResidentCommandHandler` | Enviar push al residente destino. | `Task Handle(NotifyResidentCommand command, CancellationToken ct)` |
-| `RegisterAccessDecisionCommandHandler` | Registrar aprobacion/rechazo del residente. | `Task Handle(RegisterAccessDecisionCommand command, CancellationToken ct)` |
-| `GetPendingQueueQueryHandler` | Consultar cola pendiente para dashboard. | `Task<IReadOnlyList<QueueItemDto>> Handle(GetPendingQueueQuery query, CancellationToken ct)` |
+Esta capa orquesta el flujo principal del sistema: desde la recepción del evento IoT hasta el registro de la decisión del residente. Coordina la evidencia, las notificaciones y la cola del portero manteniendo la consistencia del agregado VisitRequest.
+
+| Handler | Responsabilidad |
+| ----- | ----- |
+| `CreateVisitRequestCommandHandler` | Recibe el evento del dispositivo IoT, crea la solicitud de visita en estado pendiente y la incorpora a la cola del portero. Emite `VisitRequestReceivedDomainEvent`. |
+| `AttachVisitorEvidenceCommandHandler` | Almacena la foto y el audio recibidos, los valida y los adjunta a la solicitud correspondiente. Emite `VisitorEvidenceCapturedDomainEvent`. |
+| `NotifyResidentCommandHandler` | Consulta el directorio para identificar al residente del departamento destino y envía la notificación push con los datos del visitante. Emite `ResidentNotificationSentDomainEvent`. |
+| `RegisterAccessDecisionCommandHandler` | Registra la decisión del residente (aprobación o rechazo) sobre la solicitud de visita y actualiza su estado. Emite `AccessDecisionReceivedDomainEvent`. |
+| `GetPendingQueueQueryHandler` | Retorna la lista actualizada de solicitudes pendientes en la cola del portero, ordenadas cronológicamente. |
 
 #### 4.2.4.4. Infrastructure Layer
 
-| Componente | Tecnologia | Metodo/Contrato |
-| --- | --- | --- |
-| `EfVisitRequestRepository` | EF Core + SQL | Implementa `IVisitRequestRepository` |
-| `SignalRRealtimeQueueGateway` | SignalR | Implementa `IRealtimeQueueGateway` |
-| `FcmApnsNotificationGateway` | FCM/APNs SDK | Implementa `INotificationGateway` |
-| `BlobEvidenceStorage` | Blob/S3 compatible | Implementa `IEvidenceStorage` |
+Esta capa implementa las interfaces del dominio conectando con la base de datos, el servicio de almacenamiento de archivos, el sistema de notificaciones push y el hub de tiempo real.
 
-#### 4.2.4.5. Bounded Context Software Architecture Component Level Diagrams
-
-Flujo principal: `IoTIngressController -> CommandHandlers -> VisitRequest Aggregate -> NotificationGateway/SignalR -> Repositories`.
-
-#### 4.2.4.6. Bounded Context Software Architecture Container Level Diagrams
-
-Contenedores involucrados: `Intercom & Notifications Service`, `Intercom DB`, `Push Service (FCM/APNs)`, `IoT Entry Point Device`, `Doorman Web Dashboard`, `Resident Mobile App`.
-
-##### 4.2.4.6.1. Bounded Context Domain Layer Class Diagrams
-
-Clases nucleares: `VisitRequest`, `VisitorEvidence`, `NotificationDispatch`, `IntercomQueueItem`, `VisitRequestId`, `EvidenceUri`, `DoorStatus`.
-
-##### 4.2.4.6.2. Bounded Context Database Design Diagram
-
-Tablas sugeridas: `visit_requests`, `visitor_evidences`, `intercom_queue`, `notification_dispatches`.
-
----
-
-### 4.2.5. Bounded Context: Audit
-
-#### 4.2.5.1. Domain Layer
-
-| Tipo | Elemento | Responsabilidad | Metodos clave |
-| --- | --- | --- | --- |
-| Entity | `AccessRecord` | Registro inmutable del resultado de acceso. | `Create(...)`, `Seal()` |
-| Entity | `AccessTimelineEntry` | Evento puntual asociado al record (created, notified, approved, rejected, opened). | `Append(...)` |
-| Value Object | `AccessDecision` | Decision de acceso (`Approved`, `Rejected`). | `Create(string value)` |
-| Value Object | `AuditTimestamp` | Marca temporal normalizada UTC. | `NowUtc()` |
-| Value Object | `CorrelationId` | Correlacion inter-contexto de transacciones. | `Create(string value)` |
-
-**Interfaces de dominio**
-
-| Interface | Responsabilidad | Metodos clave |
-| --- | --- | --- |
-| `IAccessRecordRepository` | Escritura/lectura de registros inmutables. | `Task AddAsync(...)`, `Task<AccessRecord?> GetByIdAsync(...)`, `Task<IReadOnlyList<AccessRecord>> GetByResidentAsync(...)` |
-| `IAuditQueryRepository` | Consultas optimizadas para reportes. | `Task<PagedResult<AccessRecordDto>> SearchAsync(...)`, `Task<IReadOnlyList<AccessRecordDto>> GetByDateRangeAsync(...)` |
-
-**Eventos de dominio**
-
-| Evento | Disparador |
-| --- | --- |
-| `AccessRecordCreatedDomainEvent` | Se registra formalmente una decision de acceso. |
-| `AccessRecordSealedDomainEvent` | Registro cerrado e inmutable. |
-
-#### 4.2.5.2. Interface Layer
-
-| Controlador | Endpoint principal | Metodo de aplicacion invocado |
-| --- | --- | --- |
-| `AuditController` | `POST /api/audit/access-records` | `RegisterAccessRecordCommandHandler.Handle(...)` |
-| `AuditController` | `GET /api/audit/access-records/{id}` | `GetAccessRecordByIdQueryHandler.Handle(...)` |
-| `AuditQueryController` | `GET /api/audit/access-records` | `SearchAccessRecordsQueryHandler.Handle(...)` |
-| `AuditQueryController` | `GET /api/audit/access-records/export` | `ExportAuditReportQueryHandler.Handle(...)` |
-
-#### 4.2.5.3. Application Layer
-
-| Caso de uso | Responsabilidad | Metodo |
-| --- | --- | --- |
-| `RegisterAccessRecordCommandHandler` | Persistir record inmutable desde eventos de negocio. | `Task<AccessRecordDto> Handle(RegisterAccessRecordCommand command, CancellationToken ct)` |
-| `GetAccessRecordByIdQueryHandler` | Obtener detalle de un registro. | `Task<AccessRecordDto?> Handle(GetAccessRecordByIdQuery query, CancellationToken ct)` |
-| `SearchAccessRecordsQueryHandler` | Filtrar historial por estado/fecha/departamento. | `Task<PagedResult<AccessRecordDto>> Handle(SearchAccessRecordsQuery query, CancellationToken ct)` |
-| `ExportAuditReportQueryHandler` | Exportar reporte para compliance. | `Task<AuditReportFileDto> Handle(ExportAuditReportQuery query, CancellationToken ct)` |
-
-#### 4.2.5.4. Infrastructure Layer
-
-| Componente | Tecnologia | Metodo/Contrato |
-| --- | --- | --- |
-| `EfAccessRecordRepository` | EF Core + SQL | Implementa `IAccessRecordRepository` |
-| `SqlAuditQueryRepository` | SQL + proyecciones | Implementa `IAuditQueryRepository` |
-| `CsvAuditExporter` | CSV/Excel | `Task<AuditReportFileDto> ExportAsync(...)` |
+| Componente | Tecnología | Contrato que implementa |
+| ----- | ----- | ----- |
+| `EfVisitRequestRepository` | EF Core \+ SQL | `IVisitRequestRepository` |
+| `BlobEvidenceStorage` | Blob Storage / S3 compatible | `IEvidenceStorage` |
+| `FcmApnsNotificationGateway` | FCM / APNs SDK | `INotificationGateway` |
+| `SignalRRealtimeQueueGateway` | SignalR | `IRealtimeQueueGateway` |
 
 #### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-Flujo principal: `AuditController -> Command/Query Handler -> AccessRecord Aggregate -> Repositories -> Report Exporter`.
+*Component Level Diagrams del Bounded Context Intercom & Notifications*
 
-#### 4.2.5.6. Bounded Context Software Architecture Container Level Diagrams
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983010/componen_iiplhh.png" width="1000">
+</p> 
 
-Contenedores involucrados: `Audit Service`, `Audit DB`, `NexBell API Core`, consumidores (`Doorman Web Dashboard`, `Resident Mobile App`).
+*Nota.* Elaboración propia
+
+#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
 
 ##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-Clases nucleares: `AccessRecord`, `AccessTimelineEntry`, `AccessDecision`, `AuditTimestamp`, `CorrelationId`.
+*Domain Layer Class Diagrams Bounded Context Intercom & Notifications*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983010/class_wmhwgv.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
 
 ##### 4.2.5.6.2. Bounded Context Database Design Diagram
 
-Tablas sugeridas: `access_records`, `access_timeline_entries`, `audit_exports`.
+*Database Design Diagram del Bounded Context Intercom & Notifications*
 
----
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983010/database_vygufa.png" width="1000">
+</p> 
 
-### 4.2.6. Contratos de integracion entre Bounded Contexts
+*Nota.* Elaboración propia
 
-| Origen | Destino | Contrato/Operacion | Payload principal |
-| --- | --- | --- | --- |
-| `NexBell API Core` | `IAM Service` | Validacion de sesion/JWT | `userId`, `roles`, `sessionId` |
-| `NexBell API Core` | `Directory Service` | Resolucion `Apartment -> Resident` | `apartmentCode`, `residentId`, `contactChannel` |
-| `NexBell API Core` | `Intercom & Notifications Service` | Alta/consulta de `Visit Request` | `visitRequestId`, `visitorEvidence`, `status` |
-| `NexBell API Core` | `Security Service` | Autorizacion y comando de puerta | `entryPointId`, `commandType`, `actorRole` |
-| `NexBell API Core` | `Audit Service` | Registro inmutable de acceso | `correlationId`, `decision`, `timestamps`, `evidenceRef` |
+### 4.2.5. Bounded Context: Audit
 
-Esta definicion tactica permite mantener alta cohesion dentro de cada Bounded Context y bajo acoplamiento entre contextos, facilitando evolucion, pruebas y escalabilidad del sistema NexBell.
+Este bounded context se encarga de registrar de forma persistente e inmutable todos los eventos relevantes relacionados con el acceso de visitantes al edificio. Su responsabilidad es mantener un historial confiable que permita la trazabilidad completa de cada decisión tomada dentro del sistema, incluyendo aprobaciones, rechazos y la evidencia asociada a cada evento. Audit no toma decisiones ni interactúa con el dispositivo IoT directamente; únicamente escucha los eventos emitidos por otros bounded contexts y los persiste de forma ordenada y consultable. Es el contexto que da soporte a las revisiones posteriores y fortalece la seguridad del edificio mediante un control histórico de accesos.
+
+#### 4.2.5.1. Domain Layer
+
+Esta capa modela el registro inmutable de cada evento de acceso. El agregado raíz es AccessRecord, que agrupa todos los eventos puntuales ocurridos durante el ciclo de vida de una visita y una vez cerrado no puede ser modificado.
+
+**- Entities**
+
+| Elemento | Propósito | Métodos clave |
+| ----- | ----- | ----- |
+| `AccessRecord` | Agregado raíz. Representa el registro inmutable y completo del resultado de una solicitud de acceso, incluyendo la decisión tomada y la evidencia asociada. | `Create(...)`, `Seal()` |
+| `AccessTimelineEntry` | Representa un evento puntual dentro del historial de una solicitud de acceso (llegada, notificación enviada, decisión registrada, puerta abierta). | `Append(...)` |
+
+**- Value Objects**
+
+| Elemento | Propósito |
+| ----- | ----- |
+| `AccessDecision` | Encapsula la decisión final sobre el acceso del visitante (`Approved`, `Rejected`). |
+| `AuditTimestamp` | Marca temporal normalizada en UTC, usada para garantizar consistencia en el orden cronológico de los eventos. |
+| `CorrelationId` | Identificador que permite correlacionar un registro de Audit con la solicitud original en Intercom & Notifications. |
+
+**- Interfaces de dominio**
+
+| Interface | Responsabilidad | Métodos clave |
+| ----- | ----- | ----- |
+| `IAccessRecordRepository` | Escritura y lectura de registros inmutables de acceso. | `AddAsync(...)`, `GetByIdAsync(...)`, `GetByResidentAsync(...)` |
+| `IAuditQueryRepository` | Consultas optimizadas para el historial de visitas filtrado por estado, fecha o departamento. | `SearchAsync(...)`, `GetByDateRangeAsync(...)` |
+
+**- Eventos de dominio**
+
+| Evento | Disparador |
+| ----- | ----- |
+| `AccessRecordCreatedDomainEvent` | Se registra formalmente una decisión de acceso en el historial. |
+| `AccessRecordSealedDomainEvent` | El registro queda cerrado e inmutable, no puede recibir más entradas. |
+
+#### 4.2.5.2. Interface Layer
+
+Esta capa expone los endpoints que permiten registrar nuevos eventos de acceso y consultar el historial. Es consumida principalmente por el dashboard web del portero y la aplicación móvil del residente para visualizar el historial de visitas.
+
+| Controlador | Endpoint | Handler invocado |
+| ----- | ----- | ----- |
+| `AuditController` | `POST /api/audit/access-records` | `RegisterAccessRecordCommandHandler` |
+| `AuditController` | `GET /api/audit/access-records/{id}` | `GetAccessRecordByIdQueryHandler` |
+| `AuditQueryController` | `GET /api/audit/access-records` | `SearchAccessRecordsQueryHandler` |
+
+#### 4.2.5.3. Application Layer
+
+Esta capa orquesta el registro y la consulta del historial de accesos. Escucha los eventos emitidos por Intercom & Notifications para crear los registros correspondientes y expone consultas para que el portero y el residente puedan revisar el historial de visitas.
+
+| Handler | Responsabilidad |
+| ----- | ----- |
+| `RegisterAccessRecordCommandHandler` | Recibe el resultado de una decisión de acceso desde Intercom & Notifications, crea el registro inmutable con toda la información asociada y emite `AccessRecordCreatedDomainEvent`. Una vez persistido, sella el registro emitiendo `AccessRecordSealedDomainEvent`. |
+| `GetAccessRecordByIdQueryHandler` | Retorna el detalle completo de un registro de acceso específico, incluyendo la línea de tiempo de eventos asociados. |
+| `SearchAccessRecordsQueryHandler` | Permite filtrar el historial de accesos por estado (aprobado/rechazado), fecha o departamento, retornando resultados paginados para su visualización. |
+
+#### 4.2.5.4. Infrastructure Layer
+
+Esta capa implementa la persistencia del historial de accesos mediante EF Core y expone proyecciones SQL optimizadas para las consultas del historial.
+
+| Componente | Tecnología | Contrato que implementa |
+| ----- | ----- | ----- |
+| `EfAccessRecordRepository` | EF Core \+ SQL | `IAccessRecordRepository` |
+| `SqlAuditQueryRepository` | SQL \+ proyecciones | `IAuditQueryRepository` |
+
+#### 4.2.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Component Level Diagrams del Bounded Context Audit*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776981860/component_e5kwnl.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
+#### 4.2.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Domain Layer Class Diagrams Bounded Context Audit*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776981860/classs_bazhln.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
+##### 4.2.5.6.2. Bounded Context Database Design Diagram
+
+*Database Design Diagram del Bounded Context Audit*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776981860/database_jo0k0s.png" width="1000">
+</p> 
+
+*Nota.* Elaboración propia
+
+<hr>
 
 # Conclusiones
 * Hola mundo.
