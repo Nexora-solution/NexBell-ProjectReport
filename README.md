@@ -1166,11 +1166,203 @@ El Product Backlog de Nexora representa el inventario dinámico y priorizado de 
 ## 4.1. Strategic-Level Domain-Driven Design
 
 ### 4.1.1. Design-Level EventStorming
+El Event Storming es una técnica colaborativa de modelado que facilita la identificación de eventos clave y requisitos del negocio. Esta herramienta permite diseñar arquitecturas robustas alineadas con el Domain-Driven Design (DDD), optimizando la visualización de flujos y estructuras de código. Para el desarrollo de este ejercicio, se empleó la plataforma Miro como entorno virtual para asegurar una colaboración eficiente.
 
+##### Paso 1: Identificación de Eventos de Dominio (Domain Events)
+
+En esta primera fase del taller, el equipo se enfocó en identificar los Eventos de Dominio, definidos como sucesos de relevancia que ocurren dentro del sistema y que se expresan invariablemente en tiempo pasado. El objetivo principal fue mapear de forma exhaustiva las interacciones y cambios de estado del negocio, tales como la detección de dispositivos IoT o la gestión de visitas, sin considerar aún restricciones técnicas. Este proceso permitió establecer una base compartida de conocimiento sobre el comportamiento esperado del software y definir el alcance inicial del ecosistema del proyecto.
+<p align="center">
+<img src="https://i.imgur.com/PjXqHN1.jpeg" alt="Step 1: Domain Events" width="1100">
+</p>
+
+##### Paso 2: Definición de Líneas de Tiempo (Timelines)
+
+Una vez identificados los eventos de dominio, se procedió a organizarlos cronológicamente para establecer una narrativa lógica del sistema. En esta etapa, el equipo estructuró los eventos en líneas de tiempo, permitiendo identificar relaciones de causalidad, secuencias de procesos (como el flujo desde el inicio de sesión hasta el registro de una visita) y posibles ramificaciones en la lógica de negocio. Este ordenamiento lineal es fundamental para detectar lagunas de información o eventos faltantes, asegurando que el flujo de la aplicación sea coherente y cubra todos los escenarios de interacción del usuario y los dispositivos IoT.
+<p align="center">
+<img src="https://i.imgur.com/m5j7rxv.jpeg" alt="Step 2: Timelines" width="1100">
+</p>
+
+##### Paso 3: Identificación de Comandos (Commands)
+
+En esta etapa, se integraron los Comandos, representados en color azul, los cuales actúan como los desencadenantes o intenciones que provocan la aparición de los eventos de dominio. Este paso permitió definir las acciones específicas que los usuarios o sistemas externos ejecutan. Al vincular cada comando con su respectivo evento, se logró modelar la interactividad del sistema y las decisiones que la lógica de negocio debe procesar. Esta definición es crucial para el posterior diseño de la API y los controladores, ya que establece los puntos de entrada de información y las peticiones que el sistema debe soportar.
+<p align="center">
+<img src="https://i.imgur.com/CoUeMmI.jpeg" alt="Step 3: Commands" width="1100">
+</p>
+
+##### Paso 4: Sistemas Externos (External Systems)
+En esta fase se identificaron los servicios y plataformas de terceros que interactúan con nuestro sistema para completar flujos de negocio específicos. Mediante el uso de etiquetas de color rosado, se representaron dependencias críticas como Edge API para el control de hardware, Gmail para notificaciones y Niubiz para la gestión de pagos. Este mapeo permite delimitar las fronteras del sistema e identificar qué procesos dependen de la disponibilidad y respuesta de proveedores externos.
+<p align="center">
+<img src="https://i.imgur.com/OVIL5pC.jpeg" alt="Step 4: External Systems" width="1100">
+</p>
+
+##### Paso 5: Actores y Políticas (Actors & Policies)
+En esta etapa final de modelado, se asignaron los Actores (como Residentes, Conserjes y Administradores) a sus respectivos comandos para definir roles y responsabilidades dentro del sistema. Paralelamente, se establecieron las Políticas (etiquetas de color lila), las cuales representan reglas de negocio automáticas. Esta integración permite visualizar tanto la interacción humana como la automatización de flujos.
+
+<p align="center">
+<img src="https://i.imgur.com/TGodYw9.jpeg" alt="Step 5: Actors & Policies" width="1100">
+</p>
+
+##### Paso 6: Puntos de Dolor (Pain Points)
+Durante esta fase, se identificaron y señalaron las posibles debilidades, riesgos o cuellos de botella del sistema, representados mediante notas de color rojo. Este análisis crítico permitió detectar áreas de incertidumbre, como posibles fallos en la conectividad de los dispositivos IoT o riesgos en el procesamiento de pagos. La identificación temprana de estos Pain Points es fundamental en el proceso de ingeniería, ya que permite priorizar esfuerzos de desarrollo y diseñar mecanismos de contingencia para garantizar la resiliencia de la aplicación.
+
+<p align="center">
+<img src="https://i.imgur.com/toy1waW.jpeg" alt="Step 6: Pain Points" width="1100">
+</p>
+
+##### Paso 7: Modelos de Lectura (Read Models)
+En esta etapa se definieron los Read Models, representados por las notas de color azul claro situadas al inicio de cada flujo. Estos modelos especifican la información o vistas de datos que el usuario requiere consultar antes de emitir un comando. Este paso es clave para el diseño de la interfaz de usuario, ya que establece qué datos deben ser recuperados de la base de datos y presentados de manera clara para facilitar la interacción con el sistema.
+
+<p align="center">
+<img src="https://i.imgur.com/5TDzQje.jpeg" alt="Step 7: Read Models" width="1100">
+</p>
+
+##### Paso 8: Puntos Pivotales (Pivotal Points)
+Como cierre del taller, se identificaron los Pivotal Points, representados mediante líneas verticales que dividen secciones clave del flujo. Estos puntos marcan momentos de alta relevancia donde ocurre un cambio significativo en el estado del proceso o en el contexto de la operación. La identificación de estos hitos es crucial para la arquitectura de software, ya que actúan como indicadores naturales para definir los límites de los Bounded Contexts. Esto facilita la modularización del sistema, permitiendo que componentes como la gestión de accesos, el registro de visitas y el control de dispositivos IoT operen de manera independiente pero coordinada.
+
+<p align="center">
+<img src="https://i.imgur.com/gz8QJTH.jpeg" alt="Step 8: Pivotal Points" width="1100">
+</p>
 
 #### 4.1.1.1. Candidate Context Discovery
+Con la base establecida en el Event Storming, se procedió a la fase de Candidate Context Discovery para definir los límites lógicos del sistema NexBell. El objetivo principal fue descomponer la complejidad de la solución de videoportero inteligente en Bounded Contexts preliminares, asegurando que cada módulo responda de manera eficiente a las necesidades de seguridad y gestión residencial.
 
-#### 4.1.1.2. Domain Message Flows Modelling**
+
+##### Contexto Candidato 1: Identity and Access Management (IAM)
+El primer contexto delimitado identificado es el Identity and Access Management (IAM). Este actúa como un componente transversal de seguridad encargado de gestionar el ciclo de vida de las identidades y los permisos de acceso para todos los actores del ecosistema NexBell.
+
+<p align="center">
+<img src="https://i.imgur.com/0qQWx0O.jpeg" alt="IAM BC" width="1100">
+</p>
+
+De acuerdo con el modelado realizado, este contexto agrupa las siguientes capacidades críticas:
+
+- **Gestión y Modificación de Credenciales:** Centraliza la lógica para el cambio de contraseñas y actualización de correos electrónicos, garantizando que cualquier modificación sea validada y registrada de forma segura en la base de datos.
+- **Recuperación de Accesos:** Gestiona los flujos de autoservicio para el restablecimiento de cuentas mediante la integración con servicios externos (Gmail) para el envío de tokens de recuperación con tiempo de expiración.
+- **Control de Sesiones Activas:** Supervisa el estado de autenticación de los usuarios, permitiendo el inicio y cierre de sesiones de manera integrada con el resto de los módulos del sistema.
+- **Almacenamiento Seguro:** Define las políticas de persistencia y protección de los datos sensibles de identidad, asegurando que la información de acceso sea tratada bajo estándares de seguridad robustos.
+
+##### Contexto Candidato 2: Security (Core Domain)
+El contexto de Security constituye el núcleo estratégico de la solución NexBell. Su propósito es arbitrar y validar todas las interacciones de control de acceso físico, garantizando que cada apertura de puerta o flujo de comunicación cumpla con las reglas de negocio establecidas para el entorno residencial.
+
+<p align="center">
+<img src="https://i.imgur.com/Wk3ZVPt.jpeg" alt="Security BC" width="1100">
+</p>
+
+Basado en el modelado, este contexto centraliza las siguientes responsabilidades:
+
+- **Gestión de Permisos y Autorización:** Define y valida las facultades de cada actor. Mientras que el Conserje actúa como un supervisor con capacidades de gestión global, los Residentes poseen permisos específicos para el control de sus propios accesos y la autorización de sus visitas planificadas.
+- **Gestión de Acceso Biométrico (Reconocimiento Facial):** Integra la lógica de validación de identidad mediante reconocimiento facial tanto para residentes como para conserjes y visitas. Este componente es crítico para automatizar ingresos y elevar los estándares de seguridad sin sacrificar la agilidad.
+- **Respuesta e Interacción en Puerta:** Orquestra el flujo de eventos que ocurre ante la "Detección de visitante", vinculando las notificaciones en tiempo real, la verificación visual por cámara y la comunicación bidireccional entre el punto de acceso y el smartphone del usuario.
+- **Control de Interfaces y Funciones Críticas:** Administra el acceso a funcionalidades de alto impacto, como la apertura remota de puertas a través de dispositivos IoT y la visualización del historial de ingresos, asegurando que solo los actores autorizados puedan consultar o activar estas operaciones.
+
+##### Contexto Candidato 3: Audit
+El contexto de Audit se define como el sistema de registro histórico y trazabilidad de interacciones sociales dentro del edificio. A diferencia de un log técnico, este módulo está centrado exclusivamente en la gestión de la información relativa al flujo de personas, proporcionando una base de datos auditable para residentes y administración.
+
+<p align="center">
+<img src="https://i.imgur.com/0AjeTvb.jpeg" alt="Audit BC" width="1100">
+</p>
+
+Según el modelado, sus responsabilidades principales incluyen:
+
+- **Registro Integral de Visitas:** Centraliza la información de todos los tipos de ingresos: visitas planificadas por el residente, visitas atendidas en tiempo real y detección de visitantes no anunciados. Cada registro captura metadatos críticos como timestamps, acciones realizadas y el departamento destino.
+- **Gestión del Historial de Visitas:** Permite la persistencia y consulta organizada de los eventos pasados. Este componente es esencial para que los residentes puedan revisar quién accedió a su hogar y en qué momento, fortaleciendo la confianza en el sistema.
+- **Captura de Evidencia Multimedia:** Se encarga de vincular los eventos de visita con la captura de datos provenientes del hardware (como grabaciones de audio o fotos de visitantes), creando un expediente digital completo de cada interacción en la puerta.
+- **Tratamiento de Información de Visita:** Gestiona el ciclo de vida de los datos de la visita (creación, edición de información pendiente y eliminación), asegurando que la cola de visitas se mantenga actualizada y sea veraz.
+
+##### Contexto Candidato 4: Intercom
+El contexto de Intercom representa la capa de mediación tecnológica entre el sistema y el hardware IoT. Su función principal es la gestión de señales físicas, la transmisión de flujos multimedia y el control de dispositivos de campo, operando con un nivel de granularidad más detallado que el de los registros administrativos.
+
+<p align="center">
+<img src="https://i.imgur.com/FFtwB5E.jpeg" alt="Intercom BC" width="1100">
+</p>
+
+De acuerdo con el análisis de flujos, este contexto integra las siguientes capacidades:
+
+- **Control y Captura de Eventos de Hardware:** Gestiona la telemetría proveniente de sensores magnéticos y motores. A diferencia de otros módulos, este contexto registra acciones técnicas inmediatas (como "Apertura de puerta detectada" o "Estado de sensor verificado"), permitiendo una monitorización precisa del estado físico de los accesos.
+- **Gestión de Comunicación en Tiempo Real:** Orquestra las "llamadas" y la transmisión de video entre el videoportero y los dispositivos de los residentes o conserjes. Este componente maneja la señalización necesaria para iniciar, mantener y finalizar la comunicación bidireccional.
+- **Interfaz con Edge API:** Actúa como el cliente principal de los servicios de borde (Edge API), traduciendo los comandos de usuario en acciones físicas sobre el hardware y procesando las notificaciones emitidas por el timbre o los sensores de movimiento.
+- **Visualización de Datos del Dispositivo IoT:** Proporciona los modelos de lectura necesarios para que los actores autorizados consulten el estado en vivo de los componentes electrónicos, asegurando que la infraestructura responda correctamente a las peticiones del sistema.
+
+##### Contexto Candidato 5: Directory
+El contexto de Directory funciona como el repositorio central de información organizativa y perfiles del condominio. Su propósito es estructurar la relación entre los usuarios y el entorno físico del edificio, sirviendo de base para la personalización y el contexto de las interacciones dentro de la plataforma NexBell.
+
+<p align="center">
+<img src="https://i.imgur.com/shTZAei.jpeg" alt="Intercom BC" width="1100">
+</p>
+
+De acuerdo con el modelado, este contexto gestiona las siguientes áreas:
+
+- **Gestión de Perfiles de Usuario:** Almacena y permite la actualización de la información pública o de contacto de los residentes y conserjes. A diferencia del contexto IAM, este no maneja credenciales de acceso, sino la identidad social y profesional de los miembros de la comunidad.
+- **Asociación de Unidades Habitacionales:** Contiene la lógica para vincular a cada residente con su departamento correspondiente. Esta estructura es esencial para que funciones externas, como el registro de visitas, puedan identificar correctamente el destino de un visitante.
+- **Registro y Onboarding de Edificios:** Maneja el flujo inicial de contratación y creación del ecosistema digital del edificio, integrando pasarelas de pago (Niubiz) para la activación del servicio y la posterior creación masiva de cuentas de personal y residentes.
+- **Almacenamiento de Información Organizativa:** Actúa como una "guía de perfiles" útil para la gestión interna, permitiendo que el sistema muestre datos claros sobre quién está a cargo de la portería o qué vecino ha emitido una solicitud, mejorando la trazabilidad operativa.
+
+#### 4.1.1.2. Domain Message Flows Modelling
+Tras definir los Bounded Contexts, se utilizó Domain Storytelling para modelar gráficamente la interacción y el flujo de mensajes entre ellos. Esta técnica transforma los procesos en narrativas dinámicas que validan la arquitectura de NexBell, asegurando que la colaboración entre actores y sistemas cumpla con los objetivos reales del negocio.
+
+##### Escenario 1: Creación de cuentas de edificio inicial
+Este escenario describe el flujo de orquestación entre los distintos contextos y actores durante el proceso de onboarding de un nuevo condominio en la plataforma NexBell. La narrativa visual evidencia cómo una acción administrativa desencadena una serie de colaboraciones automáticas para establecer la infraestructura lógica del edificio:
+
+- **Inicio del Proceso:** El flujo comienza con el Administrador, quien realiza el registro del edificio y el pago de la suscripción a través de un sistema externo de verificación de pagos.
+- **Colaboración entre Contextos:** Una vez confirmado el pago, el sistema interactúa con el contexto Directory para la generación automática de cuentas basadas en los datos del edificio. Posteriormente, se delega al contexto IAM el almacenamiento y asignación de las credenciales genéricas iniciales.
+- **Interacción con los Usuarios Finales:** El Administrador distribuye estas credenciales a los Residentes y Conserjes, quienes acceden al panel de control para actualizar su información personal y personalizar sus claves de acceso.
+- **Cierre del Flujo (Seguridad):** El proceso culmina en el contexto IAM mediante la encriptación de las nuevas credenciales y se comunica con el contexto Security para la asignación definitiva de permisos, dejando el sistema plenamente operativo para el nuevo edificio.
+<p align="center">
+<img src="https://i.imgur.com/u9ACqcK.jpeg" alt="1" width="1100">
+</p>
+
+##### Escenario 2: Registro de visita pendiente por residente
+Este flujo de Domain Storytelling ilustra el proceso proactivo mediante el cual un residente autoriza de forma anticipada el ingreso de un tercero, asegurando que la información esté disponible para el personal de seguridad antes de la llegada del visitante.
+
+- **Interacción Inicial:** El Residente inicia el flujo accediendo al formulario de registro en su panel de control, donde ingresa los datos de identificación del visitante.
+- **Procesamiento y Persistencia:** Una vez enviado el formulario, la información viaja hacia el contexto Audit. Este componente es responsable de generar la "visita pendiente" en la cola de registros, actuando como la fuente de verdad única para los eventos de acceso planificados.
+- **Sincronización en Tiempo Real:** Tras la creación del registro, el sistema emite automáticamente una notificación de actualización. Esta señal llega al panel de control del Conserje, quien visualiza el cambio en la lista de visitas pendientes.
+- **Resultado Operativo:** El flujo concluye con la actualización de la interfaz de conserjería, permitiendo que el personal de seguridad esté debidamente informado y pueda agilizar la validación del visitante al momento de su llegada física al edificio.
+
+<p align="center">
+<img src="https://i.imgur.com/rDfGVZC.jpeg" alt="2" width="1100">
+</p>
+
+##### Escenario 3: Gestión de visita automática del sistema
+
+Este diagrama de Domain Storytelling detalla el flujo de mayor complejidad técnica y valor operativo: la automatización del acceso mediante biometría. En este escenario, el sistema actúa de forma autónoma para validar y permitir el ingreso de un residente sin intervención humana.
+
+* **Detección y Reconocimiento:** El flujo se dispara cuando el Residente es detectado por los sensores de movimiento. El contexto Intercom captura la señal y activa el reconocimiento facial, iniciando la verificación biométrica.
+* **Validación de Identidad:** El mensaje se traslada al contexto Directory, donde el sistema compara la imagen capturada con la base de datos de rostros autorizados. Una vez confirmada la coincidencia, se emite una confirmación de identidad.
+* **Autorización de Seguridad:** El contexto Security recibe la confirmación y verifica los permisos de apertura automática asociados a ese perfil. Al validar que el actor tiene las facultades necesarias, envía la orden de ejecución al sistema físico.
+* **Ejecución y Cierre de Auditoría:** Finalmente, el sistema efectúa la apertura de la puerta automáticamente y envía un mensaje al contexto Audit. Este último genera un registro de acción automática, asegurando que el evento quede debidamente documentado con su respectiva marca de tiempo y tipo de acceso.
+
+<p align="center">
+<img src="https://i.imgur.com/UHzAL9r.jpeg" alt="3" width="1100">
+</p>
+
+##### Escenario 4: Aprobación de visita por conserje
+
+Este escenario detalla el flujo de comunicación y control cuando un visitante no registrado llega al edificio, requiriendo la intervención del Conserje para validar su identidad y autorizar el acceso de manera remota.
+
+* **Notificación y Comunicación:** El proceso inicia con la detección del visitante por los sensores magnéticos/movimiento. El contexto Intercom emite una notificación de timbre al personal de seguridad e inicia una llamada en tiempo real, permitiendo la comunicación bidireccional entre el conserje y el visitante.
+* **Captura de Evidencia y Validación:** De forma paralela, el contexto Audit inicia la grabación de la interacción y envía la imagen capturada por la cámara al conserje. Este último verifica la identidad del visitante consultando la lista de visitas pendientes y la información proporcionada por el contexto Security.
+* **Autorización y Ejecución:** Una vez validada la identidad a través del panel de control, el Conserje autoriza la apertura de la puerta. Esta instrucción es procesada por el contexto Audit para mantener la trazabilidad y ejecutada físicamente por el dispositivo IoT a través de sus actuadores (motores).
+* **Registro Final:** El flujo concluye con el sistema registrando la interacción completa en la bitácora del contexto Audit, documentando tanto la identidad del visitante como la decisión tomada por el conserje, cerrando así el ciclo de seguridad.
+
+
+<p align="center">
+<img src="https://i.imgur.com/eF5T4jm.jpeg" alt="3" width="1100">
+</p>
+
+##### Escenario 5: Aprobación de visita por residente
+
+Este escenario modela la interacción directa entre el visitante y el residente a través de la plataforma, permitiendo la gestión de accesos sin necesidad de intermediarios (conserjería). Representa el flujo de comunicación crítica y ejecución remota que define la experiencia de usuario de NexBell.
+
+* **Notificación y Enlace Multimedia**: El flujo inicia con la detección del visitante, tras lo cual el contexto Intercom envía una notificación de timbre directamente al smartphone del Residente e inicia una comunicación de voz. Simultáneamente, el contexto Audit activa la grabación de la interacción y despacha la imagen del visitante hacia el terminal del usuario.
+* **Validación de Identidad**: El Residente visualiza la imagen desde su panel de control y verifica la identidad del visitante contrastándola con la lista de visitas pendientes asociadas a su departamento, proceso gestionado bajo las reglas del contexto Audit.
+* **Autorización de Seguridad**: Una vez confirmada la identidad, el sistema consulta al contexto Security para gestionar los permisos de acceso a la imagen y validar la facultad del residente para ejecutar la apertura.
+* **Ejecución y Registro Final**: Tras la autorización del residente, el contexto Audit procesa la orden, lo que desencadena que el dispositivo IoT accione físicamente la apertura de la puerta. El proceso concluye con el sistema registrando la interacción completa en la bitácora de auditoría, garantizando la trazabilidad total del evento.
+
+<p align="center">
+<img src="https://i.imgur.com/vcgKHiQ.jpeg" alt="3" width="1100">
+</p>
+
 
 
 #### 4.1.1.3. Bounded Context Canvases
