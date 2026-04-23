@@ -942,43 +942,43 @@ En NexBell, el equipo lo aplicó para modelar el flujo de gestión de visitas y 
 En la etapa inicial, se procedió a identificar los Eventos de Dominio, definidos como sucesos relevantes que ocurren dentro del sistema y se expresan en tiempo pasado. Esta lluvia de ideas masiva permite capturar todas las interacciones posibles, estableciendo la base semántica del proyecto.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/TEms3yG.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/TEms3yG.jpeg" alt="Domain Events" style="height: auto;"></p>
 
 #### Fase 2: Construcción de la Línea de Tiempo (Timelines)
 Una vez definidos los eventos, estos se organizaron cronológicamente para establecer una narrativa coherente. Este proceso de secuenciación permite identificar flujos paralelos, ramificaciones en la toma de decisiones y posibles lagunas en la lógica del proceso, asegurando que la continuidad del servicio (desde el timbrado hasta el registro final) sea consistente.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/HPudNcV.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/HPudNcV.jpeg" alt="Timelines" style="height: auto;"></p>
 
 #### Fase 3: Definición de Actores
 Se procedió a asignar Actores a cada flujo, identificando a los agentes humanos (Residente, Conserje, Administrador o Visitante) que interactúan con el sistema. Esta asignación es crítica para comprender las responsabilidades y los permisos dentro de la plataforma, diferenciando quién recibe una notificación y quién tiene la autoridad para ejecutar acciones como la apertura remota.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/UBD0aBX.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/UBD0aBX.jpeg" alt="Actors" style="height: auto;"></p>
 
 #### Fase 4: Integración de Sistemas Externos e IoT
 Dada la naturaleza del proyecto, se identificaron los Sistemas Externos y dispositivos de hardware que interactúan con el software. En esta etapa se integraron elementos como sensores magnéticos, dispositivos IoT de control de puerta y servicios de terceros (Niubiz para pagos y Gmail para notificaciones), mapeando las dependencias tecnológicas del ecosistema.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/4OApAa7.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/4OApAa7.jpeg" alt="External Systems" style="height: auto;"></p>
 
 #### Fase 5: Identificación de Comandos
 Los Comandos representan las intenciones de los usuarios o la voluntad de ejecutar una acción específica que resulta en un evento. En esta fase, se vincularon acciones como "Abrir puerta", "Iniciar sesión" o "Emitir notificación" con sus respectivos disparadores, estableciendo la relación de causalidad directa entre la interfaz de usuario y los cambios de estado en el sistema.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/wKDrzI1.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/wKDrzI1.jpeg" alt="Commands" style="height: auto;"></p>
 
 #### Fase 6: Definición de Políticas (Policies)
 Se establecieron las Políticas o reglas de negocio que automatizan procesos ante eventos específicos. Estas actúan como puentes lógicos y permiten documentar los criterios de seguridad, auditoría y flujo de trabajo que rigen el comportamiento autónomo del sistema.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/cPTMU3T.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/cPTMU3T.jpeg" alt="Policies" style="height: auto;"></p>
 
-#### Fase 7: Delimitación de Contextos (Bounded Contexts)
-Finalmente, se realizó una síntesis del modelo para agrupar funcionalidades en Contextos Delimitados, siguiendo los principios de Domain-Driven Design (DDD). Se identificaron tres áreas principales: Gestión de visita y control de puerta, Registro y modificación de credenciales, y Consultas de visitas y registros, permitiendo una arquitectura modular y escalable para el desarrollo del software.
+#### Fase 7: Identificación de Puntos Críticos (Hotspots)
+Finalmente se realizó una fase de diagnóstico para identificar los Puntos Críticos o Hotspots. Esta etapa consiste en señalizar áreas de incertidumbre, riesgos técnicos o fricciones operativas que podrían comprometer la robustez del software. En este proyecto, se priorizaron factores como la latencia en la comunicación de dispositivos IoT y errores durante procesos manuales. La detección temprana de estos puntos de dolor permite al equipo anticipar fallos y diseñar estrategias de mitigación, asegurando que los cimientos de la arquitectura sean resilientes frente a escenarios de error.
 
 <p align="center">
-<img align="center" src="https://i.imgur.com/AJYJ7an.jpeg" alt="Descripción de la imagen" style="height: auto;"></p>
+<img align="center" src="https://i.imgur.com/P0w4P91.jpeg" alt="Hotspots" style="height: auto;"></p>
 
 ## 2.5. Ubiquitous Language
 
@@ -1020,6 +1020,7 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 | EP05  | Notificaciones al usuario |
 | EP06  | Monitoreo e historial de visitas |
 | EP07  | Seguridad del sistema |
+| EP08  | Landing Page |
 
 | Epic / User  Story ID  | Título  | Descripción  | Criterios de Aceptación  | Relacionado con (Epic ID)  |
 | :---: | ----- | ----- | ----- | ----- |
