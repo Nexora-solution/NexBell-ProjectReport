@@ -1031,7 +1031,8 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 ## 3.2. Impact Mapping
 
 <p align="center">
-  <img src="images/Impactmap.png" alt="PB" width="1000">
+<img src="https://i.imgur.com/KUvSUPF.png" alt="PB" width="1000">
+
 </p>
 
 ## 3.3. Product Backlog
