@@ -336,6 +336,11 @@ Para poder conocer y analizar mejor a nuestros posibles competidores, realizamos
 
 ## 3.2. Impact Mapping
 
+<p align="center">
+<img src="https://i.imgur.com/KUvSUPF.png" alt="PB" width="1000">
+
+</p>
+
 
 ## 3.3. Product Backlog
 
