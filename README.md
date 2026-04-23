@@ -231,7 +231,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Santiago Suárez | Ingeniería de Software |
 | -- | --|
-| <img src="#" height=200px width=200px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
+| <img src="https://i.imgur.com/vgOqZYW.jpeg" height=200px width=200px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
 
 | Daniela Gómez | Ingeniería de Software |
 | -- | --|
