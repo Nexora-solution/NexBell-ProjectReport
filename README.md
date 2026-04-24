@@ -49,7 +49,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
-| TB1 | xx/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| TB1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
 <hr>
 <hr>
 
@@ -141,60 +141,62 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     <th>Conclusiones</th>
   </tr>
   <tr>
-    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta </strong></td>
+    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
     <td>
-    	<p><strong>Bellido Salas, Raúl</strong></p>
+      <p><strong>Bellido Salas, Raúl</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-    	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
+      <p>Colaboré activamente en la redacción de las historias de usuario, asegurando que cada una respondiera a una necesidad real de los actores del sistema. Asimismo, participé en la definición de las estrategias y tácticas del proyecto, orientando al equipo hacia decisiones técnicas coherentes con los objetivos planteados. También apoyé en la conducción de entrevistas con usuarios potenciales para validar los supuestos iniciales.</p>
+
+  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-      <p><strong>Suárez Romero, Santiago Manuel</strong></p>
+      <p>Contribuí al equipo liderando la investigación de antecedentes y problemáticas relacionadas con los sistemas de control de acceso en edificios residenciales. Diseñé los diagramas de Design Level Event Storming y los Bounded Context Canvas, aportando una visión estructurada del dominio del sistema. Asimismo, colaboré en la definición de las historias de usuario, apoyando al equipo en la identificación de los flujos principales del sistema Nexora.</p>
+
+  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-    	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
+      <p>Asumí un rol activo en la investigación de antecedentes y en el análisis de la problemática del proyecto. Lideré la definición y delimitación de los bounded contexts del sistema, asegurando que cada contexto tuviera responsabilidades claras y bien diferenciadas entre sí. Esta definición permitió al equipo contar con una arquitectura coherente como base para las etapas de desarrollo posteriores.</p>
+
+  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola.</p>
-      <p></p>
-    	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
+      <p>Lideré la definición del problema central del proyecto, articulando con claridad la necesidad que Nexora busca resolver. Conduje las entrevistas con usuarios potenciales y coordiné el proceso de needfinding, sintetizando los hallazgos en user personas, user task matrices, user journey maps y empathy maps. Estos insumos orientaron al equipo en la toma de decisiones centradas en el usuario. Asimismo, colaboré en la elaboración de las historias de usuario y el product backlog.</p>
+
+  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
+      <p>Contribuí al equipo liderando la elaboración de los diagramas de arquitectura de alto nivel, incluyendo el Landscape Diagram, el Context Diagram y el Deployment Diagram, los cuales permitieron al equipo visualizar la estructura global del sistema y sus relaciones con actores externos. Participé en la conducción de entrevistas y colaboré en la definición de las historias de usuario, aportando desde la perspectiva del usuario final.</p>
     </td>
     <td>
       <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>ola</p>
-      <p><strong>Conclusión: </strong>ola</p>
+      <p><strong>Objetivo específico: </strong>Establecer una base de liderazgo compartido que permitiera al equipo avanzar de forma coordinada en el planteamiento y estructuración del proyecto Nexora durante la primera entrega.</p>
+      <p><strong>Conclusión: </strong>El equipo demostró capacidad de liderazgo conjunto al distribuir responsabilidades según las fortalezas de cada integrante. Cada miembro asumió el liderazgo de áreas específicas, desde la definición del problema y el needfinding hasta la arquitectura del sistema y las historias de usuario, logrando que las decisiones tomadas fueran el resultado de un trabajo colectivo y no de una sola dirección. Esta dinámica permitió construir una propuesta de solución sólida y coherente para el AV1.</p>
+    </td>
   </tr>
   <tr>
     <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
     <td>
-    	<p><strong>Bellido Salas, Raúl</strong></p>
+      <p><strong>Bellido Salas, Raúl</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-    	<p><strong>Borja Molina, Gabriel Sebastián</strong></p>
+      <p>Participé en la planificación de las tareas del equipo, contribuyendo a establecer metas claras para la primera entrega. Colaboré en la definición del trabajo general del proyecto y en la redacción de las historias de usuario, asegurando que el equipo tuviera claridad sobre los objetivos funcionales a alcanzar. Mi participación en las entrevistas y en la definición de estrategias aportó al entorno colaborativo del equipo al integrar distintas perspectivas en las decisiones del proyecto.</p>
+
+  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-      <p><strong>Suárez Romero, Santiago Manuel</strong></p>
+      <p>Contribuí a crear un entorno colaborativo al compartir con el equipo los hallazgos del análisis de antecedentes y problemáticas, generando una base de conocimiento común sobre la que todos pudimos trabajar. La elaboración de los diagramas de Event Storming y los Bounded Context Canvas facilitó que el equipo tuviera una visión compartida del dominio, lo que permitió planificar las tareas de arquitectura de forma ordenada y con objetivos definidos.</p>
+
+  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
-      <p></p>
-    	<p><strong>Gomez Flores, Daniela Araceli</strong></p>
+      <p>Aporté al entorno colaborativo del equipo mediante la definición clara y documentada de los bounded contexts del sistema, lo que permitió que cada integrante comprendiera el alcance de su área de trabajo y pudiera planificar sus tareas sin ambigüedades. La delimitación precisa de responsabilidades entre contextos redujo los conflictos de criterio dentro del equipo y facilitó el cumplimiento de los objetivos de la entrega.</p>
+
+  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola.</p>
-      <p></p>
-    	<p><strong>Burga Loarte, Anaely Zarely</strong></p>
+      <p>Promoví un entorno inclusivo al involucrar al equipo en el proceso de needfinding, compartiendo los resultados de las entrevistas y los artefactos de investigación de usuarios para que todos pudieran tomar decisiones informadas. La construcción colaborativa de las user personas y el product backlog permitió que el equipo estableciera metas orientadas al usuario y planificara las funcionalidades del sistema con un criterio común de priorización.</p>
+
+  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
       <p><i>AV1:</i></p>
-      <p>ola</p>
+      <p>Contribuí al entorno colaborativo del equipo al elaborar y compartir los diagramas de arquitectura de alto nivel, los cuales sirvieron como referencia visual común para que todos los integrantes comprendieran la estructura global del sistema. Mi participación en las entrevistas y en las historias de usuario reforzó el trabajo conjunto del equipo, alineando los objetivos técnicos con las necesidades reales de los usuarios identificados durante la investigación.</p>
     </td>
     <td>
       <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>ola</p>
-      <p><strong>Conclusión: </strong>ola</p>
+      <p><strong>Objetivo específico: </strong>Construir un entorno de trabajo colaborativo e inclusivo en el que cada integrante pudiera planificar y cumplir sus tareas de forma alineada con los objetivos generales del proyecto Nexora en el AV1.</p>
+      <p><strong>Conclusión: </strong>El equipo logró establecer un entorno de trabajo colaborativo durante el AV1, donde cada integrante aportó desde su área de responsabilidad al objetivo común de estructurar el proyecto Nexora. La distribución clara de tareas, combinada con la integración de los resultados individuales en artefactos colectivos como el product backlog, los bounded contexts y los diagramas de arquitectura, evidenció una planificación efectiva y el cumplimiento de las metas propuestas para esta primera entrega.</p>
+    </td>
   </tr>
 </table>
 
@@ -1106,9 +1108,9 @@ Al alinear estos cuatro niveles, el Impact Mapping de NexBell actúa como un fil
 
 El Product Backlog de Nexora representa el inventario dinámico y priorizado de todas las funcionalidades, mejoras y requisitos técnicos necesarios para consolidar a NexBell como la solución líder en videoportería inteligente. Este documento no solo sirve como una lista de tareas, sino como la hoja de ruta estratégica que alinea el desarrollo tecnológico con las necesidades críticas de nuestros usuarios: residentes, porteros y administradores.
 
-***Product Backlog de GeoPS***
+***Product Backlog de Nexora***
 <p align="center">
-<img src="" alt="PB" width="1000">
+<img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777057982/TRELLO_zeiz9v.jpg" alt="PB" width="1000">
 </p>
 
 ***Nota*** Elaboración propia en Trello. 
@@ -2077,7 +2079,12 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <hr>
 
 # Conclusiones
-* Hola mundo.
+
+ - Durante el desarrollo del TB1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
+
+ - La adopción de Domain-Driven Design como enfoque arquitectónico central del proyecto demostró ser una decisión acertada para gestionar la complejidad del dominio de Nexora. La identificación y definición de cinco bounded contexts, IAM, Security, Directory, Intercom & Notifications y Audit, permitió al equipo separar responsabilidades de forma clara, evitar el acoplamiento entre módulos y establecer contratos de comunicación bien definidos entre servicios. El nivel de detalle alcanzado en cada contexto, incluyendo entidades, value objects, agregados, interfaces de dominio, eventos de dominio y capas de aplicación e infraestructura, evidencia que el equipo no solo comprendió los conceptos teóricos del DDD sino que fue capaz de aplicarlos de manera concreta al dominio del problema planteado.
+
+ - La estructuración del product backlog y la definición de las historias de usuario con criterios de aceptación en formato Gherkin representaron un avance significativo en la planificación del desarrollo del sistema. La organización de cuarenta y un historias en ocho épicas, priorizadas según el valor que cada funcionalidad aporta al negocio, proporciona al equipo una hoja de ruta clara y ejecutable para las siguientes entregas. Este trabajo de planificación, combinado con la arquitectura técnica definida mediante los diagramas de componentes, clases de dominio y base de datos para cada bounded context, sitúa al equipo en una posición favorable para iniciar el desarrollo del sistema con claridad sobre qué construir, en qué orden y bajo qué criterios de calidad verificables.
 
 # Bibliografía
 * Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/
@@ -2089,3 +2096,5 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 # Anexos
 
 * Big Picture Event Storming: https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434
+* Link del Keynote:
+https://canva.link/i6aikeu52j3nqwg 
