@@ -1365,13 +1365,89 @@ Este escenario modela la interacción directa entre el visitante y el residente 
 
 #### 4.1.1.3. Bounded Context Canvases
 
+En esta sección se presentan los lienzos detallados para los cinco contextos candidatos identificados. Cada canvas actúa como un contrato estratégico que define la misión, el lenguaje ubicuo y las decisiones críticas de los módulos que integran la solución **NexBell**, asegurando la trazabilidad desde la portería física hasta el ecosistema digital de **Nexora**.
 
+---
+
+#### **1. Bounded Context: Identity and Access Management (IAM)**
+
+Este contexto transversal de seguridad se encarga de gestionar el ciclo de vida de las identidades y los permisos de acceso lógico para todos los actores del sistema.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/1_hsvfpb" alt="Bounded Context Canvas IAM" width="1000">
+</p>
+
+
+**Explicación del Canvas:**
+* **Propósito:** Centralizar la lógica de autenticación y autorización, garantizando procesos seguros de cambio de credenciales y recuperación de accesos mediante la integración con servicios externos como Gmail.
+* **Decisiones de Negocio:** Encapsula las reglas de expiración de sesiones (Time-to-Live), las políticas de validación para el restablecimiento de cuentas y el registro seguro de modificaciones de identidad.
+
+---
+
+#### **2. Bounded Context: Security (Core Domain)**
+
+Constituye el núcleo estratégico de NexBell. Su propósito es arbitrar y validar todas las interacciones de control de acceso físico en el entorno residencial.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/2_ignmpn" alt="Bounded Context Canvas Security" width="1000">
+</p>
+
+
+**Explicación del Canvas:**
+* **Propósito:** Definir y validar los permisos de acceso basándose en reglas de negocio y **Reconocimiento Facial Biométrico**, gestionando la respuesta ante la detección de visitantes en tiempo real.
+* **Decisiones de Negocio:** Determina las facultades de cada actor (Conserje vs. Residente), gestiona el flujo de escalamiento si un usuario es inalcanzable y procesa las anomalías detectadas por modelos de Machine Learning.
+
+---
+
+#### **3. Bounded Context: Audit**
+
+Se define como el sistema de registro histórico y trazabilidad de interacciones sociales dentro del edificio, proporcionando una base de datos auditable para residentes y administración.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/3_m4bwp0" alt="Bounded Context Canvas Audit" width="1000">
+</p>
+
+
+**Explicación del Canvas:**
+* **Propósito:** Centralizar la información de todos los ingresos (visitas planificadas y no anunciadas), vinculando los eventos con **Evidencia Multimedia** (audio y fotos) capturada por el hardware.
+* **Decisiones de Negocio:** Define la política de retención de datos (Data Retention Policy), las reglas para vincular metadatos de hardware a unidades específicas y el tratamiento de la información de visitas pendientes.
+
+---
+
+#### **4. Bounded Context: Intercom**
+
+Representa la capa de mediación tecnológica entre el sistema y el hardware IoT, gestionando señales físicas y flujos multimedia.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/4_te9aqc" alt="Bounded Context Canvas Intercom" width="1000">
+</p>
+
+
+**Explicación del Canvas:**
+* **Propósito:** Gestionar la comunicación técnica y segura con el IoT Gateway, traduciendo señales de dispositivos físicos (sensores magnéticos) en eventos de software accionables.
+* **Decisiones de Negocio:** Administra los intervalos de *Heartbeat* para los dispositivos de borde, la seguridad de las conexiones MQTT y la priorización del tráfico de video/audio en tiempo real a través de la Edge API.
+
+---
+
+#### **5. Bounded Context: Directory**
+
+Funciona como el repositorio central de información organizativa y perfiles, estructurando la relación entre los usuarios y el entorno físico del edificio.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/5_kr1yac" alt="Bounded Context Canvas Directory" width="1000">
+</p>
+
+
+**Explicación del Canvas:**
+* **Propósito:** Gestionar los perfiles de usuario y las asociaciones unívocas entre residentes y sus unidades habitacionales, sirviendo como base para la personalización de las interacciones.
+* **Decisiones de Negocio:** Maneja el flujo de *onboarding* de nuevos edificios, la integración con pasarelas de pago y la estructura de perfiles sociales necesaria para la trazabilidad operativa de la comunidad.
+ 
 ### 4.1.2. Context Mapping
 
 El Mapa de Contextos de **NexBell** define las fronteras de responsabilidad y las estrategias de integración entre los diferentes contextos acotados. Dado que el proyecto busca implementar un ecosistema analítico basado en Machine Learning para optimizar la gestión de inventarios y procesos de acceso, la estructura refleja un núcleo central de toma de decisiones que orquesta los servicios de soporte e infraestructura.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Context_Mapping_huj7iv" width="1000">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/12_fa9kd6" width="1000">
 </p>
 
 ---
