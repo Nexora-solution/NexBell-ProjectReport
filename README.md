@@ -265,6 +265,300 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
 </table>
 
                                            
+# Capítulo I: Introducción 
+
+## 1.1. Startup Profile
+
+### 1.1.1. Descripción de la Startup
+
+Nexora es una startup peruana conformada por estudiantes de la Universidad Peruana de Ciencias Aplicadas (UPC), orientada al desarrollo de soluciones tecnológicas innovadoras basadas en el Internet de las Cosas (IoT), con el objetivo de mejorar la seguridad y la gestión de accesos en entornos residenciales.
+
+La propuesta de Nexora se enfoca en modernizar la infraestructura tradicional de edificios multifamiliares y condominios, reemplazando sistemas de intercomunicación analógicos por plataformas digitales inteligentes. A través de la integración de dispositivos embebidos, aplicaciones web y sistemas de notificación en tiempo real, se busca optimizar los procesos de validación de visitantes, reducir costos de mantenimiento y aumentar la eficiencia operativa del personal de seguridad.
+
+Asimismo, la startup apuesta por soluciones escalables, accesibles y centradas en el usuario, permitiendo conectar el entorno físico con el entorno digital. De esta manera, Nexora contribuye a la transformación de espacios convencionales en ecosistemas inteligentes, mejorando la experiencia de residentes, administradores y personal de conserjería.
+
+**Misión:**
+Desarrollar soluciones tecnológicas innovadoras basadas en Internet de las Cosas (IoT) que optimicen la seguridad y la gestión de accesos en entornos residenciales, brindando productos eficientes, accesibles y fáciles de usar para todos los usuarios involucrados.
+
+**Visión:**
+Ser una startup líder en Latinoamérica en el desarrollo de soluciones inteligentes para la seguridad residencial, reconocida por su innovación, confiabilidad y capacidad de transformar digitalmente la gestión de edificios y condominios.
+
+### 1.1.2. Perfiles de los integrantes del equipo
+
+| Raúl Bellido | Ingeniería de Software |
+| -- | --|
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792366/raul_lssksc.jpg" height=200px width=200px> | Soy un estudiante de ingeniería de software. Mi nombre es Raúl Bellido y tengo 19 años. Actualmente estudio en la UPC, donde vengo desarrollando mis habilidades en programación utilizando lenguajes como C# y C++. Mi principal enfoque es el desarrollo de aplicaciones móviles que contribuyan al crecimiento y bienestar del Perú, buscando generar un impacto positivo a través de la tecnología. |
+
+| Gabriel Borja | Ingeniería de Software |
+| -- | --|
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=200px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
+
+| Santiago Suárez | Ingeniería de Software |
+| -- | --|
+| <img src="https://i.imgur.com/vgOqZYW.jpeg" height=200px width=200px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
+
+| Daniela Gómez | Ingeniería de Software |
+| -- | --|
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792340/yo_uzhre7.jpg" height=200px width=200px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
+
+| Anaely Burga | Ingeniería de Software |
+| -- | --|
+| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/foto_1_el130p" height=200px width=200px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
+
+## 1.2. Solution Profile
+
+### 1.2.1. Nombre del producto
+
+NexBell, el producto insignia de nuestra startup, es una solución integral de videoportero inteligente basada en tecnología IoT y una robusta plataforma web, diseñada para transformar la seguridad en edificios residenciales y condominios. Este sistema redefine la gestión de accesos al eliminar por completo la necesidad de cableado interno tradicional, lo que se traduce en una reducción drástica de los costos de instalación y mantenimiento para las juntas de propietarios.
+
+La propuesta de valor de NexBell se centra en empoderar al personal de seguridad y conserjería, permitiéndoles validar visitas mediante video en tiempo real y enrutar las alertas de acceso directamente a los smartphones de los residentes a través de notificaciones móviles. Al integrar un registro digital detallado de cada ingreso, NexBell no solo agiliza la comunicación, sino que eleva los estándares de seguridad y moderniza la experiencia de vivir en comunidad mediante una gestión digitalizada, eficiente y escalable.
+
+### 1.2.2. Antecedentes y problemática
+
+Los edificios multifamiliares y condominios en Lima suelen depender de sistemas de intercomunicadores cableados tradicionales. Estos sistemas presentan múltiples puntos de falla como cables rotos en las paredes, teléfonos malogrados en los departamentos, su mantenimiento es altamente costoso para la junta de propietarios, y no ofrecen registro visual de quién ingresa al edificio. El problema central es la ineficiencia y vulnerabilidad en el control de accesos de edificios residenciales, causada por infraestructura analógica obsoleta que impide al personal de seguridad tener herramientas modernas de validación visual, registro auditable y comunicación asíncrona con los residentes.
+
+Como parte del proceso de definición de la problemática, se aplicó la técnica The 5 W’s and 2 H’s (Who, What, Where, When, Why, How, How Much), permitiendo estructurar de manera preliminar la descripción de los antecedentes y el planteamiento del problema. 
+
+### ***Who:***
+* **¿Quiénes están involucrados?**
+El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (NexBell) como proveedora de la tecnología; la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera; el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
+
+* **¿A quiénes les sucede el problema?**
+El problema impacta principalmente a dos grupos:
+    - **A la Junta de Propietarios y Administradores:** Quienes enfrentan la carga económica de reparaciones constantes y la frustración de gestionar un sistema que no ofrece garantías de seguridad reales ni registros de auditoría.
+    - **A los Residentes:** Quienes sufren la falta de comunicación cuando no están en casa y la vulnerabilidad de vivir en un edificio con controles de acceso fácilmente burlables o inoperativos.
+
+* **¿Quién lo utilizará?**
+La plataforma NexBell tiene dos perfiles de usuario principales según los segmentos objetivo:
+    * **Personal de seguridad o conserjería:** Utilizarán la interfaz de la plataforma web y el hardware IoT para iniciar llamadas de video, registrar visitas y monitorear el estado de los accesos en tiempo real.
+    * **Residentes:** Utilizarán la aplicación móvil en sus smartphones para recibir alertas, visualizar quién está en la puerta y autorizar el ingreso de manera remota y asíncrona.
+
+### ***What:***
+* **Descripción del producto**
+NexBell es una plataforma integral de seguridad e intercomunicación inteligente basada en IoT y entorno web. Su función principal es reemplazar la infraestructura de citofonía análoga por un sistema de videoportero digital que permite la validación de visitas mediante video en tiempo real, gestión de alertas en dispositivos móviles y almacenamiento en la nube de registros de acceso, eliminando la dependencia de cableado físico complejo.
+
+* **¿Cuál es el problema?**
+La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en edificios de Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento por fallas físicas (cables y terminales), vulnerabilidad ante ingresos no autorizados por falta de registro visual y una comunicación deficiente entre el personal de seguridad y los residentes, quienes no siempre se encuentran físicamente en su unidad para autorizar ingresos. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de APESEG (2024), ya afectan anualmente a 1 de cada 10 viviendas en zonas urbanas, agravándose en edificios con sistemas vulnerables y prácticamente obsoletos.
+
+* **¿Cuál es la relación con la persona en cuestión?**
+La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación y control operativo; para los Residentes, es el medio de comunicación asíncrona y supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
+
+### ***Where:***
+* **Localización del sistema**
+El sistema tiene una presencia dual. Físicamente, se ubica en los puntos de control y acceso (porterías, recepciones y puertas peatonales/vehiculares) de edificios residenciales y condominios multifamiliares. Digitalmente, la solución reside en la nube (plataforma web) y se extiende a los dispositivos móviles de los usuarios, permitiendo una cobertura total del perímetro del inmueble.
+
+* **¿Dónde está el usuario cuando utiliza el producto?**
+NexBell rompe la barrera de la ubicación física:
+    * **El Personal de Seguridad:** Se encuentra en su puesto de vigilancia o recepción dentro del edificio, operando la estación base.
+    * **El Residente:** Puede encontrarse en cualquier lugar con conexión a internet (su oficina, el transporte público, otra ciudad o dentro de su propio departamento), ya que recibe las notificaciones y el video directamente en su smartphone.
+
+* **¿Dónde surge el problema?**
+El problema se origina en la infraestructura interna del edificio, específicamente en las canalizaciones de las paredes y los ductos de comunicación donde el cableado antiguo se deteriora. Asimismo, surge en el vacío de comunicación que ocurre cuando el residente está fuera de su unidad habitacional, dejando el punto de acceso al edificio como un eslabón débil en la cadena de seguridad.
+
+### ***When:***
+
+* **Temporalidad del problema**
+La operación de NexBell es de carácter continuo y en tiempo real (24/7). El proceso se activa instantáneamente en el momento en que un visitante se presenta en el punto de acceso; la plataforma web procesa la señal de video y dispara las notificaciones push de forma síncrona para asegurar que la comunicación ocurra en pocos segundos, garantizando la fluidez en la recepción.
+
+* **¿Cuándo sucede el problema?**
+El problema se manifiesta en dos momentos críticos:
+    * **De forma latente y permanente:** Debido al deterioro progresivo del cableado que puede fallar en cualquier momento sin previo aviso.
+    * **En el momento del contacto:** Cuando el personal de seguridad intenta comunicarse con un residente que no está en su departamento o cuando el intercomunicador físico presenta estática o inoperatividad, generando cuellos de botella y riesgos de seguridad en la entrada.
+
+* **¿Cuándo utiliza el cliente el servicio?**
+El servicio es utilizado en cada evento de interacción en el edificio:
+
+    * **El Personal de Seguridad:** Cada vez que llega un visitante, proveedor de servicios o delivery.
+    * **El Residente:** Al recibir alertas de visitas, al revisar el historial de ingresos para auditoría personal o al abrir la puerta de forma remota para un tercero autorizado.
+    * **La Administración:** De forma periódica (mensual o semanal) para revisar reportes de incidencias y registros de auditoría digital.
+
+### ***Why:***
+* **Justificación del producto**
+La implementación de NexBell se justifica por la necesidad imperativa de modernizar la seguridad residencial y optimizar la gestión económica de las juntas de propietarios. Al digitalizar el acceso, se garantiza la trazabilidad de cada ingreso (auditoría), se reduce la vulnerabilidad del edificio ante intrusiones y se elimina el gasto recurrente en reparaciones de hardware físico obsoleto. Además, responde a las demandas de conectividad del residente moderno, proporcionando comodidad y control directo desde cualquier lugar, lo que incrementa el valor comercial de la propiedad.
+
+* **¿Cuál es la causa del problema?**
+La causa raíz reside en la dependencia de infraestructura física pasiva (cables de cobre y terminales analógicos) instalada hace décadas, la cual sufre un desgaste inevitable y es difícil de diagnosticar. A esto se suma la falta de innovación en el sector de portería tradicional, que no ha integrado capacidades de red ni procesamiento de video, dejando al personal de seguridad limitado a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
+
+### ***How:***
+* **Mecanismo de la solución**
+La solución opera mediante un ecosistema de Internet de las Cosas (IoT). Al llegar una visita, el personal de seguridad utiliza una estación base conectada a la red (vía Wi-Fi o Ethernet) para iniciar una sesión de video. Esta señal se transmite a través de una plataforma web robusta alojada en la nube, que actúa como puente para enviar notificaciones push y streaming de video cifrado directamente a la aplicación móvil del residente, permitiendo una validación bidireccional y la apertura remota del acceso.
+
+* **¿En qué condiciones los clientes usan nuestro producto?**
+Los clientes utilizan el producto bajo condiciones de movilidad y conectividad. No dependen de estar físicamente junto a un teléfono de pared; el único requisito es que el edificio cuente con conexión a internet en la recepción y que el residente tenga acceso a datos móviles o Wi-Fi en su smartphone, permitiendo la gestión de seguridad tanto desde la comodidad del hogar como desde el exterior.
+
+* **¿Cómo se integra el sistema en la organización?**
+La integración es no invasiva y escalable. Al eliminar el cableado interno, la instalación se reduce a la configuración de los nodos IoT en los puntos de acceso y el registro de la base de datos de residentes en el panel administrativo de la plataforma web. La organización no necesita contratar técnicos especializados para mantenimiento de infraestructura, sino que gestiona todo de forma digital a través de un modelo de soporte de software.
+
+* **¿Cómo prefieren los usuarios acceder al producto?**
+Los usuarios prefieren un acceso omnichannel y simplificado:
+    * El personal de seguridad prefiere una interfaz web centralizada en una tablet o computadora de escritorio que les permita gestionar múltiples accesos simultáneamente.
+    * El residente prefiere el acceso vía aplicación móvil, priorizando la inmediatez de las notificaciones y la facilidad de una interfaz intuitiva para autorizar visitas con un solo toque.
+
+### ***How Much:***
+* **¿Cuánto cuesta?**
+NexBell opera bajo un modelo de SaaS (Software as a Service) combinado con una inversión inicial mínima de hardware. Este esquema incluye:
+    * **Costo de Implementación Inicial:** Una inversión reducida destinada a la adquisición y configuración de los nodos IoT en los puntos de acceso, eliminando los miles de dólares que costaría el cableado tradicional.
+    * **Suscripción por Membresía:** Un pago recurrente (mensual o anual) por parte de la junta de propietarios o administración. Este modelo cubre el alojamiento en la nube, actualizaciones constantes de software, soporte técnico remoto y el almacenamiento de los registros de seguridad.
+
+* **Impacto Económico y Operativo**
+El impacto se traduce en una optimización radical de los recursos del edificio:
+    * **Reducción de CAPEX:** Se elimina el gasto de capital masivo en infraestructura física (cables, ductos y citófonos por departamento). El ahorro en instalación puede superar el 70% en comparación con sistemas analógicos.
+    * **Eliminación de Costos de Mantenimiento Correctivo:** Al no haber cables que se rompan dentro de las paredes, desaparecen las cuotas extraordinarias por reparaciones complejas y albañilería.
+    * **Valorización del Inmueble:** La modernización tecnológica aumenta el valor percibido y real de las unidades inmobiliarias, posicionando al edificio como una propiedad inteligente y segura.
+    * **Eficiencia en Seguridad:** El personal de conserjería reduce los tiempos de gestión de visitas y errores de comunicación, permitiéndoles enfocarse en otras tareas de vigilancia, lo que maximiza la productividad del servicio de seguridad contratado.
+
+* **Evidencia de estadística**
+    * **Brecha de Inseguridad:** Según el INEI (2025-2026), más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito en los próximos 12 meses. Específicamente en Lima Metropolitana y el Callao, el 60% de los ciudadanos se siente inseguro al transitar por su propio barrio durante la noche, lo que eleva la demanda por sistemas de vigilancia activos y registros digitales.
+    * **Incremento en Delitos de Extorsión:** Las denuncias por extorsión (modalidad que suele incluir el reglaje en viviendas y edificios) aumentaron un 44% en Lima durante el último año (ComexPerú, 2026). Esto refuerza la necesidad de NexBell de ofrecer un registro visual auditable que permita identificar visitantes antes de conceder el acceso.
+
+### 1.2.3. Lean UX Process
+
+#### 1.2.3.1. Lean UX Problem Statements
+
+ - Hemos observado que los edificios residenciales en Lima presentan dificultades en la gestión de accesos, debido al uso de sistemas de intercomunicación tradicionales que no permiten validación visual ni registro digital de visitantes.
+ **¿Cómo podemos ayudar a los administradores y conserjes a mejorar el control de accesos mediante una solución digital con monitoreo en tiempo real y registro automatizado?**
+  
+ - Hemos observado que el personal de conserjería depende de llamadas telefónicas internas y registros manuales, lo que genera retrasos y errores en la validación de visitantes.
+ **¿Cómo podemos brindarles una herramienta rápida, intuitiva y confiable que les permita gestionar visitas sin depender de procesos manuales?**
+
+ - Hemos observado que los residentes no siempre se encuentran en sus departamentos, lo que dificulta la comunicación con el personal de seguridad cuando reciben visitas o entregas.
+ **¿Cómo podemos permitir que los residentes reciban notificaciones en tiempo real y respondan desde cualquier lugar mediante sus dispositivos móviles?**
+
+ - Hemos observado que los sistemas actuales no generan un historial verificable de accesos, lo que limita la trazabilidad y auditoría en caso de incidentes.
+ **¿Cómo podemos implementar un sistema que registre automáticamente cada interacción, incluyendo fecha, hora e imagen del visitante?**
+
+#### 1.2.3.2. Lean UX Assumptions
+
+**Assumptions worksheet**
+
+ - El 70% de los conserjes en edificios urbanos depende de métodos manuales (cuadernos o llamadas) para registrar visitas, lo que genera errores y pérdida de información.<
+ 
+ - El 80% de los residentes considera importante poder visualizar quién visita su hogar antes de autorizar el acceso, especialmente en zonas urbanas con mayor percepción de inseguridad.
+ 
+ - Más del 65% de los usuarios prefiere recibir notificaciones en su celular en lugar de depender de estar físicamente en su departamento para atender visitas.
+
+ - El 60% del personal de seguridad tiene conocimientos tecnológicos básicos, por lo que requiere sistemas simples, intuitivos y rápidos de operar.
+
+- Los residentes valoran la seguridad y privacidad, ya que al menos el 75% considera importante contar con un registro de quién ingresó al edificio.
+
+**User Outcome Assumptions** 
+
+ - Los residentes podrán validar visitas en menos de 10 segundos mediante notificaciones en tiempo real y visualización de imagen o video.
+
+ - Se reducirá en un 50% el tiempo de gestión de visitas por parte del conserje al eliminar procesos manuales.
+ 
+ - El nivel de seguridad percibido por los residentes aumentará en al menos un 40% al contar con validación visual y registro digital.
+ 
+ - Más del 60% de los usuarios confiará en el sistema como principal medio de control de accesos en el edificio.
+
+**Business Assumptions**
+
+ - El 50% de las juntas de propietarios en edificios modernos está dispuesto a invertir en soluciones tecnológicas que reduzcan costos de mantenimiento a largo plazo.
+ 
+ - El modelo de negocio basado en instalación + servicio (suscripción opcional) es viable para condominios de nivel socioeconómico medio y alto en Lima.
+ 
+ - Se estima que el 30% de los edificios nuevos buscará soluciones inteligentes de seguridad en los próximos años.
+ 
+ - La adopción del sistema será progresiva, con una tasa de implementación inicial del 20% en edificios piloto.
+
+**Business Outcome Assumptions**
+
+ - Los edificios que implementen la solución podrán reducir en un 25% los costos de mantenimiento asociados a sistemas tradicionales de intercomunicación.
+ 
+ - El valor percibido del inmueble aumentará en al menos un 15% al incorporar tecnología de seguridad inteligente.
+ 
+ - Se incrementará la eficiencia operativa del personal de seguridad en un 40%, reduciendo errores y t tiempos de respuesta.
+ 
+ - La startup Nexora IoT podrá escalar su solución a múltiples edificios, logrando crecimiento sostenido en el mercado local.
+
+**Feature Assumptions**
+
+ - El sistema de notificaciones push permitirá que el 90% de las alertas de visitas sean recibidas en menos de 5 segundos.
+   
+ - La captura de imagen del visitante será utilizada en más del 80% de las validaciones realizadas por los residentes.
+ 
+ - El dashboard web permitirá al conserje gestionar visitas en menos de 3 clics por operación.
+ 
+ - El historial de accesos será consultado al menos una vez por semana por administradores en el 70% de los edificios.
+ 
+ - El sistema funcionará correctamente en condiciones normales de red WiFi en el 95% de los casos.
+
+#### 1.2.3.3. Lean UX Hypothesis Statements
+
+- Creemos que, al implementar un sistema de notificaciones en tiempo real hacia dispositivos móviles, se logrará que al menos el 80% de los residentes visualice una alerta de visita en menos de 5 segundos; sabremos que esto es cierto cuando el tiempo promedio de recepción de notificaciones sea inferior a ese intervalo.
+
+- Creemos que, al integrar la captura de imagen del visitante mediante el dispositivo IoT, se logrará que el 85% de las validaciones de acceso se realicen con mayor confianza; sabremos que esto es cierto cuando la mayoría de accesos registrados incluyan evidencia visual utilizada en la decisión del conserje o residente.
+
+- Creemos que, al incorporar el registro de audio del visitante con sus datos, se logrará que el proceso de validación sea más preciso y reduzca errores de identificación; sabremos que esto es cierto cuando las incidencias por registros incorrectos disminuyan en al menos un 40%.
+
+- Creemos que, al proporcionar un dashboard web intuitivo para el personal de conserjería, se logrará que el 70% de las gestiones de visitas se realicen en menos de 15 segundos; sabremos que esto es cierto cuando el tiempo promedio de registro por visitante se mantenga por debajo de ese valor.
+
+- Creemos que, al digitalizar el registro de accesos, se logrará que el 90% de las visitas queden almacenadas con información completa (hora, imagen y datos del visitante); sabremos que esto es cierto cuando la base de datos refleje consistencia en los registros generados.
+
+- Creemos que, al permitir el registro previo de visitas por parte de los residentes, se logrará que el 60% de los accesos frecuentes se validen de manera más rápida; sabremos que esto es cierto cuando los registros coincidan con visitas previamente autorizadas en el sistema.
+
+- Creemos que, al reemplazar sistemas tradicionales por una solución basada en IoT, se logrará reducir los costos operativos relacionados al mantenimiento en al menos un 25%; sabremos que esto es cierto cuando los gastos reportados por las juntas de propietarios disminuyan en comparación con periodos anteriores.
+
+- Creemos que, al implementar una solución tecnológica accesible y escalable, se logrará que al menos el 50% de los edificios piloto adopten el sistema como herramienta principal de control de accesos; sabremos que esto es cierto cuando se mantenga una tasa de uso continuo por parte del personal de seguridad y residentes.
+
+#### 1.2.3.4. Lean UX Canvas
+<p align="center">
+  <img src="https://i.imgur.com/D4JC1HD.png" alt="Lean UX Canvas" width="1000">
+</p>
+
+## 1.3. Segmentos Objetivo
+
+Para garantizar que la solución tecnológica propuesta responda de manera efectiva a las necesidades del entorno residencial actual, se han identificado y analizado dos segmentos clave que enfrentan problemáticas en la gestión de accesos y seguridad en edificios multifamiliares.
+
+A continuación, se detallan los perfiles estratégicos que forman parte del modelo de negocio, profundizando en sus características demográficas, geográficas y psicográficas, las cuales sustentan su relevancia dentro del dominio del problema.
+
+<ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
+ 
+ **- Aspectos demográficos:**
+
+  - **Sexo:** Masculino y femenino.
+  - **Rango de edad:** 30 años a más.
+  - **Nivel socioeconómico:** Clases A y B (administradores de edificios, representantes de juntas de propietarios y gestores inmobiliarios).
+  - **Nivel educativo:** Educación técnica o universitaria, con conocimientos en gestión administrativa o inmobiliaria.
+
+ **- Aspectos geográficos:**
+
+  - **Nacionalidad:** Peruana.
+  - **Zona geográfica:** Distritos urbanos de Lima Metropolitana con alta densidad residencial, tales como Miraflores, San Isidro, Surco y Lince.
+  - **Entorno laboral:** Edificios multifamiliares y condominios ubicados en zonas urbanas consolidadas.
+
+ **- Aspectos psicográficos:** 
+
+  - **Dolor principal:** Altos costos de mantenimiento de sistemas tradicionales de intercomunicación, así como la falta de herramientas modernas para el control eficiente de accesos.
+  - **Intereses:** Implementación de soluciones tecnológicas que mejoren la seguridad del inmueble, optimicen los procesos operativos y aumenten el valor del edificio.
+  - **Actitudes:** Son analíticos y orientados a resultados, valoran soluciones confiables, escalables y que representen una inversión rentable a largo plazo.
+  - **Necesidades clave:** Reducción de costos operativos, mejora en la seguridad del edificio, acceso a registros digitales de visitas y control centralizado de accesos.
+
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins> 
+
+ **- Aspectos demográficos:**
+
+  - **Sexo:** Masculino y femenino.
+  - **Rango de edad:** 25 a 60 años.
+  - **Nivel socioeconómico:** Clases C y D (trabajadores del sector servicios).
+  - **Nivel educativo:** Educación secundaria completa o técnica básica.
+
+ **- Aspectos geográficos:**
+
+  - **Nacionalidad:** Peruana.
+  - **Zona geográfica:** Edificios residenciales ubicados en zonas urbanas de Lima Metropolitana.
+  - **Entorno laboral:** Recepciones, porterías o garitas de seguridad en edificios multifamiliares y condominios.
+
+ **- Aspectos psicográficos:**  
+
+  - **Dolor principal:** Dependencia de procesos manuales como registros en papel y llamadas internas, lo que genera errores, retrasos y dificultad en la gestión de visitas.
+  - **Estilo de vida:** Laboral, con turnos rotativos y alta responsabilidad en el control de accesos y seguridad del edificio.
+  - **Actitudes:** Buscan herramientas simples, rápidas y confiables que no requieran conocimientos técnicos avanzados.
+  - **Intereses:** Facilitar su trabajo diario, reducir errores operativos y mejorar la comunicación con los residentes.
+  - **Necesidades clave:** Sistema intuitivo, validación rápida de visitantes, registro automático de accesos y capacidad de comunicación eficiente con los residentes.
+
+<hr>
 
 # Capítulo II: Requirements Elicitation & Analysis
 
