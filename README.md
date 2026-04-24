@@ -1379,7 +1379,13 @@ Este escenario modela la interacción directa entre el visitante y el residente 
 
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
+<p align="center">
+<img src="https://imgur.com/a/FuzqHI0" alt="3" width="1100">
+</p>
 
+<p align="center">
+<img src="https://imgur.com/YigLQ6l" alt="3" width="1100">
+</p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 
