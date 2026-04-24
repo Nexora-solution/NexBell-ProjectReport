@@ -68,8 +68,6 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
   <img src="" alt="PI5" width="1000">
 </p> 
 
-*Nota.* Elaboración propia. 
-
 # Tabla de Contenidos
   - [Student Outcome](#student-outcome)
   - [Capítulo I: Introducción](#capítulo-i-introducción)
@@ -1486,6 +1484,31 @@ A continuación, se presentan las consideraciones estratégicas y técnicas que 
 
 #### 4.1.3.1. Software Architecture System Landscape Diagram
 
+(*System Landscape*) proporciona una visión panorámica de alto nivel de todo el ecosistema de **NexBell**. Este diagrama ilustra cómo los diferentes actores (Residentes y Conserjes) interactúan con la solución y cómo el sistema se integra con servicios externos críticos y hardware IoT para garantizar la seguridad y eficiencia operativa del condominio.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/lan_ocqgkb" alt="System Landscape Diagram - NexBell">
+</p>
+
+
+**Explicación del Diagrama:**
+
+Este diagrama describe los límites del sistema y sus interdependencias estratégicas para la solución de **Nexora**:
+
+1.  **Actores del Sistema:** Se identifican dos roles clave; el **Residente**, enfocado en la gestión de su unidad habitacional y validación de visitas desde su app, y el **Conserje**, encargado de la vigilancia, la gestión del directorio y la trazabilidad operativa global del edificio.
+2.  **Sistemas Internos:** Representan los tres pilares de la arquitectura: la interfaz móvil del usuario (NexBell App), el panel administrativo web (Nexora Dashboard) y el **IoT Edge Gateway**, que actúa como el puente físico para el control de accesos y sensores.
+3.  **Integraciones Externas:**
+    * **Biometric AI Service:** Servicio fundamental para el reconocimiento facial que permite automatizar los ingresos de forma segura y ágil.
+    * **Google Mail & Niubiz:** Servicios de soporte indispensables para la gestión de identidad (recuperación de cuentas) y la monetización del servicio (onboarding de nuevos edificios).
+    * **Firebase / APNS:** Garantizan que las notificaciones de seguridad y alertas de visitas lleguen de forma instantánea al smartphone del residente, sin importar la marca del dispositivo.
+
+**Decisiones de Arquitectura y Supuestos:**
+
+| Decisión / Supuesto | Justificación Técnica |
+| :--- | :--- |
+| **Arquitectura de Borde (Edge):** El uso de un Gateway físico permite que el procesamiento de apertura y lectura de sensores sea local y rápido, minimizando la latencia en el punto de acceso. | Crítico para cumplir con los requerimientos de eficiencia operativa y garantizar la disponibilidad del sistema incluso con fluctuaciones de internet. |
+| **Desacoplamiento de Notificaciones:** Uso de proveedores externos especializados (FCM/APNS). | Asegura que el envío de alertas sea altamente confiable y optimiza el consumo de batería en los dispositivos móviles de los usuarios al no mantener procesos en segundo plano innecesarios. |
+| **Motor de IA Externo:** Integración vía API para biometría facial. | Permite a **Nexora** enfocarse en la lógica de negocio residencial y la experiencia de usuario, delegando la complejidad del procesamiento de imágenes a servicios de IA de alta precisión y escalabilidad. |
 
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
@@ -1499,6 +1522,29 @@ A continuación, se presentan las consideraciones estratégicas y técnicas que 
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
 
+El Diagrama de Despliegue describe la topología física y la infraestructura donde reside la solución **NexBell**. Se detalla la distribución de los artefactos de software en tres niveles clave: el dispositivo del usuario, la infraestructura local del edificio (*Edge*) y el ecosistema escalable en la nube de **Nexora**.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/123_wldtdk" alt="Deployment Diagram - NexBell Solution">
+</p>
+
+*Nota.* Elaboración propia mediante PlantUML siguiendo los estándares del Modelo C4.
+
+**Explicación de la Infraestructura:**
+
+1.  **Capa de Usuario (User Tier):** Las aplicaciones móviles y el panel administrativo interactúan directamente con los servicios de la nube. La aplicación móvil establece además una conexión de baja latencia con el hardware local para funciones críticas de video y audio.
+2.  **Capa de Borde (Edge Tier - Edificio):** En cada condominio se despliega un **IoT Edge Gateway**. Este nodo procesa las señales de los sensores y ejecuta los comandos de apertura de forma local, garantizando la operatividad ante fallos de internet y sincronizándose asíncronamente con la nube.
+3.  **Capa de Nube (Cloud Tier):** Orquesta la inteligencia de todo el ecosistema. Contiene los microservicios core para la gestión de residentes, el motor de biometría facial y la base de datos centralizada que alimenta el sistema analítico.
+
+**Decisiones de Infraestructura:**
+
+| Componente | Tecnología | Justificación Técnica |
+| :--- | :--- | :--- |
+| **Capa de Usuario** | HTTPS / JWT | Garantiza que las comunicaciones entre el smartphone y la nube sean seguras y que cada petición esté debidamente autorizada mediante tokens de sesión. |
+| **Edge Computing** | Gateway Local | Permite que las operaciones críticas, como la apertura de puertas, ocurran en menos de 1 segundo al no depender totalmente de la latencia de una red externa. |
+| **Comunicación IoT** | MQTT (TLS) | Protocolo ligero diseñado para dispositivos con recursos limitados; ideal para enviar estados de la puerta y recibir comandos con un consumo mínimo de datos. |
+| **Escalabilidad Cloud** | Docker / K8s | Facilita el despliegue rápido de actualizaciones y el escalamiento de la API conforme se integran nuevos edificios al ecosistema de **Nexora**. |
+| **Video en Vivo** | WebRTC / RTSP | Protocolos de baja latencia indispensables para que el residente pueda visualizar y hablar con el visitante en tiempo real sin retrasos perceptibles. |
 
 ## 4.2. Tactical-Level Domain-Driven Design
 
