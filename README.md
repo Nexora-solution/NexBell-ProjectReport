@@ -65,7 +65,7 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
 **Figura 1**  
 *Insights de ProjectReports*  
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777065335/i_nsoghts_afqld0.jpg" alt="PI5" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777073710/WhatsApp_Image_2026-04-24_at_6.33.33_PM_fw4cbs.jpg" alt="PI5" width="1000">
 </p> 
 
 # Tabla de Contenidos
