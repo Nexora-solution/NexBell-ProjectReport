@@ -1363,8 +1363,6 @@ Este escenario modela la interacción directa entre el visitante y el residente 
 <img src="https://i.imgur.com/vcgKHiQ.jpeg" alt="3" width="1100">
 </p>
 
-#### 4.1.1.2. Domain Message Flows Modelling
-
 #### 4.1.1.3. Bounded Context Canvases
 
 
