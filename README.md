@@ -1368,7 +1368,43 @@ Este escenario modela la interacción directa entre el visitante y el residente 
 
 ### 4.1.2. Context Mapping
 
+El Mapa de Contextos de **NexBell** define las fronteras de responsabilidad y las estrategias de integración entre los diferentes contextos acotados. Dado que el proyecto busca implementar un ecosistema analítico basado en Machine Learning para optimizar la gestión de inventarios y procesos de acceso, la estructura refleja un núcleo central de toma de decisiones que orquesta los servicios de soporte e infraestructura.
 
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/Context_Mapping_huj7iv" width="1000">
+</p>
+
+---
+
+#### **Tabla de Relaciones de Contexto**
+
+Esta tabla detalla la naturaleza técnica y organizacional de las integraciones en la solución.
+
+| Desde (Upstream) | Hacia (Downstream) | Propósito | Patrón DDD | Contrato | Mensajes / Consultas | SLA / Notas |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Access Management** | **Notification Context** | Notificar al residente en tiempo real para la validación de visitas mediante la app móvil. | Upstream (OHS) / Downstream (CF) | Eventos de Dominio (JSON) | `VisitRegisteredEvent`, `AlertNotification` | Disponibilidad crítica; entrega inmediata (< 3s). |
+| **Access Management** | **IoT Management** | Orquestar la apertura física de cerraduras y monitorear el estado de sensores de puerta. | Customer / Supplier | Published Language (Protobuf) | `UnlockDoorCommand`, `DeviceStatusQuery` | Latencia en hardware requerida < 1.5s. |
+| **Access Management** | **Audit & Analytics** | Proveer flujos de datos para el ecosistema analítico basado en Machine Learning. | Upstream (OHS) / Downstream (CF) | Canonical Schema | `AccessAuthorizedEvent`, `EntryAnomalyDetected` | Almacenamiento persistente para entrenamiento de modelos. |
+
+---
+
+#### **Decisiones, Supuestos, Riesgos y Mitigaciones**
+
+A continuación, se presentan las consideraciones estratégicas y técnicas que sustentan el diseño del mapa de contextos.
+
+##### **1. Decisiones y Supuestos**
+* **Abstracción de Hardware**: Se implementa un **Published Language (PL)** para que el dominio de acceso sea agnóstico al hardware físico, permitiendo integrar diversos protocolos IoT (MQTT/HTTP) sin modificar el núcleo del negocio.
+* **Calidad de Datos Analíticos**: Se asume que el sistema de analítica requiere flujos de datos limpios y constantes de cada evento de acceso para cumplir con el objetivo de optimizar la gestión de recursos en el edificio.
+* **Protección de Dominio (ACL)**: El contexto de Notificaciones utiliza una **Anti-Corruption Layer (ACL)** para proteger la lógica interna de **NexBell** ante cambios en las APIs externas de proveedores como Firebase o APNS.
+
+##### **2. Riesgos y Mitigaciones**
+* **Riesgo de Desincronización Física**: Posible inconsistencia entre el estado lógico de la aplicación y el estado real de la puerta por fallos de red.
+    * **Mitigación**: Implementación de un flujo de confirmación obligatoria (*DoorUnlockedEvent*) y monitoreo de estado (*Heartbeat*) constante desde el IoT Gateway.
+* **Riesgo de Latencia en Notificaciones**: El residente podría no recibir la alerta a tiempo debido a saturación en servicios de terceros.
+    * **Mitigación**: Generación automática de códigos de respaldo y visualización de alertas en el dashboard del conserje para gestión manual.
+* **Riesgo de Saturación Analítica**: El procesamiento masivo de eventos para Machine Learning podría degradar el rendimiento del sistema transaccional.
+    * **Mitigación**: Uso de una arquitectura orientada a eventos (EDA) para procesar la analítica de forma asíncrona y aislada del flujo principal.
+      
 ### 4.1.3. Software Architecture
 
 
