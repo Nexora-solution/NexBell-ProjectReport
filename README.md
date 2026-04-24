@@ -49,7 +49,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
-| TB1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| AV1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
 <hr>
 <hr>
 
@@ -60,12 +60,12 @@
 Elaboramos el informe de nuestro proyecto en un repositorio llamado “ProjectReport” en nuestra organización llamada “Nexora” porque ahí desarrollaremos el producto de nuestra startup.  
 Enlace del repositorio “ProjectReport”: [https://github.com/Nexora-solution/NexBell-ProjectReport.git](https://github.com/Nexora-solution/NexBell-ProjectReport.git)   
 
-<ins>**TB1:**</ins>  
+<ins>**AV1:**</ins>  
 Para poder lograr la elaboración grupal de este informe del proyecto, creamos primero un documento en google y posteriormente agregamos las partes en GitHub en formato markdown. A continuación, se mostrará una imagen de los insights de los commits realizados por cada miembro en dicho repositorio.  
 **Figura 1**  
 *Insights de ProjectReports*  
 <p align="center">
-  <img src="" alt="PI5" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777065335/i_nsoghts_afqld0.jpg" alt="PI5" width="1000">
 </p> 
 
 # Tabla de Contenidos
@@ -2080,7 +2080,7 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 
 # Conclusiones
 
- - Durante el desarrollo del TB1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
+ - Durante el desarrollo del AV1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
 
  - La adopción de Domain-Driven Design como enfoque arquitectónico central del proyecto demostró ser una decisión acertada para gestionar la complejidad del dominio de Nexora. La identificación y definición de cinco bounded contexts, IAM, Security, Directory, Intercom & Notifications y Audit, permitió al equipo separar responsabilidades de forma clara, evitar el acoplamiento entre módulos y establecer contratos de comunicación bien definidos entre servicios. El nivel de detalle alcanzado en cada contexto, incluyendo entidades, value objects, agregados, interfaces de dominio, eventos de dominio y capas de aplicación e infraestructura, evidencia que el equipo no solo comprendió los conceptos teóricos del DDD sino que fue capaz de aplicarlos de manera concreta al dominio del problema planteado.
 
