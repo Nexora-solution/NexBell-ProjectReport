@@ -849,7 +849,7 @@ Estas representaciones permiten comprender de forma más profunda las necesidade
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296243/Mar%C3%ADa_Fern%C3%A1ndez_hjtdj0.png" alt="Class Diagram">
 </p>
 
-*Nota. Elaboración propia de UXPressia*
+
 
 <ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
 
@@ -1528,7 +1528,6 @@ El Diagrama de Despliegue describe la topología física y la infraestructura do
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/123_wldtdk" alt="Deployment Diagram - NexBell Solution">
 </p>
 
-*Nota.* Elaboración propia mediante PlantUML siguiendo los estándares del Modelo C4.
 
 **Explicación de la Infraestructura:**
 
