@@ -677,7 +677,7 @@ Se presenta la elaboración de guías de preguntas estructuradas, dirigidas a lo
 
 * **Nombre:** Nicolas 
 * **Apellido:** Deza
-* **Distrito:** Miraflroes
+* **Distrito:** Miraflores
 
 **Figura** 
 
@@ -2161,4 +2161,6 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 
 * Big Picture Event Storming: https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434
 * Link del Keynote:
-https://canva.link/i6aikeu52j3nqwg 
+https://canva.link/i6aikeu52j3nqwg
+* Link del Video de exposición:
+https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d
