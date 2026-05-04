@@ -1,55 +1,54 @@
 <p align="center">
-  <img src="https://i.imgur.com/frPdUOx.png" alt="logo">
+  <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=100px>
 </p>
 
-# <p align="center">Universidad Peruana de Ciencias Aplicadas</p>
-## <p align="center">Ingeniería de Software</p>
+<p align="center"><b>Universidad Peruana de Ciencias Aplicadas</b></p>
+<p align="center"><b>Facultad de Ingenieria</b></p>
+<br>
 
-<h3 align="center"><strong>Ciclo 2026-10</strong></h3>
-
-<p align="center">1ASI0572 | Desarrollo y Soluciones IOT</p>
+<p align="center">Curso: 1ASI0572 - Desarrollo y Soluciones IOT</p>
 <p align="center"><b>NRC:</b> 6785</p>
-<p align="center"><b>Docente:</b> Marco Antonio León Baca</p>
-
 <br>
+<p align="center"><b>Nombre del profesor:</b> Marco Antonio León Baca</p>
 
-## <p align="center">Informe del TB1</p>
-
-<p align="center"><b>Startup:</b> Nexora</p>
-<p align="center"><b>Producto:</b> NexBell</p>
-
+### <p align="center"><b>"Informe del Trabajo Final"</b></p>
 <br>
-
+<p align="center"><b>Nombre del grupo:</b> Nexora</p>
+<p align="center"><b>Nombre del producto:</b> NexBell</p>
+<br>
 <center>
 
 <p align="center">Integrantes:</p>
 
 <table align="center"; style="width: 100%; border-collapse: collapse; margin: 0 auto;">
   <tr>
-    <th style="border: 1px solid black; padding: 8px; text-align: center;">Nombre</th>
     <th style="border: 1px solid black; padding: 8px; text-align: center;">Código</th>
+    <th style="border: 1px solid black; padding: 8px; text-align: center;">Nombre</th>
+
   </tr>
   </tr>
     <tr>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">Bellido Salas, Raúl</td>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">U202310931</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Bellido Salas, Raúl</td>
+    
   </tr>
   <tr>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">Borja Molina, Gabriel Sebastián</td>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">U202310308</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Borja Molina, Gabriel Sebastián</td>
   </tr>
   </tr>
     <tr>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">Suárez Romero, Santiago Manuel</td>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">U202311532</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Suárez Romero, Santiago Manuel</td>
+
   </tr>  
   <tr>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">Gómez Flores, Daniela Araceli</td>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">U202311184</td>  
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Gómez Flores, Daniela Araceli</td>
   </tr>
     <tr>
-    <td style="border: 1px solid black; padding: 8px; text-align: center;">Burga Loarte, Anaely Zarely</td>
     <td style="border: 1px solid black; padding: 8px; text-align: center;">U202118264</td>
+    <td style="border: 1px solid black; padding: 8px; text-align: center;">Burga Loarte, Anaely Zarely</td>
   </tr>
 </table>
 
