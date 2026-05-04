@@ -16,7 +16,6 @@
 <p align="center"><b>Nombre del grupo:</b> Nexora</p>
 <p align="center"><b>Nombre del producto:</b> NexBell</p>
 <br>
-<center>
 
 <p align="center">Integrantes:</p>
 
@@ -52,17 +51,20 @@
   </tr>
 </table>
 
+<br>
 <hr>
+
+<div style="page-break-after: always;"></div>
 
 # <p align="center">Registro de Versiones del Informe</p>
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
 | AV1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
-<hr>
+
 <hr>
 
-<br>
+<div style="page-break-after: always;"></div>
 
 # Project Report Collaboration Insights
 
@@ -76,6 +78,8 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777073710/WhatsApp_Image_2026-04-24_at_6.33.33_PM_fw4cbs.jpg" alt="PI5" width="1000">
 </p> 
+
+<div style="page-break-after: always;"></div>
 
 # Tabla de Contenidos
   - [Student Outcome](#student-outcome)
@@ -151,10 +155,10 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
               * [4.1.3.3. Software Architecture Deployment Diagrams](#4133-software-architecture-deployment-diagrams)
       * [4.2. Tactical-Level Domain-Driven Design](#42-tactical-level-domain-driven-design)
         * [4.2.1. Bounded Context: IAM (Identity & Access Management)](#421-bounded-context-iam-identity--access-management)
-              * [4.2.1.1. Domain Layer](#4211-domain-layer)
-              * [4.2.1.2. Interface Layer](#4212-interface-layer)
-              * [4.2.1.3. Application Layer](#4213-application-layer)
-              * [4.2.1.4. Infrastructure Layer](#4214-infrastructure-layer)
+            * [4.2.1.1. Domain Layer](#4211-domain-layer)
+            * [4.2.1.2. Interface Layer](#4212-interface-layer)
+            * [4.2.1.3. Application Layer](#4213-application-layer)
+            * [4.2.1.4. Infrastructure Layer](#4214-infrastructure-layer)
           * [4.2.5.5. Bounded Context Software Architecture Component Level Diagrams](#4255-bounded-context-software-architecture-component-level-diagrams)
           * [4.2.5.6. Bounded Context Software Architecture Container Level Diagrams](#4256-bounded-context-software-architecture-container-level-diagrams)
             * [4.2.5.6.1. Bounded Context Domain Layer Class Diagrams](#42561-bounded-context-domain-layer-class-diagrams)
@@ -200,6 +204,7 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
   - [Anexos](#anexos)
 
 <hr>
+<div style="page-break-after: always;"></div>
 
 # Student Outcome
 
@@ -272,7 +277,7 @@ En el siguiente cuadro se describe las acciones realizadas y enunciados de concl
     </td>
   </tr>
 </table>
-
+<div style="page-break-after: always;"></div>
                                            
 # Capítulo I: Introducción 
 
@@ -296,23 +301,23 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Raúl Bellido | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792366/raul_lssksc.jpg" height=200px width=200px> | Soy un estudiante de ingeniería de software. Mi nombre es Raúl Bellido y tengo 19 años. Actualmente estudio en la UPC, donde vengo desarrollando mis habilidades en programación utilizando lenguajes como C# y C++. Mi principal enfoque es el desarrollo de aplicaciones móviles que contribuyan al crecimiento y bienestar del Perú, buscando generar un impacto positivo a través de la tecnología. |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792366/raul_lssksc.jpg" height=200px width=350px> | Soy un estudiante de ingeniería de software. Mi nombre es Raúl Bellido y tengo 19 años. Actualmente estudio en la UPC, donde vengo desarrollando mis habilidades en programación utilizando lenguajes como C# y C++. Mi principal enfoque es el desarrollo de aplicaciones móviles que contribuyan al crecimiento y bienestar del Perú, buscando generar un impacto positivo a través de la tecnología. |
 
 | Gabriel Borja | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=200px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=400px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
 
 | Santiago Suárez | Ingeniería de Software |
 | -- | --|
-| <img src="https://i.imgur.com/vgOqZYW.jpeg" height=200px width=200px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
+| <img src="https://i.imgur.com/vgOqZYW.jpeg" height=200px width=400px> | Soy de la carrera de ingeniería de software. Mis cualidades son ser creativo, trabajar en grupo, me adapto a diferentes entornos. Además, siempre trato de apoyar con los conocimientos que he aprendido a lo largo de mi vida y siempre trato de aprender algo nuevo. |
 
 | Daniela Gómez | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792340/yo_uzhre7.jpg" height=200px width=200px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776792340/yo_uzhre7.jpg" height=200px width=400px> | Soy Daniela Gómez Flores, estudiante de Ingeniería de Software en la UPC, actualmente cursando el 7mo ciclo. Me gusta trabajar de manera organizada, aprender cosas nuevas y mantener un buen equilibrio en mis actividades. La música es parte importante de mi día a día y me motiva a seguir creciendo tanto en lo académico como en lo personal.  |
 
 | Anaely Burga | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/foto_1_el130p" height=200px width=200px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
+| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/foto_1_el130p" height=200px width=300px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
 
 ## 1.2. Solution Profile
 
@@ -568,6 +573,7 @@ A continuación, se detallan los perfiles estratégicos que forman parte del mod
   - **Necesidades clave:** Sistema intuitivo, validación rápida de visitantes, registro automático de accesos y capacidad de comunicación eficiente con los residentes.
 
 <hr>
+<div style="page-break-after: always;"></div>
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -914,29 +920,31 @@ Se presentan los User Personas de Nexora, construidos a partir del análisis de 
 
 Estas representaciones permiten comprender de forma más profunda las necesidades reales de los usuarios, asegurando que el diseño de la solución tecnológica responda de manera efectiva a los problemas identificados en la gestión de accesos y seguridad. De esta manera, los User Personas funcionan como una guía estratégica para el desarrollo de funcionalidades alineadas con el contexto operativo del proyecto.
 
+<div style="page-break-after: always;"></div>
+
 <ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
 
-**Figura**
-
-*User persona de María Fernández*
+**Figura:** *User persona de María Fernández*
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296243/Mar%C3%ADa_Fern%C3%A1ndez_hjtdj0.png" alt="Class Diagram">
-</p>
-
-
-
-<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
-
-**Figura**
-
-*User persona de José Ramírez*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296233/Jos%C3%A9_Ram%C3%ADrez_mfmy85.png" alt="Class Diagram">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296243/Mar%C3%ADa_Fern%C3%A1ndez_hjtdj0.png" alt="Class Diagram" height=1000px width=700px>
 </p>
 
 *Nota. Elaboración propia de UXPressia*
+
+<div style="page-break-after: always;"></div>
+
+<ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
+
+**Figura:** *User persona de José Ramírez*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776296233/Jos%C3%A9_Ram%C3%ADrez_mfmy85.png" alt="Class Diagram" height=1000px width=700px>
+</p>
+
+*Nota. Elaboración propia de UXPressia*
+
+<div style="page-break-after: always;"></div>
 
 ### 2.3.2. User Task Matrix
 
@@ -966,11 +974,11 @@ En esta sección se representa de manera integral la experiencia actual de los u
 
 Al identificar los puntos de dolor (pains) y oportunidades de mejora (gains), se logra transformar la información obtenida en la investigación en insumos clave para el diseño de la solución. Este enfoque facilita la detección de ineficiencias, momentos críticos y necesidades no cubiertas, orientando el desarrollo de Nexora hacia una experiencia más eficiente, segura y centrada en el usuario.
 
+<div style="page-break-after: always;"></div>
+
 <ins>**Segmento Objetivo 1: Juntas de propietarios y administradores de inmuebles**</ins>  
 
-**Figura**
-
-*User Journey Mapping de María Fernández*
+**Figura:** *User Journey Mapping de María Fernández*
 
 <p align="center">
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776303068/Journey_Mapping_de_Juntas_de_propietarios_y_administradores_de_muebles_wrswek.png" alt="Class Diagram">
@@ -978,17 +986,19 @@ Al identificar los puntos de dolor (pains) y oportunidades de mejora (gains), se
 
 *Nota. Elaboración propia de UXPressia*
 
+<div style="page-break-after: always;"></div>
+
 <ins>**Segmento Objetivo 2: Personal de seguridad o conserjería**</ins>
 
-**Figura**
-
-*User Journey Mapping de José Ramírez*
+**Figura:** *User Journey Mapping de José Ramírez*
 
 <p align="center">
   <img src="https://res.cloudinary.com/dxtlqfkp9/image/upload/v1776307102/Jouney_Mapping_de_Personal_de_seguridad_o_conserjeria_2_w3bow9.png" alt="Class Diagram">
 </p>
 
 *Nota. Elaboración propia de UXPressia*
+
+<div style="page-break-after: always;"></div>
 
 ### 2.3.4. Empathy Mapping
 
@@ -1019,6 +1029,8 @@ Esta representación facilita una visión más humana del usuario, destacando su
 </p>
 
 *Nota. Elaboración propia de UXPressia*
+
+<div style="page-break-after: always;"></div>
 
 ## 2.4. Big Picture EventStorming
 
@@ -1093,6 +1105,8 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 | **Approval (Aprobación)**                      | Acción mediante la cual se permite el ingreso del visitante al edificio.                                                                              |
 | **Rejection (Rechazo)**                        | Acción mediante la cual se niega el ingreso del visitante al edificio.                                                                                |
 | **Visit History (Historial de visitas)**       | Lista de visitas asociadas a un residente o gestionadas por el conserje.                                                                              |
+
+<div style="page-break-after: always;"></div>
 
 # Capítulo III: Requirements Specification
 
@@ -1233,6 +1247,7 @@ El Product Backlog de Nexora representa el inventario dinámico y priorizado de 
 | 41 | US33 | Modificar datos de autenticación | Como residente, quiero que el sistema me permita actualizar mis credenciales de acceso (nombre de usuario, contraseña y correo electrónico), para mantener la seguridad y vigencia de mi cuenta dentro de la plataforma. | 5 |
 
 <hr>
+<div style="page-break-after: always;"></div>
 
 # Capítulo IV: Solution Software Design
 
@@ -1717,6 +1732,8 @@ Esta capa implementa las interfaces definidas en el dominio y gestiona la conexi
 
 *Nota.* Elaboración propia
 
+<div style="page-break-after: always;"></div>
+
 #### 4.2.5.6. Bounded Context Software Architecture Container Level Diagrams
 
 ##### 4.2.5.6.1. Bounded Context Domain Layer Class Diagrams
@@ -1809,7 +1826,7 @@ Esta capa orquesta la evaluación de permisos y el despacho de comandos físicos
 *Component Level Diagrams del Bounded Context Security*
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983129/component_fblnm4.png" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983129/component_fblnm4.png" width="600px" height="900px">
 </p> 
 
 *Nota.* Elaboración propia
@@ -2150,6 +2167,7 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 *Nota.* Elaboración propia
 
 <hr>
+<div style="page-break-after: always;"></div>
 
 # Conclusiones
 
@@ -2159,6 +2177,8 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 
  - La estructuración del product backlog y la definición de las historias de usuario con criterios de aceptación en formato Gherkin representaron un avance significativo en la planificación del desarrollo del sistema. La organización de cuarenta y un historias en ocho épicas, priorizadas según el valor que cada funcionalidad aporta al negocio, proporciona al equipo una hoja de ruta clara y ejecutable para las siguientes entregas. Este trabajo de planificación, combinado con la arquitectura técnica definida mediante los diagramas de componentes, clases de dominio y base de datos para cada bounded context, sitúa al equipo en una posición favorable para iniciar el desarrollo del sistema con claridad sobre qué construir, en qué orden y bajo qué criterios de calidad verificables.
 
+<div style="page-break-after: always;"></div>
+
 # Bibliografía
 * Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/
 
@@ -2166,10 +2186,14 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 
 * Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html
 
+<div style="page-break-after: always;"></div>
+
 # Anexos
 
-* Big Picture Event Storming: https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434
+* Big Picture Event Storming: [https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434](https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434)
 * Link del Keynote:
-https://canva.link/i6aikeu52j3nqwg
+[https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
 * Link del Video de exposición:
-https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d
+[https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d](https://canva.link/i6aikeu52j3nqwg)
+
+<div style="page-break-after: always;"></div>
