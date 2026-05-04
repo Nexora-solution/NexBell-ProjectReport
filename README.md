@@ -1,16 +1,28 @@
-<h1 align="center">Informe del Trabajo Final</h1>
-<h3 align="center"><strong>Universidad Peruana de Ciencias Aplicadas</strong></h1>
-
 <p align="center">
-<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/f/fc/UPC_logo_transparente.png" alt="Descripción de la imagen" style="width: 50%; height: auto;"></p>
+  <img src="https://i.imgur.com/frPdUOx.png" alt="logo">
+</p>
 
-<h4 align="center">Ingeniería de Software</h4>
-<h4 align="center">Desarrollo de Soluciones IoT- 6785</h4>
-<h4 align="center">Docente: Marco Antonio Leon Baca</h4>
-<h4 align="center">Startup: Nexora</h4>
-<h4 align="center">Product: NexBell</h4>
+# <p align="center">Universidad Peruana de Ciencias Aplicadas</p>
+## <p align="center">Ingeniería de Software</p>
 
-<p align="center">Team members:</p>
+<h3 align="center"><strong>Ciclo 2026-10</strong></h3>
+
+<p align="center">1ASI0572 | Desarrollo y Soluciones IOT</p>
+<p align="center"><b>NRC:</b> 6785</p>
+<p align="center"><b>Docente:</b> Marco Antonio León Baca</p>
+
+<br>
+
+## <p align="center">Informe del TB1</p>
+
+<p align="center"><b>Startup:</b> Nexora</p>
+<p align="center"><b>Producto:</b> NexBell</p>
+
+<br>
+
+<center>
+
+<p align="center">Integrantes:</p>
 
 <table align="center"; style="width: 100%; border-collapse: collapse; margin: 0 auto;">
   <tr>
@@ -41,11 +53,9 @@
   </tr>
 </table>
 
-<h3 align="center"><strong>Ciclo 2026-01</strong></h3>
-
 <hr>
 
-# Registro de Versiones del Informe
+# <p align="center">Registro de Versiones del Informe</p>
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
