@@ -305,7 +305,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Gabriel Borja | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=400px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=350px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
 
 | Santiago Suárez | Ingeniería de Software |
 | -- | --|
@@ -335,7 +335,7 @@ Como parte del proceso de definición de la problemática, se aplicó la técnic
 
 ### ***Who:***
 * **¿Quiénes están involucrados?**
-El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (NexBell) como proveedora de la tecnología; la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera; el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
+El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (NexBell) como proveedora de la tecnología, la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera, el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
 
 * **¿A quiénes les sucede el problema?**
 El problema impacta principalmente a dos grupos:
@@ -353,6 +353,13 @@ NexBell es una plataforma integral de seguridad e intercomunicación inteligente
 
 * **¿Cuál es el problema?**
 La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en edificios de Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento por fallas físicas (cables y terminales), vulnerabilidad ante ingresos no autorizados por falta de registro visual y una comunicación deficiente entre el personal de seguridad y los residentes, quienes no siempre se encuentran físicamente en su unidad para autorizar ingresos. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de APESEG (2024), ya afectan anualmente a 1 de cada 10 viviendas en zonas urbanas, agravándose en edificios con sistemas vulnerables y prácticamente obsoletos.
+    - **Alcance típico (edificio de ~20 departamentos):**
+    0.5–1.2 km de cableado interno y 20–30 puntos de terminación.
+    - **Frecuencia de fallos:**
+    Los sistemas analógicos empiezan a mostrar fallos comunes cada 5–8 años en condiciones urbanas, debido a múltiples causas: como el desgaste de componentes eléctricos, picos de voltaje o conexiones defectuosas (Seisa, 2025).
+    En entornos de alta humedad, como en las ciudades peruanas (Consultoría & Servicios en Hidrocarburos y Minería S.A.C., 2019), las incidencias pueden llegar a duplicarse.
+    - **Impacto operativo:**
+    Cada evento de falla suele implicar 48–72 horas de indisponibilidad (diagnóstico, acceso por obra civil y reparación), con afectación directa a la gestión de visitas y la percepción de seguridad.
 
 * **¿Cuál es la relación con la persona en cuestión?**
 La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación y control operativo; para los Residentes, es el medio de comunicación asíncrona y supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
@@ -392,6 +399,12 @@ La implementación de NexBell se justifica por la necesidad imperativa de modern
 
 * **¿Cuál es la causa del problema?**
 La causa raíz reside en la dependencia de infraestructura física pasiva (cables de cobre y terminales analógicos) instalada hace décadas, la cual sufre un desgaste inevitable y es difícil de diagnosticar. A esto se suma la falta de innovación en el sector de portería tradicional, que no ha integrado capacidades de red ni procesamiento de video, dejando al personal de seguridad limitado a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
+    - **Causa técnica:**
+La alta humedad y la sulfatación aceleran la corrosión de conductores y terminales, provocando pérdida de audio, estática y fallos en mecanismos de apertura (Consultoría & Servicios en Hidrocarburos y Minería S.A.C., 2019).
+    - **Degradación y vida útil:**
+Un sistema analógico en Lima tiende a entrar en falla crítica entre 5 y 8 años (Sunat, 2022); un sistema digital, con actualizaciones periódicas, tiene expectativa útil de 12–15 años.
+    - **Costo de re‑tendido completo:**
+Rehacer canalizaciones y acabados en un edificio pequeño o mediano: aproximadamente S/6,000 a S/12,000, según el alcance de la intervención y terminaciones, teniendo en cuenta el costo de obra civil, materiales necesarios y reemplazo de dispositivos (Cámara Peruana de la Construcción, 2019; Colegio de Arquitectos del Perú, 2025).
 
 ### ***How:***
 * **Mecanismo de la solución**
@@ -420,6 +433,7 @@ El impacto se traduce en una optimización radical de los recursos del edificio:
     * **Eliminación de Costos de Mantenimiento Correctivo:** Al no haber cables que se rompan dentro de las paredes, desaparecen las cuotas extraordinarias por reparaciones complejas y albañilería.
     * **Valorización del Inmueble:** La modernización tecnológica aumenta el valor percibido y real de las unidades inmobiliarias, posicionando al edificio como una propiedad inteligente y segura.
     * **Eficiencia en Seguridad:** El personal de conserjería reduce los tiempos de gestión de visitas y errores de comunicación, permitiéndoles enfocarse en otras tareas de vigilancia, lo que maximiza la productividad del servicio de seguridad contratado.
+    * **Impacto por departamento (ahorro 5 años):** En un edificio de 20 dptos, ahorro acumulado estimado entre S/300 y S/1,000 por departamento, además de mejora en disponibilidad del servicio y reducción de días de indisponibilidad.
 
 * **Evidencia de estadística**
     * **Brecha de Inseguridad:** Según el INEI (2025-2026), más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito en los próximos 12 meses. Específicamente en Lima Metropolitana y el Callao, el 60% de los ciudadanos se siente inseguro al transitar por su propio barrio durante la noche, lo que eleva la demanda por sistemas de vigilancia activos y registros digitales.
@@ -2180,11 +2194,14 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
-* Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/
-
-* ComexPerú. (2026, 2 de febrero). *Inseguridad en cifras: ¿qué muestran las denuncias?*. ComexPeru. Recuperado el 16 de abril de 2026, de https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias
-
-* Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html
+* Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de [https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/](https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/)
+* Cámara Peruana de la Construcción (2019, Octubre). *Costos y Presupuestos en Edificación*. CAPECO. Recuperado el 6 de mayo de 2026, de [https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf](https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf)
+* Colegio de Arquitectos del Perú Regional Lima (2025, Enero). *VALORES UNITARIOS A COSTO DIRECTO DE ALGUNAS OBRAS COMPLEMENTARIAS E INSTALACIONES FIJAS Y PERMANENTES LIMA METROPOLITANA Y PROVINCIA CONSTITUCIONAL DEL CALLAO AL 31 DE OCTUBRE DE 2024*. Limacap. Recuperado el 6 de mayo de 2026, de [https://limacap.org/wp-content/uploads/2025/01/Valores-de-obras-complementarias-2025.pdf](https://limacap.org/wp-content/uploads/2025/01/Valores-de-obras-complementarias-2025.pdf)
+* ComexPerú. (2026, 2 de febrero). *Inseguridad en cifras: ¿qué muestran las denuncias?*. ComexPeru. Recuperado el 16 de abril de 2026, de [https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias](https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias)
+* Consultoría & Servicios en Hidrocarburos y Minería S.A.C. (2019, Julio). *Servicio de estudio de corrosión en Piura y Tumbes- Electronoroeste S.A.*. Osinergmin. Recuperado el 6 de mayo de 2026, de [https://www2.osinergmin.gob.pe/GRT/Procesos-Regulatorios/VAD-2019-2023/VAD-2019-2023-9-Electronoroeste_Informe%20Corrosi%C3%B3n%2001.pdf](https://www2.osinergmin.gob.pe/GRT/Procesos-Regulatorios/VAD-2019-2023/VAD-2019-2023-9-Electronoroeste_Informe%20Corrosi%C3%B3n%2001.pdf)
+* Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de [https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html](https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html)
+* Seisa (2025, 14 de agosto). *Fallas intermitentes en equipos eléctricos: Causas y solución con el Osciloscopio Serie 2 MSO-EDU*. Seisa. Recuperado el 6 de mayo de 2026, de [https://seisa.com.co/fallas-intermitentes-en-equipos-electricos-causas-y-solucion-con-el-osciloscopio-serie-2-mso-edu/?srsltid=AfmBOoo5cojL6JiRAIzLx9f2mtgWt50ZBgYlMyyMjT4cyrS5r5Lt-WmZ](https://seisa.com.co/fallas-intermitentes-en-equipos-electricos-causas-y-solucion-con-el-osciloscopio-serie-2-mso-edu/?srsltid=AfmBOoo5cojL6JiRAIzLx9f2mtgWt50ZBgYlMyyMjT4cyrS5r5Lt-WmZ)
+* Sunat (2022). *Tabla de Tiempos de Vida Útil de los Equipos*. Sunat. Recuperado el 6 de mayo de 2026, de [https://www.sunat.gob.pe/legislacion/superin/2022/anexo-071-2022.pdf](https://www.sunat.gob.pe/legislacion/superin/2022/anexo-071-2022.pdf)
 
 <div style="page-break-after: always;"></div>
 
@@ -2195,5 +2212,3 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
 * Link del Video de exposición:
 [https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d](https://canva.link/i6aikeu52j3nqwg)
-
-<div style="page-break-after: always;"></div>
