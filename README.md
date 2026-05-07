@@ -2183,6 +2183,180 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <hr>
 <div style="page-break-after: always;"></div>
 
+# Capítulo V: Solution UI/UX Design
+
+## 5.1. General Style Guidelines
+
+La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
+los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
+de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
+Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
+a la identidad de nuestra marca.
+
+#### **Branding y Tono de Comunicación**
+
+La identidad de **Nextbell** se construye sobre una base de confianza y eficiencia, valores críticos para el administrador del edificio y la tranquilidad de los residentes.
+
+- **Personalidad de la Marca:** NextBell se proyecta como una marca **Confiable, Eficiente y Profesional**. Buscamos que los administradores, juntas de propietarios y personal de seguridad perciban la plataforma no solo como una herramienta, sino como un socio estratégico en la protección de su comunidad.
+
+- **Tono de Comunicación:** El lenguaje utilizado en la plataforma es un reflejo directo de nuestra personalidad. Por ello, el tono será:
+    - **Serio y Formal:** Para comunicar con la profesionalidad que el entorno B2B y la gestión de seguridad demandan.
+    - **Respetuoso y Sereno:** Para transmitir control, orden y seguridad a los usuarios que confían en nosotros para la vigilancia de sus hogares.
+
+#### **Paleta de Colores**
+
+La paleta de colores ha sido seleccionada para reforzar nuestra identidad de marca, utilizando un sistema armónico y accesible basado en Material Design. El color azul primario fue elegido por su asociación psicológica con la confianza, la estabilidad y la tecnología.
+
+| Rol del Color          | Nombre             | Código HEX | Muestra |
+| :--------------------- | :----------------- | :--------- | :------ |
+| **Primario** | Primary Blue       | `#2196F3`  | 🔵      |
+| **Secundario** | Secondary Teal     | `#009688`  | 🟢      |
+| **Error** | Error Red          | `#D32F2F`  | 🔴      |
+| **Superficie (Fondo)** | Surface            | `#FFFFFF`  | ⚪      |
+| **Texto Primario** | On Surface         | `#212121`  | ⚫      |
+| **Texto Secundario** | On Surface Variant | `#757575`  | ⚫      |
+
+#### **Tipografía**
+
+Para asegurar la máxima legibilidad y una estética limpia en todas las plataformas (móvil para residentes y web para conserjes), se ha adoptado la familia tipográfica **Roboto**, el estándar oficial de Material Design. Su versatilidad y claridad la hacen ideal para interfaces de usuario funcionales.
+
+La jerarquía tipográfica se define de la siguiente manera:
+
+| Elemento                 | Fuente | Grosor (Weight) | Tamaño (Size) |
+| :----------------------- | :----- | :-------------- | :------------ |
+| **Headline Large (H1)** | Roboto | Regular         | 32px          |
+| **Headline Medium (H2)** | Roboto | Regular         | 28px          |
+| **Title Large (Título)** | Roboto | Medium          | 22px          |
+| **Body Large (Párrafo)** | Roboto | Regular         | 16px          |
+| **Body Medium** | Roboto | Regular         | 14px          |
+| **Label Large (Botón)** | Roboto | Medium          | 14px          |
+
+#### **Espaciado (Spacing)**
+
+Con el fin de crear una interfaz ordenada y con un ritmo visual consistente, se implementa un **sistema de espaciado basado en una cuadrícula de 8px**. Todos los márgenes, paddings y distancias entre los componentes de la UI serán múltiplos de 8 (ej: 8px, 16px, 24px, 32px). Este enfoque sistemático asegura que los layouts de gestión de visitas y directorios se sientan equilibrados y profesionales.
+
+### 5.2. Information Architecture
+
+#### 5.2.1. Organization Systems
+
+Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+
+##### **Sistemas de Organización Visual**
+
+- **Jerárquica (Visual Hierarchy):** Se aplicará principalmente en el **Dashboard del Conserje/Administrador**, donde las alertas de acceso actuales y las llamadas en espera se mostrarán con mayor prominencia visual. La jerarquía tipográfica guiará al usuario para distinguir rápidamente entre un aviso de visita y una notificación del sistema.
+
+- **Secuencial (Step-by-step):** Este sistema se aplicará en flujos de trabajo críticos como la **validación de una visita**, el **onboarding de un nuevo residente** y el **proceso de registro de una encomienda o paquete**. Guía al usuario de principio a fin, minimizando errores en la toma de datos de seguridad.
+
+- **Matricial (Matrix):** Utilizado para la visualización de conjuntos de datos complejos como el **Historial de Accesos** y el **Directorio de Residentes**, permitiendo consultar, ordenar y filtrar registros según departamento, fecha o tipo de ingreso.
+
+##### **Esquemas de Categorización del Contenido**
+
+- **Alfabético:** Se aplicará para facilitar la búsqueda en la lista de **Residentes** y el directorio de **Proveedores de Servicios** frecuentes.
+
+- **Cronológico:** El pilar para el historial de seguridad. Se presentará en orden cronológico descendente (lo más reciente primero) en secciones como **Registro de Visitas**, **Historial de Llamadas** y **Bitácora de Incidentes de Seguridad**.
+
+- **Por Tópicos (By Topic):** La navegación se organizará por módulos funcionales: **Intercomunicador, Visitantes, Residentes, Encomiendas y Seguridad**.
+
+- **Según Audiencia (By Audience):** - El **Personal de Seguridad (Conserje)** tendrá acceso a la consola de intercomunicación, gestión de visitas en tiempo real y registro de paquetes.
+    - El **Residente** dispondrá de una vista simplificada en su móvil para recibir videollamadas, autorizar accesos y revisar su historial personal de visitas.
+    - El **Administrador del Edificio** tendrá acceso a métricas de uso, auditorías de seguridad y gestión de pagos de la plataforma.
+
+#### 5.2.2. Labelling Systems
+
+El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+
+##### **Etiquetas de Navegación Principal**
+
+- **Inicio:** Dashboard principal.
+- **Intercom:** Acceso a la consola de llamadas y video.
+- **Visitantes:** Gestión de visitas actuales y pre-autorizadas.
+- **Directorio:** Lista de residentes y departamentos.
+- **Encomiendas:** Registro de paquetes y correspondencia.
+- **Auditoría:** Historial completo de accesos.
+- **Mi Cuenta:** Configuración de perfil.
+
+##### **Etiquetas de Acciones Principales (CTA)**
+
+- **+ Pre-autorizar Visita**
+- **Abrir Puerta**
+- **Iniciar Videollamada**
+- **Registrar Paquete**
+- **Añadir Residente**
+- **Reportar Alerta**
+
+##### **Etiquetas de Acciones de Gestión**
+
+- **Autorizar**
+- **Denegar**
+- **Editar**
+- **Finalizar Llamada**
+- **Ver Registro**
+- **Filtrar**
+
+##### **Etiquetas de Estado y Datos**
+
+- **Estado de Acceso:** `Autorizado`, `Denegado`, `En Espera`.
+- **Estado de Puerta:** `Cerrada`, `Abierta`, `Alarma`.
+- **Tipo de Visita:** `Familiar`, `Delivery`, `Servicio Técnico`.
+
+#### 5.2.3. SEO Tags and Meta Tags
+
+##### **SEO Tags para el Landing Page**
+
+- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+    - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
+
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+    - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
+
+- **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
+
+##### **ASO (App Store Optimization) para la Aplicación Móvil**
+
+- **App Title:** `Nextbell: Videoportería y Seguridad`
+- **App Subtitle:** `Atiende tu puerta desde el celular.`
+- **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
+- **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
+    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+
+      Con Nextbell podrás:
+        - Ver y hablar con tus visitantes en tiempo real.
+        - Pre-autorizar invitados con códigos QR o invitaciones digitales.
+        - Recibir alertas de encomiendas y paquetes en recepción.
+        - Consultar el historial de quién ha visitado tu hogar.
+
+      Sin instalaciones complejas dentro de tu departamento. ¡Más seguridad, más comodidad!`
+
+#### 5.2.4. Searching Systems
+
+##### **Búsqueda de Residentes**
+
+- **Opción de Búsqueda:** El conserje podrá buscar por **número de departamento** o **apellido del residente**.
+- **Filtros Disponibles:** Por **Torre/Bloque** y **Estado de Cuenta** (`Activo`, `Inactivo`).
+
+##### **Búsqueda en Historial de Accesos**
+
+- **Opción de Búsqueda:** Búsqueda por **nombre del visitante** o **DNI**.
+- **Filtros Disponibles:** **Fecha/Hora**, **Tipo de Visita** (`Delivery`, `Visita`, `Servicios`) y **Resultado** (`Aprobado`, `Denegado`).
+
+##### **Búsqueda de Encomiendas**
+
+- **Opción de Búsqueda:** Localización por **Departamento** destinatario.
+- **Filtros Disponibles:** **Estado del Paquete** (`En Conserjería`, `Entregado`) y **Empresa de Courier**.
+
+#### 5.2.5. Navigation Systems
+
+##### **Sistema de Navegación para la Aplicación Móvil**
+
+- **Navegación Primaria (Bottom Nav):** Acceso rápido a `Inicio`, `Visitas`, `Llamadas` y `Perfil`.
+- **Navegación Jerárquica:** Al tocar una notificación de visita, el usuario entra al detalle del visitante y puede retroceder al historial.
+- **Pestañas (Tabs):** En la sección de Visitas se usará `Pendientes` y `Pasadas`.
+- **Botón de Acción Flotante (FAB):** En la pantalla de Visitas para "+ Crear Invitación".
+
+##### **Sistema de Navegación para el Landing Page**
+
+- **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
+- **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
 # Conclusiones
 
  - Durante el desarrollo del AV1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
