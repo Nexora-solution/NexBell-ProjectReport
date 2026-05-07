@@ -2357,6 +2357,60 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 
 - **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
 - **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
+
+#### 5.3. Landing Page UI Design.
+#### 5.3.1. Landing Page Wireframe.
+#### 5.3.2. Landing Page Mock-up.
+#### 5.4. Applications UX/UI Design.
+#### 5.4.1. Applications Wireframes.
+#### 5.4.2. Applications Wireflow Diagrams.
+#### 5.4.2. Applications Mock-ups.
+#### 5.4.3. Applications User Flow Diagrams.
+#### 5.5. Applications Prototyping.
+#### 5.6. IoT Device Design.
+
+### Paso 1: Definición de los requisitos del sistema
+* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
+* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
+
+### Paso 2: Selección de la tipología del sistema IoT
+* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
+
+### Paso 3: Definición de los requisitos de la capa física
+* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
+* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
+
+### Paso 4: Definición de los requisitos de la capa de intercambio
+* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
+* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
+
+### Paso 5: Definición de los requisitos de la capa de información
+* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
+* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
+
+### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
+* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
+
+### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
+* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
+
+### Paso 8: Selección de los sensores y actuadores
+* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
+* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
+
+### Paso 9: Selección del microcontrolador y transceptores de radio
+* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
+
+### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
+* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
+* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
+
+### Paso 11: Análisis del tiempo de procesamiento
+* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
+
+### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
+* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
+
 # Conclusiones
 
  - Durante el desarrollo del AV1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
