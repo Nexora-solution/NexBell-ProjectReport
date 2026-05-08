@@ -2176,12 +2176,19 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
+
 * Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/
 
 * ComexPerú. (2026, 2 de febrero). *Inseguridad en cifras: ¿qué muestran las denuncias?*. ComexPeru. Recuperado el 16 de abril de 2026, de https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias
 
 * Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html
+  
+* Policía Nacional del Perú. (2025). *Anuario Estadístico de la Criminalidad y Seguridad Ciudadana*. Ministerio del Interior.
 
+* Smart Cities Perú. (2025). *Impacto de la Tecnología IoT en la Valorización del Patrimonio Inmobiliario y Seguridad Ciudadana*. Observatorio de Ciudades Inteligentes.
+
+* Cámara Peruana de la Construcción. (2025). *Tendencias en Edificaciones Inteligentes y Eficiencia en Gestión de Propietarios*. CAPECO.
+  
 <div style="page-break-after: always;"></div>
 
 # Anexos
