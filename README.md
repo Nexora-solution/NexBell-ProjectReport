@@ -1617,7 +1617,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 </p>
 
 <p align="center">
-<img src="https://imgur.com/YigLQ6l.png" alt="3" width="1100">
+<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
