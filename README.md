@@ -2252,37 +2252,60 @@ La identidad de **Nextbell** se construye sobre una base de confianza y eficienc
     - **Serio y Formal:** Para comunicar con la profesionalidad que el entorno B2B y la gestión de seguridad demandan.
     - **Respetuoso y Sereno:** Para transmitir control, orden y seguridad a los usuarios que confían en nosotros para la vigilancia de sus hogares.
 
+A continuación, presento la actualización de las guías de diseño para **Nextbell**, integrando la identidad visual "Vigilant Elegance" y las especificaciones técnicas detalladas en el archivo `DESIGN.md`.
+
+---
+
+#### **Branding y Tono de Comunicación**
+
+La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+
+* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
+* *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
+* *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
+* *Técnico y Funcional:** Para los datos de seguridad, estados del sistema y lectura de dispositivos IoT .
+
 #### **Paleta de Colores**
 
-La paleta de colores ha sido seleccionada para reforzar nuestra identidad de marca, utilizando un sistema armónico y accesible basado en Material Design. El color azul primario fue elegido por su asociación psicológica con la confianza, la estabilidad y la tecnología.
+La paleta sigue una filosofía de **"Negro Puro"** para asegurar profundidad infinita y eficiencia energética en pantallas OLED, utilizando el turquesa como indicador de seguridad y actividad .
 
-| Rol del Color          | Nombre             | Código HEX | Muestra |
-| :--------------------- | :----------------- | :--------- | :------ |
-| **Primario** | Primary Blue       | `#2196F3`  | 🔵      |
-| **Secundario** | Secondary Teal     | `#009688`  | 🟢      |
-| **Error** | Error Red          | `#D32F2F`  | 🔴      |
-| **Superficie (Fondo)** | Surface            | `#FFFFFF`  | ⚪      |
-| **Texto Primario** | On Surface         | `#212121`  | ⚫      |
-| **Texto Secundario** | On Surface Variant | `#757575`  | ⚫      |
+| Rol del Color | Nombre | Código HEX | Aplicación |
+| :--- | :--- | :--- | :--- |
+| **Primario** | Primary Turquoise | `#74d7cf` | Estado activo e indicador de "Seguro" . |
+| **Secundario** | Secondary Turquoise| `#74d7ce` | Estados de interacción (hover) y detalles decorativos . |
+| **Terciario** | Tertiary Accent | `#ffb59a` | Elementos de acento específicos . |
+| **Fondo** | Background | `#000000` | Base sólida para contraste máximo . |
+| **Error** | Error Red | `#ffb4ab` | Alertas críticas de seguridad . |
+| **Bordes** | Tonal Borders | `#1a1a1a` | Definición de contenedores secundarios . |
 
 #### **Tipografía**
 
-Para asegurar la máxima legibilidad y una estética limpia en todas las plataformas (móvil para residentes y web para conserjes), se ha adoptado la familia tipográfica **Roboto**, el estándar oficial de Material Design. Su versatilidad y claridad la hacen ideal para interfaces de usuario funcionales.
+El sistema emplea una tensión tipográfica sofisticada entre lo editorial y lo técnico .
 
-La jerarquía tipográfica se define de la siguiente manera:
+| Elemento | Fuente | Grosor | Tamaño | Aplicación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Headline Accent** | ebGaramond | Medium (500) | 48px | Títulos editoriales y hero statements . |
+| **Headline Large** | Geist | Bold (600) | 32px | Títulos funcionales de la UI . |
+| **Body Medium** | Geist | Regular (400) | 16px | Lectura de datos y cuerpo de texto . |
+| **Label Caps** | Geist | Bold (600) | 12px | Metadatos técnicos y estados (Uppercase) . |
 
-| Elemento                 | Fuente | Grosor (Weight) | Tamaño (Size) |
-| :----------------------- | :----- | :-------------- | :------------ |
-| **Headline Large (H1)** | Roboto | Regular         | 32px          |
-| **Headline Medium (H2)** | Roboto | Regular         | 28px          |
-| **Title Large (Título)** | Roboto | Medium          | 22px          |
-| **Body Large (Párrafo)** | Roboto | Regular         | 16px          |
-| **Body Medium** | Roboto | Regular         | 14px          |
-| **Label Large (Botón)** | Roboto | Medium          | 14px          |
+#### **Layout y Espaciado (Spacing)**
 
-#### **Espaciado (Spacing)**
+Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un ritmo vertical estricto y una sensación arquitectónica estructurada .
 
-Con el fin de crear una interfaz ordenada y con un ritmo visual consistente, se implementa un **sistema de espaciado basado en una cuadrícula de 8px**. Todos los márgenes, paddings y distancias entre los componentes de la UI serán múltiplos de 8 (ej: 8px, 16px, 24px, 32px). Este enfoque sistemático asegura que los layouts de gestión de visitas y directorios se sientan equilibrados y profesionales.
+* *Unidad Base:** 4px .
+* *Gutter:** 24px para separación entre columnas .
+* *Margen:** 32px para evitar la saturación visual en los bordes de la pantalla .
+* *Zonas de Control:** Se utilizan grandes espacios negativos para separar el estado de seguridad principal de los controles ambientales secundarios .
+
+#### **Formas y Elevación**
+
+* *Geometría de Píldora:** Los botones, campos de entrada y distintivos de estado deben ser siempre **completamente redondeados (pill-shaped)** para suavizar el borde técnico de la interfaz .
+* *Contenedores:** Las tarjetas de video y gráficos utilizan un radio de **1.5rem (rounded-xl)** para proyectar estabilidad arquitectónica .
+* *Profundidad Luminosa:** En lugar de sombras, se utiliza un **brillo turquesa suave** (`rgba(66, 168, 161, 0.3)`) para resaltar elementos de estado crítico como el botón de "Armado" .
+* *Efecto de Cristal:** Los modales y superposiciones utilizan un fondo blanco al 10% de opacidad con un desenfoque de fondo (*backdrop blur*) de más de 20px para un efecto de "vidrio ahumado" .
+
 
 ### 5.2. Information Architecture
 
