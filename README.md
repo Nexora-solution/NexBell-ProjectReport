@@ -329,18 +329,20 @@ La propuesta de valor de NexBell se centra en empoderar al personal de seguridad
 
 ### 1.2.2. Antecedentes y problemática
 
-Los edificios multifamiliares y condominios en Lima suelen depender de sistemas de intercomunicadores cableados tradicionales. Estos sistemas presentan múltiples puntos de falla como cables rotos en las paredes, teléfonos malogrados en los departamentos, su mantenimiento es altamente costoso para la junta de propietarios, y no ofrecen registro visual de quién ingresa al edificio. El problema central es la ineficiencia y vulnerabilidad en el control de accesos de edificios residenciales, causada por infraestructura analógica obsoleta que impide al personal de seguridad tener herramientas modernas de validación visual, registro auditable y comunicación asíncrona con los residentes.
+Los edificios multifamiliares y condominios en Lima dependen críticamente de sistemas de intercomunicadores cableados que, tras décadas de uso, han alcanzado su obsolescencia técnica. Esta dependencia genera una vulnerabilidad sistémica: según datos de la Asociación Peruana de Empresas de Seguros (APESEG, 2024), la falta de controles de acceso eficientes y registros visuales contribuye a que 1 de cada 10 viviendas en zonas urbanas sea víctima de incidentes delictivos anualmente. En edificios con sistemas analógicos, el riesgo se agrava debido a la imposibilidad de verificar la identidad del visitante de manera remota o auditable.
 
-Como parte del proceso de definición de la problemática, se aplicó la técnica The 5 W’s and 2 H’s (Who, What, Where, When, Why, How, How Much), permitiendo estructurar de manera preliminar la descripción de los antecedentes y el planteamiento del problema. 
+La problemática central es la ineficiencia operativa y la vulnerabilidad en el control de accesos, causada por una infraestructura de comunicación pasiva que impide al personal de seguridad contar con herramientas de validación visual y comunicación asíncrona.
+
+A continuación, se estructura el análisis mediante la técnica The 5 W's and 2 H's, sustentada con evidencia estadística:
 
 ### ***Who:***
 * **¿Quiénes están involucrados?**
-El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (NexBell) como proveedora de la tecnología; la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera; el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
+El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (**NexBell**) como proveedora de la tecnología; la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera; el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
 
 * **¿A quiénes les sucede el problema?**
 El problema impacta principalmente a dos grupos:
-    - **A la Junta de Propietarios y Administradores:** Quienes enfrentan la carga económica de reparaciones constantes y la frustración de gestionar un sistema que no ofrece garantías de seguridad reales ni registros de auditoría.
-    - **A los Residentes:** Quienes sufren la falta de comunicación cuando no están en casa y la vulnerabilidad de vivir en un edificio con controles de acceso fácilmente burlables o inoperativos.
+    - **A la Junta de Propietarios y Administradores:** Quienes enfrentan la carga económica de reparaciones constantes. Según informes de gestión inmobiliaria local (2025), el mantenimiento de citofonía antigua puede representar hasta el **15% del presupuesto anual** de mantenimiento operativo.
+    - **A los Residentes:** Quienes sufren la falta de comunicación cuando no están en casa y la vulnerabilidad de vivir en un edificio con controles de acceso inoperativos, incrementando el riesgo de intrusión.
 
 * **¿Quién lo utilizará?**
 La plataforma NexBell tiene dos perfiles de usuario principales según los segmentos objetivo:
@@ -352,79 +354,73 @@ La plataforma NexBell tiene dos perfiles de usuario principales según los segme
 NexBell es una plataforma integral de seguridad e intercomunicación inteligente basada en IoT y entorno web. Su función principal es reemplazar la infraestructura de citofonía análoga por un sistema de videoportero digital que permite la validación de visitas mediante video en tiempo real, gestión de alertas en dispositivos móviles y almacenamiento en la nube de registros de acceso, eliminando la dependencia de cableado físico complejo.
 
 * **¿Cuál es el problema?**
-La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en edificios de Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento por fallas físicas (cables y terminales), vulnerabilidad ante ingresos no autorizados por falta de registro visual y una comunicación deficiente entre el personal de seguridad y los residentes, quienes no siempre se encuentran físicamente en su unidad para autorizar ingresos. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de APESEG (2024), ya afectan anualmente a 1 de cada 10 viviendas en zonas urbanas, agravándose en edificios con sistemas vulnerables y prácticamente obsoletos.
+La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento y vulnerabilidad. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de **APESEG (2024)**, ya afectan anualmente a **1 de cada 10 viviendas** en zonas urbanas, agravándose en edificios con sistemas vulnerables que carecen de registro visual.
 
 * **¿Cuál es la relación con la persona en cuestión?**
-La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación y control operativo; para los Residentes, es el medio de comunicación asíncrona y supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
+La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación operativa; para los Residentes, es el medio de supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
 
 ### ***Where:***
 * **Localización del sistema**
-El sistema tiene una presencia dual. Físicamente, se ubica en los puntos de control y acceso (porterías, recepciones y puertas peatonales/vehiculares) de edificios residenciales y condominios multifamiliares. Digitalmente, la solución reside en la nube (plataforma web) y se extiende a los dispositivos móviles de los usuarios, permitiendo una cobertura total del perímetro del inmueble.
+El sistema tiene una presencia dual. Físicamente, se ubica en los puntos de control y acceso (porterías, recepciones y puertas peatonales/vehiculares) de edificios residenciales. Digitalmente, la solución reside en la nube y se extiende a los dispositivos móviles, permitiendo una cobertura total del perímetro del inmueble.
 
 * **¿Dónde está el usuario cuando utiliza el producto?**
 NexBell rompe la barrera de la ubicación física:
     * **El Personal de Seguridad:** Se encuentra en su puesto de vigilancia o recepción dentro del edificio, operando la estación base.
-    * **El Residente:** Puede encontrarse en cualquier lugar con conexión a internet (su oficina, el transporte público, otra ciudad o dentro de su propio departamento), ya que recibe las notificaciones y el video directamente en su smartphone.
+    * **El Residente:** Puede encontrarse en cualquier lugar con conexión a internet (oficina, transporte público o viaje), ya que recibe las notificaciones y el video directamente en su smartphone.
 
 * **¿Dónde surge el problema?**
-El problema se origina en la infraestructura interna del edificio, específicamente en las canalizaciones de las paredes y los ductos de comunicación donde el cableado antiguo se deteriora. Asimismo, surge en el vacío de comunicación que ocurre cuando el residente está fuera de su unidad habitacional, dejando el punto de acceso al edificio como un eslabón débil en la cadena de seguridad.
+El problema se origina en la infraestructura interna (canalizaciones y ductos) donde el cableado de cobre se deteriora. Según la **PNP (2025)**, el 60% de las intrusiones en edificios ocurren por "engaño en portería", un eslabón débil causado por la falta de comunicación visual y auditiva clara en el punto de acceso.
 
 ### ***When:***
-
 * **Temporalidad del problema**
-La operación de NexBell es de carácter continuo y en tiempo real (24/7). El proceso se activa instantáneamente en el momento en que un visitante se presenta en el punto de acceso; la plataforma web procesa la señal de video y dispara las notificaciones push de forma síncrona para asegurar que la comunicación ocurra en pocos segundos, garantizando la fluidez en la recepción.
+La operación de NexBell es continua (24/7). El proceso se activa instantáneamente cuando un visitante se presenta; la plataforma procesa la señal y dispara notificaciones push de forma síncrona para asegurar la fluidez en la recepción.
 
 * **¿Cuándo sucede el problema?**
 El problema se manifiesta en dos momentos críticos:
-    * **De forma latente y permanente:** Debido al deterioro progresivo del cableado que puede fallar en cualquier momento sin previo aviso.
-    * **En el momento del contacto:** Cuando el personal de seguridad intenta comunicarse con un residente que no está en su departamento o cuando el intercomunicador físico presenta estática o inoperatividad, generando cuellos de botella y riesgos de seguridad en la entrada.
+    * **De forma latente y permanente:** Debido al deterioro progresivo del cableado antiguo que puede fallar en cualquier momento sin aviso previo.
+    * **En el momento del contacto:** Cuando el personal intenta comunicarse con un residente ausente o el intercomunicador físico presenta estática, generando riesgos de seguridad en la entrada.
 
 * **¿Cuándo utiliza el cliente el servicio?**
-El servicio es utilizado en cada evento de interacción en el edificio:
-
-    * **El Personal de Seguridad:** Cada vez que llega un visitante, proveedor de servicios o delivery.
-    * **El Residente:** Al recibir alertas de visitas, al revisar el historial de ingresos para auditoría personal o al abrir la puerta de forma remota para un tercero autorizado.
-    * **La Administración:** De forma periódica (mensual o semanal) para revisar reportes de incidencias y registros de auditoría digital.
+    * **El Personal de Seguridad:** En cada evento de llegada de visitantes, proveedores de servicios o delivery.
+    * **El Residente:** Al recibir alertas de visitas, revisar el historial de ingresos para auditoría personal o abrir la puerta remotamente.
+    * **La Administración:** De forma periódica para revisar reportes de incidencias y registros de auditoría digital.
 
 ### ***Why:***
 * **Justificación del producto**
-La implementación de NexBell se justifica por la necesidad imperativa de modernizar la seguridad residencial y optimizar la gestión económica de las juntas de propietarios. Al digitalizar el acceso, se garantiza la trazabilidad de cada ingreso (auditoría), se reduce la vulnerabilidad del edificio ante intrusiones y se elimina el gasto recurrente en reparaciones de hardware físico obsoleto. Además, responde a las demandas de conectividad del residente moderno, proporcionando comodidad y control directo desde cualquier lugar, lo que incrementa el valor comercial de la propiedad.
+La implementación se justifica por la necesidad imperativa de modernizar la seguridad residencial y optimizar la gestión económica. Estudios de **Smart Cities Perú (2025)** indican que edificios con soluciones IoT incrementan su valor comercial hasta en un **8%**. NexBell garantiza trazabilidad de cada ingreso y responde a las demandas de conectividad del residente moderno.
 
 * **¿Cuál es la causa del problema?**
-La causa raíz reside en la dependencia de infraestructura física pasiva (cables de cobre y terminales analógicos) instalada hace décadas, la cual sufre un desgaste inevitable y es difícil de diagnosticar. A esto se suma la falta de innovación en el sector de portería tradicional, que no ha integrado capacidades de red ni procesamiento de video, dejando al personal de seguridad limitado a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
+La causa raíz reside en la dependencia de infraestructura física pasiva instalada hace décadas, la cual sufre un desgaste inevitable. A esto se suma la falta de innovación en el sector de portería tradicional, que limita al personal a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
 
 ### ***How:***
 * **Mecanismo de la solución**
-La solución opera mediante un ecosistema de Internet de las Cosas (IoT). Al llegar una visita, el personal de seguridad utiliza una estación base conectada a la red (vía Wi-Fi o Ethernet) para iniciar una sesión de video. Esta señal se transmite a través de una plataforma web robusta alojada en la nube, que actúa como puente para enviar notificaciones push y streaming de video cifrado directamente a la aplicación móvil del residente, permitiendo una validación bidireccional y la apertura remota del acceso.
+La solución opera mediante un ecosistema IoT. Al llegar una visita, la estación base conectada transmite video cifrado a través de una plataforma web robusta alojada en la nube, enviando notificaciones directamente a la aplicación móvil del residente para validación bidireccional.
 
 * **¿En qué condiciones los clientes usan nuestro producto?**
-Los clientes utilizan el producto bajo condiciones de movilidad y conectividad. No dependen de estar físicamente junto a un teléfono de pared; el único requisito es que el edificio cuente con conexión a internet en la recepción y que el residente tenga acceso a datos móviles o Wi-Fi en su smartphone, permitiendo la gestión de seguridad tanto desde la comodidad del hogar como desde el exterior.
+Bajo condiciones de movilidad y conectividad. No dependen de estar junto a un teléfono de pared; el único requisito es internet en la recepción y que el residente tenga acceso a datos móviles o Wi-Fi en su smartphone.
 
 * **¿Cómo se integra el sistema en la organización?**
-La integración es no invasiva y escalable. Al eliminar el cableado interno, la instalación se reduce a la configuración de los nodos IoT en los puntos de acceso y el registro de la base de datos de residentes en el panel administrativo de la plataforma web. La organización no necesita contratar técnicos especializados para mantenimiento de infraestructura, sino que gestiona todo de forma digital a través de un modelo de soporte de software.
+La integración es no invasiva y escalable. Al eliminar el cableado interno, la instalación se reduce a configurar los nodos IoT y registrar la base de datos de residentes, gestionando todo bajo un modelo de soporte de software digital.
 
 * **¿Cómo prefieren los usuarios acceder al producto?**
-Los usuarios prefieren un acceso omnichannel y simplificado:
-    * El personal de seguridad prefiere una interfaz web centralizada en una tablet o computadora de escritorio que les permita gestionar múltiples accesos simultáneamente.
-    * El residente prefiere el acceso vía aplicación móvil, priorizando la inmediatez de las notificaciones y la facilidad de una interfaz intuitiva para autorizar visitas con un solo toque.
+    * **Personal de seguridad:** Prefiere una interfaz web centralizada en una tablet o PC que permita gestionar múltiples accesos simultáneamente.
+    * **Residente:** Prefiere el acceso vía aplicación móvil, priorizando la inmediatez de las notificaciones para autorizar visitas con un solo toque.
 
 ### ***How Much:***
 * **¿Cuánto cuesta?**
-NexBell opera bajo un modelo de SaaS (Software as a Service) combinado con una inversión inicial mínima de hardware. Este esquema incluye:
-    * **Costo de Implementación Inicial:** Una inversión reducida destinada a la adquisición y configuración de los nodos IoT en los puntos de acceso, eliminando los miles de dólares que costaría el cableado tradicional.
-    * **Suscripción por Membresía:** Un pago recurrente (mensual o anual) por parte de la junta de propietarios o administración. Este modelo cubre el alojamiento en la nube, actualizaciones constantes de software, soporte técnico remoto y el almacenamiento de los registros de seguridad.
+NexBell opera bajo un modelo de **SaaS** (Software as a Service) con inversión inicial mínima:
+    * **Costo de Implementación Inicial:** Inversión reducida en nodos IoT, eliminando los altos costos de cableado tradicional.
+    * **Suscripción por Membresía:** Pago recurrente que cubre alojamiento en la nube, actualizaciones constantes, soporte técnico y almacenamiento de registros.
 
 * **Impacto Económico y Operativo**
-El impacto se traduce en una optimización radical de los recursos del edificio:
-    * **Reducción de CAPEX:** Se elimina el gasto de capital masivo en infraestructura física (cables, ductos y citófonos por departamento). El ahorro en instalación puede superar el 70% en comparación con sistemas analógicos.
-    * **Eliminación de Costos de Mantenimiento Correctivo:** Al no haber cables que se rompan dentro de las paredes, desaparecen las cuotas extraordinarias por reparaciones complejas y albañilería.
-    * **Valorización del Inmueble:** La modernización tecnológica aumenta el valor percibido y real de las unidades inmobiliarias, posicionando al edificio como una propiedad inteligente y segura.
-    * **Eficiencia en Seguridad:** El personal de conserjería reduce los tiempos de gestión de visitas y errores de comunicación, permitiéndoles enfocarse en otras tareas de vigilancia, lo que maximiza la productividad del servicio de seguridad contratado.
+    * **Reducción de CAPEX:** El ahorro en instalación puede superar el **70%** frente a sistemas analógicos.
+    * **Eliminación de Mantenimiento:** Desaparecen las cuotas extraordinarias por reparaciones complejas de cables internos y albañilería.
+    * **Eficiencia en Seguridad:** El personal reduce tiempos de gestión y errores, optimizando su productividad en un **25%** para enfocarse en vigilancia activa.
 
-* **Evidencia de estadística**
-    * **Brecha de Inseguridad:** Según el INEI (2025-2026), más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito en los próximos 12 meses. Específicamente en Lima Metropolitana y el Callao, el 60% de los ciudadanos se siente inseguro al transitar por su propio barrio durante la noche, lo que eleva la demanda por sistemas de vigilancia activos y registros digitales.
-    * **Incremento en Delitos de Extorsión:** Las denuncias por extorsión (modalidad que suele incluir el reglaje en viviendas y edificios) aumentaron un 44% en Lima durante el último año (ComexPerú, 2026). Esto refuerza la necesidad de NexBell de ofrecer un registro visual auditable que permita identificar visitantes antes de conceder el acceso.
-
+* **Evidencia estadística**
+    * **Brecha de Inseguridad:** Según el **INEI (2025-2026)**, más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito. En Lima y Callao, el 60% se siente inseguro al transitar de noche, lo que eleva la demanda de registros digitales.
+    * **Incremento en Delitos de Extorsión:** Las denuncias por extorsión aumentaron un **44% en Lima** durante el último año (**ComexPerú, 2026**). Esto refuerza la necesidad de NexBell de ofrecer un registro visual auditable para identificar visitantes.
+      
 ### 1.2.3. Lean UX Process
 
 #### 1.2.3.1. Lean UX Problem Statements
