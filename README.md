@@ -2183,6 +2183,253 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <hr>
 <div style="page-break-after: always;"></div>
 
+# Capítulo V: Solution UI/UX Design
+
+## 5.1 Style Guidelines
+
+## 5.1.1 General Style Guidelines
+
+La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
+los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
+de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
+Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
+a la identidad de nuestra marca.
+
+### 5.1.1 General Style Guidelines.
+
+
+
+#### **Branding y Tono de Comunicación**
+
+La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+
+* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
+* *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
+* *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
+* *Técnico y Funcional:** Para los datos de seguridad, estados del sistema y lectura de dispositivos IoT .
+
+#### **Paleta de Colores**
+
+La paleta sigue una filosofía de **"Negro Puro"** para asegurar profundidad infinita y eficiencia energética en pantallas OLED, utilizando el turquesa como indicador de seguridad y actividad .
+
+| Rol del Color | Nombre | Código HEX | Aplicación |
+| :--- | :--- | :--- | :--- |
+| **Primario** | Primary Turquoise | `#74d7cf` | Estado activo e indicador de "Seguro" . |
+| **Secundario** | Secondary Turquoise| `#74d7ce` | Estados de interacción (hover) y detalles decorativos . |
+| **Terciario** | Tertiary Accent | `#ffb59a` | Elementos de acento específicos . |
+| **Fondo** | Background | `#000000` | Base sólida para contraste máximo . |
+| **Error** | Error Red | `#ffb4ab` | Alertas críticas de seguridad . |
+| **Bordes** | Tonal Borders | `#1a1a1a` | Definición de contenedores secundarios . |
+
+#### **Tipografía**
+
+El sistema emplea una tensión tipográfica sofisticada entre lo editorial y lo técnico .
+
+| Elemento | Fuente | Grosor | Tamaño | Aplicación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Headline Accent** | ebGaramond | Medium (500) | 48px | Títulos editoriales y hero statements . |
+| **Headline Large** | Geist | Bold (600) | 32px | Títulos funcionales de la UI . |
+| **Body Medium** | Geist | Regular (400) | 16px | Lectura de datos y cuerpo de texto . |
+| **Label Caps** | Geist | Bold (600) | 12px | Metadatos técnicos y estados (Uppercase) . |
+
+#### **Layout y Espaciado (Spacing)**
+
+Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un ritmo vertical estricto y una sensación arquitectónica estructurada .
+
+* *Unidad Base:** 4px .
+* *Gutter:** 24px para separación entre columnas .
+* *Margen:** 32px para evitar la saturación visual en los bordes de la pantalla .
+* *Zonas de Control:** Se utilizan grandes espacios negativos para separar el estado de seguridad principal de los controles ambientales secundarios .
+
+#### **Formas y Elevación**
+
+* *Geometría de Píldora:** Los botones, campos de entrada y distintivos de estado deben ser siempre **completamente redondeados (pill-shaped)** para suavizar el borde técnico de la interfaz .
+* *Contenedores:** Las tarjetas de video y gráficos utilizan un radio de **1.5rem (rounded-xl)** para proyectar estabilidad arquitectónica .
+* *Profundidad Luminosa:** En lugar de sombras, se utiliza un **brillo turquesa suave** (`rgba(66, 168, 161, 0.3)`) para resaltar elementos de estado crítico como el botón de "Armado" .
+* *Efecto de Cristal:** Los modales y superposiciones utilizan un fondo blanco al 10% de opacidad con un desenfoque de fondo (*backdrop blur*) de más de 20px para un efecto de "vidrio ahumado" .
+
+
+### 5.1.2 Web, Mobile and IoT Style Guidelines.
+
+### Paso 1: Definición de los requisitos del sistema
+* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
+* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
+
+### Paso 2: Selección de la tipología del sistema IoT
+* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
+
+### Paso 3: Definición de los requisitos de la capa física
+* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
+* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
+
+### Paso 4: Definición de los requisitos de la capa de intercambio
+* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
+* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
+
+### Paso 5: Definición de los requisitos de la capa de información
+* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
+* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
+
+### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
+* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
+
+### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
+* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
+
+### Paso 8: Selección de los sensores y actuadores
+* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
+* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
+
+### Paso 9: Selección del microcontrolador y transceptores de radio
+* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
+
+### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
+* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
+* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
+
+### Paso 11: Análisis del tiempo de procesamiento
+* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
+
+### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
+* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
+
+
+### 5.2. Information Architecture
+
+#### 5.2.1. Organization Systems
+
+Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+
+##### **Sistemas de Organización Visual**
+
+- **Jerárquica (Visual Hierarchy):** Se aplicará principalmente en el **Dashboard del Conserje/Administrador**, donde las alertas de acceso actuales y las llamadas en espera se mostrarán con mayor prominencia visual. La jerarquía tipográfica guiará al usuario para distinguir rápidamente entre un aviso de visita y una notificación del sistema.
+
+- **Secuencial (Step-by-step):** Este sistema se aplicará en flujos de trabajo críticos como la **validación de una visita**, el **onboarding de un nuevo residente** y el **proceso de registro de una encomienda o paquete**. Guía al usuario de principio a fin, minimizando errores en la toma de datos de seguridad.
+
+- **Matricial (Matrix):** Utilizado para la visualización de conjuntos de datos complejos como el **Historial de Accesos** y el **Directorio de Residentes**, permitiendo consultar, ordenar y filtrar registros según departamento, fecha o tipo de ingreso.
+
+##### **Esquemas de Categorización del Contenido**
+
+- **Alfabético:** Se aplicará para facilitar la búsqueda en la lista de **Residentes** y el directorio de **Proveedores de Servicios** frecuentes.
+
+- **Cronológico:** El pilar para el historial de seguridad. Se presentará en orden cronológico descendente (lo más reciente primero) en secciones como **Registro de Visitas**, **Historial de Llamadas** y **Bitácora de Incidentes de Seguridad**.
+
+- **Por Tópicos (By Topic):** La navegación se organizará por módulos funcionales: **Intercomunicador, Visitantes, Residentes, Encomiendas y Seguridad**.
+
+- **Según Audiencia (By Audience):** - El **Personal de Seguridad (Conserje)** tendrá acceso a la consola de intercomunicación, gestión de visitas en tiempo real y registro de paquetes.
+    - El **Residente** dispondrá de una vista simplificada en su móvil para recibir videollamadas, autorizar accesos y revisar su historial personal de visitas.
+    - El **Administrador del Edificio** tendrá acceso a métricas de uso, auditorías de seguridad y gestión de pagos de la plataforma.
+
+#### 5.2.2. Labelling Systems
+
+El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+
+##### **Etiquetas de Navegación Principal**
+
+- **Inicio:** Dashboard principal.
+- **Intercom:** Acceso a la consola de llamadas y video.
+- **Visitantes:** Gestión de visitas actuales y pre-autorizadas.
+- **Directorio:** Lista de residentes y departamentos.
+- **Encomiendas:** Registro de paquetes y correspondencia.
+- **Auditoría:** Historial completo de accesos.
+- **Mi Cuenta:** Configuración de perfil.
+
+##### **Etiquetas de Acciones Principales (CTA)**
+
+- **+ Pre-autorizar Visita**
+- **Abrir Puerta**
+- **Iniciar Videollamada**
+- **Registrar Paquete**
+- **Añadir Residente**
+- **Reportar Alerta**
+
+##### **Etiquetas de Acciones de Gestión**
+
+- **Autorizar**
+- **Denegar**
+- **Editar**
+- **Finalizar Llamada**
+- **Ver Registro**
+- **Filtrar**
+
+##### **Etiquetas de Estado y Datos**
+
+- **Estado de Acceso:** `Autorizado`, `Denegado`, `En Espera`.
+- **Estado de Puerta:** `Cerrada`, `Abierta`, `Alarma`.
+- **Tipo de Visita:** `Familiar`, `Delivery`, `Servicio Técnico`.
+
+#### 5.2.3. SEO Tags and Meta Tags
+
+##### **SEO Tags para el Landing Page**
+
+- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+    - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
+
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+    - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
+
+- **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
+
+##### **ASO (App Store Optimization) para la Aplicación Móvil**
+
+- **App Title:** `Nextbell: Videoportería y Seguridad`
+- **App Subtitle:** `Atiende tu puerta desde el celular.`
+- **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
+- **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
+    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+
+      Con Nextbell podrás:
+        - Ver y hablar con tus visitantes en tiempo real.
+        - Pre-autorizar invitados con códigos QR o invitaciones digitales.
+        - Recibir alertas de encomiendas y paquetes en recepción.
+        - Consultar el historial de quién ha visitado tu hogar.
+
+      Sin instalaciones complejas dentro de tu departamento. ¡Más seguridad, más comodidad!`
+
+#### 5.2.4. Searching Systems
+
+##### **Búsqueda de Residentes**
+
+- **Opción de Búsqueda:** El conserje podrá buscar por **número de departamento** o **apellido del residente**.
+- **Filtros Disponibles:** Por **Torre/Bloque** y **Estado de Cuenta** (`Activo`, `Inactivo`).
+
+##### **Búsqueda en Historial de Accesos**
+
+- **Opción de Búsqueda:** Búsqueda por **nombre del visitante** o **DNI**.
+- **Filtros Disponibles:** **Fecha/Hora**, **Tipo de Visita** (`Delivery`, `Visita`, `Servicios`) y **Resultado** (`Aprobado`, `Denegado`).
+
+##### **Búsqueda de Encomiendas**
+
+- **Opción de Búsqueda:** Localización por **Departamento** destinatario.
+- **Filtros Disponibles:** **Estado del Paquete** (`En Conserjería`, `Entregado`) y **Empresa de Courier**.
+
+#### 5.2.5. Navigation Systems
+
+##### **Sistema de Navegación para la Aplicación Móvil**
+
+- **Navegación Primaria (Bottom Nav):** Acceso rápido a `Inicio`, `Visitas`, `Llamadas` y `Perfil`.
+- **Navegación Jerárquica:** Al tocar una notificación de visita, el usuario entra al detalle del visitante y puede retroceder al historial.
+- **Pestañas (Tabs):** En la sección de Visitas se usará `Pendientes` y `Pasadas`.
+- **Botón de Acción Flotante (FAB):** En la pantalla de Visitas para "+ Crear Invitación".
+
+##### **Sistema de Navegación para el Landing Page**
+
+- **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
+- **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
+
+#### 5.3. Landing Page UI Design.
+#### 5.3.1. Landing Page Wireframe.
+#### 5.3.2. Landing Page Mock-up.
+#### 5.4. Applications UX/UI Design.
+#### 5.4.1. Applications Wireframes.
+#### 5.4.2. Applications Wireflow Diagrams.
+#### 5.4.2. Applications Mock-ups.
+#### 5.4.3. Applications User Flow Diagrams.
+#### 5.5. Applications Prototyping.
+#### 5.6. IoT Device Design.
+
+
 # Conclusiones
 
  - Durante el desarrollo del AV1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
