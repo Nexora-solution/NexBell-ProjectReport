@@ -305,7 +305,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Gabriel Borja | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=400px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
+| <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776966554/gabriel_dgnakv.jpg" height=200px width=350px> | Soy un estudiante de la carrera de Ingeniería de Software en la UPC. Enfocado principalmente en el desarrollo web, busco especializarme en la elaboración de soluciones robustas y orientadas al usuario. Cuento con conocimiento de lenguajes como Python, C++ y C#. Me caracterizo por ser una persona creativa, amigable y responsable. Me comprometo a brindar mi apoyo al equipo para desarrollar el proyecto y aprobar el curso de manera satisfactoria. |
 
 | Santiago Suárez | Ingeniería de Software |
 | -- | --|
@@ -317,7 +317,7 @@ Ser una startup líder en Latinoamérica en el desarrollo de soluciones intelige
 
 | Anaely Burga | Ingeniería de Software |
 | -- | --|
-| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778274678/WhatsApp_Image_2026-05-08_at_15.44.55_p9qvsb.jpg" height=200px width=300px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras. A, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
+| <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778274678/WhatsApp_Image_2026-05-08_at_15.44.55_p9qvsb.jpg" height=200px width=300px> | Soy estudiante de la carrera de Ingeniería de Software, con interés en el análisis de usuarios y el diseño de soluciones centradas en el usuario. Durante mi formación he desarrollado habilidades lo que me permite comprender mejor las necesidades del usuario y proponer soluciones innovadoras, permitiéndome adaptarme a distintos entornos de desarrollo y seguir aprendiendo continuamente. |
 
 ## 1.2. Solution Profile
 
@@ -329,20 +329,18 @@ La propuesta de valor de NexBell se centra en empoderar al personal de seguridad
 
 ### 1.2.2. Antecedentes y problemática
 
-Los edificios multifamiliares y condominios en Lima dependen críticamente de sistemas de intercomunicadores cableados que, tras décadas de uso, han alcanzado su obsolescencia técnica. Esta dependencia genera una vulnerabilidad sistémica: según datos de la Asociación Peruana de Empresas de Seguros (APESEG, 2024), la falta de controles de acceso eficientes y registros visuales contribuye a que 1 de cada 10 viviendas en zonas urbanas sea víctima de incidentes delictivos anualmente. En edificios con sistemas analógicos, el riesgo se agrava debido a la imposibilidad de verificar la identidad del visitante de manera remota o auditable.
+Los edificios multifamiliares y condominios en Lima suelen depender de sistemas de intercomunicadores cableados tradicionales. Estos sistemas presentan múltiples puntos de falla como cables rotos en las paredes, teléfonos malogrados en los departamentos, su mantenimiento es altamente costoso para la junta de propietarios, y no ofrecen registro visual de quién ingresa al edificio. El problema central es la ineficiencia y vulnerabilidad en el control de accesos de edificios residenciales, causada por infraestructura analógica obsoleta que impide al personal de seguridad tener herramientas modernas de validación visual, registro auditable y comunicación asíncrona con los residentes.
 
-La problemática central es la ineficiencia operativa y la vulnerabilidad en el control de accesos, causada por una infraestructura de comunicación pasiva que impide al personal de seguridad contar con herramientas de validación visual y comunicación asíncrona.
-
-A continuación, se estructura el análisis mediante la técnica The 5 W's and 2 H's, sustentada con evidencia estadística:
+Como parte del proceso de definición de la problemática, se aplicó la técnica The 5 W’s and 2 H’s (Who, What, Where, When, Why, How, How Much), permitiendo estructurar de manera preliminar la descripción de los antecedentes y el planteamiento del problema. 
 
 ### ***Who:***
 * **¿Quiénes están involucrados?**
-El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (**NexBell**) como proveedora de la tecnología; la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera; el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
+El proyecto involucra a un ecosistema de cuatro actores clave: la Startup (NexBell) como proveedora de la tecnología, la Administración del Inmueble/Junta de Propietarios como tomadores de decisión financiera, el Personal de Seguridad como operadores directos del sistema en recepción; y los Residentes, quienes son los usuarios finales que reciben las notificaciones y validan los accesos.
 
 * **¿A quiénes les sucede el problema?**
 El problema impacta principalmente a dos grupos:
-    - **A la Junta de Propietarios y Administradores:** Quienes enfrentan la carga económica de reparaciones constantes. Según informes de gestión inmobiliaria local (2025), el mantenimiento de citofonía antigua puede representar hasta el **15% del presupuesto anual** de mantenimiento operativo.
-    - **A los Residentes:** Quienes sufren la falta de comunicación cuando no están en casa y la vulnerabilidad de vivir en un edificio con controles de acceso inoperativos, incrementando el riesgo de intrusión.
+    - **A la Junta de Propietarios y Administradores:** Quienes enfrentan la carga económica de reparaciones constantes y la frustración de gestionar un sistema que no ofrece garantías de seguridad reales ni registros de auditoría.
+    - **A los Residentes:** Quienes sufren la falta de comunicación cuando no están en casa y la vulnerabilidad de vivir en un edificio con controles de acceso fácilmente burlables o inoperativos.
 
 * **¿Quién lo utilizará?**
 La plataforma NexBell tiene dos perfiles de usuario principales según los segmentos objetivo:
@@ -354,73 +352,93 @@ La plataforma NexBell tiene dos perfiles de usuario principales según los segme
 NexBell es una plataforma integral de seguridad e intercomunicación inteligente basada en IoT y entorno web. Su función principal es reemplazar la infraestructura de citofonía análoga por un sistema de videoportero digital que permite la validación de visitas mediante video en tiempo real, gestión de alertas en dispositivos móviles y almacenamiento en la nube de registros de acceso, eliminando la dependencia de cableado físico complejo.
 
 * **¿Cuál es el problema?**
-La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento y vulnerabilidad. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de **APESEG (2024)**, ya afectan anualmente a **1 de cada 10 viviendas** en zonas urbanas, agravándose en edificios con sistemas vulnerables que carecen de registro visual.
+La problemática central es la obsolescencia tecnológica y la ineficiencia operativa de los sistemas de control de acceso en edificios de Lima. Actualmente, la infraestructura analógica genera altos costos de mantenimiento por fallas físicas (cables y terminales), vulnerabilidad ante ingresos no autorizados por falta de registro visual y una comunicación deficiente entre el personal de seguridad y los residentes, quienes no siempre se encuentran físicamente en su unidad para autorizar ingresos. Bajo este escenario, la falta de modernización tecnológica eleva el riesgo de incidentes delictivos que, según cifras de APESEG (2024), ya afectan anualmente a 1 de cada 10 viviendas en zonas urbanas, agravándose en edificios con sistemas vulnerables y prácticamente obsoletos.
+    - **Alcance típico (edificio de ~20 departamentos):**
+    0.5–1.2 km de cableado interno y 20–30 puntos de terminación.
+    - **Frecuencia de fallos:**
+    Los sistemas analógicos empiezan a mostrar fallos comunes cada 5–8 años en condiciones urbanas, debido a múltiples causas: como el desgaste de componentes eléctricos, picos de voltaje o conexiones defectuosas (Seisa, 2025).
+    En entornos de alta humedad, como en las ciudades peruanas (Consultoría & Servicios en Hidrocarburos y Minería S.A.C., 2019), las incidencias pueden llegar a duplicarse.
+    - **Impacto operativo:**
+    Cada evento de falla suele implicar 48–72 horas de indisponibilidad (diagnóstico, acceso por obra civil y reparación), con afectación directa a la gestión de visitas y la percepción de seguridad.
 
 * **¿Cuál es la relación con la persona en cuestión?**
-La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación operativa; para los Residentes, es el medio de supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
+La relación se establece mediante una interacción tripartita: para el Personal de Seguridad, NexBell es la herramienta de validación y control operativo; para los Residentes, es el medio de comunicación asíncrona y supervisión desde sus smartphones; y para la Junta de Propietarios, representa una solución de optimización de costos y valorización del patrimonio inmobiliario a través de la digitalización.
 
 ### ***Where:***
 * **Localización del sistema**
-El sistema tiene una presencia dual. Físicamente, se ubica en los puntos de control y acceso (porterías, recepciones y puertas peatonales/vehiculares) de edificios residenciales. Digitalmente, la solución reside en la nube y se extiende a los dispositivos móviles, permitiendo una cobertura total del perímetro del inmueble.
+El sistema tiene una presencia dual. Físicamente, se ubica en los puntos de control y acceso (porterías, recepciones y puertas peatonales/vehiculares) de edificios residenciales y condominios multifamiliares. Digitalmente, la solución reside en la nube (plataforma web) y se extiende a los dispositivos móviles de los usuarios, permitiendo una cobertura total del perímetro del inmueble.
 
 * **¿Dónde está el usuario cuando utiliza el producto?**
 NexBell rompe la barrera de la ubicación física:
     * **El Personal de Seguridad:** Se encuentra en su puesto de vigilancia o recepción dentro del edificio, operando la estación base.
-    * **El Residente:** Puede encontrarse en cualquier lugar con conexión a internet (oficina, transporte público o viaje), ya que recibe las notificaciones y el video directamente en su smartphone.
+    * **El Residente:** Puede encontrarse en cualquier lugar con conexión a internet (su oficina, el transporte público, otra ciudad o dentro de su propio departamento), ya que recibe las notificaciones y el video directamente en su smartphone.
 
 * **¿Dónde surge el problema?**
-El problema se origina en la infraestructura interna (canalizaciones y ductos) donde el cableado de cobre se deteriora. Según la **PNP (2025)**, el 60% de las intrusiones en edificios ocurren por "engaño en portería", un eslabón débil causado por la falta de comunicación visual y auditiva clara en el punto de acceso.
+El problema se origina en la infraestructura interna del edificio, específicamente en las canalizaciones de las paredes y los ductos de comunicación donde el cableado antiguo se deteriora. Asimismo, surge en el vacío de comunicación que ocurre cuando el residente está fuera de su unidad habitacional, dejando el punto de acceso al edificio como un eslabón débil en la cadena de seguridad.
 
 ### ***When:***
+
 * **Temporalidad del problema**
-La operación de NexBell es continua (24/7). El proceso se activa instantáneamente cuando un visitante se presenta; la plataforma procesa la señal y dispara notificaciones push de forma síncrona para asegurar la fluidez en la recepción.
+La operación de NexBell es de carácter continuo y en tiempo real (24/7). El proceso se activa instantáneamente en el momento en que un visitante se presenta en el punto de acceso; la plataforma web procesa la señal de video y dispara las notificaciones push de forma síncrona para asegurar que la comunicación ocurra en pocos segundos, garantizando la fluidez en la recepción.
 
 * **¿Cuándo sucede el problema?**
 El problema se manifiesta en dos momentos críticos:
-    * **De forma latente y permanente:** Debido al deterioro progresivo del cableado antiguo que puede fallar en cualquier momento sin aviso previo.
-    * **En el momento del contacto:** Cuando el personal intenta comunicarse con un residente ausente o el intercomunicador físico presenta estática, generando riesgos de seguridad en la entrada.
+    * **De forma latente y permanente:** Debido al deterioro progresivo del cableado que puede fallar en cualquier momento sin previo aviso.
+    * **En el momento del contacto:** Cuando el personal de seguridad intenta comunicarse con un residente que no está en su departamento o cuando el intercomunicador físico presenta estática o inoperatividad, generando cuellos de botella y riesgos de seguridad en la entrada.
 
 * **¿Cuándo utiliza el cliente el servicio?**
-    * **El Personal de Seguridad:** En cada evento de llegada de visitantes, proveedores de servicios o delivery.
-    * **El Residente:** Al recibir alertas de visitas, revisar el historial de ingresos para auditoría personal o abrir la puerta remotamente.
-    * **La Administración:** De forma periódica para revisar reportes de incidencias y registros de auditoría digital.
+El servicio es utilizado en cada evento de interacción en el edificio:
+
+    * **El Personal de Seguridad:** Cada vez que llega un visitante, proveedor de servicios o delivery.
+    * **El Residente:** Al recibir alertas de visitas, al revisar el historial de ingresos para auditoría personal o al abrir la puerta de forma remota para un tercero autorizado.
+    * **La Administración:** De forma periódica (mensual o semanal) para revisar reportes de incidencias y registros de auditoría digital.
 
 ### ***Why:***
 * **Justificación del producto**
-La implementación se justifica por la necesidad imperativa de modernizar la seguridad residencial y optimizar la gestión económica. Estudios de **Smart Cities Perú (2025)** indican que edificios con soluciones IoT incrementan su valor comercial hasta en un **8%**. NexBell garantiza trazabilidad de cada ingreso y responde a las demandas de conectividad del residente moderno.
+La implementación de NexBell se justifica por la necesidad imperativa de modernizar la seguridad residencial y optimizar la gestión económica de las juntas de propietarios. Al digitalizar el acceso, se garantiza la trazabilidad de cada ingreso (auditoría), se reduce la vulnerabilidad del edificio ante intrusiones y se elimina el gasto recurrente en reparaciones de hardware físico obsoleto. Además, responde a las demandas de conectividad del residente moderno, proporcionando comodidad y control directo desde cualquier lugar, lo que incrementa el valor comercial de la propiedad.
 
 * **¿Cuál es la causa del problema?**
-La causa raíz reside en la dependencia de infraestructura física pasiva instalada hace décadas, la cual sufre un desgaste inevitable. A esto se suma la falta de innovación en el sector de portería tradicional, que limita al personal a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
+La causa raíz reside en la dependencia de infraestructura física pasiva (cables de cobre y terminales analógicos) instalada hace décadas, la cual sufre un desgaste inevitable y es difícil de diagnosticar. A esto se suma la falta de innovación en el sector de portería tradicional, que no ha integrado capacidades de red ni procesamiento de video, dejando al personal de seguridad limitado a una comunicación por audio de baja fidelidad sin capacidad de registro o respuesta remota.
+    - **Causa técnica:**
+La alta humedad y la sulfatación aceleran la corrosión de conductores y terminales, provocando pérdida de audio, estática y fallos en mecanismos de apertura (Consultoría & Servicios en Hidrocarburos y Minería S.A.C., 2019).
+    - **Degradación y vida útil:**
+Un sistema analógico en Lima tiende a entrar en falla crítica entre 5 y 8 años (Sunat, 2022); un sistema digital, con actualizaciones periódicas, tiene expectativa útil de 12–15 años.
+    - **Costo de re‑tendido completo:**
+Rehacer canalizaciones y acabados en un edificio pequeño o mediano: aproximadamente S/6,000 a S/12,000, según el alcance de la intervención y terminaciones, teniendo en cuenta el costo de obra civil, materiales necesarios y reemplazo de dispositivos (Cámara Peruana de la Construcción, 2019; Colegio de Arquitectos del Perú, 2025).
 
 ### ***How:***
 * **Mecanismo de la solución**
-La solución opera mediante un ecosistema IoT. Al llegar una visita, la estación base conectada transmite video cifrado a través de una plataforma web robusta alojada en la nube, enviando notificaciones directamente a la aplicación móvil del residente para validación bidireccional.
+La solución opera mediante un ecosistema de Internet de las Cosas (IoT). Al llegar una visita, el personal de seguridad utiliza una estación base conectada a la red (vía Wi-Fi o Ethernet) para iniciar una sesión de video. Esta señal se transmite a través de una plataforma web robusta alojada en la nube, que actúa como puente para enviar notificaciones push y streaming de video cifrado directamente a la aplicación móvil del residente, permitiendo una validación bidireccional y la apertura remota del acceso.
 
 * **¿En qué condiciones los clientes usan nuestro producto?**
-Bajo condiciones de movilidad y conectividad. No dependen de estar junto a un teléfono de pared; el único requisito es internet en la recepción y que el residente tenga acceso a datos móviles o Wi-Fi en su smartphone.
+Los clientes utilizan el producto bajo condiciones de movilidad y conectividad. No dependen de estar físicamente junto a un teléfono de pared; el único requisito es que el edificio cuente con conexión a internet en la recepción y que el residente tenga acceso a datos móviles o Wi-Fi en su smartphone, permitiendo la gestión de seguridad tanto desde la comodidad del hogar como desde el exterior.
 
 * **¿Cómo se integra el sistema en la organización?**
-La integración es no invasiva y escalable. Al eliminar el cableado interno, la instalación se reduce a configurar los nodos IoT y registrar la base de datos de residentes, gestionando todo bajo un modelo de soporte de software digital.
+La integración es no invasiva y escalable. Al eliminar el cableado interno, la instalación se reduce a la configuración de los nodos IoT en los puntos de acceso y el registro de la base de datos de residentes en el panel administrativo de la plataforma web. La organización no necesita contratar técnicos especializados para mantenimiento de infraestructura, sino que gestiona todo de forma digital a través de un modelo de soporte de software.
 
 * **¿Cómo prefieren los usuarios acceder al producto?**
-    * **Personal de seguridad:** Prefiere una interfaz web centralizada en una tablet o PC que permita gestionar múltiples accesos simultáneamente.
-    * **Residente:** Prefiere el acceso vía aplicación móvil, priorizando la inmediatez de las notificaciones para autorizar visitas con un solo toque.
+Los usuarios prefieren un acceso omnichannel y simplificado:
+    * El personal de seguridad prefiere una interfaz web centralizada en una tablet o computadora de escritorio que les permita gestionar múltiples accesos simultáneamente.
+    * El residente prefiere el acceso vía aplicación móvil, priorizando la inmediatez de las notificaciones y la facilidad de una interfaz intuitiva para autorizar visitas con un solo toque.
 
 ### ***How Much:***
 * **¿Cuánto cuesta?**
-NexBell opera bajo un modelo de **SaaS** (Software as a Service) con inversión inicial mínima:
-    * **Costo de Implementación Inicial:** Inversión reducida en nodos IoT, eliminando los altos costos de cableado tradicional.
-    * **Suscripción por Membresía:** Pago recurrente que cubre alojamiento en la nube, actualizaciones constantes, soporte técnico y almacenamiento de registros.
+NexBell opera bajo un modelo de SaaS (Software as a Service) combinado con una inversión inicial mínima de hardware. Este esquema incluye:
+    * **Costo de Implementación Inicial:** Una inversión reducida destinada a la adquisición y configuración de los nodos IoT en los puntos de acceso, eliminando los miles de dólares que costaría el cableado tradicional.
+    * **Suscripción por Membresía:** Un pago recurrente (mensual o anual) por parte de la junta de propietarios o administración. Este modelo cubre el alojamiento en la nube, actualizaciones constantes de software, soporte técnico remoto y el almacenamiento de los registros de seguridad.
 
 * **Impacto Económico y Operativo**
-    * **Reducción de CAPEX:** El ahorro en instalación puede superar el **70%** frente a sistemas analógicos.
-    * **Eliminación de Mantenimiento:** Desaparecen las cuotas extraordinarias por reparaciones complejas de cables internos y albañilería.
-    * **Eficiencia en Seguridad:** El personal reduce tiempos de gestión y errores, optimizando su productividad en un **25%** para enfocarse en vigilancia activa.
+El impacto se traduce en una optimización radical de los recursos del edificio:
+    * **Reducción de CAPEX:** Se elimina el gasto de capital masivo en infraestructura física (cables, ductos y citófonos por departamento). El ahorro en instalación puede superar el 70% en comparación con sistemas analógicos.
+    * **Eliminación de Costos de Mantenimiento Correctivo:** Al no haber cables que se rompan dentro de las paredes, desaparecen las cuotas extraordinarias por reparaciones complejas y albañilería.
+    * **Valorización del Inmueble:** La modernización tecnológica aumenta el valor percibido y real de las unidades inmobiliarias, posicionando al edificio como una propiedad inteligente y segura.
+    * **Eficiencia en Seguridad:** El personal de conserjería reduce los tiempos de gestión de visitas y errores de comunicación, permitiéndoles enfocarse en otras tareas de vigilancia, lo que maximiza la productividad del servicio de seguridad contratado.
+    * **Impacto por departamento (ahorro 5 años):** En un edificio de 20 dptos, ahorro acumulado estimado entre S/300 y S/1,000 por departamento, además de mejora en disponibilidad del servicio y reducción de días de indisponibilidad.
 
-* **Evidencia estadística**
-    * **Brecha de Inseguridad:** Según el **INEI (2025-2026)**, más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito. En Lima y Callao, el 60% se siente inseguro al transitar de noche, lo que eleva la demanda de registros digitales.
-    * **Incremento en Delitos de Extorsión:** Las denuncias por extorsión aumentaron un **44% en Lima** durante el último año (**ComexPerú, 2026**). Esto refuerza la necesidad de NexBell de ofrecer un registro visual auditable para identificar visitantes.
-      
+* **Evidencia de estadística**
+    * **Brecha de Inseguridad:** Según el INEI (2025-2026), más del 80% de la población urbana en Perú percibe que podría ser víctima de un delito en los próximos 12 meses. Específicamente en Lima Metropolitana y el Callao, el 60% de los ciudadanos se siente inseguro al transitar por su propio barrio durante la noche, lo que eleva la demanda por sistemas de vigilancia activos y registros digitales.
+    * **Incremento en Delitos de Extorsión:** Las denuncias por extorsión (modalidad que suele incluir el reglaje en viviendas y edificios) aumentaron un 44% en Lima durante el último año (ComexPerú, 2026). Esto refuerza la necesidad de NexBell de ofrecer un registro visual auditable que permita identificar visitantes antes de conceder el acceso.
+
 ### 1.2.3. Lean UX Process
 
 #### 1.2.3.1. Lean UX Problem Statements
@@ -2165,6 +2183,253 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <hr>
 <div style="page-break-after: always;"></div>
 
+# Capítulo V: Solution UI/UX Design
+
+## 5.1 Style Guidelines
+
+## 5.1.1 General Style Guidelines
+
+La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
+los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
+de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
+Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
+a la identidad de nuestra marca.
+
+### 5.1.1 General Style Guidelines.
+
+
+
+#### **Branding y Tono de Comunicación**
+
+La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+
+* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
+* *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
+* *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
+* *Técnico y Funcional:** Para los datos de seguridad, estados del sistema y lectura de dispositivos IoT .
+
+#### **Paleta de Colores**
+
+La paleta sigue una filosofía de **"Negro Puro"** para asegurar profundidad infinita y eficiencia energética en pantallas OLED, utilizando el turquesa como indicador de seguridad y actividad .
+
+| Rol del Color | Nombre | Código HEX | Aplicación |
+| :--- | :--- | :--- | :--- |
+| **Primario** | Primary Turquoise | `#74d7cf` | Estado activo e indicador de "Seguro" . |
+| **Secundario** | Secondary Turquoise| `#74d7ce` | Estados de interacción (hover) y detalles decorativos . |
+| **Terciario** | Tertiary Accent | `#ffb59a` | Elementos de acento específicos . |
+| **Fondo** | Background | `#000000` | Base sólida para contraste máximo . |
+| **Error** | Error Red | `#ffb4ab` | Alertas críticas de seguridad . |
+| **Bordes** | Tonal Borders | `#1a1a1a` | Definición de contenedores secundarios . |
+
+#### **Tipografía**
+
+El sistema emplea una tensión tipográfica sofisticada entre lo editorial y lo técnico .
+
+| Elemento | Fuente | Grosor | Tamaño | Aplicación |
+| :--- | :--- | :--- | :--- | :--- |
+| **Headline Accent** | ebGaramond | Medium (500) | 48px | Títulos editoriales y hero statements . |
+| **Headline Large** | Geist | Bold (600) | 32px | Títulos funcionales de la UI . |
+| **Body Medium** | Geist | Regular (400) | 16px | Lectura de datos y cuerpo de texto . |
+| **Label Caps** | Geist | Bold (600) | 12px | Metadatos técnicos y estados (Uppercase) . |
+
+#### **Layout y Espaciado (Spacing)**
+
+Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un ritmo vertical estricto y una sensación arquitectónica estructurada .
+
+* *Unidad Base:** 4px .
+* *Gutter:** 24px para separación entre columnas .
+* *Margen:** 32px para evitar la saturación visual en los bordes de la pantalla .
+* *Zonas de Control:** Se utilizan grandes espacios negativos para separar el estado de seguridad principal de los controles ambientales secundarios .
+
+#### **Formas y Elevación**
+
+* *Geometría de Píldora:** Los botones, campos de entrada y distintivos de estado deben ser siempre **completamente redondeados (pill-shaped)** para suavizar el borde técnico de la interfaz .
+* *Contenedores:** Las tarjetas de video y gráficos utilizan un radio de **1.5rem (rounded-xl)** para proyectar estabilidad arquitectónica .
+* *Profundidad Luminosa:** En lugar de sombras, se utiliza un **brillo turquesa suave** (`rgba(66, 168, 161, 0.3)`) para resaltar elementos de estado crítico como el botón de "Armado" .
+* *Efecto de Cristal:** Los modales y superposiciones utilizan un fondo blanco al 10% de opacidad con un desenfoque de fondo (*backdrop blur*) de más de 20px para un efecto de "vidrio ahumado" .
+
+
+### 5.1.2 Web, Mobile and IoT Style Guidelines.
+
+### Paso 1: Definición de los requisitos del sistema
+* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
+* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
+
+### Paso 2: Selección de la tipología del sistema IoT
+* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
+
+### Paso 3: Definición de los requisitos de la capa física
+* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
+* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
+
+### Paso 4: Definición de los requisitos de la capa de intercambio
+* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
+* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
+
+### Paso 5: Definición de los requisitos de la capa de información
+* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
+* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
+
+### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
+* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
+
+### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
+* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
+
+### Paso 8: Selección de los sensores y actuadores
+* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
+* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
+
+### Paso 9: Selección del microcontrolador y transceptores de radio
+* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
+
+### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
+* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
+* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
+
+### Paso 11: Análisis del tiempo de procesamiento
+* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
+
+### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
+* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
+
+
+### 5.2. Information Architecture
+
+#### 5.2.1. Organization Systems
+
+Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+
+##### **Sistemas de Organización Visual**
+
+- **Jerárquica (Visual Hierarchy):** Se aplicará principalmente en el **Dashboard del Conserje/Administrador**, donde las alertas de acceso actuales y las llamadas en espera se mostrarán con mayor prominencia visual. La jerarquía tipográfica guiará al usuario para distinguir rápidamente entre un aviso de visita y una notificación del sistema.
+
+- **Secuencial (Step-by-step):** Este sistema se aplicará en flujos de trabajo críticos como la **validación de una visita**, el **onboarding de un nuevo residente** y el **proceso de registro de una encomienda o paquete**. Guía al usuario de principio a fin, minimizando errores en la toma de datos de seguridad.
+
+- **Matricial (Matrix):** Utilizado para la visualización de conjuntos de datos complejos como el **Historial de Accesos** y el **Directorio de Residentes**, permitiendo consultar, ordenar y filtrar registros según departamento, fecha o tipo de ingreso.
+
+##### **Esquemas de Categorización del Contenido**
+
+- **Alfabético:** Se aplicará para facilitar la búsqueda en la lista de **Residentes** y el directorio de **Proveedores de Servicios** frecuentes.
+
+- **Cronológico:** El pilar para el historial de seguridad. Se presentará en orden cronológico descendente (lo más reciente primero) en secciones como **Registro de Visitas**, **Historial de Llamadas** y **Bitácora de Incidentes de Seguridad**.
+
+- **Por Tópicos (By Topic):** La navegación se organizará por módulos funcionales: **Intercomunicador, Visitantes, Residentes, Encomiendas y Seguridad**.
+
+- **Según Audiencia (By Audience):** - El **Personal de Seguridad (Conserje)** tendrá acceso a la consola de intercomunicación, gestión de visitas en tiempo real y registro de paquetes.
+    - El **Residente** dispondrá de una vista simplificada en su móvil para recibir videollamadas, autorizar accesos y revisar su historial personal de visitas.
+    - El **Administrador del Edificio** tendrá acceso a métricas de uso, auditorías de seguridad y gestión de pagos de la plataforma.
+
+#### 5.2.2. Labelling Systems
+
+El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+
+##### **Etiquetas de Navegación Principal**
+
+- **Inicio:** Dashboard principal.
+- **Intercom:** Acceso a la consola de llamadas y video.
+- **Visitantes:** Gestión de visitas actuales y pre-autorizadas.
+- **Directorio:** Lista de residentes y departamentos.
+- **Encomiendas:** Registro de paquetes y correspondencia.
+- **Auditoría:** Historial completo de accesos.
+- **Mi Cuenta:** Configuración de perfil.
+
+##### **Etiquetas de Acciones Principales (CTA)**
+
+- **+ Pre-autorizar Visita**
+- **Abrir Puerta**
+- **Iniciar Videollamada**
+- **Registrar Paquete**
+- **Añadir Residente**
+- **Reportar Alerta**
+
+##### **Etiquetas de Acciones de Gestión**
+
+- **Autorizar**
+- **Denegar**
+- **Editar**
+- **Finalizar Llamada**
+- **Ver Registro**
+- **Filtrar**
+
+##### **Etiquetas de Estado y Datos**
+
+- **Estado de Acceso:** `Autorizado`, `Denegado`, `En Espera`.
+- **Estado de Puerta:** `Cerrada`, `Abierta`, `Alarma`.
+- **Tipo de Visita:** `Familiar`, `Delivery`, `Servicio Técnico`.
+
+#### 5.2.3. SEO Tags and Meta Tags
+
+##### **SEO Tags para el Landing Page**
+
+- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+    - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
+
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+    - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
+
+- **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
+
+##### **ASO (App Store Optimization) para la Aplicación Móvil**
+
+- **App Title:** `Nextbell: Videoportería y Seguridad`
+- **App Subtitle:** `Atiende tu puerta desde el celular.`
+- **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
+- **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
+    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+
+      Con Nextbell podrás:
+        - Ver y hablar con tus visitantes en tiempo real.
+        - Pre-autorizar invitados con códigos QR o invitaciones digitales.
+        - Recibir alertas de encomiendas y paquetes en recepción.
+        - Consultar el historial de quién ha visitado tu hogar.
+
+      Sin instalaciones complejas dentro de tu departamento. ¡Más seguridad, más comodidad!`
+
+#### 5.2.4. Searching Systems
+
+##### **Búsqueda de Residentes**
+
+- **Opción de Búsqueda:** El conserje podrá buscar por **número de departamento** o **apellido del residente**.
+- **Filtros Disponibles:** Por **Torre/Bloque** y **Estado de Cuenta** (`Activo`, `Inactivo`).
+
+##### **Búsqueda en Historial de Accesos**
+
+- **Opción de Búsqueda:** Búsqueda por **nombre del visitante** o **DNI**.
+- **Filtros Disponibles:** **Fecha/Hora**, **Tipo de Visita** (`Delivery`, `Visita`, `Servicios`) y **Resultado** (`Aprobado`, `Denegado`).
+
+##### **Búsqueda de Encomiendas**
+
+- **Opción de Búsqueda:** Localización por **Departamento** destinatario.
+- **Filtros Disponibles:** **Estado del Paquete** (`En Conserjería`, `Entregado`) y **Empresa de Courier**.
+
+#### 5.2.5. Navigation Systems
+
+##### **Sistema de Navegación para la Aplicación Móvil**
+
+- **Navegación Primaria (Bottom Nav):** Acceso rápido a `Inicio`, `Visitas`, `Llamadas` y `Perfil`.
+- **Navegación Jerárquica:** Al tocar una notificación de visita, el usuario entra al detalle del visitante y puede retroceder al historial.
+- **Pestañas (Tabs):** En la sección de Visitas se usará `Pendientes` y `Pasadas`.
+- **Botón de Acción Flotante (FAB):** En la pantalla de Visitas para "+ Crear Invitación".
+
+##### **Sistema de Navegación para el Landing Page**
+
+- **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
+- **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
+
+#### 5.3. Landing Page UI Design.
+#### 5.3.1. Landing Page Wireframe.
+#### 5.3.2. Landing Page Mock-up.
+#### 5.4. Applications UX/UI Design.
+#### 5.4.1. Applications Wireframes.
+#### 5.4.2. Applications Wireflow Diagrams.
+#### 5.4.2. Applications Mock-ups.
+#### 5.4.3. Applications User Flow Diagrams.
+#### 5.5. Applications Prototyping.
+#### 5.6. IoT Device Design.
+
+
 # Conclusiones
 
  - Durante el desarrollo del AV1, el equipo logró establecer una base conceptual y arquitectónica sólida para el sistema Nexora, partiendo desde la identificación del problema hasta la estructuración técnica completa del proyecto. El proceso de investigación inicial, que incluyó entrevistas con usuarios potenciales, análisis de antecedentes y la elaboración de artefactos de needfinding como user personas, user journey maps y empathy maps, permitió comprender en profundidad las limitaciones de los sistemas de intercomunicación tradicionales en edificios residenciales y validar la propuesta de valor del sistema. Esta base de conocimiento orientada al usuario se tradujo en decisiones de diseño coherentes y fundamentadas, garantizando que Nexora responde a necesidades reales y no a supuestos sin sustento.
@@ -2176,19 +2441,15 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 <div style="page-break-after: always;"></div>
 
 # Bibliografía
+* Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de [https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/](https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/)
+* Cámara Peruana de la Construcción (2019, Octubre). *Costos y Presupuestos en Edificación*. CAPECO. Recuperado el 6 de mayo de 2026, de [https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf](https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf)
+* Colegio de Arquitectos del Perú Regional Lima (2025, Enero). *VALORES UNITARIOS A COSTO DIRECTO DE ALGUNAS OBRAS COMPLEMENTARIAS E INSTALACIONES FIJAS Y PERMANENTES LIMA METROPOLITANA Y PROVINCIA CONSTITUCIONAL DEL CALLAO AL 31 DE OCTUBRE DE 2024*. Limacap. Recuperado el 6 de mayo de 2026, de [https://limacap.org/wp-content/uploads/2025/01/Valores-de-obras-complementarias-2025.pdf](https://limacap.org/wp-content/uploads/2025/01/Valores-de-obras-complementarias-2025.pdf)
+* ComexPerú. (2026, 2 de febrero). *Inseguridad en cifras: ¿qué muestran las denuncias?*. ComexPeru. Recuperado el 16 de abril de 2026, de [https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias](https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias)
+* Consultoría & Servicios en Hidrocarburos y Minería S.A.C. (2019, Julio). *Servicio de estudio de corrosión en Piura y Tumbes- Electronoroeste S.A.*. Osinergmin. Recuperado el 6 de mayo de 2026, de [https://www2.osinergmin.gob.pe/GRT/Procesos-Regulatorios/VAD-2019-2023/VAD-2019-2023-9-Electronoroeste_Informe%20Corrosi%C3%B3n%2001.pdf](https://www2.osinergmin.gob.pe/GRT/Procesos-Regulatorios/VAD-2019-2023/VAD-2019-2023-9-Electronoroeste_Informe%20Corrosi%C3%B3n%2001.pdf)
+* Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de [https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html](https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html)
+* Seisa (2025, 14 de agosto). *Fallas intermitentes en equipos eléctricos: Causas y solución con el Osciloscopio Serie 2 MSO-EDU*. Seisa. Recuperado el 6 de mayo de 2026, de [https://seisa.com.co/fallas-intermitentes-en-equipos-electricos-causas-y-solucion-con-el-osciloscopio-serie-2-mso-edu/?srsltid=AfmBOoo5cojL6JiRAIzLx9f2mtgWt50ZBgYlMyyMjT4cyrS5r5Lt-WmZ](https://seisa.com.co/fallas-intermitentes-en-equipos-electricos-causas-y-solucion-con-el-osciloscopio-serie-2-mso-edu/?srsltid=AfmBOoo5cojL6JiRAIzLx9f2mtgWt50ZBgYlMyyMjT4cyrS5r5Lt-WmZ)
+* Sunat (2022). *Tabla de Tiempos de Vida Útil de los Equipos*. Sunat. Recuperado el 6 de mayo de 2026, de [https://www.sunat.gob.pe/legislacion/superin/2022/anexo-071-2022.pdf](https://www.sunat.gob.pe/legislacion/superin/2022/anexo-071-2022.pdf)
 
-* Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/
-
-* ComexPerú. (2026, 2 de febrero). *Inseguridad en cifras: ¿qué muestran las denuncias?*. ComexPeru. Recuperado el 16 de abril de 2026, de https://www.comexperu.org.pe/articulo/inseguridad-en-cifras-que-muestran-las-denuncias
-
-* Instituto Nacional de Estadística e Informática. (2026, marzo). Victimización en el Perú 2025. INEI. Recuperado el 16 de abril de 2026, de https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib2076/index.html
-  
-* Policía Nacional del Perú. (2025). *Anuario Estadístico de la Criminalidad y Seguridad Ciudadana*. Ministerio del Interior.
-
-* Smart Cities Perú. (2025). *Impacto de la Tecnología IoT en la Valorización del Patrimonio Inmobiliario y Seguridad Ciudadana*. Observatorio de Ciudades Inteligentes.
-
-* Cámara Peruana de la Construcción. (2025). *Tendencias en Edificaciones Inteligentes y Eficiencia en Gestión de Propietarios*. CAPECO.
-  
 <div style="page-break-after: always;"></div>
 
 # Anexos
@@ -2198,5 +2459,3 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
 * Link del Video de exposición:
 [https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d](https://canva.link/i6aikeu52j3nqwg)
-
-<div style="page-break-after: always;"></div>
