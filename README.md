@@ -2453,14 +2453,78 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 - **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
 
 #### 5.3. Landing Page UI Design.
+
 #### 5.3.1. Landing Page Wireframe.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
+</p> 
+
 #### 5.3.2. Landing Page Mock-up.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
+</p> 
+
 #### 5.4. Applications UX/UI Design.
+
 #### 5.4.1. Applications Wireframes.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_8_jfrjwg.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_9_lyxci3.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682628/Html_Body_13_sj51ug.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_11_feosk2.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_12_dzpzun.png" width="1000">
+</p> 
+
 #### 5.4.2. Applications Wireflow Diagrams.
+
+<p align="center">
+  <img src="" width="1000">
+</p> 
+
 #### 5.4.2. Applications Mock-ups.
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_hkcg06.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_1_eulqqj.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_2_ze7kz2.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682431/Html_Body_6_y3tf2m.png" width="1000">
+</p> 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_5_w2ltlt.png" width="1000">
+</p> 
+#### 5.4.2. Applications Wireflow Diagrams.
+
+<p align="center">
+  <img src="" width="1000">
+</p> 
+
 #### 5.4.3. Applications User Flow Diagrams.
 #### 5.5. Applications Prototyping.
+
 #### 5.6. IoT Device Design.
 
 <div style="page-break-after: always;"></div>
