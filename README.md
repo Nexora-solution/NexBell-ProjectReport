@@ -2499,6 +2499,7 @@ A continuación, se detallan los repositorios que alojan el código fuente de lo
 | Backend | [https://github.com/Nexora-solution/NexBell-WebServices](https://github.com/Nexora-solution/NexBell-WebServices) | Repositorio del núcleo de la solución. Implementa la lógica de negocio, la API RESTful para la persistencia de datos en MySQL, el manejo de notificaciones y la autenticación de usuarios. |
 | Edge API | [https://github.com/Nexora-solution/NexBell-EdgeAPI](https://github.com/Nexora-solution/NexBell-EdgeAPI) | Contiene el firmware y la lógica de borde para los dispositivos IoT. Gestiona la interacción con sensores, el control del videoportero y la comunicación de eventos hacia la nube. |
 | Report | [https://github.com/Nexora-solution/NexBell-ProjectReport](https://github.com/Nexora-solution/NexBell-ProjectReport) | Repositorio central de documentación del proyecto. Almacena los entregables académicos y el informe final del curso. |
+| Testing | [https://github.com/Nexora-solution/NexBell-Testing](https://github.com/Nexora-solution/NexBell-Testing) | Repositorio de pruebas y archivos feature de la solución. |
 
 #### Estrategia de Trabajo y Versionamiento
 
