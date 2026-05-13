@@ -60,7 +60,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
-| AV1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| AV1 | 24/04/2026 | **· Bellido Salas Raúl <br> · Borja Molina, Gabriel Sebastián <br> · Suárez Romero, Santiago Manuel  <br> · Gomez Flores, Daniela Araceli <br> · Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| TP1 | | | |
 
 <hr>
 
@@ -1650,11 +1651,11 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
 <p align="center">
-<img src="https://imgur.com/RaYmJrq.png" alt="3" width="1100">
+<img src="https://imgur.com/RaYmJrq.png" alt="Context" width="1100">
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
+<img src="https://i.imgur.com/gQpmrNG.png" alt="Container" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
@@ -1662,7 +1663,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 El Diagrama de Despliegue describe la topología física y la infraestructura donde reside la solución **NexBell**. Se detalla la distribución de los artefactos de software en tres niveles clave: el dispositivo del usuario, la infraestructura local del edificio (*Edge*) y el ecosistema escalable en la nube de **Nexora**.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/123_wldtdk" alt="Deployment Diagram - NexBell Solution">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
 </p>
 
 
@@ -2547,7 +2548,13 @@ Para la redacción de los criterios de aceptación y las pruebas de la solución
 
 ### 6.1.4. Software Deployment Configuration
 
+En esta sección se describe el flujo de despliegue y la configuración de infraestructura para el sistema de NexBell. El equipo Nexora ha optado por una estrategia de despliegue híbrida que aprovecha las fortalezas de diferentes proveedores de nube para optimizar la latencia, la escalabilidad y la disponibilidad de la solución.
 
+El proceso de entrega continua inicia con la integración del código en GitHub, activando flujos de trabajo que automatizan la publicación de la Landing Page y la Web Application en Netlify, garantizando una distribución global eficiente. Por otro lado, la lógica de negocio y la persistencia de datos se centralizan en Microsoft Azure, proporcionando un entorno robusto para el procesamiento de los Web Services. Este esquema asegura que cada componente de NexBell opere en un entorno optimizado para su función específica, facilitando el mantenimiento y la trazabilidad del producto final.
+
+<p align="center">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
+</p>
 
 ## 6.2. Landing Page, Services & Applications Implementation
 
@@ -2555,21 +2562,99 @@ Para la redacción de los criterios de aceptación y las pruebas de la solución
 
 #### 6.2.1.1. Sprint Planning 1
 
+| Sprint # | Sprint 1 |
+|---|---|
+| Sprint Planning Background |
+| Date | 06/05/2026 |
+| Time | 3:30 PM |
+| Location | Virtual |
+| Prepared by | Gómez Flores, Daniela Araceli |
+| Attendees (to planned meeting) | Gómez Flores, Daniela Araceli / Bellido Salas, Raúl / Borja Molina, Gabriel Sebastián / Suárez Romero, Santiago Manuel / Burga Loarte, Anaely Zarely |
+| Sprint Goal & User Stories |
+| Sprint 1 Goal | **Nuestro objetivo es** consolidar la presencia digital de NexBell y validar la experiencia de usuario principal para la administración. <br> **Creemos que** esto permite a los potenciales clientes residenciales comprender claramente nuestra propuesta de valor y ofrece al personal de seguridad una visión general del flujo de trabajo de gestión. <br> **Esto se confirmará cuando** un visitante pueda navegar por la página de inicio completa para conocer los beneficios del sistema, y ​​cuando un usuario administrador pueda interactuar con el panel principal, visualizando registros de visitantes ficticios e interfaces de videoportero simuladas, todo ello implementado en un entorno web. |
+| Sprint 1 Velocity | 30 |
+| Sum of Story Points |  24 |
+
 #### 6.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Identidad Visual y Diseño UX/UI | Desarrollo de la Landing Page | Arquitectura de Frontend y Mocking de Datos | Configuración de CI/CD y Despliegue | Gestión de Documentación e Informe Final |
+|---|---|---|---|---|---|---|
+| Bellido Salas, Raúl             | raulbellidosalas | L | C | C | C | C |
+| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | C | L |
+| Suárez Romero, Santiago Manuel  | SDarXx | C | C | L | C | C |
+| Gómez Flores, Daniela Araceli   | DanieGF1 | C | L | C | C | C |
+| Burga Loarte, Anaely Zarely     | userxx1000 | C | C | C | L | C |
 
 #### 6.2.1.3. Sprint Backlog 1
 
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **US37** | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
+| **US37** | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
+| **US38** | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
+| **US39** | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
+| **US40** | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
+| **US41** | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
+| **US01, US02** | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
+| **US03** | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
+| **US15** | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
+| **US15** | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
+| **US16** | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
+| **General** | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
+| **General** | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
+
 #### 6.2.1.4. Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited On |
+|---|---|---|--|---|---|
+| Nexbell-LandingPage | main | f74d36f9be37815f4d4269f066925e176ac228bc | feat: landing page nexbell redesign | - | 11/05/2026 |
+| Nexbell-FrontendWeb | main | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | b7d65c0066ed41c231604d237e7c271e195c3282 | feat: build NexBell doorman web app from Figma mockups | Setup Tailwind CSS v3 with NexBell color palette and Space Grotesk/Geist fonts <br> Configure Vue Router with all routes for auth and doorman flows <br> Create DoormanLayout with sidebar navigation and logout modal <br> Auth views: Login (split layout), Register, RegisterSuccess, ForgotPassword <br> Doorman views: Welcome, Dashboard, Visitors (verify/approve/reject), History (with date filter modal), Profile, EditProfile, Settings, Support <br> Build compiles cleanly with zero TypeScript errors | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | d6aa9ab87999c3f50c5516b43ab7a96e3144da78 | feat: add stores, composables, data layer and fix dependencies | Add Pinia stores: authStore (login/register/logout) and visitorsStore (approve/reject) <br> Add composables: useI18n and useTheme with localStorage persistence <br> Add seed data: users.json, visitors.json, accessHistory.json <br> Add i18n locales: en.ts and es.ts <br> Add TypeScript types: User, Visitor, AccessRecord, DoorEvent <br> Add pinia and lucide-vue-next as official dependencies | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | 2935d471dbbbfbf22427cf6599acbf0384387088 | feat: integrate Pinia for state management, enhance visitor registration, and improve UI components | - | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026 |
+| Nexbell-FrontendWeb | feature/login | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026
+| Nexbell-FrontendWeb | develop | fc500aaba60edf64b7ffd3c2a9baa60b3e2f4a65 | Merge pull request #1 from Nexora-solution/feature/login | - | 12/05/2026 |
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 
+
+
 #### 6.2.1.6. Execution Evidence for Sprint Review
+
+
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
+
+
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
+Durante el presente Sprint, el equipo Nexora ha establecido las bases de la infraestructura de entrega continua (CD) para los componentes públicos y administrativos de la solución NexBell. Las actividades de despliegue se centraron en el aprovisionamiento de recursos en la plataforma Netlify, seleccionada por su eficiencia en la distribución de contenido estático y SPA (Single Page Applications).
+
+El proceso incluyó la creación de la organización del proyecto, la vinculación directa con los repositorios de GitHub para habilitar Continuous Deployment y la configuración de las variables de entorno necesarias para la ejecución de los componentes desarrollados en Vue.js. A continuación, se detallan los enlaces de acceso y las evidencias del despliegue exitoso para cada producto digital:
+
+##### NexBell Landing Page Deployment
+<p align="center">
+  <img src="https://i.imgur.com/hHFvYN9.png" alt="landing-page" width="1000">
+</p>
+
+Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell.netlify.app/)
+
+##### NexBell Web Application (Frontend) Deployment
+
+
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
+A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
+
+<p align="center">
+  <img src="https://i.imgur.com/0XXKy9k.jpeg" alt="team-collaboration" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/YvS9aeV.jpeg" alt="team-collaboration" width="1000">
+</p>
 
 <div style="page-break-after: always;"></div>
 
