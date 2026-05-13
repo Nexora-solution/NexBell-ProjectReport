@@ -2519,11 +2519,7 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_12_dzpzun.png" width="1000">
 </p> 
 
-#### 5.4.2. Applications Wireflow Diagrams.
 
-<p align="center">
-  <img src="" width="1000">
-</p> 
 
 #### 5.4.2. Applications Mock-ups.
 <p align="center">
@@ -2545,7 +2541,8 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_5_w2ltlt.png" width="1000">
 </p> 
-#### 5.4.2. Applications Wireflow Diagrams.
+
+#### 5.4.3. Applications Wireflow Diagrams.
 
 En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
 
