@@ -2166,10 +2166,6 @@ de usuario consistente, profesional y coherente, sentando las bases de un sistem
 Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
 a la identidad de nuestra marca.
 
-### 5.1.1 General Style Guidelines.
-
-
-
 #### **Branding y Tono de Comunicación**
 
 La identidad de **Nexbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
@@ -2736,13 +2732,12 @@ Enlace del video: https://tinyurl.com/yc3c7emm
   
 ## 5.6. IoT Device Design.
 <img src="https://i.imgur.com/dGdKVQa.jpeg" alt="iot imagen v1">
-### Diagrama del prototipo (Wokwi)
 
+### Diagrama del prototipo (Wokwi)
 
 - **Editor:** Wokwi
 - **Microcontrolador:** ESP32 DevKit C V4
 - **Sensores y actuadores:** PIR, ultrasonico HC-SR04, sensor de sonido (simulado), electromagnetico (simulado), LED de estado
-
 
 ### Componentes y proposito
 
@@ -2994,7 +2989,31 @@ En esta sección se presentan las evidencias correspondientes a la suite de prue
 
 #### 6.2.1.6. Execution Evidence for Sprint Review
 
+Durante el presente Sprint, el equipo Nexora ha logrado la transición crítica de la fase de diseño hacia una infraestructura funcional y desplegada. Los hitos alcanzados incluyen la consolidación de la identidad visual en una Landing Page de alto impacto y la implementación del núcleo de la aplicación web administrativa. Se ha logrado establecer un flujo de despliegue continuo (CD) mediante Netlify, permitiendo que los componentes de la solución sean accesibles de forma pública y estén preparados para la integración con los servicios IoT en los próximos ciclos de desarrollo.
 
+Logros Alcanzados en el Desarrollo Web:
+
+ - Módulo de Autenticación (Login): Implementación de acceso seguro para los distintos roles del sistema.
+
+ - Dashboard Principal: Panel de control centralizado con métricas clave y estado del sistema en tiempo real.
+
+ - Historial de Visitas: Interfaz de consulta avanzada para la auditoría de entradas y salidas con soporte multimedia.
+
+ - Verificación de Visitas: Sistema de validación activa para la confirmación de identidad de visitantes desde la plataforma.
+
+ - Perfil de Usuario: Sección de gestión de datos personales y configuración de preferencias para residentes y administradores.
+
+Evidencias de Navegación y Funcionalidad
+Las capturas de pantalla a continuación muestran la fidelidad visual y la disposición final de los componentes en la Web App, demostrando una experiencia de usuario fluida y coherente con la identidad de Nexora:
+
+Video de Demostración y Navegación
+Para complementar la evidencia visual, se ha grabado una demostración que ilustra el flujo de navegación logrado, la interactividad de los componentes desplegados y la correcta visualización de la plataforma en distintos dispositivos.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715071/Captura_mq3rt2.jpg" width="1000">
+</p> 
+
+Link del video: https://goo.su/2U9eS   
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
@@ -3014,7 +3033,13 @@ Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell
 
 ##### NexBell Web Application (Frontend) Deployment
 
+Se ha completado el despliegue de la interfaz administrativa de NexBell, la cual centraliza el control de accesos y la gestión de usuarios del sistema. Para asegurar un entorno de pruebas estable durante el Sprint Review, se configuró un pipeline de despliegue automatizado que sincroniza cada actualización del repositorio con la instancia en producción. Esta configuración garantiza que el personal de seguridad y los administradores puedan interactuar con una aplicación web de alta disponibilidad, optimizada para la gestión de eventos IoT y la visualización de registros en tiempo real.
 
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778712864/WhatsApp_Image_2026-05-13_at_5.54.05_PM_fh34gl.jpg" alt="landing-page" width="1000">
+</p>
+
+Link de acceso a la Landing Page: [https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
 A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
