@@ -60,7 +60,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
-| AV1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| AV1 | 24/04/2026 | **· Bellido Salas Raúl <br> · Borja Molina, Gabriel Sebastián <br> · Suárez Romero, Santiago Manuel  <br> · Gomez Flores, Daniela Araceli <br> · Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| TP1 | | | |
 
 <hr>
 
@@ -1650,11 +1651,11 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
 <p align="center">
-<img src="https://imgur.com/RaYmJrq.png" alt="3" width="1100">
+<img src="https://imgur.com/RaYmJrq.png" alt="Context" width="1100">
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
+<img src="https://i.imgur.com/gQpmrNG.png" alt="Container" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
@@ -1662,7 +1663,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 El Diagrama de Despliegue describe la topología física y la infraestructura donde reside la solución **NexBell**. Se detalla la distribución de los artefactos de software en tres niveles clave: el dispositivo del usuario, la infraestructura local del edificio (*Edge*) y el ecosistema escalable en la nube de **Nexora**.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/123_wldtdk" alt="Deployment Diagram - NexBell Solution">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
 </p>
 
 
@@ -2609,11 +2610,90 @@ El siguiente diagrama representa el circuito del prototipo basado en el archivo 
 
 ### 6.1.1. Software Development Environment Configuration.
 
+| Actividad | Producto o Herramienta | Propósito de uso | Ruta (SaaS/Descarga) |
+|---|---|---|---|
+| Project Management | Jira | Gestión de tareas, seguimiento del progreso mediante tableros Kanban y control de sprints. | [https://www.atlassian.com/software/jira](https://www.atlassian.com/software/jira) |
+| Requirements Management | Trello | Centralización de historias de usuario, matriz de trazabilidad y especificación de requerimientos funcionales. | [https://trello.com](https://trello.com) |
+| Product Design | Figma | Diseño de prototipos de alta fidelidad, wireframes de la interfaz móvil y web, y flujos de usuario (UX). | [https://www.figma.com](https://www.figma.com) |
+| Software Development | Visual Studio Code | Entorno de desarrollo integrado (IDE) principal para la codificación del backend y frontend. | [https://code.visualstudio.com](https://code.visualstudio.com) |
+| IoT Hardware Simulation | Wokwi | Simulación de circuitos electrónicos, microcontroladores (ESP32) y sensores para validar la lógica del Edge antes de la implementación física. | [https://wokwi.com](https://wokwi.com/) |
+| Software Deployment | Microsoft Azure | Plataforma de nube para el despliegue de microservicios, base de datos MySQL y hosting de la web. | [https://azure.microsoft.com](https://azure.microsoft.com) |
+| Software Testing | Postman | Pruebas funcionales de la API, validación de endpoints y automatización de colecciones de pruebas manuales. | [https://www.postman.com](https://www.postman.com) |
+| Database Management | MySQL Workbench | Modelado de datos (DER), administración de la base de datos remota en Azure y ejecución de scripts SQL. | [https://www.mysql.com](https://www.mysql.com) |
+| Software Documentation | GitHub Wiki | Documentación técnica detallada de la arquitectura, manuales de usuario y guías de instalación. | [https://github.com](https://github.com/) |
+
 ### 6.1.2. Source Code Management
+
+En esta sección se definen los mecanismos y el plan de organización técnica que el equipo de Nexora empleará para el control y seguimiento de los cambios en el ecosistema NexBell. La gestión del código fuente es una pieza crítica para garantizar la integridad de una solución IoT de este tipo, ya que requiere la sincronización precisa entre el software de borde (Edge API), la lógica de negocio en el backend y la interfaz de usuario web.
+
+Para asegurar un desarrollo paralelo eficiente y una trazabilidad completa de cada iteración, se utilizará GitHub como plataforma centralizada de control de versiones. Esto permitirá mantener un historial detallado de las mejoras en la seguridad de los accesos y la gestión de video en tiempo real, facilitando la colaboración continua y el despliegue escalable de la solución.
+
+A continuación, se detallan los repositorios que alojan el código fuente de los componentes de la solución NexBell, abarcando desde la lógica del dispositivo IoT hasta los servicios web:
+
+| Producto | Repositorio | Descripción |
+|---|---|---|
+| Landing Page | [https://github.com/Nexora-solution/NexBell-LandingPage](https://github.com/Nexora-solution/Nexbell-LandingPage) | Contiene el código fuente del sitio web público de NexBell, enfocado en el marketing digital, la presentación de la propuesta de valor y el contacto para potenciales clientes. |
+| Frontend | [https://github.com/Nexora-solution/NexBell-FrontendWeb](https://github.com/Nexora-solution/Nexbell-FrontendWeb) | Aloja la interfaz web de la aplicación principal, diseñada para el personal de conserjería y administración. Incluye el dashboard de gestión de accesos, monitoreo de video y control de residentes. |
+| Backend | [https://github.com/Nexora-solution/NexBell-WebServices](https://github.com/Nexora-solution/NexBell-WebServices) | Repositorio del núcleo de la solución. Implementa la lógica de negocio, la API RESTful para la persistencia de datos en MySQL, el manejo de notificaciones y la autenticación de usuarios. |
+| Edge API | [https://github.com/Nexora-solution/NexBell-EdgeAPI](https://github.com/Nexora-solution/NexBell-EdgeAPI) | Contiene el firmware y la lógica de borde para los dispositivos IoT. Gestiona la interacción con sensores, el control del videoportero y la comunicación de eventos hacia la nube. |
+| Report | [https://github.com/Nexora-solution/NexBell-ProjectReport](https://github.com/Nexora-solution/NexBell-ProjectReport) | Repositorio central de documentación del proyecto. Almacena los entregables académicos y el informe final del curso. |
+| Testing | [https://github.com/Nexora-solution/NexBell-Testing](https://github.com/Nexora-solution/NexBell-Testing) | Repositorio de pruebas y archivos feature de la solución. |
+
+#### Estrategia de Trabajo y Versionamiento
+
+El equipo adopta el modelo GitFlow de Vincent Driessen para organizar el flujo de trabajo. Este esquema permite separar claramente el código en desarrollo de las versiones estables listas para producción.
+* **Main Branch (Rama Principal):** Contiene el código fuente que se encuentra actualmente en producción. Cada commit en esta rama corresponde a una versión estable y etiquetada.
+* **Develop Branch (Rama de Desarrollo):** Es la rama de integración principal. Aquí se consolidan todas las funcionalidades terminadas antes de pasar a una fase de lanzamiento.
+* **Feature Branches (feature/…):** Ramas temporales creadas para desarrollar una funcionalidad específica. Se originan en develop y se reintegran a ella al finalizar la tarea.
+* **Release Branches (release/…):** Se utilizan para preparar una nueva versión de producción. Permiten correcciones menores y preparación de metadatos antes de fusionarse en main y develop.
+* **Hotfix Branches (hotfix/…):** Ramas de emergencia destinadas a solucionar errores críticos detectados en producción. Se originan directamente en main y se reintegran tanto a main como a develop.
+
+Para el control de versiones, se aplica el Versionamiento Semántico (SemVer) bajo el formato MAJOR.MINOR.PATCH:
+* **MAJOR:** Cambios incompatibles con versiones previas (ej. cambio estructural en la Edge API).
+* **MINOR:** Nuevas funcionalidades compatibles (ej. nueva vista en el Frontend).
+* **PATCH:** Corrección de errores menores.
+
+Se adopta el estándar de Conventional Commits para asegurar que el historial de cambios sea legible y automatizable. La estructura de cada mensaje debe ser:
+* **Estructura:** \<tipo\>(\<alcance\>): \<descripción\>
+* **Cuerpo (Opcional):** \<descripción detallada del cambio\>
+
+Tipos comunes: feat (nueva funcionalidad), fix (corrección de error), docs (cambios en documentación), refactor (mejora de código sin cambiar funciones).
+> Ejemplo: feat(edge): add motion sensor trigger for video recording
 
 ### 6.1.3. Source Code Style Guide & Conventions
 
+El equipo Nexora se compromete a mantener un estándar de código limpio, profesional y uniforme para la solución NexBell. Dado que el proyecto integra múltiples entornos (Edge, Backend y Frontend), se adoptan las siguientes normativas transversales:
+* **Nomenclatura en Inglés:** Todos los elementos de programación (clases, variables, métodos, componentes y comentarios técnicos) deben nombrarse estrictamente en inglés para mantener estándares internacionales.
+* **Clean Code:** Se aplican principios de responsabilidad única y legibilidad para facilitar la integración entre los componentes de hardware y software.
+* **Gherkin Conventions:** Las especificaciones de pruebas de aceptación en archivos .feature seguirán un formato estandarizado para asegurar la validación de los flujos de seguridad del videoportero.
+
+A continuación, se detallan las convenciones específicas para cada tecnología del ecosistema NexBell:
+
+| Lenguaje / Framework | Convención de nombres | Guía referencial |
+| --- | --- | --- |
+| **HTML / CSS** | `kebab-case` para IDs, clases y nombres de archivos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript (Vue.js)** | `camelCase` para variables y funciones. `PascalCase` para nombres de componentes (`.vue`). | [Vue.js Official Style Guide](https://vuejs.org/style-guide/) |
+| **C# (EF Core 9)** | `PascalCase` para clases, métodos y propiedades. `camelCase` para variables locales y parámetros. | [Microsoft C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **C++ (IoT / ESP32)** | `camelCase` para variables y sensores. `PascalCase` para funciones de control de hardware. | [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) |
+| **MySQL** | `snake_case` para nombres de tablas y columnas. `UPPERCASE` para palabras clave SQL. | [SQL Style Guide](https://www.sqlstyle.guide/) |
+
+#### Pruebas de Comportamiento (Behavior-Driven Development)
+
+Para la redacción de los criterios de aceptación y las pruebas de la solución IoT, se aplican los estándares de Gherkin. Esto garantiza que las interacciones entre el residente y el videoportero NexBell sean comprendidas tanto por el equipo técnico como por los stakeholders:
+
+* **Estilo Declarativo:** Se prioriza describir el comportamiento del sistema sobre la implementación técnica.
+* **Estructura Base:** Uso riguroso de las palabras clave: Feature, Scenario, Given (Dado que), When (Cuando), Then (Entonces) y And (Y).
+* **Idioma:** Redacción obligatoria en inglés para mantener consistencia con los repositorios de código.
+
 ### 6.1.4. Software Deployment Configuration
+
+En esta sección se describe el flujo de despliegue y la configuración de infraestructura para el sistema de NexBell. El equipo Nexora ha optado por una estrategia de despliegue híbrida que aprovecha las fortalezas de diferentes proveedores de nube para optimizar la latencia, la escalabilidad y la disponibilidad de la solución.
+
+El proceso de entrega continua inicia con la integración del código en GitHub, activando flujos de trabajo que automatizan la publicación de la Landing Page y la Web Application en Netlify, garantizando una distribución global eficiente. Por otro lado, la lógica de negocio y la persistencia de datos se centralizan en Microsoft Azure, proporcionando un entorno robusto para el procesamiento de los Web Services. Este esquema asegura que cada componente de NexBell opere en un entorno optimizado para su función específica, facilitando el mantenimiento y la trazabilidad del producto final.
+
+<p align="center">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
+</p>
 
 ## 6.2. Landing Page, Services & Applications Implementation
 
@@ -2621,21 +2701,139 @@ El siguiente diagrama representa el circuito del prototipo basado en el archivo 
 
 #### 6.2.1.1. Sprint Planning 1
 
+| Sprint # | Sprint 1 |
+|---|---|
+| Sprint Planning Background |
+| Date | 06/05/2026 |
+| Time | 3:30 PM |
+| Location | Virtual |
+| Prepared by | Gómez Flores, Daniela Araceli |
+| Attendees (to planned meeting) | Gómez Flores, Daniela Araceli / Bellido Salas, Raúl / Borja Molina, Gabriel Sebastián / Suárez Romero, Santiago Manuel / Burga Loarte, Anaely Zarely |
+| Sprint Goal & User Stories |
+| Sprint 1 Goal | **Nuestro objetivo es** consolidar la presencia digital de NexBell y validar la experiencia de usuario principal para la administración. <br> **Creemos que** esto permite a los potenciales clientes residenciales comprender claramente nuestra propuesta de valor y ofrece al personal de seguridad una visión general del flujo de trabajo de gestión. <br> **Esto se confirmará cuando** un visitante pueda navegar por la página de inicio completa para conocer los beneficios del sistema, y ​​cuando un usuario administrador pueda interactuar con el panel principal, visualizando registros de visitantes ficticios e interfaces de videoportero simuladas, todo ello implementado en un entorno web. |
+| Sprint 1 Velocity | 30 |
+| Sum of Story Points |  24 |
+
 #### 6.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Identidad Visual y Diseño UX/UI | Desarrollo de la Landing Page | Arquitectura de Frontend y Mocking de Datos | Configuración de CI/CD y Despliegue | Gestión de Documentación e Informe Final |
+|---|---|---|---|---|---|---|
+| Bellido Salas, Raúl             | raulbellidosalas | L | C | C | C | C |
+| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | C | L |
+| Suárez Romero, Santiago Manuel  | SDarXx | C | C | L | C | C |
+| Gómez Flores, Daniela Araceli   | DanieGF1 | C | L | C | C | C |
+| Burga Loarte, Anaely Zarely     | userxx1000 | C | C | C | L | C |
 
 #### 6.2.1.3. Sprint Backlog 1
 
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **US37** | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
+| **US37** | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
+| **US38** | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
+| **US39** | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
+| **US40** | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
+| **US41** | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
+| **US01, US02** | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
+| **US03** | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
+| **US15** | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
+| **US15** | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
+| **US16** | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
+| **General** | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
+| **General** | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
+
 #### 6.2.1.4. Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited On |
+|---|---|---|--|---|---|
+| Nexbell-LandingPage | main | f74d36f9be37815f4d4269f066925e176ac228bc | feat: landing page nexbell redesign | - | 11/05/2026 |
+| Nexbell-FrontendWeb | main | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | b7d65c0066ed41c231604d237e7c271e195c3282 | feat: build NexBell doorman web app from Figma mockups | Setup Tailwind CSS v3 with NexBell color palette and Space Grotesk/Geist fonts <br> Configure Vue Router with all routes for auth and doorman flows <br> Create DoormanLayout with sidebar navigation and logout modal <br> Auth views: Login (split layout), Register, RegisterSuccess, ForgotPassword <br> Doorman views: Welcome, Dashboard, Visitors (verify/approve/reject), History (with date filter modal), Profile, EditProfile, Settings, Support <br> Build compiles cleanly with zero TypeScript errors | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | d6aa9ab87999c3f50c5516b43ab7a96e3144da78 | feat: add stores, composables, data layer and fix dependencies | Add Pinia stores: authStore (login/register/logout) and visitorsStore (approve/reject) <br> Add composables: useI18n and useTheme with localStorage persistence <br> Add seed data: users.json, visitors.json, accessHistory.json <br> Add i18n locales: en.ts and es.ts <br> Add TypeScript types: User, Visitor, AccessRecord, DoorEvent <br> Add pinia and lucide-vue-next as official dependencies | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | 2935d471dbbbfbf22427cf6599acbf0384387088 | feat: integrate Pinia for state management, enhance visitor registration, and improve UI components | - | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026 |
+| Nexbell-FrontendWeb | feature/login | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026
+| Nexbell-FrontendWeb | develop | fc500aaba60edf64b7ffd3c2a9baa60b3e2f4a65 | Merge pull request #1 from Nexora-solution/feature/login | - | 12/05/2026 |
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 
+En esta sección se presentan las evidencias correspondientes a la suite de pruebas diseñada bajo el enfoque BDD. Para ello, se elaboraron archivos .feature utilizando el lenguaje Gherkin. Esta estructura permite describir el comportamiento esperado del sistema de forma clara, verificable y alineada con los criterios de aceptación establecidos para cada historia de usuario.
+
+<p align="center">
+  <img src="https://i.imgur.com/plIOw2P.jpeg" alt="g1" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kIirKpZ.jpeg" alt="g2" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/M6YPG6h.jpeg" alt="g3" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kNMYB9O.jpeg" alt="g4" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/rF2gxey.jpeg" alt="g5" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/LihbDFc.jpeg" alt="g6" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/l1EaB5H.jpeg" alt="g7" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/2qmdERQ.jpeg" alt="g8" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/DROK0Wj.jpeg" alt="g9" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/HxUPvdN.jpeg" alt="g10" width="1000">
+</p>
+
 #### 6.2.1.6. Execution Evidence for Sprint Review
+
+
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
+Durante el presente sprint no se realizaron actividades de desarrollo sobre el Backend, por lo que no se generaron nuevos endpoints ni modificaciones en las rutas de servicios existentes. En consecuencia, esta sección se conserva como evidencia de referencia documental, indicando que no aplica la inclusión de una tabla de endpoints para este incremento. La implementación de servicios web será incorporada en sprints posteriores, cuando se aborde el desarrollo del backend correspondiente.
+
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
+Durante el presente Sprint, el equipo Nexora ha establecido las bases de la infraestructura de entrega continua (CD) para los componentes públicos y administrativos de la solución NexBell. Las actividades de despliegue se centraron en el aprovisionamiento de recursos en la plataforma Netlify, seleccionada por su eficiencia en la distribución de contenido estático y SPA (Single Page Applications).
+
+El proceso incluyó la creación de la organización del proyecto, la vinculación directa con los repositorios de GitHub para habilitar Continuous Deployment y la configuración de las variables de entorno necesarias para la ejecución de los componentes desarrollados en Vue.js. A continuación, se detallan los enlaces de acceso y las evidencias del despliegue exitoso para cada producto digital:
+
+##### NexBell Landing Page Deployment
+<p align="center">
+  <img src="https://i.imgur.com/hHFvYN9.png" alt="landing-page" width="1000">
+</p>
+
+Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell.netlify.app/)
+
+##### NexBell Web Application (Frontend) Deployment
+
+
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
+A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
+
+<p align="center">
+  <img src="https://i.imgur.com/0XXKy9k.jpeg" alt="team-collaboration" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/YvS9aeV.jpeg" alt="team-collaboration" width="1000">
+</p>
 
 <div style="page-break-after: always;"></div>
 
