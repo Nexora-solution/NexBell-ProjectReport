@@ -2225,8 +2225,6 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
 
-### 5.1.2 Web, Mobile and IoT Style Guidelines (12 Pasos de Diseño IoT)
-
 A continuación, se presenta la aplicación detallada de los 12 pasos de diseño IoT para el prototipo de NexBell, estructurada de forma clara y alineada con la arquitectura "Zero Hardware" en departamentos:
 
 **1. Definition of the System Requirements**
@@ -2344,6 +2342,20 @@ A continuación, se presenta la aplicación detallada de los 12 pasos de diseño
 | **NexBell Mobile (Residente)** | • Lock Screen Notification interactiva (Botones contextuales de Aprobar/Rechazar).<br>• Visor en vivo con datos del visitante (DNI provisto si hubo pre-registro). |
 | **Nexora Dashboard (Web/Conserje)**| • Tabla visual de visitas pendientes (modo grilla o fila).<br>• Botón masivo para "Abrir Puerta".<br>• Indicador Semáforo universal (Rojo=Cerrado/Alarma, Verde=Abierta, Amarillo=Visitante). |
 | **Punto IoT Físico (Embedded)** | • Indicación minimalista mediante un LED verde parpadeando durante procesamiento, rojo en denegado. |
+
+#### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
+Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
+
+* **Estructura de Layout y Grillas:** Se implementa una cuadrícula responsiva basada en columnas fluidas (12 columnas para pantallas de escritorio `>= 1200px`) con un *gutter* fijo de `24px` y márgenes laterales de `32px` para evitar el hacinamiento visual de la información de control.
+* **Jerarquía Tipográfica en Pantalla Ancha:** Se prioriza el uso de *Headline Accent (ebGaramond)* a `48px` para los enunciados principales (*Hero Statements*) de la Landing Page, mientras que el panel administrativo utiliza *Headline Large (Geist)* a `32px` para asegurar la legibilidad técnica inmediata de los datos en monitores de escritorio.
+* **Estados de Interacción de Escritorio (Desktop Hovers):** Los elementos interactivos como botones en forma de píldora (Pill-shaped) y tarjetas del dashboard web adoptan una transición cromática suave hacia el color secundario (*Secondary Turquoise* `#74d7ce`) al detectar el puntero (hover), acompañado de un sutil brillo turquesa de profundidad lumínica.
+
+#### 5.1.2.2. Aplicación del Proceso para Mobile 1 (Aplicación Residencial)
+Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacción, recepción de alertas en tiempo real y la validación de visitas por parte del residente, el mismo proceso del *General Style* se traslada considerando los factores de forma portátiles:
+
+* **Zonas de Control y Áreas Seguras (Safe Areas):** El layout se diseña sobre una grilla móvil simplificada (4 columnas). Se respeta estrictamente el uso de espacios negativos en los extremos de la pantalla y márgenes de seguridad para evitar superposiciones con los *notches* físicos de los dispositivos móviles o las barras de navegación del sistema operativo.
+* **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
+* **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
 
 
 ### 5.2. Information Architecture
