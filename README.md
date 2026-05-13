@@ -2547,10 +2547,82 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 </p> 
 #### 5.4.2. Applications Wireflow Diagrams.
 
+En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
+
+El prototipo se ha estructurado en cinco grupos de flujos operativos independientes para validar la usabilidad y la eficiencia del sistema antes de proceder con el desarrollo del software.
+
+---
+
+#### Grupo 1: Flujo de Acceso, Registro e Inicialización de Jornada
+Este diagrama mapea el ciclo de vida de la autenticación de los operarios y la inicialización segura del entorno de monitoreo.
+
+**Descripción del Proceso:**
+1. **Validación de Credenciales:** El flujo inicia en la pantalla *Iniciar sesión*, donde el portero ingresa sus credenciales de acceso. El sistema valida los datos contra el módulo de usuarios.
+2. **Recuperación de Contraseña:** Desde el Login, el flujo permite una bifurcación hacia la interfaz de *Recuperar contraseña* en caso de que el usuario requiera restablecer sus credenciales de seguridad.
+3. **Creación de Cuenta:** Si el usuario no tiene una cuenta activa, se le redirige al formulario de *Registro*, donde captura sus datos personales y selecciona el rol operativo (*Portero*). Al completar el proceso con éxito, el sistema muestra una pantalla intermedia de *Registro exitoso*.
+4. **Inicialización de Jornada (Welcome):** Tras una autenticación o registro exitoso, el flujo redirige a la interfaz de bienvenida (*"Bienvenido de vuelta, José Peralta"*). Aquí el sistema realiza una carga dinámica de datos contextuales en tiempo real: ubicación del módulo (*Main Gate - Edificio San Martín*), fecha/hora del servidor, y el estado perimetral inicial (puerta *Cerrada*, sensores *Activos* y *2 visitantes* en cola). El flujo concluye cuando el operador presiona el botón principal **"Iniciar turno →"**, cambiando su estado a activo en el backend e inicializando el dashboard principal.
+
+   
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699506/Captura_de_pantalla_2026-05-13_a_la_s_2.11.40_p._m._nqqqbw.png" width="1000">
 </p> 
 
+---
+
+#### Grupo 2: Flujo de Gestión de Notificaciones y Configuración del Sistema
+Este diagrama detalla cómo el operador interactúa con las alertas del entorno y gestiona los ajustes operativos globales de la plataforma.
+
+**Descripción del Proceso:**
+1. **Procesamiento de Alertas:** Al ingresar al sistema, el portero visualiza el módulo de *Notificaciones*. El sistema clasifica y ordena los eventos automáticamente. Se validan las transiciones para alertas de tipo informativo rutinario (ej. *"Nuevo visitante registrado"*) y alertas de advertencia de vulnerabilidad técnica o física (ej. *"Batería Baja: Sensor Perimetral 08"*), las cuales forzan un estado visual diferenciado para asegurar la atención inmediata del operador.
+2. **Configuración Global:** El operador puede acceder a la interfaz de *Ajustes*, donde el flujo permite interactuar con los *toggles* funcionales para habilitar/deshabilitar alertas sonoras y notificaciones de escritorio, así como seleccionar el idioma base de la interfaz.
+3. **Soporte Técnico:** Si el operador requiere asistencia, el flujo se bifurca hacia el *Centro de Ayuda y Soporte*, desplegando guías rápidas de resolución de problemas y un formulario integrado para enviar tickets de soporte al equipo técnico de NexBell.
+
+---
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699582/Captura_de_pantalla_2026-05-13_a_la_s_2.12.57_p._m._pv9ufz.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 3: Flujo de Mantenimiento de Cuenta y Seguridad del Operador
+Este diagrama valida el flujo de actualización de la información personal de los porteros y la seguridad de sus credenciales de acceso.
+
+**Descripción del Proceso:**
+1. **Consulta de Perfil:** Desde la barra de navegación fija, el operador accede a su interfaz de *Perfil*, donde el sistema renderiza su ficha de identidad completa, incluyendo datos del edificio (*Edificio San Martín*) y contactos de emergencia del personal de seguridad.
+2. **Mantenimiento de Datos:** Al presionar el disparador de edición, el flujo abre la interfaz de *Editar perfil*, permitiendo al operador actualizar su información de contacto o subir/eliminar su fotografía de identidad para el monitoreo administrativo.
+3. **Actualización de Credenciales:** El flujo se bifurca de manera segura hacia el módulo de *Cambio de contraseña*. Aquí se simula el ingreso de la contraseña actual, el establecimiento de una nueva credencial blindada por un control CAPTCHA visual y la finalización con el disparador *"Guardar nueva contraseña"* para robustecer la seguridad de la cuenta del operario.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700167/Captura_de_pantalla_2026-05-13_a_la_s_2.22.41_p._m._b9lzhn.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 4: Flujo de Verificación y Control de Accesos (Módulo Crítico)
+Este diagrama detalla el flujo lógico del proceso de control de ingresos residenciales, mapeando la interacción entre los datos multimedia y el control físico de accesos.
+
+**Descripción del Proceso:**
+1. **Identificación de Visitas:** El flujo inicia cuando un visitante se encuentra en cola de espera. El portero accede a la pantalla de *Verificación de Visitas*, donde el sistema carga la fotografía del rostro en alta resolución, su nombre verificado (*Carlos Méndez*) y su ID correlativo (*Visitante #001*).
+2. **Evaluación Cruzada:** El operador interactúa con el componente de reproducción de audio para escuchar la autorización de voz vinculada. Simultáneamente, el sistema cruza la información visual y multimedia con la ficha técnica del residente anfitrión asignado para validar la legitimidad del ingreso.
+3. **Impacto en Hardware (IoT):** El usuario cuenta con dos disparadores de alta prioridad: rechazar el acceso o presionar **"Permitir Ingreso"**. Al aprobar la solicitud, el flujo ejecuta una transición instantánea hacia un modal de éxito con el estado *"¡ACCESO APROBADO!"*, simulando la liberación física de la cerradura electromecánica (IoT) y registrando el evento en la bitácora histórica. El flujo concluye limpiando la cola con la vista *"Todo al día"*.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700385/Captura_de_pantalla_2026-05-13_a_la_s_2.26.19_p._m._bk1zyf.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 5: Flujo de Monitoreo Central (Dashboard) y Finalización de Jornada
+Este diagrama valida la jerarquía visual del panel de control central y el flujo de cierre seguro de la sesión operativa.
+
+**Descripción del Proceso:**
+1. **Supervisión en Tiempo Real:** Tras iniciar el turno, el operador opera principalmente sobre el *Dashboard*. El sistema renderiza un panel analítico centralizado: estado de la puerta, resumen de visitas esperadas y la bitácora de actividad reciente. Se validan los diagramas para componentes interactivos clave como los medidores estadísticos diarios y semanales.
+2. **Cierre de Sesión Seguro:** Cuando el operador decide concluir su jornada laboral, presiona el disparador de *Log Out*. El flujo ejecuta una transición hacia el modal flotante de confirmación (*"¿Cerrar sesión?"*), donde el sistema despliega datos contextuales técnicos (hora de inicio y dispositivo utilizado). Al confirmar con el botón de acción principal **"Sí, cerrar sesión"**, el flujo termina de manera segura, destruyendo los tokens de sesión locales y redirigiendo al estado inicial de *Login* de la aplicación.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700345/Captura_de_pantalla_2026-05-13_a_la_s_2.25.39_p._m._houger.png" width="1000">
+</p> 
 #### 5.4.3. Applications User Flow Diagrams.
 #### 5.5. Applications Prototyping.
 
