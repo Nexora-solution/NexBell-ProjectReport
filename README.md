@@ -2285,14 +2285,7 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
-Entendido.  
-**Plan:**
-- [ ] Adaptar los 12 pasos de diseño de sistemas IoT para reflejar la arquitectura de **NexBell** (control de accesos, videoportería, ESP32, sensores de presencia/proximidad, actuador de puerta y arquitectura Edge-Cloud).
-- [ ] Presentar la información estructurada en tablas, reemplazando el contenido existente del punto 5.1.2 en el informe.
 
-Aquí tienes la actualización detallada para la sección **5.1.2 Web, Mobile and IoT Style Guidelines / 12 Pasos de Diseño IoT**, adaptada específicamente a NexBell y al hardware de nuestro diseño Wokwi:
-
-```markdown
 ### 5.1.2 Web, Mobile and IoT Style Guidelines (12 Pasos de Diseño IoT)
 
 A continuación, se presenta la aplicación detallada de los 12 pasos de diseño IoT para el prototipo de NexBell, estructurada de forma clara y alineada con la arquitectura "Zero Hardware" en departamentos:
@@ -2412,7 +2405,7 @@ A continuación, se presenta la aplicación detallada de los 12 pasos de diseño
 | **NexBell Mobile (Residente)** | • Lock Screen Notification interactiva (Botones contextuales de Aprobar/Rechazar).<br>• Visor en vivo con datos del visitante (DNI provisto si hubo pre-registro). |
 | **Nexora Dashboard (Web/Conserje)**| • Tabla visual de visitas pendientes (modo grilla o fila).<br>• Botón masivo para "Abrir Puerta".<br>• Indicador Semáforo universal (Rojo=Cerrado/Alarma, Verde=Abierta, Amarillo=Visitante). |
 | **Punto IoT Físico (Embedded)** | • Indicación minimalista mediante un LED verde parpadeando durante procesamiento, rojo en denegado. |
-```
+
 
 ### 5.2. Information Architecture
 
