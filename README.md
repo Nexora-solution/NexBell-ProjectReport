@@ -2479,7 +2479,7 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 - **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
 - **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
 
-#### 5.3. Landing Page UI Design.
+## 5.3. Landing Page UI Design.
 
 En esta sección se presenta el diseño de interfaz de usuario (UI) de alta fidelidad para la Landing Page de Nexora. Este diseño consolida la identidad visual de la startup, utilizando una paleta de colores y tipografías que transmiten seguridad, modernidad y eficiencia tecnológica.
 
@@ -2521,7 +2521,7 @@ Este recurso es fundamental para validar la estética del producto y asegurar qu
 
 En esta sección se detalla el diseño de la interfaz y la experiencia de usuario para la plataforma web de NexBell. El enfoque se centra en la eficiencia operativa, permitiendo que tanto administradores como personal de seguridad gestionen los accesos, visualicen registros multimedia y administren la base de datos de residentes de manera intuitiva y centralizada.
 
-#### 5.4.1. Applications Wireframes.
+### 5.4.1. Applications Wireframes.
 
 Se presentan los wireframes de baja fidelidad que definen la arquitectura de información y el flujo de navegación de la aplicación web. Estos esquemas permiten validar la disposición de los módulos de control, el tablero de monitoreo y las secciones de auditoría sin distracciones visuales. El objetivo principal es asegurar que las funcionalidades críticas sean accesibles con la menor cantidad de clics posibles, optimizando el tiempo de respuesta ante eventos de seguridad.
 
@@ -2562,53 +2562,7 @@ Se presentan los wireframes de baja fidelidad que definen la arquitectura de inf
 </p> 
 
 
-#### 5.4.2. Applications Wireflow Diagrams.
-
-
-#### 5.4.2. Applications Mock-ups.
-
-Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
-
-
-*- Vista de Inicio de sesion*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_hkcg06.png" width="1000">
-</p> 
-
-*- Vista de Bienvenida*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_1_eulqqj.png" width="1000">
-</p> 
-
-*- Vista de Perfil* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_2_ze7kz2.png" width="1000">
-</p> 
-
-*- Vista de Historial* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682431/Html_Body_6_y3tf2m.png" width="1000">
-</p> 
-
-*- Vista de Dashboard*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_5_w2ltlt.png" width="1000">
-</p> 
-
-*- Vista de Verificación* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_4_jk0muo.png" width="1000">
-</p> 
-
-
-#### 5.4.2. Applications Wireflow Diagrams.
-#### 5.4.3. Applications Wireflow Diagrams.
+### 5.4.2. Applications Wireflow Diagrams.
 
 En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
 
@@ -2686,7 +2640,50 @@ Este diagrama valida la jerarquía visual del panel de control central y el fluj
 <p align="center">
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700345/Captura_de_pantalla_2026-05-13_a_la_s_2.25.39_p._m._houger.png" width="1000">
 </p> 
-#### 5.4.3. Applications User Flow Diagrams.
+
+
+### 5.4.4. Applications Mock-ups.
+
+Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
+
+
+*- Vista de Inicio de sesion*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_hkcg06.png" width="1000">
+</p> 
+
+*- Vista de Bienvenida*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_1_eulqqj.png" width="1000">
+</p> 
+
+*- Vista de Perfil* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_2_ze7kz2.png" width="1000">
+</p> 
+
+*- Vista de Historial* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682431/Html_Body_6_y3tf2m.png" width="1000">
+</p> 
+
+*- Vista de Dashboard*
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_5_w2ltlt.png" width="1000">
+</p> 
+
+*- Vista de Verificación* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_4_jk0muo.png" width="1000">
+</p> 
+
+### 5.4.4. Applications User Flow Diagrams.
 
 En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión y el flujo de datos que experimenta el personal de seguridad (portero/vigilante) al interactuar con el sistema **NexBell**. El objetivo de este mapeo es asegurar que las transiciones entre estados del software respondan eficientemente a las operaciones críticas de control residencial en tiempo real.
 
@@ -2712,7 +2709,7 @@ En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión
 </p> 
 
 
-#### 5.5. Applications Prototyping.
+## 5.5. Applications Prototyping.
 
 Para validar la arquitectura de información, la consistencia visual y la usabilidad de **NexBell** antes de proceder con la fase de codificación frontend, desarrollamos un prototipo de alta fidelidad en la plataforma **Figma**, utilizando las herramientas de la pestaña *Prototype*.
 
@@ -2723,7 +2720,6 @@ Nos aseguramos de consolidar toda la experiencia interactiva en un flujo continu
 </p> 
 
 Enlace del video: https://tinyurl.com/yc3c7emm
-
 
 #### Criterios de diseño e interacción implementados:
 
@@ -2738,7 +2734,7 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 * **Panel de Configuración Global:** Simulación de *Toggles* funcionales para activar/desactivar alertas sonoras del sistema, notificaciones de escritorio y selector de idioma.
 * **Gestión de Cuenta y Seguridad:** Flujo de actualización de perfil (carga de foto de identidad) y el módulo para *Cambiar Contraseña*, el cual integra la validación visual de un componente CAPTCHA para robustecer la seguridad de la cuenta.
   
-#### 5.6. IoT Device Design.
+## 5.6. IoT Device Design.
 <img src="https://i.imgur.com/dGdKVQa.jpeg" alt="iot imagen v1">
 ### Diagrama del prototipo (Wokwi)
 
