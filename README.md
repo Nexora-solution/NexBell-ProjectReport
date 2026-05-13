@@ -2290,6 +2290,19 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 ### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
 * La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
 
+#### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
+Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
+
+* **Estructura de Layout y Grillas:** Se implementa una cuadrícula responsiva basada en columnas fluidas (12 columnas para pantallas de escritorio `>= 1200px`) con un *gutter* fijo de `24px` y márgenes laterales de `32px` para evitar el hacinamiento visual de la información de control.
+* **Jerarquía Tipográfica en Pantalla Ancha:** Se prioriza el uso de *Headline Accent (ebGaramond)* a `48px` para los enunciados principales (*Hero Statements*) de la Landing Page, mientras que el panel administrativo utiliza *Headline Large (Geist)* a `32px` para asegurar la legibilidad técnica inmediata de los datos en monitores de escritorio.
+* **Estados de Interacción de Escritorio (Desktop Hovers):** Los elementos interactivos como botones en forma de píldora (Pill-shaped) y tarjetas del dashboard web adoptan una transición cromática suave hacia el color secundario (*Secondary Turquoise* `#74d7ce`) al detectar el puntero (hover), acompañado de un sutil brillo turquesa de profundidad lumínica.
+
+#### 5.1.2.2. Aplicación del Proceso para Mobile 1 (Aplicación Residencial)
+Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacción, recepción de alertas en tiempo real y la validación de visitas por parte del residente, el mismo proceso del *General Style* se traslada considerando los factores de forma portátiles:
+
+* **Zonas de Control y Áreas Seguras (Safe Areas):** El layout se diseña sobre una grilla móvil simplificada (4 columnas). Se respeta estrictamente el uso de espacios negativos en los extremos de la pantalla y márgenes de seguridad para evitar superposiciones con los *notches* físicos de los dispositivos móviles o las barras de navegación del sistema operativo.
+* **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
+* **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
 
 ### 5.2. Information Architecture
 
@@ -2321,76 +2334,6 @@ Siguiendo el proceso metodológico estandarizado en las pautas generales de dise
 
 Este proceso garantiza que la identidad de marca ("Vigilant Elegance") y los principios de diseño basados en *Material Design 3* se desplieguen de forma óptima según las restricciones y capacidades de cada plataforma.
 
-#### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
-Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
-
-* **Estructura de Layout y Grillas:** Se implementa una cuadrícula responsiva basada en columnas fluidas (12 columnas para pantallas de escritorio `>= 1200px`) con un *gutter* fijo de `24px` y márgenes laterales de `32px` para evitar el hacinamiento visual de la información de control.
-* **Jerarquía Tipográfica en Pantalla Ancha:** Se prioriza el uso de *Headline Accent (ebGaramond)* a `48px` para los enunciados principales (*Hero Statements*) de la Landing Page, mientras que el panel administrativo utiliza *Headline Large (Geist)* a `32px` para asegurar la legibilidad técnica inmediata de los datos en monitores de escritorio.
-* **Estados de Interacción de Escritorio (Desktop Hovers):** Los elementos interactivos como botones en forma de píldora (Pill-shaped) y tarjetas del dashboard web adoptan una transición cromática suave hacia el color secundario (*Secondary Turquoise* `#74d7ce`) al detectar el puntero (hover), acompañado de un sutil brillo turquesa de profundidad lumínica.
-
-* /* --------------------------------------------------------------------------
-   5.1.2.1. Web 1 Style Guidelines (Landing Page & Dashboard)
-   -------------------------------------------------------------------------- */
-:root {
-  --web-grid-columns: 12;
-  --web-grid-gutter: 24px;
-  --web-grid-margin: 32px;
-  
-  /* Jerarquía Tipográfica Web */
-  --web-font-hero: 48px 'ebGaramond', serif;
-  --web-font-dashboard-title: 32px 'Geist', sans-serif;
-}
-
-.web-interactive-card, .web-btn-pill {
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto Hover Desktop (General Style adaptado a Web) */
-.web-interactive-card:hover, .web-btn-pill:hover {
-  background-color: #74d7ce; /* Secondary Turquoise */
-  box-shadow: 0px 0px 12px rgba(116, 215, 206, 0.5); /* Brillo Turquesa */
-  cursor: pointer;
-}
-
-
-#### 5.1.2.2. Aplicación del Proceso para Mobile 1 (Aplicación Residencial)
-Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacción, recepción de alertas en tiempo real y la validación de visitas por parte del residente, el mismo proceso del *General Style* se traslada considerando los factores de forma portátiles:
-
-* **Zonas de Control y Áreas Seguras (Safe Areas):** El layout se diseña sobre una grilla móvil simplificada (4 columnas). Se respeta estrictamente el uso de espacios negativos en los extremos de la pantalla y márgenes de seguridad para evitar superposiciones con los *notches* físicos de los dispositivos móviles o las barras de navegación del sistema operativo.
-* **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
-* **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
-
-/* --------------------------------------------------------------------------
-   5.1.2.2. Mobile 1 Style Guidelines (Resident Application)
-   -------------------------------------------------------------------------- */
-.mobile-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Grilla simplificada móvil */
-  padding-left: 16px;
-  padding-right: 16px;
-  
-  /* Áreas seguras para dispositivos portátiles (Notch / System Bars) */
-  padding-top: env(safe-area-inset-top, 20px);
-  padding-bottom: env(safe-area-inset-bottom, 20px);
-}
-
-/* Densidad e Interacción Táctil Móvil */
-.mobile-btn-pill, .mobile-touch-target {
-  min-width: 48px;
-  min-height: 48px; /* Touch Target mínimo para usabilidad móvil */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Alertas Críticas Móviles (NexBell Real-time Notifications) */
-.mobile-alert-critical {
-  background-color: #000000; /* Fondo negro puro */
-  border: 2px solid #ffb4ab; /* Error Red para máximo contraste */
-  font-family: 'Geist', sans-serif;
-  font-size: 16px; /* Body Medium */
-  line-height: 1.5;
-}
   
 #### 5.2.2. Labelling Systems
 
