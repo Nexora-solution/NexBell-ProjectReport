@@ -2452,13 +2452,37 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 
 #### 5.3. Landing Page UI Design.
 
+En esta sección se presenta el diseño de interfaz de usuario (UI) de alta fidelidad para la Landing Page de Nexora. Este diseño consolida la identidad visual de la startup, utilizando una paleta de colores y tipografías que transmiten seguridad, modernidad y eficiencia tecnológica.
+
+El diseño UI se ha optimizado para guiar al usuario a través de un flujo narrativo claro, desde el reconocimiento de la problemática de los sistemas analógicos hasta la adopción del ecosistema NexBell. Se han aplicado principios de Responsive Design para garantizar que la experiencia sea consistente tanto en navegadores de escritorio como en dispositivos móviles, asegurando que los elementos de interacción (CTA) sean accesibles y visualmente destacados para maximizar la conversión de clientes potenciales.
+
 #### 5.3.1. Landing Page Wireframe.
 
+El wireframe de la Landing Page de Nexora ha sido diseñado bajo un enfoque de baja fidelidad, priorizando la jerarquía de la información y la experiencia de usuario (UX) para los dos segmentos interesados: juntas de propietarios que buscan modernización y administradores de edificios. La estructura se divide en módulos clave que comunican la propuesta de valor de NexBell:
+
+ - Header (Navegación): Se implementa un Sticky Header que facilita el acceso rápido a las secciones de "Cómo Funciona", "Planes de Suscripción", "Seguridad IoT" y un botón de "Contacto Comercial" destacado para la conversión.
+
+ - Sección Hero: En la parte superior se presenta el eslogan principal y el objetivo de la startup, destacando la eliminación de cableado analógico y la transición hacia una portería inteligente basada en la nube.
+
+ - Módulo de Funciones Principales: Mediante el uso de tarjetas informativas e íconos, se describen las capacidades técnicas del sistema, tales como la captura de evidencia multimedia, el enrutamiento de llamadas al smartphone y la gestión de alertas en tiempo real.
+
+ - Sección de Beneficios: Se detallan las ventajas competitivas de la solución, enfocándose en el ahorro de costos operativos (CAPEX), la valorización del patrimonio inmobiliario y la mejora en la seguridad mediante el registro auditable de visitas.
+
+ - Sección de Planes (Pricing): Un módulo comparativo que presenta el modelo de negocio Software as a Service (SaaS), permitiendo a los interesados visualizar las opciones de membresía según el tamaño del condominio o edificio.
+
+ - Footer: Contiene enlaces secundarios a soporte técnico, políticas de privacidad y el acceso directo al portal de administración para usuarios ya registrados.
+
+Este diseño asegura que el usuario interesado comprenda el flujo de trabajo de la solución IoT y los beneficios de reemplazar la infraestructura tradicional por el ecosistema digital de Nexora.
+
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778710148/landing_i7zhsy.png" width="1000">
 </p> 
 
 #### 5.3.2. Landing Page Mock-up.
+
+En esta sección se presenta el Mock-up de la Landing Page, proporcionando una representación visual realista de cómo interactúa la interfaz de Nexora en un entorno de escritorio. A diferencia del diseño UI plano, el mock-up permite visualizar la profundidad, las texturas y la disposición final de los elementos en un contexto de uso real.
+
+Este recurso es fundamental para validar la estética del producto y asegurar que el mensaje de innovación de NexBell se comunique de forma impactante. La composición resalta la claridad del dashboard de administración y la facilidad con la que un propietario puede entender el servicio desde el primer contacto visual.
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
@@ -2466,27 +2490,48 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 
 #### 5.4. Applications UX/UI Design.
 
+En esta sección se detalla el diseño de la interfaz y la experiencia de usuario para la plataforma web de NexBell. El enfoque se centra en la eficiencia operativa, permitiendo que tanto administradores como personal de seguridad gestionen los accesos, visualicen registros multimedia y administren la base de datos de residentes de manera intuitiva y centralizada.
+
 #### 5.4.1. Applications Wireframes.
+
+Se presentan los wireframes de baja fidelidad que definen la arquitectura de información y el flujo de navegación de la aplicación web. Estos esquemas permiten validar la disposición de los módulos de control, el tablero de monitoreo y las secciones de auditoría sin distracciones visuales. El objetivo principal es asegurar que las funcionalidades críticas sean accesibles con la menor cantidad de clics posibles, optimizando el tiempo de respuesta ante eventos de seguridad.
+
+*- Vista de Inicio de sesion*
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_8_jfrjwg.png" width="1000">
 </p> 
 
+*- Vista de Bienvenida*
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_9_lyxci3.png" width="1000">
 </p> 
+
+*- Vista de Dashboard*
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682628/Html_Body_13_sj51ug.png" width="1000">
 </p> 
 
+*- Vista de Historial* 
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_11_feosk2.png" width="1000">
 </p> 
 
+*- Vista de Verificación* 
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_12_dzpzun.png" width="1000">
 </p> 
+
+*- Vista de Perfil* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_10_uofxgt.png" width="1000">
+</p> 
+
 
 #### 5.4.2. Applications Wireflow Diagrams.
 
@@ -2495,25 +2540,47 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 </p> 
 
 #### 5.4.2. Applications Mock-ups.
+
+Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
+
+
+*- Vista de Inicio de sesion*
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_hkcg06.png" width="1000">
 </p> 
+
+*- Vista de Bienvenida*
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_1_eulqqj.png" width="1000">
 </p> 
 
+*- Vista de Perfil* 
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681905/Html_Body_2_ze7kz2.png" width="1000">
 </p> 
+
+*- Vista de Historial* 
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682431/Html_Body_6_y3tf2m.png" width="1000">
 </p> 
 
+*- Vista de Dashboard*
+
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_5_w2ltlt.png" width="1000">
 </p> 
+
+*- Vista de Verificación* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_4_jk0muo.png" width="1000">
+</p> 
+
+
 #### 5.4.2. Applications Wireflow Diagrams.
 
 <p align="center">
