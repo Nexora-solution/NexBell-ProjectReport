@@ -2620,7 +2620,47 @@ El proceso de entrega continua inicia con la integración del código en GitHub,
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 
+En esta sección se presentan las evidencias correspondientes a la suite de pruebas diseñada bajo el enfoque BDD. Para ello, se elaboraron archivos .feature utilizando el lenguaje Gherkin. Esta estructura permite describir el comportamiento esperado del sistema de forma clara, verificable y alineada con los criterios de aceptación establecidos para cada historia de usuario.
 
+<p align="center">
+  <img src="https://i.imgur.com/plIOw2P.jpeg" alt="g1" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kIirKpZ.jpeg" alt="g2" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/M6YPG6h.jpeg" alt="g3" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kNMYB9O.jpeg" alt="g4" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/rF2gxey.jpeg" alt="g5" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/LihbDFc.jpeg" alt="g6" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/l1EaB5H.jpeg" alt="g7" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/2qmdERQ.jpeg" alt="g8" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/DROK0Wj.jpeg" alt="g9" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/HxUPvdN.jpeg" alt="g10" width="1000">
+</p>
 
 #### 6.2.1.6. Execution Evidence for Sprint Review
 
@@ -2628,7 +2668,7 @@ El proceso de entrega continua inicia con la integración del código en GitHub,
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
-
+Durante el presente sprint no se realizaron actividades de desarrollo sobre el Backend, por lo que no se generaron nuevos endpoints ni modificaciones en las rutas de servicios existentes. En consecuencia, esta sección se conserva como evidencia de referencia documental, indicando que no aplica la inclusión de una tabla de endpoints para este incremento. La implementación de servicios web será incorporada en sprints posteriores, cuando se aborde el desarrollo del backend correspondiente.
 
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
 Durante el presente Sprint, el equipo Nexora ha establecido las bases de la infraestructura de entrega continua (CD) para los componentes públicos y administrativos de la solución NexBell. Las actividades de despliegue se centraron en el aprovisionamiento de recursos en la plataforma Netlify, seleccionada por su eficiencia en la distribución de contenido estático y SPA (Single Page Applications).
