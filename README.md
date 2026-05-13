@@ -1624,7 +1624,7 @@ A continuación, se presentan las consideraciones estratégicas y técnicas que 
 (*System Landscape*) proporciona una visión panorámica de alto nivel de todo el ecosistema de **NexBell**. Este diagrama ilustra cómo los diferentes actores (Residentes y Conserjes) interactúan con la solución y cómo el sistema se integra con servicios externos críticos y hardware IoT para garantizar la seguridad y eficiencia operativa del condominio.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/lan_ocqgkb" alt="System Landscape Diagram - NexBell">
+  <img src="https://i.imgur.com/B4LPo15.jpeg" alt="System Landscape Diagram - NexBell">
 </p>
 
 
@@ -2224,7 +2224,7 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 ## 5.1.1 General Style Guidelines
 
 La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
-los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
+los productos digitales de **Nexbell**. El objetivo principal es garantizar una experiencia
 de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
 Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
 a la identidad de nuestra marca.
@@ -2235,9 +2235,9 @@ a la identidad de nuestra marca.
 
 #### **Branding y Tono de Comunicación**
 
-La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+La identidad de **Nexbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
 
-* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Personalidad de la Marca:** Nexbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
 * *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
 * *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
 * *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
@@ -2285,55 +2285,140 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
+Entendido.  
+**Plan:**
+- [ ] Adaptar los 12 pasos de diseño de sistemas IoT para reflejar la arquitectura de **NexBell** (control de accesos, videoportería, ESP32, sensores de presencia/proximidad, actuador de puerta y arquitectura Edge-Cloud).
+- [ ] Presentar la información estructurada en tablas, reemplazando el contenido existente del punto 5.1.2 en el informe.
 
-### Paso 1: Definición de los requisitos del sistema
-* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
-* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
+Aquí tienes la actualización detallada para la sección **5.1.2 Web, Mobile and IoT Style Guidelines / 12 Pasos de Diseño IoT**, adaptada específicamente a NexBell y al hardware de nuestro diseño Wokwi:
 
-### Paso 2: Selección de la tipología del sistema IoT
-* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
+```markdown
+### 5.1.2 Web, Mobile and IoT Style Guidelines (12 Pasos de Diseño IoT)
 
-### Paso 3: Definición de los requisitos de la capa física
-* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
-* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
+A continuación, se presenta la aplicación detallada de los 12 pasos de diseño IoT para el prototipo de NexBell, estructurada de forma clara y alineada con la arquitectura "Zero Hardware" en departamentos:
 
-### Paso 4: Definición de los requisitos de la capa de intercambio
-* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
-* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
+**1. Definition of the System Requirements**
 
-### Paso 5: Definición de los requisitos de la capa de información
-* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
-* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
+| Categoría | Especificación |
+|-----------|----------------|
+| **Objetivo Principal** | Control de accesos inteligente, videoportería virtual y notificación en tiempo real para edificios residenciales. |
+| **Parámetros a Medir** | Presencia humana (movimiento), proximidad del visitante, estado físico de la puerta (abierta/cerrada), nivel de audio ambiental. |
+| **Requisitos Funcionales** | • Detección y notificación de visitantes en tiempo real<br>• Apertura remota de cerraduras<br>• Transmisión inalámbrica WiFi<br>• Indicación visual de estado. |
+| **Requisitos No Funcionales** | • Tiempo de envío de alerta < 5 segundos<br>• Operación 24/7 en punto de control<br>• Resistente a condiciones típicas de recepción (0-50°C). |
 
-### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
-* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
+**2. Selection of the IoT System Typology**
 
-### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
-* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
+| Aspecto | Descripción |
+|---------|-------------|
+| **Tipo de Sistema** | **Real-time Access Control IoT System** con arquitectura Edge-Cloud. |
+| **Topología** | Nodo perimetral (ESP32) conectado vía WiFi a un Edge Gateway o directamente al Cloud. |
+| **Procesamiento** | Validación rápida local (Edge) para apertura rápida, y Cloud para enrutamiento de notificaciones, registro de auditoría y almacenamiento multimedia. |
+| **Resiliencia** | Capacidad asíncrona temporal si falla internet, permitiendo control por conserjería física local. |
 
-### Paso 8: Selección de los sensores y actuadores
-* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
-* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
+**3. Definition of Physical Layer Requirements**
 
-### Paso 9: Selección del microcontrolador y transceptores de radio
-* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
+| Componente | Especificaciones Técnicas |
+|------------|---------------------------|
+| **Sensor de Movimiento (PIR)** | • Salida digital (HIGH/LOW) para eventos de llegada.<br>• Rango de cono ajustable (3-7 metros). |
+| **Sensor Ultrasónico HC-SR04** | • Validación de distancia analítica (reducir falsos positivos del PIR).<br>• Precisión de 2cm a 400cm. |
+| **Sensor Magnético (Simulado/Pot)**| • Monitorea el estado físico de la puerta (Abierta/Cerrada). |
+| **Módulo de Audio/Captura** | • Sensor de sonido para captura preliminar/activación por voz. En el modelo final incluye hardware multimedia. |
+| **LED Panel / Indicador** | • Feedback visual para el visitante (encendido, error, puerta abierta). |
 
-### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
-* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
-* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
+**4. Definition of Exchange Layer Requirements**
 
-### Paso 11: Análisis del tiempo de procesamiento
-* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
+| Capa | Protocolo | Descripción |
+|-----------|-----------|-------------|
+| **Embedded → Cloud/Edge** | MQTT (TLS) / HTTP REST | Envío de telemetría de sensores y recepción de comandos de apertura remota. |
+| **Cloud → Mobile App** | FCM / APNS | Push Notifications de baja latencia a los residentes. |
+| **Conectividad** | WiFi 802.11 b/g/n | Módulo integrado en el ESP32. |
+| **Formato Datos** | JSON | Payload: `device_id`, `event_type`, `distance_cm`, `door_status`, `timestamp`. |
+| **Seguridad** | Hashing, JWT, TLS 1.2 | Protección contra suplantación física y cifrado extremo a extremo. |
 
-### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
-* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
+**5. Definition of Information Layer Requirements**
 
+| Proceso | Detalle |
+|---------|---------|
+| **Adquisición Datos** | GPIO para PIR y Ultrasonido. ADC de 12-bits para sensores analógicos. |
+| **Lógica de Fusión** | Se cruza la detección del PIR con el HC-SR04 (< 1 metro) para confirmar "Visitante Presente". |
+| **Estructura JSON** | `{"device":"gate_01", "event":"visitor_detected", "door":"closed"}` |
+| **Buffer Local** | Cola local de eventos físicos durante caídas temporales de WiFi. |
+| **Sincronización** | Estampado de tiempo (NTP) en cada paquete generado. |
+
+**6. Definition of Application Service Layer Requirements**
+
+| Interfaz | Funcionalidades |
+|----------|----------------|
+| **Mobile App (Residente)** | • Alertas push interactivas: "Aprobar" / "Rechazar".<br>• Visualización de imagen/audio y apertura remota de chapa. |
+| **Web Dashboard (Conserje)** | • Cola priorizada de visitantes (FIFO).<br>• Monitoreo de estado de todas las puertas del edificio.<br>• Accionamiento de apertura e historial. |
+| **API REST / Cloud** | • Búsqueda en directorio, asociación de departamento a residente y registro auditable (log). |
+
+**7. Selection of the Architectures of Data Exchange and Information Integration Layers**
+
+| Componente | Tecnología | Función |
+|------------|------------|---------|
+| **Cloud API Gateways** | .NET / C# Web API | Enrutamiento seguro, RBAC, exposición de módulos del Bounded Context. |
+| **Microservicios (DDD)** | .NET / C# | Contextos: IAM, Directory, Security (Core), Audit, Intercom. |
+| **Database** | SQL Server / PostgreSQL | Tablas transaccionales de visitas, logs de auditoría inmutables, directorio de residentes. |
+| **Message Broker** | MQTT Broker / SignalR | Manejo asíncrono para señales del hardware IoT y websockets para UI del conserje en tiempo real. |
+| **External Services** | Firebase (FCM) | Entrega de notificaciones ricas al smartphone del residente. |
+
+**8. Selection of the Sensors and the Actuators**
+
+| Componente | Rol en NexBell | Especificaciones Clave |
+|------------|----------------|------------------------|
+| **PIR y HC-SR04** | Activadores de flujo | Detonantes del escenario sin intervención táctil (Touchless). |
+| **Relé Electromagnético** | Actuador / Cerradura | Recibe pulso (HIGH) desde el ESP32 para liberar el mecanismo de puerta (5V/12V). |
+| **Contacto Magnético** | Auditoría y Seguridad | Detecta aperturas forzadas o puertas dejadas abiertas. |
+| **Módulo Multimedia** | Evidencia | (Proyección) Micrófono / Cámara para validación visual pre-apertura. |
+
+**9. Selection of the Microcontroller**
+
+| Aspecto | Especificaciones (ESP32 DevKit C V4) |
+|---------|--------------------------------------|
+| **Microcontrolador** | Dual-core Xtensa LX6 @ 240MHz. Potencia suficiente para preprocesar audio básico. |
+| **Conectividad** | WiFi integrado + Bluetooth (para aprovisionamiento inicial). |
+| **Pines y E/S** | Múltiples GPIOs soportan interrupciones hardware (PIR), I2C, SPI para pantallas o cámaras (OV2640 futuro). |
+| **Alimentación** | 5V vía USB o Vin constantes desde la fuente de la portería central. |
+
+**10. Definition of the Data Processing for Each Node and in Cloud**
+
+**Procesamiento Embedded (ESP32):**
+1. Interrupción activada por PIR.
+2. Comprobación cruzada de distancia vía HC-SR04.
+3. Empaquetado JSON: Envío de HTTP POST / Mensaje MQTT al Cloud marcando "Event: Visitor_Arrival".
+4. Recepción de comando "Unlock" desde la nube y disparo del relé de 3 segundos.
+
+**Procesamiento in Cloud (.NET):**
+1. Enrutamiento del evento: Identifica qué residente/departamento asociar a esa puerta.
+2. Consulta de permisos (Security BC): Solo los usuarios del depto destino pueden aprobar.
+3. Despacho notificaciones: Usa Firebase FCM enviando la alerta con metadata.
+4. Auditoría (Audit BC): Registra cada intento de interacción con el dispositivo IoT.
+
+**11. Analysis of the Processing Time**
+
+| Operación | Capa | Latencia Estimada |
+|-----------|------|-------------------|
+| Detección Hardware (PIR + Ultrasonido) | Embedded | < 100 ms |
+| Enrutamiento API + Búsqueda de Usuario | Cloud | < 300 ms |
+| Entrega Firebase (Push) al celular | Network | 1 a 3 segundos |
+| Apertura operada por usuario | Cloud → Embedded | < 500 ms tras botón de 'Aprobar' |
+| **Latencia Total de Experiencia** | End-to-End | **< 4 segundos (Detección a Smartphone)** |
+
+**12. Definition of the Graphical User Interface**
+
+| Dispositivo / App | Componentes Clave de UI |
+|-------------------|--------------------------|
+| **NexBell Mobile (Residente)** | • Lock Screen Notification interactiva (Botones contextuales de Aprobar/Rechazar).<br>• Visor en vivo con datos del visitante (DNI provisto si hubo pre-registro). |
+| **Nexora Dashboard (Web/Conserje)**| • Tabla visual de visitas pendientes (modo grilla o fila).<br>• Botón masivo para "Abrir Puerta".<br>• Indicador Semáforo universal (Rojo=Cerrado/Alarma, Verde=Abierta, Amarillo=Visitante). |
+| **Punto IoT Físico (Embedded)** | • Indicación minimalista mediante un LED verde parpadeando durante procesamiento, rojo en denegado. |
+```
 
 ### 5.2. Information Architecture
 
 #### 5.2.1. Organization Systems
 
-Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+Para garantizar que los usuarios de **Nexbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
 
 ##### **Sistemas de Organización Visual**
 
@@ -2357,7 +2442,7 @@ Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la in
 
 #### 5.2.2. Labelling Systems
 
-El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
 
 ##### **Etiquetas de Navegación Principal**
 
@@ -2397,23 +2482,23 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 
 ##### **SEO Tags para el Landing Page**
 
-- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+- **Title Tag:** `Nexbell | Videoportería Inteligente y Citofonía Virtual en Perú`
     - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
 
-- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nexbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
     - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
 
 - **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
 
 ##### **ASO (App Store Optimization) para la Aplicación Móvil**
 
-- **App Title:** `Nextbell: Videoportería y Seguridad`
+- **App Title:** `Nexbell: Videoportería y Seguridad`
 - **App Subtitle:** `Atiende tu puerta desde el celular.`
 - **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
 - **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
-    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+    - **Larga:** `Nexbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
 
-      Con Nextbell podrás:
+      Con Nexbell podrás:
         - Ver y hablar con tus visitantes en tiempo real.
         - Pre-autorizar invitados con códigos QR o invitaciones digitales.
         - Recibir alertas de encomiendas y paquetes en recepción.
@@ -2462,6 +2547,66 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 #### 5.4.3. Applications User Flow Diagrams.
 #### 5.5. Applications Prototyping.
 #### 5.6. IoT Device Design.
+<img src="https://i.imgur.com/dGdKVQa.jpeg" alt="iot imagen v1">
+### Diagrama del prototipo (Wokwi)
+
+El siguiente diagrama representa el circuito del prototipo basado en el archivo `db.json`:
+
+- **Editor:** Wokwi
+- **Microcontrolador:** ESP32 DevKit C V4
+- **Sensores y actuadores:** PIR, ultrasonico HC-SR04, sensor de sonido (simulado), electromagnetico (simulado), LED de estado
+
+*(Agregar imagen si cuentan con captura del diagrama en Wokwi)*
+
+### Componentes y proposito
+
+| Componente | Rol en NexBell | Descripcion tecnica |
+|-----------|-----------------|---------------------|
+| **ESP32 DevKit C V4** | Nodo principal | WiFi integrado, ADC para sensores analogicos, GPIO para control de actuadores |
+| **PIR Motion Sensor** | Deteccion de presencia | Dispara evento de llegada de visitante |
+| **HC-SR04** | Proximidad/confirmacion | Valida distancia a puerta y reduce falsos positivos |
+| **Potenciometro “Electromag”** | Estado de puerta (simulado) | Simula lectura de sensor magnetico en la puerta |
+| **Potenciometro “Sound Sensor”** | Evidencia de audio (simulada) | Simula nivel de ruido/voz en la puerta |
+| **LED** | Estado local | Indicador de alertas o estado de conexion |
+
+### Conexiones principales (segun `db.json`)
+
+| Sensor/Actuador | Pin ESP32 | Tipo de senal |
+|----------------|-----------|---------------|
+| LED (con resistencia) | GPIO 2 | Digital (salida) |
+| PIR OUT | GPIO 13 | Digital (entrada) |
+| HC-SR04 TRIG | GPIO 5 | Digital (salida) |
+| HC-SR04 ECHO | GPIO 18 | Digital (entrada) |
+| Electromag (pot) | GPIO 34 | Analogica (entrada) |
+| Sound sensor (pot) | GPIO 32 | Analogica (entrada) |
+
+### Constraints para NexBell (hardware + operacion)
+
+1. **Instalacion sin cableado interno:** El dispositivo no debe requerir cableado hacia departamentos. Se prioriza WiFi local.
+2. **Latencia operativa:** La deteccion y notificacion debe ocurrir en segundos (flujo visitante → alerta).
+3. **Robustez en porteria:** Sensores deben resistir uso diario y cambios de iluminacion/ruido.
+4. **Consumo moderado:** Operacion continua en puntos de acceso sin sobrecargar energia.
+5. **Escalabilidad modular:** Sensores pueden reemplazarse o mejorarse sin afectar el firmware base.
+
+### Flujos de IoT soportados
+
+- **Deteccion de llegada:** PIR activa evento inicial.
+- **Confirmacion de presencia:** HC-SR04 valida distancia.
+- **Estado de puerta:** Lectura analogica simula estado abierto/cerrado.
+- **Evidencia local:** Sensor de sonido simula captura de audio ambiente.
+- **Indicacion local:** LED senala estado del sistema o alerta.
+
+### Validacion preliminar
+
+- Lecturas analogicas estables en GPIO 32/34.
+- Activacion y lectura digital de PIR.
+- Medicion de distancia con HC-SR04 funcional.
+- LED responde a eventos locales como prueba de estados.
+
+### Observaciones
+
+- En esta fase, sensores de puerta y sonido se simulan con potenciometros. En la version fisica se reemplazaran por sensor magnetico real y microfono con preamplificador.
+- La arquitectura esta preparada para evolucionar hacia captura multimedia real (camara + microfono), manteniendo el ESP32 como nodo de control.
 
 <div style="page-break-after: always;"></div>
 
