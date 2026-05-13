@@ -1898,8 +1898,6 @@ Esta capa orquesta la evaluación de permisos y el despacho de comandos físicos
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1776983129/database_tva66c.png" width="1000">
 </p> 
 
-*Nota.* Elaboración propia
-
 
 ### 4.2.3. Bounded Context: Directory
 
@@ -2523,8 +2521,57 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 </p> 
 
 #### 5.4.3. Applications User Flow Diagrams.
+
+En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión y el flujo de datos que experimenta el personal de seguridad (portero/vigilante) al interactuar con el sistema **NexBell**. El objetivo de este mapeo es asegurar que las transiciones entre estados del software respondan eficientemente a las operaciones críticas de control residencial en tiempo real.
+
+#### Descripción detallada de los procesos del sistema:
+
+1. **Flujo de Autenticación e Inicialización de Jornada (Login & Welcome):**
+   * **Validación de Credenciales:** El flujo inicia en la interfaz de *Acceso al sistema*. El usuario ingresa su correo y contraseña; el sistema valida los datos contra la base de datos de usuarios. En caso de no contar con un perfil activo, el flujo permite redirigir al usuario al formulario de *Crear Cuenta*, donde se registran los datos personales y se asigna explícitamente el rol operativo (*Portero*).
+   * **Carga de Estado Contextual:** Tras una autenticación exitosa, el sistema redirige a una pantalla de bienvenida dinámica (*"Bienvenido de vuelta, José Peralta"*). En esta vista, el sistema realiza una consulta inmediata para renderizar datos en tiempo real: ubicación del módulo (*Main Gate - Edificio San Martín*), fecha/hora del servidor, y un resumen del estado físico del perímetro estructurado en tres componentes: estado de la puerta (*Cerrada*), estado de los sensores (*Activos*) y la cola de visitas pendientes (*2 visitantes*).
+   * **Disparador de Estado Activo:** El proceso de inicio concluye cuando el operador presiona el botón principal **"Iniciar turno →"**. Esta acción cambia el estado del usuario en el sistema a "Activo" e inicializa el entorno principal de monitoreo.
+
+2. **Flujo de Gestión y Clasificación de Notificaciones:**
+   * **Procesamiento de Eventos:** Al ingresar al *Dashboard*, el sistema despliega el módulo de *Notificaciones (Historial de alertas y eventos del sistema)*.
+   * **Bifurcación por Criticidad:** Las alertas se ordenan automáticamente por prioridad. Los eventos informativos rutinarios (ej. *"Nuevo visitante registrado"*) generan tarjetas oscuras con opción de expansión, mientras que los eventos de vulnerabilidad técnica o física (ej. *"Batería Baja: Sensor Perimetral 08"*) disparan un estado de *Advertencia* visualmente diferenciado para forzar la atención del operador.
+
+3. **Flujo de Verificación y Control de Accesos (Módulo Crítico):**
+   * **Identificación y Carga de Ficha:** Cuando una visita se encuentra en cola, el operador accede al panel de *Verificación de Visitas*. La interfaz renderiza la captura fotográfica del visitante, su nombre completo extraído del registro (*Carlos Méndez*) y su ID correlativo (*Visitante #001*).
+   * **Validación Multimedia y Cruzada:** El operador interactúa con un componente de reproducción de audio para escuchar la autorización de voz vinculada. Simultáneamente, el sistema cruza la información en pantalla con la ficha técnica del residente anfitrión asignado a ese departamento para validar la legitimidad del ingreso.
+   * **Resolución del Flujo e Impacto en Hardware:** El usuario cuenta con dos disparadores de alta prioridad: rechazar el acceso o presionar **"Permitir Ingreso"**. Al aprobar la solicitud, el sistema ejecuta una transición hacia un modal de éxito con el estado *"¡ACCESO APROBADO!"*, lo que simula el envío del pulso digital para liberar la cerradura física (IoT) y registra la entrada en la bitácora histórica. El flujo finaliza limpiando la cola con la vista *"Todo al día"*.
+
+---
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778696776/Captura_de_pantalla_2026-05-13_a_la_s_1.26.10_p._m._ow0whu.png" width="1000">
+</p> 
+
+
 #### 5.5. Applications Prototyping.
 
+Para validar la arquitectura de información, la consistencia visual y la usabilidad de **NexBell** antes de proceder con la fase de codificación frontend, desarrollamos un prototipo de alta fidelidad en la plataforma **Figma**, utilizando las herramientas de la pestaña *Prototype*.
+
+Nos aseguramos de consolidar toda la experiencia interactiva en un flujo continuo y unificado, eliminando puntos de inicio (*Flow starting points*) redundantes para garantizar que las pruebas de usuario y las simulaciones de navegación reflejen el comportamiento real del sistema en un entorno de producción.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778696916/Captura_de_pantalla_2026-05-13_a_la_s_1.27.28_p._m._batmyt.png" width="1000">
+</p> 
+
+Enlace del video: https://tinyurl.com/yc3c7emm
+
+
+#### Criterios de diseño e interacción implementados:
+
+* **Enfoque Visual "Vigilant Elegance" (UI Oscura):** Implementamos un tema oscuro puro (fondos negros con tipografía clara de alta densidad utilizando la fuente *Geist*). Este enfoque mitiga la fatiga ocular del operador durante jornadas prolongadas de monitoreo nocturno y genera un contraste de alto impacto para las alertas críticas a través de nuestro color de acento turquesa (*Secondary Turquoise* `#74D7CE`).
+* **Consistencia de Componentes y Mitigación de Errores:** Todos los campos de entrada de formularios, botones de acción y tarjetas de información utilizan esquinas redondeadas (*Pill-shaped / Smooth Cards*). Esta geometría limpia organiza visualmente los datos en bloques lógicos, optimizando la velocidad de lectura y reduciendo el error humano al gestionar datos críticos o contraseñas.
+* **Comportamiento y Transiciones de la Interfaz:** * Configuramos disparadores de tipo clic (`On Click`) con transiciones inmediatas (`Instant`) para simular la navegación fluida a través de la barra lateral fija (*Main Gate, Dashboard, Visitors, History, Profile*).
+  * Empleamos transiciones desvanecidas (`Dissolve`) para modelar de manera realista la superposición de ventanas emergentes y estados de confirmación (como el modal de *Cerrar Sesión*).
+
+#### Módulos de software validados en el prototipo:
+
+* **Módulo de Autenticación y Registro:** Flujo completo de Login, recuperación de credenciales y creación de cuenta con validación de rol.
+* **Panel de Configuración Global:** Simulación de *Toggles* funcionales para activar/desactivar alertas sonoras del sistema, notificaciones de escritorio y selector de idioma.
+* **Gestión de Cuenta y Seguridad:** Flujo de actualización de perfil (carga de foto de identidad) y el módulo para *Cambiar Contraseña*, el cual integra la validación visual de un componente CAPTCHA para robustecer la seguridad de la cuenta.
+  
 #### 5.6. IoT Device Design.
 
 <div style="page-break-after: always;"></div>
