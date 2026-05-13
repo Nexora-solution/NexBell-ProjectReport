@@ -60,7 +60,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---- | :---- | :---- | :---- |
-| AV1 | 24/04/2026 | **Bellido Salas Raúl <br>  Borja Molina, Gabriel Sebastián <br> Suárez Romero, Santiago Manuel  <br> Gomez Flores, Daniela Araceli <br> Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| AV1 | 24/04/2026 | **· Bellido Salas Raúl <br> · Borja Molina, Gabriel Sebastián <br> · Suárez Romero, Santiago Manuel  <br> · Gomez Flores, Daniela Araceli <br> · Burga Loarte, Anaely Zarely** | En la primera entrega del informe de nuestro proyecto, se han desarrollado los cuatro primeros capítulos, los cuales abarcan la definición de la startup, el planteamiento del problema y la propuesta de solución. Asimismo, se incluye el análisis de los segmentos objetivo, la aplicación del proceso Lean UX y la validación inicial mediante entrevistas y análisis competitivo. Estos elementos permiten establecer una base sólida para el desarrollo del proyecto, alineando la problemática identificada con una solución tecnológica viable y centrada en las necesidades de los usuarios. |
+| TP1 | 13/05/2026 | **· Bellido Salas Raúl <br> · Borja Molina, Gabriel Sebastián <br> · Suárez Romero, Santiago Manuel  <br> · Gomez Flores, Daniela Araceli <br> · Burga Loarte, Anaely Zarely**| En esta entrega articulamos el diseño UX/UI y la ingeniería de software de NexBell mediante el desarrollo de los Capítulos V y VI. En un solo bloque, documentamos las guías de estilo bajo el enfoque Vigilant Elegance (General, Web, Mobile e IoT), la arquitectura de información en sus cinco sistemas clave y la interacción visual de la Landing Page y la aplicación móvil para el Edificio San Martín mediante el desglose de Wireframes, Wireflows, Mock-ups, User Flows, el prototipo en Figma y el diseño del hardware (IoT Device Design). Asimismo, consolidamos la infraestructura técnica mediante la gestión de configuración de software (SCM), detallando el entorno de desarrollo, el control de versiones en GitHub con GitFlow, las convenciones de código y el despliegue continuo en la nube, culminando con la documentación completa del Sprint 1 que integra desde el backlog inicial hasta las evidencias de desarrollo, suite de pruebas, APIs, puesta en producción y la retrospectiva colaborativa del equipo|
 
 <hr>
 
@@ -248,72 +249,10 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
 El curso contribuye al cumplimiento del Student Outcome **ABET: ABET – EAC - Student Outcome 7: Aprendizaje Continuo y Autónomo** <br>
 **Criterio:**  *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos* <br>
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del equipo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome.
-
-<table border="1">
-  <tr>
-    <th>Criterio específico</th>
-    <th>Acciones realizadas</th>
-    <th>Conclusiones</th>
-  </tr>
-  <tr>
-    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
-    <td>
-      <p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Colaboré activamente en la redacción de las historias de usuario, asegurando que cada una respondiera a una necesidad real de los actores del sistema. Asimismo, participé en la definición de las estrategias y tácticas del proyecto, orientando al equipo hacia decisiones técnicas coherentes con los objetivos planteados. También apoyé en la conducción de entrevistas con usuarios potenciales para validar los supuestos iniciales.</p>
-
-  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al equipo liderando la investigación de antecedentes y problemáticas relacionadas con los sistemas de control de acceso en edificios residenciales. Diseñé los diagramas de Design Level Event Storming y los Bounded Context Canvas, aportando una visión estructurada del dominio del sistema. Asimismo, colaboré en la definición de las historias de usuario, apoyando al equipo en la identificación de los flujos principales del sistema Nexora.</p>
-
-  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Asumí un rol activo en la investigación de antecedentes y en el análisis de la problemática del proyecto. Lideré la definición y delimitación de los bounded contexts del sistema, asegurando que cada contexto tuviera responsabilidades claras y bien diferenciadas entre sí. Esta definición permitió al equipo contar con una arquitectura coherente como base para las etapas de desarrollo posteriores.</p>
-
-  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Lideré la definición del problema central del proyecto, articulando con claridad la necesidad que Nexora busca resolver. Conduje las entrevistas con usuarios potenciales y coordiné el proceso de needfinding, sintetizando los hallazgos en user personas, user task matrices, user journey maps y empathy maps. Estos insumos orientaron al equipo en la toma de decisiones centradas en el usuario. Asimismo, colaboré en la elaboración de las historias de usuario y el product backlog.</p>
-
-  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al equipo liderando la elaboración de los diagramas de arquitectura de alto nivel, incluyendo el Landscape Diagram, el Context Diagram y el Deployment Diagram, los cuales permitieron al equipo visualizar la estructura global del sistema y sus relaciones con actores externos. Participé en la conducción de entrevistas y colaboré en la definición de las historias de usuario, aportando desde la perspectiva del usuario final.</p>
-    </td>
-    <td>
-      <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>Establecer una base de liderazgo compartido que permitiera al equipo avanzar de forma coordinada en el planteamiento y estructuración del proyecto Nexora durante la primera entrega.</p>
-      <p><strong>Conclusión: </strong>El equipo demostró capacidad de liderazgo conjunto al distribuir responsabilidades según las fortalezas de cada integrante. Cada miembro asumió el liderazgo de áreas específicas, desde la definición del problema y el needfinding hasta la arquitectura del sistema y las historias de usuario, logrando que las decisiones tomadas fueran el resultado de un trabajo colectivo y no de una sola dirección. Esta dinámica permitió construir una propuesta de solución sólida y coherente para el AV1.</p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
-    <td>
-      <p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Participé en la planificación de las tareas del equipo, contribuyendo a establecer metas claras para la primera entrega. Colaboré en la definición del trabajo general del proyecto y en la redacción de las historias de usuario, asegurando que el equipo tuviera claridad sobre los objetivos funcionales a alcanzar. Mi participación en las entrevistas y en la definición de estrategias aportó al entorno colaborativo del equipo al integrar distintas perspectivas en las decisiones del proyecto.</p>
-
-  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí a crear un entorno colaborativo al compartir con el equipo los hallazgos del análisis de antecedentes y problemáticas, generando una base de conocimiento común sobre la que todos pudimos trabajar. La elaboración de los diagramas de Event Storming y los Bounded Context Canvas facilitó que el equipo tuviera una visión compartida del dominio, lo que permitió planificar las tareas de arquitectura de forma ordenada y con objetivos definidos.</p>
-
-  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Aporté al entorno colaborativo del equipo mediante la definición clara y documentada de los bounded contexts del sistema, lo que permitió que cada integrante comprendiera el alcance de su área de trabajo y pudiera planificar sus tareas sin ambigüedades. La delimitación precisa de responsabilidades entre contextos redujo los conflictos de criterio dentro del equipo y facilitó el cumplimiento de los objetivos de la entrega.</p>
-
-  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Promoví un entorno inclusivo al involucrar al equipo en el proceso de needfinding, compartiendo los resultados de las entrevistas y los artefactos de investigación de usuarios para que todos pudieran tomar decisiones informadas. La construcción colaborativa de las user personas y el product backlog permitió que el equipo estableciera metas orientadas al usuario y planificara las funcionalidades del sistema con un criterio común de priorización.</p>
-
-  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al entorno colaborativo del equipo al elaborar y compartir los diagramas de arquitectura de alto nivel, los cuales sirvieron como referencia visual común para que todos los integrantes comprendieran la estructura global del sistema. Mi participación en las entrevistas y en las historias de usuario reforzó el trabajo conjunto del equipo, alineando los objetivos técnicos con las necesidades reales de los usuarios identificados durante la investigación.</p>
-    </td>
-    <td>
-      <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>Construir un entorno de trabajo colaborativo e inclusivo en el que cada integrante pudiera planificar y cumplir sus tareas de forma alineada con los objetivos generales del proyecto Nexora en el AV1.</p>
-      <p><strong>Conclusión: </strong>El equipo logró establecer un entorno de trabajo colaborativo durante el AV1, donde cada integrante aportó desde su área de responsabilidad al objetivo común de estructurar el proyecto Nexora. La distribución clara de tareas, combinada con la integración de los resultados individuales en artefactos colectivos como el product backlog, los bounded contexts y los diagramas de arquitectura, evidenció una planificación efectiva y el cumplimiento de las metas propuestas para esta primera entrega.</p>
-    </td>
-  </tr>
-</table>
+| Criterio específico | Acciones realizadas | Conclusiones |
+| :--- | :--- | :--- |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Bellido Salas, Raúl**<br>• *AV1:* Redacción de historias de usuario, definición de estrategias técnicas y conducción de entrevistas.<br>• *TB1:* Liderazgo en diseño táctico (DDD) para módulos IAM y Security, mapeo de Container Diagrams y modelos de base de datos.<br>• *TP:* Liderazgo técnico en la construcción del backend del Sprint 1, guiando el diseño de las REST APIs y la lógica de persistencia de datos.<br><br>**Borja Molina, Gabriel Sebastián**<br>• *AV1:* Liderazgo en investigación de problemáticas, diseño de Event Storming y Bounded Context Canvas.<br>• *TB1:* Liderazgo técnico en diseño de dispositivo IoT "Clair" en Wokwi, definición de hardware (ESP32) y capas de datos (MQTT/HTTP).<br>• TP: Dirección estratégica de la Gestión de Configuración de Software (SCM) y del flujo de ramificación GitFlow en el repositorio de la entrega parcial.<br><br>**Suárez Romero, Santiago Manuel**<br>• *AV1:* Análisis de antecedentes y liderazgo en la delimitación de Bounded Contexts.<br>• *TB1:* Liderazgo en diseño visual y UX/UI (wireframes/mockups) bajo el concepto "Vigilant Elegance".<br> •TP: Liderazgo en la codificación del frontend responsive de la Landing Page durante el desarrollo del Sprint 1.<br><br>**Gomez Flores, Daniela Araceli**<br> *AV1:* Definición del problema central, coordinación de Needfinding (User Personas/Journey Maps) y Product Backlog.<br>• *TB1:* Liderazgo en Arquitectura de Información, sistemas de navegación, etiquetado y búsqueda.<br>•*TP:*Liderazgo en el control de calidad (QA), coordinando la definición de la suite de pruebas unitarias y de aceptación de las interfaces del software. <br><br>**Burga Loarte, Anaely Zarely**<br>• *AV1:* Liderazgo en diagramas de arquitectura de alto nivel (Landscape/Context/Deployment) y apoyo en historias de usuario.<br>• *TB1:* Diseño UI/UX de Landing Page, configuración SEO/ASO e integración de los 12 pasos de diseño IoT. <br> • *TP:* Liderazgo de diseño en el prototipado e interacciones complejas de la aplicación móvil móvil en Figma y la consistencia técnica de la entrega parcial.| **AV1 - Objetivo:** Establecer una base de liderazgo compartido para avanzar de forma coordinada en la estructuración.<br>**AV1 - Conclusión:** El equipo demostró liderazgo conjunto al distribuir responsabilidades según fortalezas, logrando una propuesta sólida y coherente.<br><br>**TB1 - Objetivo:** Profundizar en el diseño técnico (táctico, IoT y UX/UI) distribuyendo el liderazgo para una evolución consistente.<br>**TB1 - Conclusión:** Se consolidó la visión técnica, logrando que el backend, las interfaces y el hardware IoT empataran de forma fluida y acelerada. <br><br> **TP - Objetivo:** Consolidar el co-liderazgo multi-rol para transformar las especificaciones teóricas de la solución en un incremento de software funcional, integrado y desplegado. <br> **TP - Conclusión:** El liderazgo distribuido permitió avanzar simultáneamente en los frentes de infraestructura, código y diseño físico, garantizando un producto de software robusto que cumple con las métricas de arquitectura esperadas para el hito parcial |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Bellido Salas, Raúl**<br>• *AV1:* Planificación de tareas y metas. Integración de perspectivas en la toma de decisiones técnicas.<br>• *TB1:* Coordinación de sesiones de revisión de arquitectura para unificar expectativas entre la API y la aplicación móvil.<br> **•TP:** Planificación del Sprint Backlog técnico, gestionando la unificación de los contratos de las APIs con las demandas operativas de la aplicación.<br><br>**Borja Molina, Gabriel Sebastián**<br>• *AV1:* Generación de base de conocimiento común mediante hallazgos de investigación y diagramas compartidos.<br>• *TB1:* Síntesis y comunicación de restricciones técnicas de hardware y esquemas JSON con el equipo de software. <br> •**TP:** Moderación e integración de las ramas de desarrollo individuales en GitHub, asegurando un entorno de código colaborativo y libre de conflictos técnicos.<br><br>**Suárez Romero, Santiago Manuel**<br>• *AV1:* Documentación clara de contextos para reducir ambigüedades y conflictos de criterio.<br>• *TB1:* Ciclos de feedback continuo sobre prototipos visuales, fortaleciendo el compromiso con la calidad final.<br>• **TP:** Establecimiento de metas colaborativas de diseño frontend, garantizando la consistencia visual total entre los estilos web y móviles creados por el equipo.<br><br>**Gomez Flores, Daniela Araceli**<br>• *AV1:* Promoción de entorno inclusivo compartiendo hallazgos de investigación para toma de decisiones informada.<br>• *TB1:* Alineación entre la investigación UX y la arquitectura de información con las historias de usuario aprobadas.<br>• **TP:** Planificación de los criterios de aceptación y las metas de validación del Sprint 1, integrando el flujo de negocio con el código entregado.<br><br>**Burga Loarte, Anaely Zarely**<br>• *AV1:* Creación de referencias visuales comunes (diagramas de arquitectura) para alinear al equipo.<br>• *TB1:* Gestión de la consistencia del reporte final, integrando software, hardware e interfaces en una única voz grupal.<br> •**TP:** Conducción de las sesiones de Sprint Planning y retrospectivas del equipo, estructurando un entorno inclusivo para asegurar la entrega a tiempo de la infraestructura técnica y del informe del TP.| **AV1 - Objetivo:** Construir un entorno de trabajo colaborativo para planificar y cumplir tareas alineadas.<br>**AV1 - Conclusión:** La distribución clara de tareas y la integración de resultados individuales evidenciaron una planificación efectiva y cumplimiento de metas.<br><br>**TB1 - Objetivo:** Integrar eficientemente decisiones de hardware, interfaz y backend mediante comunicación transparente.<br>**TB1 - Conclusión:** La alta interdependencia demandó gran colaboración. La planificación iterativa garantizó que cada avance técnico complementara el entregable final satisfactoriamente. <br><br> **TP - Objetivo:** Gestionar la ejecución colaborativa del Sprint 1 mediante la sincronización ágil de metas de software, control de calidad y despliegue continuo en la nube. <br>**TP - Conclusión:** El establecimiento de revisiones periódicas e integración continua mediante GitFlow habilitó un espacio de trabajo inclusivo y de alta velocidad, logrando el cumplimiento total de los objetivos de desarrollo y despliegue previstos para la entrega parcial.|
 <div style="page-break-after: always;"></div>
                                            
 # Capítulo I: Introducción 
@@ -1624,7 +1563,7 @@ A continuación, se presentan las consideraciones estratégicas y técnicas que 
 (*System Landscape*) proporciona una visión panorámica de alto nivel de todo el ecosistema de **NexBell**. Este diagrama ilustra cómo los diferentes actores (Residentes y Conserjes) interactúan con la solución y cómo el sistema se integra con servicios externos críticos y hardware IoT para garantizar la seguridad y eficiencia operativa del condominio.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/lan_ocqgkb" alt="System Landscape Diagram - NexBell">
+  <img src="https://i.imgur.com/B4LPo15.jpeg" alt="System Landscape Diagram - NexBell">
 </p>
 
 
@@ -1650,11 +1589,11 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 #### 4.1.3.2. Software Architecture Context Level Diagram
 
 <p align="center">
-<img src="https://imgur.com/RaYmJrq.png" alt="3" width="1100">
+<img src="https://imgur.com/RaYmJrq.png" alt="Context" width="1100">
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
+<img src="https://i.imgur.com/gQpmrNG.png" alt="Container" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
@@ -1662,7 +1601,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 El Diagrama de Despliegue describe la topología física y la infraestructura donde reside la solución **NexBell**. Se detalla la distribución de los artefactos de software en tres niveles clave: el dispositivo del usuario, la infraestructura local del edificio (*Edge*) y el ecosistema escalable en la nube de **Nexora**.
 
 <p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/f_auto,q_auto/123_wldtdk" alt="Deployment Diagram - NexBell Solution">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
 </p>
 
 
@@ -2222,7 +2161,7 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 ## 5.1.1 General Style Guidelines
 
 La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
-los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
+los productos digitales de **Nexbell**. El objetivo principal es garantizar una experiencia
 de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
 Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
 a la identidad de nuestra marca.
@@ -2233,9 +2172,9 @@ a la identidad de nuestra marca.
 
 #### **Branding y Tono de Comunicación**
 
-La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+La identidad de **Nexbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
 
-* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Personalidad de la Marca:** Nexbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
 * *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
 * *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
 * *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
@@ -2284,54 +2223,144 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
 
-### Paso 1: Definición de los requisitos del sistema
-* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
-* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
+A continuación, se presenta la aplicación detallada de los 12 pasos de diseño IoT para el prototipo de NexBell, estructurada de forma clara y alineada con la arquitectura "Zero Hardware" en departamentos:
 
-### Paso 2: Selección de la tipología del sistema IoT
-* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
+**1. Definition of the System Requirements**
 
-### Paso 3: Definición de los requisitos de la capa física
-* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
-* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
+| Categoría | Especificación |
+|-----------|----------------|
+| **Objetivo Principal** | Control de accesos inteligente, videoportería virtual y notificación en tiempo real para edificios residenciales. |
+| **Parámetros a Medir** | Presencia humana (movimiento), proximidad del visitante, estado físico de la puerta (abierta/cerrada), nivel de audio ambiental. |
+| **Requisitos Funcionales** | • Detección y notificación de visitantes en tiempo real<br>• Apertura remota de cerraduras<br>• Transmisión inalámbrica WiFi<br>• Indicación visual de estado. |
+| **Requisitos No Funcionales** | • Tiempo de envío de alerta < 5 segundos<br>• Operación 24/7 en punto de control<br>• Resistente a condiciones típicas de recepción (0-50°C). |
 
-### Paso 4: Definición de los requisitos de la capa de intercambio
-* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
-* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
+**2. Selection of the IoT System Typology**
 
-### Paso 5: Definición de los requisitos de la capa de información
-* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
-* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
+| Aspecto | Descripción |
+|---------|-------------|
+| **Tipo de Sistema** | **Real-time Access Control IoT System** con arquitectura Edge-Cloud. |
+| **Topología** | Nodo perimetral (ESP32) conectado vía WiFi a un Edge Gateway o directamente al Cloud. |
+| **Procesamiento** | Validación rápida local (Edge) para apertura rápida, y Cloud para enrutamiento de notificaciones, registro de auditoría y almacenamiento multimedia. |
+| **Resiliencia** | Capacidad asíncrona temporal si falla internet, permitiendo control por conserjería física local. |
 
-### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
-* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
+**3. Definition of Physical Layer Requirements**
 
-### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
-* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
+| Componente | Especificaciones Técnicas |
+|------------|---------------------------|
+| **Sensor de Movimiento (PIR)** | • Salida digital (HIGH/LOW) para eventos de llegada.<br>• Rango de cono ajustable (3-7 metros). |
+| **Sensor Ultrasónico HC-SR04** | • Validación de distancia analítica (reducir falsos positivos del PIR).<br>• Precisión de 2cm a 400cm. |
+| **Sensor Magnético (Simulado/Pot)**| • Monitorea el estado físico de la puerta (Abierta/Cerrada). |
+| **Módulo de Audio/Captura** | • Sensor de sonido para captura preliminar/activación por voz. En el modelo final incluye hardware multimedia. |
+| **LED Panel / Indicador** | • Feedback visual para el visitante (encendido, error, puerta abierta). |
 
-### Paso 8: Selección de los sensores y actuadores
-* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
-* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
+**4. Definition of Exchange Layer Requirements**
 
-### Paso 9: Selección del microcontrolador y transceptores de radio
-* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
+| Capa | Protocolo | Descripción |
+|-----------|-----------|-------------|
+| **Embedded → Cloud/Edge** | MQTT (TLS) / HTTP REST | Envío de telemetría de sensores y recepción de comandos de apertura remota. |
+| **Cloud → Mobile App** | FCM / APNS | Push Notifications de baja latencia a los residentes. |
+| **Conectividad** | WiFi 802.11 b/g/n | Módulo integrado en el ESP32. |
+| **Formato Datos** | JSON | Payload: `device_id`, `event_type`, `distance_cm`, `door_status`, `timestamp`. |
+| **Seguridad** | Hashing, JWT, TLS 1.2 | Protección contra suplantación física y cifrado extremo a extremo. |
 
-### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
-* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
-* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
+**5. Definition of Information Layer Requirements**
 
-### Paso 11: Análisis del tiempo de procesamiento
-* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
+| Proceso | Detalle |
+|---------|---------|
+| **Adquisición Datos** | GPIO para PIR y Ultrasonido. ADC de 12-bits para sensores analógicos. |
+| **Lógica de Fusión** | Se cruza la detección del PIR con el HC-SR04 (< 1 metro) para confirmar "Visitante Presente". |
+| **Estructura JSON** | `{"device":"gate_01", "event":"visitor_detected", "door":"closed"}` |
+| **Buffer Local** | Cola local de eventos físicos durante caídas temporales de WiFi. |
+| **Sincronización** | Estampado de tiempo (NTP) en cada paquete generado. |
 
-### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
-* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
+**6. Definition of Application Service Layer Requirements**
+
+| Interfaz | Funcionalidades |
+|----------|----------------|
+| **Mobile App (Residente)** | • Alertas push interactivas: "Aprobar" / "Rechazar".<br>• Visualización de imagen/audio y apertura remota de chapa. |
+| **Web Dashboard (Conserje)** | • Cola priorizada de visitantes (FIFO).<br>• Monitoreo de estado de todas las puertas del edificio.<br>• Accionamiento de apertura e historial. |
+| **API REST / Cloud** | • Búsqueda en directorio, asociación de departamento a residente y registro auditable (log). |
+
+**7. Selection of the Architectures of Data Exchange and Information Integration Layers**
+
+| Componente | Tecnología | Función |
+|------------|------------|---------|
+| **Cloud API Gateways** | .NET / C# Web API | Enrutamiento seguro, RBAC, exposición de módulos del Bounded Context. |
+| **Microservicios (DDD)** | .NET / C# | Contextos: IAM, Directory, Security (Core), Audit, Intercom. |
+| **Database** | SQL Server / PostgreSQL | Tablas transaccionales de visitas, logs de auditoría inmutables, directorio de residentes. |
+| **Message Broker** | MQTT Broker / SignalR | Manejo asíncrono para señales del hardware IoT y websockets para UI del conserje en tiempo real. |
+| **External Services** | Firebase (FCM) | Entrega de notificaciones ricas al smartphone del residente. |
+
+**8. Selection of the Sensors and the Actuators**
+
+| Componente | Rol en NexBell | Especificaciones Clave |
+|------------|----------------|------------------------|
+| **PIR y HC-SR04** | Activadores de flujo | Detonantes del escenario sin intervención táctil (Touchless). |
+| **Relé Electromagnético** | Actuador / Cerradura | Recibe pulso (HIGH) desde el ESP32 para liberar el mecanismo de puerta (5V/12V). |
+| **Contacto Magnético** | Auditoría y Seguridad | Detecta aperturas forzadas o puertas dejadas abiertas. |
+| **Módulo Multimedia** | Evidencia | (Proyección) Micrófono / Cámara para validación visual pre-apertura. |
+
+**9. Selection of the Microcontroller**
+
+| Aspecto | Especificaciones (ESP32 DevKit C V4) |
+|---------|--------------------------------------|
+| **Microcontrolador** | Dual-core Xtensa LX6 @ 240MHz. Potencia suficiente para preprocesar audio básico. |
+| **Conectividad** | WiFi integrado + Bluetooth (para aprovisionamiento inicial). |
+| **Pines y E/S** | Múltiples GPIOs soportan interrupciones hardware (PIR), I2C, SPI para pantallas o cámaras (OV2640 futuro). |
+| **Alimentación** | 5V vía USB o Vin constantes desde la fuente de la portería central. |
+
+**10. Definition of the Data Processing for Each Node and in Cloud**
+
+**Procesamiento Embedded (ESP32):**
+1. Interrupción activada por PIR.
+2. Comprobación cruzada de distancia vía HC-SR04.
+3. Empaquetado JSON: Envío de HTTP POST / Mensaje MQTT al Cloud marcando "Event: Visitor_Arrival".
+4. Recepción de comando "Unlock" desde la nube y disparo del relé de 3 segundos.
+
+**Procesamiento in Cloud (.NET):**
+1. Enrutamiento del evento: Identifica qué residente/departamento asociar a esa puerta.
+2. Consulta de permisos (Security BC): Solo los usuarios del depto destino pueden aprobar.
+3. Despacho notificaciones: Usa Firebase FCM enviando la alerta con metadata.
+4. Auditoría (Audit BC): Registra cada intento de interacción con el dispositivo IoT.
+
+**11. Analysis of the Processing Time**
+
+| Operación | Capa | Latencia Estimada |
+|-----------|------|-------------------|
+| Detección Hardware (PIR + Ultrasonido) | Embedded | < 100 ms |
+| Enrutamiento API + Búsqueda de Usuario | Cloud | < 300 ms |
+| Entrega Firebase (Push) al celular | Network | 1 a 3 segundos |
+| Apertura operada por usuario | Cloud → Embedded | < 500 ms tras botón de 'Aprobar' |
+| **Latencia Total de Experiencia** | End-to-End | **< 4 segundos (Detección a Smartphone)** |
+
+**12. Definition of the Graphical User Interface**
+
+| Dispositivo / App | Componentes Clave de UI |
+|-------------------|--------------------------|
+| **NexBell Mobile (Residente)** | • Lock Screen Notification interactiva (Botones contextuales de Aprobar/Rechazar).<br>• Visor en vivo con datos del visitante (DNI provisto si hubo pre-registro). |
+| **Nexora Dashboard (Web/Conserje)**| • Tabla visual de visitas pendientes (modo grilla o fila).<br>• Botón masivo para "Abrir Puerta".<br>• Indicador Semáforo universal (Rojo=Cerrado/Alarma, Verde=Abierta, Amarillo=Visitante). |
+| **Punto IoT Físico (Embedded)** | • Indicación minimalista mediante un LED verde parpadeando durante procesamiento, rojo en denegado. |
+
+#### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
+Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
+
+* **Estructura de Layout y Grillas:** Se implementa una cuadrícula responsiva basada en columnas fluidas (12 columnas para pantallas de escritorio `>= 1200px`) con un *gutter* fijo de `24px` y márgenes laterales de `32px` para evitar el hacinamiento visual de la información de control.
+* **Jerarquía Tipográfica en Pantalla Ancha:** Se prioriza el uso de *Headline Accent (ebGaramond)* a `48px` para los enunciados principales (*Hero Statements*) de la Landing Page, mientras que el panel administrativo utiliza *Headline Large (Geist)* a `32px` para asegurar la legibilidad técnica inmediata de los datos en monitores de escritorio.
+* **Estados de Interacción de Escritorio (Desktop Hovers):** Los elementos interactivos como botones en forma de píldora (Pill-shaped) y tarjetas del dashboard web adoptan una transición cromática suave hacia el color secundario (*Secondary Turquoise* `#74d7ce`) al detectar el puntero (hover), acompañado de un sutil brillo turquesa de profundidad lumínica.
+
+#### 5.1.2.2. Aplicación del Proceso para Mobile 1 (Aplicación Residencial)
+Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacción, recepción de alertas en tiempo real y la validación de visitas por parte del residente, el mismo proceso del *General Style* se traslada considerando los factores de forma portátiles:
+
+* **Zonas de Control y Áreas Seguras (Safe Areas):** El layout se diseña sobre una grilla móvil simplificada (4 columnas). Se respeta estrictamente el uso de espacios negativos en los extremos de la pantalla y márgenes de seguridad para evitar superposiciones con los *notches* físicos de los dispositivos móviles o las barras de navegación del sistema operativo.
+* **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
+* **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
 
 
 ### 5.2. Information Architecture
 
 #### 5.2.1. Organization Systems
 
-Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+Para garantizar que los usuarios de **Nexbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
 
 ##### **Sistemas de Organización Visual**
 
@@ -2355,7 +2384,7 @@ Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la in
 
 #### 5.2.2. Labelling Systems
 
-El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
 
 ##### **Etiquetas de Navegación Principal**
 
@@ -2395,23 +2424,23 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 
 ##### **SEO Tags para el Landing Page**
 
-- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+- **Title Tag:** `Nexbell | Videoportería Inteligente y Citofonía Virtual en Perú`
     - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
 
-- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nexbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
     - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
 
 - **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
 
 ##### **ASO (App Store Optimization) para la Aplicación Móvil**
 
-- **App Title:** `Nextbell: Videoportería y Seguridad`
+- **App Title:** `Nexbell: Videoportería y Seguridad`
 - **App Subtitle:** `Atiende tu puerta desde el celular.`
 - **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
 - **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
-    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+    - **Larga:** `Nexbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
 
-      Con Nextbell podrás:
+      Con Nexbell podrás:
         - Ver y hablar con tus visitantes en tiempo real.
         - Pre-autorizar invitados con códigos QR o invitaciones digitales.
         - Recibir alertas de encomiendas y paquetes en recepción.
@@ -2535,9 +2564,6 @@ Se presentan los wireframes de baja fidelidad que definen la arquitectura de inf
 
 #### 5.4.2. Applications Wireflow Diagrams.
 
-<p align="center">
-  <img src="" width="1000">
-</p> 
 
 #### 5.4.2. Applications Mock-ups.
 
@@ -2582,11 +2608,84 @@ Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación we
 
 
 #### 5.4.2. Applications Wireflow Diagrams.
+#### 5.4.3. Applications Wireflow Diagrams.
 
+En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
+
+El prototipo se ha estructurado en cinco grupos de flujos operativos independientes para validar la usabilidad y la eficiencia del sistema antes de proceder con el desarrollo del software.
+
+---
+
+#### Grupo 1: Flujo de Acceso, Registro e Inicialización de Jornada
+Este diagrama mapea el ciclo de vida de la autenticación de los operarios y la inicialización segura del entorno de monitoreo.
+
+**Descripción del Proceso:**
+1. **Validación de Credenciales:** El flujo inicia en la pantalla *Iniciar sesión*, donde el portero ingresa sus credenciales de acceso. El sistema valida los datos contra el módulo de usuarios.
+2. **Recuperación de Contraseña:** Desde el Login, el flujo permite una bifurcación hacia la interfaz de *Recuperar contraseña* en caso de que el usuario requiera restablecer sus credenciales de seguridad.
+3. **Creación de Cuenta:** Si el usuario no tiene una cuenta activa, se le redirige al formulario de *Registro*, donde captura sus datos personales y selecciona el rol operativo (*Portero*). Al completar el proceso con éxito, el sistema muestra una pantalla intermedia de *Registro exitoso*.
+4. **Inicialización de Jornada (Welcome):** Tras una autenticación o registro exitoso, el flujo redirige a la interfaz de bienvenida (*"Bienvenido de vuelta, José Peralta"*). Aquí el sistema realiza una carga dinámica de datos contextuales en tiempo real: ubicación del módulo (*Main Gate - Edificio San Martín*), fecha/hora del servidor, y el estado perimetral inicial (puerta *Cerrada*, sensores *Activos* y *2 visitantes* en cola). El flujo concluye cuando el operador presiona el botón principal **"Iniciar turno →"**, cambiando su estado a activo en el backend e inicializando el dashboard principal.
+
+   
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699506/Captura_de_pantalla_2026-05-13_a_la_s_2.11.40_p._m._nqqqbw.png" width="1000">
 </p> 
 
+---
+
+#### Grupo 2: Flujo de Gestión de Notificaciones y Configuración del Sistema
+Este diagrama detalla cómo el operador interactúa con las alertas del entorno y gestiona los ajustes operativos globales de la plataforma.
+
+**Descripción del Proceso:**
+1. **Procesamiento de Alertas:** Al ingresar al sistema, el portero visualiza el módulo de *Notificaciones*. El sistema clasifica y ordena los eventos automáticamente. Se validan las transiciones para alertas de tipo informativo rutinario (ej. *"Nuevo visitante registrado"*) y alertas de advertencia de vulnerabilidad técnica o física (ej. *"Batería Baja: Sensor Perimetral 08"*), las cuales forzan un estado visual diferenciado para asegurar la atención inmediata del operador.
+2. **Configuración Global:** El operador puede acceder a la interfaz de *Ajustes*, donde el flujo permite interactuar con los *toggles* funcionales para habilitar/deshabilitar alertas sonoras y notificaciones de escritorio, así como seleccionar el idioma base de la interfaz.
+3. **Soporte Técnico:** Si el operador requiere asistencia, el flujo se bifurca hacia el *Centro de Ayuda y Soporte*, desplegando guías rápidas de resolución de problemas y un formulario integrado para enviar tickets de soporte al equipo técnico de NexBell.
+
+---
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699582/Captura_de_pantalla_2026-05-13_a_la_s_2.12.57_p._m._pv9ufz.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 3: Flujo de Mantenimiento de Cuenta y Seguridad del Operador
+Este diagrama valida el flujo de actualización de la información personal de los porteros y la seguridad de sus credenciales de acceso.
+
+**Descripción del Proceso:**
+1. **Consulta de Perfil:** Desde la barra de navegación fija, el operador accede a su interfaz de *Perfil*, donde el sistema renderiza su ficha de identidad completa, incluyendo datos del edificio (*Edificio San Martín*) y contactos de emergencia del personal de seguridad.
+2. **Mantenimiento de Datos:** Al presionar el disparador de edición, el flujo abre la interfaz de *Editar perfil*, permitiendo al operador actualizar su información de contacto o subir/eliminar su fotografía de identidad para el monitoreo administrativo.
+3. **Actualización de Credenciales:** El flujo se bifurca de manera segura hacia el módulo de *Cambio de contraseña*. Aquí se simula el ingreso de la contraseña actual, el establecimiento de una nueva credencial blindada por un control CAPTCHA visual y la finalización con el disparador *"Guardar nueva contraseña"* para robustecer la seguridad de la cuenta del operario.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700167/Captura_de_pantalla_2026-05-13_a_la_s_2.22.41_p._m._b9lzhn.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 4: Flujo de Verificación y Control de Accesos (Módulo Crítico)
+Este diagrama detalla el flujo lógico del proceso de control de ingresos residenciales, mapeando la interacción entre los datos multimedia y el control físico de accesos.
+
+**Descripción del Proceso:**
+1. **Identificación de Visitas:** El flujo inicia cuando un visitante se encuentra en cola de espera. El portero accede a la pantalla de *Verificación de Visitas*, donde el sistema carga la fotografía del rostro en alta resolución, su nombre verificado (*Carlos Méndez*) y su ID correlativo (*Visitante #001*).
+2. **Evaluación Cruzada:** El operador interactúa con el componente de reproducción de audio para escuchar la autorización de voz vinculada. Simultáneamente, el sistema cruza la información visual y multimedia con la ficha técnica del residente anfitrión asignado para validar la legitimidad del ingreso.
+3. **Impacto en Hardware (IoT):** El usuario cuenta con dos disparadores de alta prioridad: rechazar el acceso o presionar **"Permitir Ingreso"**. Al aprobar la solicitud, el flujo ejecuta una transición instantánea hacia un modal de éxito con el estado *"¡ACCESO APROBADO!"*, simulando la liberación física de la cerradura electromecánica (IoT) y registrando el evento en la bitácora histórica. El flujo concluye limpiando la cola con la vista *"Todo al día"*.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700385/Captura_de_pantalla_2026-05-13_a_la_s_2.26.19_p._m._bk1zyf.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 5: Flujo de Monitoreo Central (Dashboard) y Finalización de Jornada
+Este diagrama valida la jerarquía visual del panel de control central y el flujo de cierre seguro de la sesión operativa.
+
+**Descripción del Proceso:**
+1. **Supervisión en Tiempo Real:** Tras iniciar el turno, el operador opera principalmente sobre el *Dashboard*. El sistema renderiza un panel analítico centralizado: estado de la puerta, resumen de visitas esperadas y la bitácora de actividad reciente. Se validan los diagramas para componentes interactivos clave como los medidores estadísticos diarios y semanales.
+2. **Cierre de Sesión Seguro:** Cuando el operador decide concluir su jornada laboral, presiona el disparador de *Log Out*. El flujo ejecuta una transición hacia el modal flotante de confirmación (*"¿Cerrar sesión?"*), donde el sistema despliega datos contextuales técnicos (hora de inicio y dispositivo utilizado). Al confirmar con el botón de acción principal **"Sí, cerrar sesión"**, el flujo termina de manera segura, destruyendo los tokens de sesión locales y redirigiendo al estado inicial de *Login* de la aplicación.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700345/Captura_de_pantalla_2026-05-13_a_la_s_2.25.39_p._m._houger.png" width="1000">
+</p> 
 #### 5.4.3. Applications User Flow Diagrams.
 
 En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión y el flujo de datos que experimenta el personal de seguridad (portero/vigilante) al interactuar con el sistema **NexBell**. El objetivo de este mapeo es asegurar que las transiciones entre estados del software respondan eficientemente a las operaciones críticas de control residencial en tiempo real.
@@ -2640,6 +2739,64 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 * **Gestión de Cuenta y Seguridad:** Flujo de actualización de perfil (carga de foto de identidad) y el módulo para *Cambiar Contraseña*, el cual integra la validación visual de un componente CAPTCHA para robustecer la seguridad de la cuenta.
   
 #### 5.6. IoT Device Design.
+<img src="https://i.imgur.com/dGdKVQa.jpeg" alt="iot imagen v1">
+### Diagrama del prototipo (Wokwi)
+
+
+- **Editor:** Wokwi
+- **Microcontrolador:** ESP32 DevKit C V4
+- **Sensores y actuadores:** PIR, ultrasonico HC-SR04, sensor de sonido (simulado), electromagnetico (simulado), LED de estado
+
+
+### Componentes y proposito
+
+| Componente | Rol en NexBell | Descripcion tecnica |
+|-----------|-----------------|---------------------|
+| **ESP32 DevKit C V4** | Nodo principal | WiFi integrado, ADC para sensores analogicos, GPIO para control de actuadores |
+| **PIR Motion Sensor** | Deteccion de presencia | Dispara evento de llegada de visitante |
+| **HC-SR04** | Proximidad/confirmacion | Valida distancia a puerta y reduce falsos positivos |
+| **Potenciometro “Electromag”** | Estado de puerta (simulado) | Simula lectura de sensor magnetico en la puerta |
+| **Potenciometro “Sound Sensor”** | Evidencia de audio (simulada) | Simula nivel de ruido/voz en la puerta |
+| **LED** | Estado local | Indicador de alertas o estado de conexion |
+
+### Conexiones principales 
+
+| Sensor/Actuador | Pin ESP32 | Tipo de senal |
+|----------------|-----------|---------------|
+| LED (con resistencia) | GPIO 2 | Digital (salida) |
+| PIR OUT | GPIO 13 | Digital (entrada) |
+| HC-SR04 TRIG | GPIO 5 | Digital (salida) |
+| HC-SR04 ECHO | GPIO 18 | Digital (entrada) |
+| Electromag (pot) | GPIO 34 | Analogica (entrada) |
+| Sound sensor (pot) | GPIO 32 | Analogica (entrada) |
+
+### Constraints para NexBell 
+
+1. **Instalacion sin cableado interno:** El dispositivo no debe requerir cableado hacia departamentos. Se prioriza WiFi local.
+2. **Latencia operativa:** La deteccion y notificacion debe ocurrir en segundos (flujo visitante → alerta).
+3. **Robustez en porteria:** Sensores deben resistir uso diario y cambios de iluminacion/ruido.
+4. **Consumo moderado:** Operacion continua en puntos de acceso sin sobrecargar energia.
+5. **Escalabilidad modular:** Sensores pueden reemplazarse o mejorarse sin afectar el firmware base.
+
+### Flujos de IoT soportados
+
+- **Deteccion de llegada:** PIR activa evento inicial.
+- **Confirmacion de presencia:** HC-SR04 valida distancia.
+- **Estado de puerta:** Lectura analogica simula estado abierto/cerrado.
+- **Evidencia local:** Sensor de sonido simula captura de audio ambiente.
+- **Indicacion local:** LED senala estado del sistema o alerta.
+
+### Validacion preliminar
+
+- Lecturas analogicas estables en GPIO 32/34.
+- Activacion y lectura digital de PIR.
+- Medicion de distancia con HC-SR04 funcional.
+- LED responde a eventos locales como prueba de estados.
+
+### Observaciones
+
+- En esta fase, sensores de puerta y sonido se simulan con potenciometros. En la version fisica se reemplazaran por sensor magnetico real y microfono con preamplificador.
+- La arquitectura esta preparada para evolucionar hacia captura multimedia real (camara + microfono), manteniendo el ESP32 como nodo de control.
 
 <div style="page-break-after: always;"></div>
 
@@ -2649,11 +2806,90 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 
 ### 6.1.1. Software Development Environment Configuration.
 
+| Actividad | Producto o Herramienta | Propósito de uso | Ruta (SaaS/Descarga) |
+|---|---|---|---|
+| Project Management | Jira | Gestión de tareas, seguimiento del progreso mediante tableros Kanban y control de sprints. | [https://www.atlassian.com/software/jira](https://www.atlassian.com/software/jira) |
+| Requirements Management | Trello | Centralización de historias de usuario, matriz de trazabilidad y especificación de requerimientos funcionales. | [https://trello.com](https://trello.com) |
+| Product Design | Figma | Diseño de prototipos de alta fidelidad, wireframes de la interfaz móvil y web, y flujos de usuario (UX). | [https://www.figma.com](https://www.figma.com) |
+| Software Development | Visual Studio Code | Entorno de desarrollo integrado (IDE) principal para la codificación del backend y frontend. | [https://code.visualstudio.com](https://code.visualstudio.com) |
+| IoT Hardware Simulation | Wokwi | Simulación de circuitos electrónicos, microcontroladores (ESP32) y sensores para validar la lógica del Edge antes de la implementación física. | [https://wokwi.com](https://wokwi.com/) |
+| Software Deployment | Microsoft Azure | Plataforma de nube para el despliegue de microservicios, base de datos MySQL y hosting de la web. | [https://azure.microsoft.com](https://azure.microsoft.com) |
+| Software Testing | Postman | Pruebas funcionales de la API, validación de endpoints y automatización de colecciones de pruebas manuales. | [https://www.postman.com](https://www.postman.com) |
+| Database Management | MySQL Workbench | Modelado de datos (DER), administración de la base de datos remota en Azure y ejecución de scripts SQL. | [https://www.mysql.com](https://www.mysql.com) |
+| Software Documentation | GitHub Wiki | Documentación técnica detallada de la arquitectura, manuales de usuario y guías de instalación. | [https://github.com](https://github.com/) |
+
 ### 6.1.2. Source Code Management
+
+En esta sección se definen los mecanismos y el plan de organización técnica que el equipo de Nexora empleará para el control y seguimiento de los cambios en el ecosistema NexBell. La gestión del código fuente es una pieza crítica para garantizar la integridad de una solución IoT de este tipo, ya que requiere la sincronización precisa entre el software de borde (Edge API), la lógica de negocio en el backend y la interfaz de usuario web.
+
+Para asegurar un desarrollo paralelo eficiente y una trazabilidad completa de cada iteración, se utilizará GitHub como plataforma centralizada de control de versiones. Esto permitirá mantener un historial detallado de las mejoras en la seguridad de los accesos y la gestión de video en tiempo real, facilitando la colaboración continua y el despliegue escalable de la solución.
+
+A continuación, se detallan los repositorios que alojan el código fuente de los componentes de la solución NexBell, abarcando desde la lógica del dispositivo IoT hasta los servicios web:
+
+| Producto | Repositorio | Descripción |
+|---|---|---|
+| Landing Page | [https://github.com/Nexora-solution/NexBell-LandingPage](https://github.com/Nexora-solution/Nexbell-LandingPage) | Contiene el código fuente del sitio web público de NexBell, enfocado en el marketing digital, la presentación de la propuesta de valor y el contacto para potenciales clientes. |
+| Frontend | [https://github.com/Nexora-solution/NexBell-FrontendWeb](https://github.com/Nexora-solution/Nexbell-FrontendWeb) | Aloja la interfaz web de la aplicación principal, diseñada para el personal de conserjería y administración. Incluye el dashboard de gestión de accesos, monitoreo de video y control de residentes. |
+| Backend | [https://github.com/Nexora-solution/NexBell-WebServices](https://github.com/Nexora-solution/NexBell-WebServices) | Repositorio del núcleo de la solución. Implementa la lógica de negocio, la API RESTful para la persistencia de datos en MySQL, el manejo de notificaciones y la autenticación de usuarios. |
+| Edge API | [https://github.com/Nexora-solution/NexBell-EdgeAPI](https://github.com/Nexora-solution/NexBell-EdgeAPI) | Contiene el firmware y la lógica de borde para los dispositivos IoT. Gestiona la interacción con sensores, el control del videoportero y la comunicación de eventos hacia la nube. |
+| Report | [https://github.com/Nexora-solution/NexBell-ProjectReport](https://github.com/Nexora-solution/NexBell-ProjectReport) | Repositorio central de documentación del proyecto. Almacena los entregables académicos y el informe final del curso. |
+| Testing | [https://github.com/Nexora-solution/NexBell-Testing](https://github.com/Nexora-solution/NexBell-Testing) | Repositorio de pruebas y archivos feature de la solución. |
+
+#### Estrategia de Trabajo y Versionamiento
+
+El equipo adopta el modelo GitFlow de Vincent Driessen para organizar el flujo de trabajo. Este esquema permite separar claramente el código en desarrollo de las versiones estables listas para producción.
+* **Main Branch (Rama Principal):** Contiene el código fuente que se encuentra actualmente en producción. Cada commit en esta rama corresponde a una versión estable y etiquetada.
+* **Develop Branch (Rama de Desarrollo):** Es la rama de integración principal. Aquí se consolidan todas las funcionalidades terminadas antes de pasar a una fase de lanzamiento.
+* **Feature Branches (feature/…):** Ramas temporales creadas para desarrollar una funcionalidad específica. Se originan en develop y se reintegran a ella al finalizar la tarea.
+* **Release Branches (release/…):** Se utilizan para preparar una nueva versión de producción. Permiten correcciones menores y preparación de metadatos antes de fusionarse en main y develop.
+* **Hotfix Branches (hotfix/…):** Ramas de emergencia destinadas a solucionar errores críticos detectados en producción. Se originan directamente en main y se reintegran tanto a main como a develop.
+
+Para el control de versiones, se aplica el Versionamiento Semántico (SemVer) bajo el formato MAJOR.MINOR.PATCH:
+* **MAJOR:** Cambios incompatibles con versiones previas (ej. cambio estructural en la Edge API).
+* **MINOR:** Nuevas funcionalidades compatibles (ej. nueva vista en el Frontend).
+* **PATCH:** Corrección de errores menores.
+
+Se adopta el estándar de Conventional Commits para asegurar que el historial de cambios sea legible y automatizable. La estructura de cada mensaje debe ser:
+* **Estructura:** \<tipo\>(\<alcance\>): \<descripción\>
+* **Cuerpo (Opcional):** \<descripción detallada del cambio\>
+
+Tipos comunes: feat (nueva funcionalidad), fix (corrección de error), docs (cambios en documentación), refactor (mejora de código sin cambiar funciones).
+> Ejemplo: feat(edge): add motion sensor trigger for video recording
 
 ### 6.1.3. Source Code Style Guide & Conventions
 
+El equipo Nexora se compromete a mantener un estándar de código limpio, profesional y uniforme para la solución NexBell. Dado que el proyecto integra múltiples entornos (Edge, Backend y Frontend), se adoptan las siguientes normativas transversales:
+* **Nomenclatura en Inglés:** Todos los elementos de programación (clases, variables, métodos, componentes y comentarios técnicos) deben nombrarse estrictamente en inglés para mantener estándares internacionales.
+* **Clean Code:** Se aplican principios de responsabilidad única y legibilidad para facilitar la integración entre los componentes de hardware y software.
+* **Gherkin Conventions:** Las especificaciones de pruebas de aceptación en archivos .feature seguirán un formato estandarizado para asegurar la validación de los flujos de seguridad del videoportero.
+
+A continuación, se detallan las convenciones específicas para cada tecnología del ecosistema NexBell:
+
+| Lenguaje / Framework | Convención de nombres | Guía referencial |
+| --- | --- | --- |
+| **HTML / CSS** | `kebab-case` para IDs, clases y nombres de archivos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript (Vue.js)** | `camelCase` para variables y funciones. `PascalCase` para nombres de componentes (`.vue`). | [Vue.js Official Style Guide](https://vuejs.org/style-guide/) |
+| **C# (EF Core 9)** | `PascalCase` para clases, métodos y propiedades. `camelCase` para variables locales y parámetros. | [Microsoft C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **C++ (IoT / ESP32)** | `camelCase` para variables y sensores. `PascalCase` para funciones de control de hardware. | [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) |
+| **MySQL** | `snake_case` para nombres de tablas y columnas. `UPPERCASE` para palabras clave SQL. | [SQL Style Guide](https://www.sqlstyle.guide/) |
+
+#### Pruebas de Comportamiento (Behavior-Driven Development)
+
+Para la redacción de los criterios de aceptación y las pruebas de la solución IoT, se aplican los estándares de Gherkin. Esto garantiza que las interacciones entre el residente y el videoportero NexBell sean comprendidas tanto por el equipo técnico como por los stakeholders:
+
+* **Estilo Declarativo:** Se prioriza describir el comportamiento del sistema sobre la implementación técnica.
+* **Estructura Base:** Uso riguroso de las palabras clave: Feature, Scenario, Given (Dado que), When (Cuando), Then (Entonces) y And (Y).
+* **Idioma:** Redacción obligatoria en inglés para mantener consistencia con los repositorios de código.
+
 ### 6.1.4. Software Deployment Configuration
+
+En esta sección se describe el flujo de despliegue y la configuración de infraestructura para el sistema de NexBell. El equipo Nexora ha optado por una estrategia de despliegue híbrida que aprovecha las fortalezas de diferentes proveedores de nube para optimizar la latencia, la escalabilidad y la disponibilidad de la solución.
+
+El proceso de entrega continua inicia con la integración del código en GitHub, activando flujos de trabajo que automatizan la publicación de la Landing Page y la Web Application en Netlify, garantizando una distribución global eficiente. Por otro lado, la lógica de negocio y la persistencia de datos se centralizan en Microsoft Azure, proporcionando un entorno robusto para el procesamiento de los Web Services. Este esquema asegura que cada componente de NexBell opere en un entorno optimizado para su función específica, facilitando el mantenimiento y la trazabilidad del producto final.
+
+<p align="center">
+  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
+</p>
 
 ## 6.2. Landing Page, Services & Applications Implementation
 
@@ -2661,21 +2897,139 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 
 #### 6.2.1.1. Sprint Planning 1
 
+| Sprint # | Sprint 1 |
+|---|---|
+| Sprint Planning Background |
+| Date | 06/05/2026 |
+| Time | 3:30 PM |
+| Location | Virtual |
+| Prepared by | Gómez Flores, Daniela Araceli |
+| Attendees (to planned meeting) | Gómez Flores, Daniela Araceli / Bellido Salas, Raúl / Borja Molina, Gabriel Sebastián / Suárez Romero, Santiago Manuel / Burga Loarte, Anaely Zarely |
+| Sprint Goal & User Stories |
+| Sprint 1 Goal | **Nuestro objetivo es** consolidar la presencia digital de NexBell y validar la experiencia de usuario principal para la administración. <br> **Creemos que** esto permite a los potenciales clientes residenciales comprender claramente nuestra propuesta de valor y ofrece al personal de seguridad una visión general del flujo de trabajo de gestión. <br> **Esto se confirmará cuando** un visitante pueda navegar por la página de inicio completa para conocer los beneficios del sistema, y ​​cuando un usuario administrador pueda interactuar con el panel principal, visualizando registros de visitantes ficticios e interfaces de videoportero simuladas, todo ello implementado en un entorno web. |
+| Sprint 1 Velocity | 30 |
+| Sum of Story Points |  24 |
+
 #### 6.2.1.2. Aspect Leaders and Collaborators
+
+| Team Member | GitHub Username | Identidad Visual y Diseño UX/UI | Desarrollo de la Landing Page | Arquitectura de Frontend y Mocking de Datos | Configuración de CI/CD y Despliegue | Gestión de Documentación e Informe Final |
+|---|---|---|---|---|---|---|
+| Bellido Salas, Raúl             | raulbellidosalas | L | C | C | C | C |
+| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | C | L |
+| Suárez Romero, Santiago Manuel  | SDarXx | C | C | L | C | C |
+| Gómez Flores, Daniela Araceli   | DanieGF1 | C | L | C | C | C |
+| Burga Loarte, Anaely Zarely     | userxx1000 | C | C | C | L | C |
 
 #### 6.2.1.3. Sprint Backlog 1
 
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **US37** | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
+| **US37** | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
+| **US38** | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
+| **US39** | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
+| **US40** | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
+| **US41** | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
+| **US01, US02** | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
+| **US03** | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
+| **US15** | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
+| **US15** | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
+| **US16** | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
+| **General** | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
+| **General** | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
+
 #### 6.2.1.4. Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited On |
+|---|---|---|--|---|---|
+| Nexbell-LandingPage | main | f74d36f9be37815f4d4269f066925e176ac228bc | feat: landing page nexbell redesign | - | 11/05/2026 |
+| Nexbell-FrontendWeb | main | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
+| Nexbell-FrontendWeb | develop | b7d65c0066ed41c231604d237e7c271e195c3282 | feat: build NexBell doorman web app from Figma mockups | Setup Tailwind CSS v3 with NexBell color palette and Space Grotesk/Geist fonts <br> Configure Vue Router with all routes for auth and doorman flows <br> Create DoormanLayout with sidebar navigation and logout modal <br> Auth views: Login (split layout), Register, RegisterSuccess, ForgotPassword <br> Doorman views: Welcome, Dashboard, Visitors (verify/approve/reject), History (with date filter modal), Profile, EditProfile, Settings, Support <br> Build compiles cleanly with zero TypeScript errors | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | d6aa9ab87999c3f50c5516b43ab7a96e3144da78 | feat: add stores, composables, data layer and fix dependencies | Add Pinia stores: authStore (login/register/logout) and visitorsStore (approve/reject) <br> Add composables: useI18n and useTheme with localStorage persistence <br> Add seed data: users.json, visitors.json, accessHistory.json <br> Add i18n locales: en.ts and es.ts <br> Add TypeScript types: User, Visitor, AccessRecord, DoorEvent <br> Add pinia and lucide-vue-next as official dependencies | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | 2935d471dbbbfbf22427cf6599acbf0384387088 | feat: integrate Pinia for state management, enhance visitor registration, and improve UI components | - | 11/05/2026 |
+| Nexbell-FrontendWeb | develop | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026 |
+| Nexbell-FrontendWeb | feature/login | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026
+| Nexbell-FrontendWeb | develop | fc500aaba60edf64b7ffd3c2a9baa60b3e2f4a65 | Merge pull request #1 from Nexora-solution/feature/login | - | 12/05/2026 |
 
 #### 6.2.1.5. Testing Suite Evidence for Sprint Review
 
+En esta sección se presentan las evidencias correspondientes a la suite de pruebas diseñada bajo el enfoque BDD. Para ello, se elaboraron archivos .feature utilizando el lenguaje Gherkin. Esta estructura permite describir el comportamiento esperado del sistema de forma clara, verificable y alineada con los criterios de aceptación establecidos para cada historia de usuario.
+
+<p align="center">
+  <img src="https://i.imgur.com/plIOw2P.jpeg" alt="g1" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kIirKpZ.jpeg" alt="g2" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/M6YPG6h.jpeg" alt="g3" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/kNMYB9O.jpeg" alt="g4" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/rF2gxey.jpeg" alt="g5" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/LihbDFc.jpeg" alt="g6" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/l1EaB5H.jpeg" alt="g7" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/2qmdERQ.jpeg" alt="g8" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/DROK0Wj.jpeg" alt="g9" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/HxUPvdN.jpeg" alt="g10" width="1000">
+</p>
+
 #### 6.2.1.6. Execution Evidence for Sprint Review
+
+
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
 
+Durante el presente sprint no se realizaron actividades de desarrollo sobre el Backend, por lo que no se generaron nuevos endpoints ni modificaciones en las rutas de servicios existentes. En consecuencia, esta sección se conserva como evidencia de referencia documental, indicando que no aplica la inclusión de una tabla de endpoints para este incremento. La implementación de servicios web será incorporada en sprints posteriores, cuando se aborde el desarrollo del backend correspondiente.
+
 #### 6.2.1.8. Software Deployment Evidence for Sprint Review
+Durante el presente Sprint, el equipo Nexora ha establecido las bases de la infraestructura de entrega continua (CD) para los componentes públicos y administrativos de la solución NexBell. Las actividades de despliegue se centraron en el aprovisionamiento de recursos en la plataforma Netlify, seleccionada por su eficiencia en la distribución de contenido estático y SPA (Single Page Applications).
+
+El proceso incluyó la creación de la organización del proyecto, la vinculación directa con los repositorios de GitHub para habilitar Continuous Deployment y la configuración de las variables de entorno necesarias para la ejecución de los componentes desarrollados en Vue.js. A continuación, se detallan los enlaces de acceso y las evidencias del despliegue exitoso para cada producto digital:
+
+##### NexBell Landing Page Deployment
+<p align="center">
+  <img src="https://i.imgur.com/hHFvYN9.png" alt="landing-page" width="1000">
+</p>
+
+Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell.netlify.app/)
+
+##### NexBell Web Application (Frontend) Deployment
+
+
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
+A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
+
+<p align="center">
+  <img src="https://i.imgur.com/0XXKy9k.jpeg" alt="team-collaboration" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/YvS9aeV.jpeg" alt="team-collaboration" width="1000">
+</p>
 
 <div style="page-break-after: always;"></div>
 
