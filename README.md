@@ -249,72 +249,10 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
 El curso contribuye al cumplimiento del Student Outcome **ABET: ABET – EAC - Student Outcome 7: Aprendizaje Continuo y Autónomo** <br>
 **Criterio:**  *La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos* <br>
 En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del equipo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome.
-
-<table border="1">
-  <tr>
-    <th>Criterio específico</th>
-    <th>Acciones realizadas</th>
-    <th>Conclusiones</th>
-  </tr>
-  <tr>
-    <td><strong>Trabaja en equipo para proporcionar liderazgo en forma conjunta</strong></td>
-    <td>
-      <p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Colaboré activamente en la redacción de las historias de usuario, asegurando que cada una respondiera a una necesidad real de los actores del sistema. Asimismo, participé en la definición de las estrategias y tácticas del proyecto, orientando al equipo hacia decisiones técnicas coherentes con los objetivos planteados. También apoyé en la conducción de entrevistas con usuarios potenciales para validar los supuestos iniciales.</p>
-
-  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al equipo liderando la investigación de antecedentes y problemáticas relacionadas con los sistemas de control de acceso en edificios residenciales. Diseñé los diagramas de Design Level Event Storming y los Bounded Context Canvas, aportando una visión estructurada del dominio del sistema. Asimismo, colaboré en la definición de las historias de usuario, apoyando al equipo en la identificación de los flujos principales del sistema Nexora.</p>
-
-  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Asumí un rol activo en la investigación de antecedentes y en el análisis de la problemática del proyecto. Lideré la definición y delimitación de los bounded contexts del sistema, asegurando que cada contexto tuviera responsabilidades claras y bien diferenciadas entre sí. Esta definición permitió al equipo contar con una arquitectura coherente como base para las etapas de desarrollo posteriores.</p>
-
-  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Lideré la definición del problema central del proyecto, articulando con claridad la necesidad que Nexora busca resolver. Conduje las entrevistas con usuarios potenciales y coordiné el proceso de needfinding, sintetizando los hallazgos en user personas, user task matrices, user journey maps y empathy maps. Estos insumos orientaron al equipo en la toma de decisiones centradas en el usuario. Asimismo, colaboré en la elaboración de las historias de usuario y el product backlog.</p>
-
-  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al equipo liderando la elaboración de los diagramas de arquitectura de alto nivel, incluyendo el Landscape Diagram, el Context Diagram y el Deployment Diagram, los cuales permitieron al equipo visualizar la estructura global del sistema y sus relaciones con actores externos. Participé en la conducción de entrevistas y colaboré en la definición de las historias de usuario, aportando desde la perspectiva del usuario final.</p>
-    </td>
-    <td>
-      <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>Establecer una base de liderazgo compartido que permitiera al equipo avanzar de forma coordinada en el planteamiento y estructuración del proyecto Nexora durante la primera entrega.</p>
-      <p><strong>Conclusión: </strong>El equipo demostró capacidad de liderazgo conjunto al distribuir responsabilidades según las fortalezas de cada integrante. Cada miembro asumió el liderazgo de áreas específicas, desde la definición del problema y el needfinding hasta la arquitectura del sistema y las historias de usuario, logrando que las decisiones tomadas fueran el resultado de un trabajo colectivo y no de una sola dirección. Esta dinámica permitió construir una propuesta de solución sólida y coherente para el AV1.</p>
-    </td>
-  </tr>
-  <tr>
-    <td><strong>Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.</strong></td>
-    <td>
-      <p><strong>Bellido Salas, Raúl</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Participé en la planificación de las tareas del equipo, contribuyendo a establecer metas claras para la primera entrega. Colaboré en la definición del trabajo general del proyecto y en la redacción de las historias de usuario, asegurando que el equipo tuviera claridad sobre los objetivos funcionales a alcanzar. Mi participación en las entrevistas y en la definición de estrategias aportó al entorno colaborativo del equipo al integrar distintas perspectivas en las decisiones del proyecto.</p>
-
-  <p><strong>Borja Molina, Gabriel Sebastián</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí a crear un entorno colaborativo al compartir con el equipo los hallazgos del análisis de antecedentes y problemáticas, generando una base de conocimiento común sobre la que todos pudimos trabajar. La elaboración de los diagramas de Event Storming y los Bounded Context Canvas facilitó que el equipo tuviera una visión compartida del dominio, lo que permitió planificar las tareas de arquitectura de forma ordenada y con objetivos definidos.</p>
-
-  <p><strong>Suárez Romero, Santiago Manuel</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Aporté al entorno colaborativo del equipo mediante la definición clara y documentada de los bounded contexts del sistema, lo que permitió que cada integrante comprendiera el alcance de su área de trabajo y pudiera planificar sus tareas sin ambigüedades. La delimitación precisa de responsabilidades entre contextos redujo los conflictos de criterio dentro del equipo y facilitó el cumplimiento de los objetivos de la entrega.</p>
-
-  <p><strong>Gomez Flores, Daniela Araceli</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Promoví un entorno inclusivo al involucrar al equipo en el proceso de needfinding, compartiendo los resultados de las entrevistas y los artefactos de investigación de usuarios para que todos pudieran tomar decisiones informadas. La construcción colaborativa de las user personas y el product backlog permitió que el equipo estableciera metas orientadas al usuario y planificara las funcionalidades del sistema con un criterio común de priorización.</p>
-
-  <p><strong>Burga Loarte, Anaely Zarely</strong></p>
-      <p><i>AV1:</i></p>
-      <p>Contribuí al entorno colaborativo del equipo al elaborar y compartir los diagramas de arquitectura de alto nivel, los cuales sirvieron como referencia visual común para que todos los integrantes comprendieran la estructura global del sistema. Mi participación en las entrevistas y en las historias de usuario reforzó el trabajo conjunto del equipo, alineando los objetivos técnicos con las necesidades reales de los usuarios identificados durante la investigación.</p>
-    </td>
-    <td>
-      <p><ins><i><strong>AV1:</strong></i></ins></p>
-      <p><strong>Objetivo específico: </strong>Construir un entorno de trabajo colaborativo e inclusivo en el que cada integrante pudiera planificar y cumplir sus tareas de forma alineada con los objetivos generales del proyecto Nexora en el AV1.</p>
-      <p><strong>Conclusión: </strong>El equipo logró establecer un entorno de trabajo colaborativo durante el AV1, donde cada integrante aportó desde su área de responsabilidad al objetivo común de estructurar el proyecto Nexora. La distribución clara de tareas, combinada con la integración de los resultados individuales en artefactos colectivos como el product backlog, los bounded contexts y los diagramas de arquitectura, evidenció una planificación efectiva y el cumplimiento de las metas propuestas para esta primera entrega.</p>
-    </td>
-  </tr>
-</table>
+| Criterio específico | Acciones realizadas | Conclusiones |
+| :--- | :--- | :--- |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Bellido Salas, Raúl**<br>• *AV1:* Redacción de historias de usuario, definición de estrategias técnicas y conducción de entrevistas.<br>• *TB1:* Liderazgo en diseño táctico (DDD) para módulos IAM y Security, mapeo de Container Diagrams y modelos de base de datos.<br><br>**Borja Molina, Gabriel Sebastián**<br>• *AV1:* Liderazgo en investigación de problemáticas, diseño de Event Storming y Bounded Context Canvas.<br>• *TB1:* Liderazgo técnico en diseño de dispositivo IoT "Clair" en Wokwi, definición de hardware (ESP32) y capas de datos (MQTT/HTTP).<br><br>**Suárez Romero, Santiago Manuel**<br>• *AV1:* Análisis de antecedentes y liderazgo en la delimitación de Bounded Contexts.<br>• *TB1:* Liderazgo en diseño visual y UX/UI (wireframes/mockups) bajo el concepto "Vigilant Elegance".<br><br>**Gomez Flores, Daniela Araceli**<br>• *AV1:* Definición del problema central, coordinación de Needfinding (User Personas/Journey Maps) y Product Backlog.<br>• *TB1:* Liderazgo en Arquitectura de Información, sistemas de navegación, etiquetado y búsqueda.<br><br>**Burga Loarte, Anaely Zarely**<br>• *AV1:* Liderazgo en diagramas de arquitectura de alto nivel (Landscape/Context/Deployment) y apoyo en historias de usuario.<br>• *TB1:* Diseño UI/UX de Landing Page, configuración SEO/ASO e integración de los 12 pasos de diseño IoT. | **AV1 - Objetivo:** Establecer una base de liderazgo compartido para avanzar de forma coordinada en la estructuración.<br>**AV1 - Conclusión:** El equipo demostró liderazgo conjunto al distribuir responsabilidades según fortalezas, logrando una propuesta sólida y coherente.<br><br>**TB1 - Objetivo:** Profundizar en el diseño técnico (táctico, IoT y UX/UI) distribuyendo el liderazgo para una evolución consistente.<br>**TB1 - Conclusión:** Se consolidó la visión técnica, logrando que el backend, las interfaces y el hardware IoT empataran de forma fluida y acelerada. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Bellido Salas, Raúl**<br>• *AV1:* Planificación de tareas y metas. Integración de perspectivas en la toma de decisiones técnicas.<br>• *TB1:* Coordinación de sesiones de revisión de arquitectura para unificar expectativas entre la API y la aplicación móvil.<br><br>**Borja Molina, Gabriel Sebastián**<br>• *AV1:* Generación de base de conocimiento común mediante hallazgos de investigación y diagramas compartidos.<br>• *TB1:* Síntesis y comunicación de restricciones técnicas de hardware y esquemas JSON con el equipo de software.<br><br>**Suárez Romero, Santiago Manuel**<br>• *AV1:* Documentación clara de contextos para reducir ambigüedades y conflictos de criterio.<br>• *TB1:* Ciclos de feedback continuo sobre prototipos visuales, fortaleciendo el compromiso con la calidad final.<br><br>**Gomez Flores, Daniela Araceli**<br>• *AV1:* Promoción de entorno inclusivo compartiendo hallazgos de investigación para toma de decisiones informada.<br>• *TB1:* Alineación entre la investigación UX y la arquitectura de información con las historias de usuario aprobadas.<br><br>**Burga Loarte, Anaely Zarely**<br>• *AV1:* Creación de referencias visuales comunes (diagramas de arquitectura) para alinear al equipo.<br>• *TB1:* Gestión de la consistencia del reporte final, integrando software, hardware e interfaces en una única voz grupal. | **AV1 - Objetivo:** Construir un entorno de trabajo colaborativo para planificar y cumplir tareas alineadas.<br>**AV1 - Conclusión:** La distribución clara de tareas y la integración de resultados individuales evidenciaron una planificación efectiva y cumplimiento de metas.<br><br>**TB1 - Objetivo:** Integrar eficientemente decisiones de hardware, interfaz y backend mediante comunicación transparente.<br>**TB1 - Conclusión:** La alta interdependencia demandó gran colaboración. La planificación iterativa garantizó que cada avance técnico complementara el entregable final satisfactoriamente. |
 <div style="page-break-after: always;"></div>
                                            
 # Capítulo I: Introducción 
@@ -2608,13 +2546,11 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 <img src="https://i.imgur.com/dGdKVQa.jpeg" alt="iot imagen v1">
 ### Diagrama del prototipo (Wokwi)
 
-El siguiente diagrama representa el circuito del prototipo basado en el archivo `db.json`:
 
 - **Editor:** Wokwi
 - **Microcontrolador:** ESP32 DevKit C V4
 - **Sensores y actuadores:** PIR, ultrasonico HC-SR04, sensor de sonido (simulado), electromagnetico (simulado), LED de estado
 
-*(Agregar imagen si cuentan con captura del diagrama en Wokwi)*
 
 ### Componentes y proposito
 
@@ -2627,7 +2563,7 @@ El siguiente diagrama representa el circuito del prototipo basado en el archivo 
 | **Potenciometro “Sound Sensor”** | Evidencia de audio (simulada) | Simula nivel de ruido/voz en la puerta |
 | **LED** | Estado local | Indicador de alertas o estado de conexion |
 
-### Conexiones principales (segun `db.json`)
+### Conexiones principales 
 
 | Sensor/Actuador | Pin ESP32 | Tipo de senal |
 |----------------|-----------|---------------|
@@ -2638,7 +2574,7 @@ El siguiente diagrama representa el circuito del prototipo basado en el archivo 
 | Electromag (pot) | GPIO 34 | Analogica (entrada) |
 | Sound sensor (pot) | GPIO 32 | Analogica (entrada) |
 
-### Constraints para NexBell (hardware + operacion)
+### Constraints para NexBell 
 
 1. **Instalacion sin cableado interno:** El dispositivo no debe requerir cableado hacia departamentos. Se prioriza WiFi local.
 2. **Latencia operativa:** La deteccion y notificacion debe ocurrir en segundos (flujo visitante → alerta).
