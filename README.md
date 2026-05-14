@@ -1,4 +1,4 @@
-<p align="center">
+5<p align="center">
   <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=100px>
 </p>
 
@@ -1131,49 +1131,49 @@ En esta sección se define el Ubiquitous Language del proyecto, el cual consiste
 | EP07  | Seguridad del sistema |
 | EP08  | Landing Page |
 
-| N° | ID | Título | Descripción Detallada | Criterios de Aceptación (Escenarios Dado que-When-Then) | Epic | Puntos |
+| N° | ID | Título | Descripción Detallada | Criterios de Aceptación (Escenarios Given-When-Then) | Epic | Puntos |
 | :--- | :--- | :--- | :--- | :--- | :---: | :---: |
-| 1 | **US01** | Registrarse como residente | **Como** residente, **quiero** registrarme en el sistema, **para** gestionar mis visitas autónomamente. | **E1: Registro exitoso** Dado que el usuario ingresa datos válidos, Cuando pulsa registrar, Entonces se crea el perfil. <br> **E2: Validación de datos** Dado que datos incompletos, Cuando intenta registrar, Entonces el sistema muestra error de validación. | 1 | 3 |
-| 2 | **US02** | Registrarse como Portero | **Como** Portero, **quiero** crear una cuenta profesional, **para** acceder al panel de control web. | **E1: Alta de portero** Dado que datos profesionales válidos, Cuando pulsa crear cuenta, Entonces se asigna rol Portero. <br> **E2: Correo duplicado** Dado que correo ya registrado, Cuando intenta crear cuenta, Entonces el sistema deniega el registro. | 1 | 3 |
-| 3 | **US03** | Iniciar sesión | **Como** usuario, **quiero** ingresar con mis credenciales, **para** acceder a mis funciones. | **E1: Inicio correcto** Dado que correo y clave correctos, Cuando pulsa entrar, Entonces el sistema inicia sesión. <br> **E2: Credenciales inválidas** Dado que clave incorrecta, Cuando intenta entrar, Entonces el sistema bloquea el acceso. | 1 | 2 |
-| 4 | **US04** | Cerrar sesión | **Como** usuario, **quiero** finalizar mi sesión, **para** proteger mi información. | **E1: Cierre exitoso** Dado que sesión activa, Cuando pulsa cerrar, Entonces el sistema invalida el token. <br> **E2: Acceso tras cierre** Dado que sesión cerrada, Cuando intenta volver atrás, Entonces el sistema redirige al login. | 1 | 1 |
-| 5 | **US05** | Editar perfil | **Como** usuario, **quiero** actualizar mis datos, **para** mantener mi contacto vigente. | **E1: Actualización de perfil** Dado que nuevos datos válidos, Cuando guarda cambios, Entonces el perfil se actualiza en la BD. <br> **E2: Formato inválido** Dado que formato de correo inválido, Cuando intenta guardar, Entonces el sistema rechaza el cambio. | 1 | 2 |
-| 6 | **US06** | Registrar visita | **Como** residente, **quiero** pre-registrar una visita, **para** agilizar el ingreso. | **E1: Registro de visita** Dado que datos de visita válidos, Cuando registra, Entonces se crea el registro vinculado al depto. <br> **E2: DNI vacío** Dado que DNI vacío, Cuando intenta registrar, Entonces el sistema impide la creación. | 2 | 3 |
-| 7 | **US07** | Verificar visitante | **Como** Portero, **quiero** comparar datos del visitante, **para** confirmar su identidad. | **E1: Verificación correcta** Dado que DNI en base de datos, Cuando el portero consulta, Entonces el sistema confirma registro. <br> **E2: Registro no encontrado** Dado que DNI no registrado, Cuando el portero consulta, Entonces el sistema sugiere registro manual. | 2 | 3 |
-| 8 | **US08** | Asociación automática | **Como** Developer, **quiero** vincular visita a departamento, **para** trazabilidad. | **E1: Asociación por sesión** Dado que sesión de residente X, Cuando crea visita, Entonces el sistema inserta el ID del depto X. <br> **E2: Sesión caída** Dado que sesión caída, Cuando intenta asociar, Entonces el sistema lanza error de autenticación. | 2 | 2 |
-| 9 | **US09** | Gestionar visitas | **Como** residente, **quiero** editar o borrar visitas, **para** corregir errores. | **E1: Edición pendiente** Dado que visita pendiente, Cuando edita datos, Entonces los cambios se reflejan en tiempo real. <br> **E2: Bloqueo de borrado** Dado que visita ya procesada, Cuando intenta borrar, Entonces el sistema bloquea la acción. | 2 | 3 |
-| 10 | **US10** | Activar cámara IoT | **Como** Portero, **quiero** activación por sensor, **para** monitoreo automático. | **E1: Activación por movimiento** Dado que sensor PIR detecta movimiento, Cuando se activa, Entonces la cámara inicia el stream. <br> **E2: Modo nocturno** Dado que baja luz, Cuando se activa, Entonces el sistema enciende el modo nocturno. | 3 | 5 |
-| 11 | **US11** | Capturar imagen | **Como** Portero, **quiero** una fotografía, **para** evidencia visual del ingreso. | **E1: Captura de foto** Dado que presencia detectada, Cuando el sistema captura, Entonces la foto se sube al Cloud. <br> **E2: Falla de cámara** Dado que error de cámara, Cuando intenta capturar, Entonces el sistema notifica fallo al hardware. | 3 | 5 |
-| 12 | **US12** | Grabar audio | **Como** Portero, **quiero** audio del ingreso, **para** contexto de seguridad. | **E1: Grabación iniciada** Dado que timbre activado, Cuando graba, Entonces se genera un archivo .mp3 de 5 segundos. <br> **E2: Micrófono silenciado** Dado que micrófono silenciado, Cuando inicia evento, Entonces el sistema muestra alerta de silencio. | 3 | 5 |
-| 13 | **US13** | Transmitir al servidor | **Como** Developer, **quiero** envío automático, **para** disponibilidad inmediata. | **E1: Envío a API** Dado que paquete multimedia listo, Cuando finaliza evento, Entonces se transmite vía REST API. <br> **E2: Cola local** Dado que pérdida de Wi-Fi, Cuando intenta enviar, Entonces el sistema encola los datos localmente. | 3 | 5 |
-| 14 | **US14** | Asociar multimedia | **Como** Portero, **quiero** multimedia ligado al registro, **para** auditoría. | **E1: Vinculación de archivos** Dado que ID de visita activo, Cuando recibe multimedia, Entonces el sistema vincula los archivos. <br> **E2: Reenvío requerido** Dado que archivo corrupto, Cuando asocia, Entonces el sistema pide reenvío desde el IoT. | 3 | 3 |
-| 15 | **US15** | Visualizar espera | **Como** Portero, **quiero** lista en tiempo real, **para** organizar la atención. | **E1: Cola FIFO** Dado que eventos entrantes, Cuando el portero mira el panel, Entonces se ven en orden FIFO. <br> **E2: Sin eventos** Dado que lista vacía, Cuando no hay eventos, Entonces se muestra mensaje "Sin visitas en espera". | 4 | 3 |
-| 16 | **US16** | Visualizar foto | **Como** Portero/Residente, **quiero** ver la foto, **para** identificar al visitante. | **E1: Vista de imagen** Dado que foto almacenada, Cuando abre detalle, Entonces la imagen se despliega en HD. <br> **E2: Imagen por defecto** Dado que link roto, Cuando intenta abrir, Entonces el sistema muestra imagen por defecto. | 4 | 2 |
-| 17 | **US17** | Reproducir audio | **Como** Portero/Residente, **quiero** oír el audio, **para** verificar la declaración. | **E1: Reproducción completa** Dado que audio grabado, Cuando pulsa play, Entonces se reproduce el sonido completo. <br> **E2: Error de formato** Dado que error de códec, Cuando intenta oír, Entonces el sistema lanza alerta de formato. | 4 | 2 |
-| 18 | **US18** | Comparar datos | **Como** Developer, **quiero** match de DNI automático, **para** reducir carga. | **E1: Coincidencia encontrada** Dado que DNI capturado igual a DNI pre-registrado, Cuando compara, Entonces marca como "Match". <br> **E2: Sin coincidencia** Dado que DNI no registrado, Cuando compara, Entonces marca como "Desconocido". | 4 | 5 |
-| 19 | **US19** | Registrar acceso OK | **Como** Developer, **quiero** log de acceso, **para** trazabilidad. | **E1: Acceso concedido** Dado que aprobación del residente, Cuando se procesa, Entonces se crea log "Acceso Concedido". <br> **E2: Reintento de log** Dado que error en BD, Cuando intenta grabar log, Entonces el sistema reintenta la operación. | 4 | 3 |
-| 20 | **US20** | Registrar rechazo | **Como** Developer, **quiero** log de denegación, **para** seguridad. | **E1: Acceso denegado** Dado que rechazo del residente, Cuando se procesa, Entonces se guarda log "Acceso Denegado". <br> **E2: Motivo del rechazo** Dado que rechazo manual de portero, Cuando guarda, Entonces incluye motivo del rechazo. | 4 | 3 |
-| 21 | **US21** | Sincronizar decisión | **Como** Portero, **quiero** ver decisión del residente, **para** abrir puerta. | **E1: Aprobación en app** Dado que residente acepta en App, Cuando el portero mira web, Entonces el estado cambia a Verde. <br> **E2: Rechazo en app** Dado que residente rechaza en App, Cuando el portero mira web, Entonces el estado cambia a Rojo. | 4 | 3 |
-| 22 | **US22** | Enviar Notificación | **Como** Developer, **quiero** Push Notifications, **para** alertar al residente. | **E1: Notificación enviada** Dado que visitante para depto 101, Cuando el IoT timbra, Entonces el móvil 101 recibe notificación. <br> **E2: Reintento FCM** Dado que residente offline, Cuando envía push, Entonces el sistema reintenta vía Firebase FCM. | 5 | 5 |
-| 23 | **US23** | Datos en App | **Como** residente, **quiero** ver DNI/Nombre en alerta, **para** saber quién es. | **E1: Datos visibles** Dado que datos disponibles, Cuando recibe alerta, Entonces el cuerpo del mensaje muestra el DNI. <br> **E2: Sin DNI** Dado que datos nulos, Cuando recibe alerta, Entonces el mensaje indica "Visitante sin DNI". | 5 | 2 |
-| 24 | **US24** | Foto en App | **Como** residente, **quiero** ver la foto en la App, **para** seguridad. | **E1: Thumbnail en alerta** Dado que foto en Cloud, Cuando abre notificación, Entonces se muestra el thumbnail en la alerta. <br> **E2: Recarga manual** Dado que fallo de red, Cuando intenta ver foto, Entonces el sistema muestra botón "Recargar". | 5 | 2 |
-| 25 | **US25** | Log de visualización | **Como** Developer, **quiero** registro de lectura, **para** auditoría. | **E1: Lectura registrada** Dado que notificación abierta, Cuando el usuario pulsa, Entonces se guarda fecha y hora de lectura. <br> **E2: Evento no atendido** Dado que notificación ignorada, Cuando pasan 5 min, Entonces el log marca "No atendida". | 5 | 2 |
-| 26 | **US26** | Historial residente | **Como** residente, **quiero** ver mis alertas pasadas, **para** control personal. | **E1: Historial activo** Dado que historial activo, Cuando el usuario abre lista, Entonces se muestran eventos del mes. <br> **E2: Historial vacío** Dado que historial vacío, Cuando consulta, Entonces el sistema muestra "Sin registros". | 5 | 3 |
-| 27 | **US27** | Detalle completo | **Como** residente, **quiero** evidencia total, **para** decidir mejor. | **E1: Vista detallada** Dado que vista detallada, Cuando usuario entra, Entonces ve foto, audio y datos de una vez. <br> **E2: Carga pendiente** Dado que multimedia no cargada, Cuando entra, Entonces el sistema muestra spinners de carga. | 5 | 2 |
-| 28 | **US28** | Acciones App | **Como** residente, **quiero** botones Aprobar/Rechazar, **para** abrir remoto. | **E1: Apertura remota** Dado que botón Aprobar presionado, Cuando procesa, Entonces el hardware activa el relé de puerta. <br> **E2: Cierre del evento** Dado que botón Rechazar presionado, Cuando procesa, Entonces se cierra el evento en portería. | 5 | 3 |
-| 29 | **US29** | Detectar presencia | **Como** Portero, **quiero** saber si hay gente en puerta, **para** atención proactiva. | **E1: Presencia detectada** Dado que sensor detecta persona, Cuando supera 10 seg, Entonces la web marca "Gente en puerta". <br> **E2: Puerta libre** Dado que cese de movimiento, Cuando pasa tiempo, Entonces el estado vuelve a "Puerta Libre". | 6 | 5 |
-| 30 | **US30** | Estado de puerta | **Como** Portero, **quiero** saber si puerta está abierta, **para** seguridad. | **E1: Alerta por apertura** Dado que contacto magnético abierto, Cuando se rompe el circuito, Entonces la web muestra "ALERTA". <br> **E2: Estado seguro** Dado que contacto cerrado, Cuando está normal, Entonces se muestra icono de candado cerrado. | 6 | 3 |
-| 31 | **US31** | Logs de hardware | **Como** administrador, **quiero** auditoría de puerta física, **para** seguridad. | **E1: Apertura registrada** Dado que apertura física, Cuando ocurre el evento, Entonces se guarda log con ID de dispositivo. <br> **E2: Cierre registrado** Dado que cierre físico, Cuando ocurre el evento, Entonces se guarda log de tiempo de apertura. | 6 | 3 |
-| 32 | **US32** | Historial portería | **Como** Portero, **quiero** ver todas las visitas, **para** administración. | **E1: Filtrado por fecha** Dado que búsqueda por fecha, Cuando el portero filtra, Entonces se muestran todas las visitas del día. <br> **E2: Filtrado por residente** Dado que búsqueda por residente, Cuando filtra, Entonces muestra visitas a ese departamento. | 6 | 3 |
-| 33 | **US33** | Modificar clave | **Como** residente, **quiero** cambiar mis credenciales, **para** protección. | **E1: Cambio de clave** Dado que clave antigua correcta, Cuando cambia clave, Entonces se actualiza el hash en BD. <br> **E2: Clave incorrecta** Dado que clave antigua incorrecta, Cuando intenta cambiar, Entonces el sistema bloquea el cambio. | 7 | 5 |
-| 34 | **US34** | Recuperar cuenta | **Como** residente, **quiero** resetear clave por email, **para** recuperar acceso. | **E1: Token enviado** Dado que correo registrado, Cuando solicita reset, Entonces el sistema envía token al email. <br> **E2: Token vencido** Dado que token expirado, Cuando intenta usarlo, Entonces el sistema deniega el cambio de clave. | 7 | 5 |
-| 35 | **US35** | Hashing BCrypt | **Como** Developer, **quiero** encriptar claves, **para** seguridad de datos. | **E1: Hash seguro** Dado que registro de usuario, Cuando guarda clave, Entonces el sistema aplica BCrypt con salt. <br> **E2: Claves ilegibles** Dado que intento de lectura BD, Cuando se mira tabla, Entonces las claves son ilegibles. | 7 | 3 |
-| 36 | **US36** | Roles y Permisos | **Como** Developer, **quiero** validación RBAC, **para** proteger recursos. | **E1: Acceso restringido** Dado que residente logueado, Cuando intenta entrar a panel web, Entonces el sistema da Error 403. <br> **E2: Permiso válido** Dado que portero logueado, Cuando intenta registrar visita ajena, Entonces el sistema lo permite. | 7 | 5 |
-| 37 | **US37** | Visualizar información | **Como** interesado, **quiero** ver el propósito en la Landing, **para** conocer NexBell. | **E1: Presentación inicial** Dado que acceso a Landing Page, Cuando carga la web, Entonces visualiza el eslogan y objetivo. <br> **E2: Descripción IoT** Dado que scroll hacia abajo, Cuando navega, Entonces encuentra la descripción de la seguridad IoT. | 8 | 3 |
-| 38 | **US38** | Visualizar funciones | **Como** interesado, **quiero** conocer funciones web, **para** entender el flujo. | **E1: Lista de funciones** Dado que sección de funciones, Cuando el usuario entra, Entonces ve lista de captura y alertas. <br> **E2: Detalle funcional** Dado que clic en ícono funcional, Cuando interactúa, Entonces se despliega la descripción técnica. | 8 | 2 |
-| 39 | **US39** | Visualizar beneficios | **Como** interesado, **quiero** ver ventajas principales, **para** valor agregado. | **E1: Beneficios visibles** Dado que sección beneficios, Cuando revisa texto, Entonces visualiza ahorro de tiempo y seguridad. <br> **E2: Comparativa clara** Dado que sección comparativa, Cuando lee, Entonces entiende la diferencia con sistemas clásicos. | 8 | 2 |
-| 40 | **US40** | Visualizar contacto | **Como** interesado, **quiero** ver datos de contacto, **para** comunicación técnica. | **E1: Datos de soporte** Dado que llegada al footer, Cuando busca soporte, Entonces visualiza correos y redes sociales. <br> **E2: Confirmación de envío** Dado que formulario contacto, Cuando envía mensaje, Entonces recibe confirmación de recepción. | 8 | 1 |
-| 41 | **US41** | Navegar entre secciones | **Como** interesado, **quiero** moverme fácilmente, **para** acceso sin fricciones. | **E1: Inicio del sitio** Dado que clic en menú superior, Cuando pulsa "Inicio", Entonces el navegador hace scroll al tope. <br> **E2: Salto a beneficios** Dado que clic en "Beneficios", Cuando pulsa, Entonces el navegador se desliza a la sección central. | 8 | 2 |
+| 1 | **US01** | Registrarse como residente | **Como** residente, **quiero** registrarme en el sistema, **para** gestionar mis visitas autónomamente. | **E1:** Given el usuario ingresa datos válidos, When pulsa registrar, Then se crea el perfil. <br> **E2:** Given datos incompletos, When intenta registrar, Then el sistema muestra error de validación. | 1 | 3 |
+| 2 | **US02** | Registrarse como Portero | **Como** Portero, **quiero** crear una cuenta profesional, **para** acceder al panel de control web. | **E1:** Given datos profesionales válidos, When pulsa crear cuenta, Then se asigna rol Portero. <br> **E2:** Given correo ya registrado, When intenta crear cuenta, Then el sistema deniega el registro. | 1 | 3 |
+| 3 | **US03** | Iniciar sesión | **Como** usuario, **quiero** ingresar con mis credenciales, **para** acceder a mis funciones. | **E1:** Given correo y clave correctos, When pulsa entrar, Then el sistema inicia sesión. <br> **E2:** Given clave incorrecta, When intenta entrar, Then el sistema bloquea el acceso. | 1 | 2 |
+| 4 | **US04** | Cerrar sesión | **Como** usuario, **quiero** finalizar mi sesión, **para** proteger mi información. | **E1:** Given sesión activa, When pulsa cerrar, Then el sistema invalida el token. <br> **E2:** Given sesión cerrada, When intenta volver atrás, Then el sistema redirige al login. | 1 | 1 |
+| 5 | **US05** | Editar perfil | **Como** usuario, **quiero** actualizar mis datos, **para** mantener mi contacto vigente. | **E1:** Given nuevos datos válidos, When guarda cambios, Then el perfil se actualiza en la BD. <br> **E2:** Given formato de correo inválido, When intenta guardar, Then el sistema rechaza el cambio. | 1 | 2 |
+| 6 | **US06** | Registrar visita | **Como** residente, **quiero** pre-registrar una visita, **para** agilizar el ingreso. | **E1:** Given datos de visita válidos, When registra, Then se crea el registro vinculado al depto. <br> **E2:** Given DNI vacío, When intenta registrar, Then el sistema impide la creación. | 2 | 3 |
+| 7 | **US07** | Verificar visitante | **Como** Portero, **quiero** comparar datos del visitante, **para** confirmar su identidad. | **E1:** Given DNI en base de datos, When el portero consulta, Then el sistema confirma registro. <br> **E2:** Given DNI no registrado, When el portero consulta, Then el sistema sugiere registro manual. | 2 | 3 |
+| 8 | **US08** | Asociación automática | **Como** Developer, **quiero** vincular visita a departamento, **para** trazabilidad. | **E1:** Given sesión de residente X, When crea visita, Then el sistema inserta el ID del depto X. <br> **E2:** Given sesión caída, When intenta asociar, Then el sistema lanza error de autenticación. | 2 | 2 |
+| 9 | **US09** | Gestionar visitas | **Como** residente, **quiero** editar o borrar visitas, **para** corregir errores. | **E1:** Given visita pendiente, When edita datos, Then los cambios se reflejan en tiempo real. <br> **E2:** Given visita ya procesada, When intenta borrar, Then el sistema bloquea la acción. | 2 | 3 |
+| 10 | **US10** | Activar cámara IoT | **Como** Portero, **quiero** activación por sensor, **para** monitoreo automático. | **E1:** Given sensor PIR detecta movimiento, When se activa, Then la cámara inicia el stream. <br> **E2:** Given baja luz, When se activa, Then el sistema enciende el modo nocturno. | 3 | 5 |
+| 11 | **US11** | Capturar imagen | **Como** Portero, **quiero** una fotografía, **para** evidencia visual del ingreso. | **E1:** Given presencia detectada, When el sistema captura, Then la foto se sube al Cloud. <br> **E2:** Given error de cámara, When intenta capturar, Then el sistema notifica fallo al hardware. | 3 | 5 |
+| 12 | **US12** | Grabar audio | **Como** Portero, **quiero** audio del ingreso, **para** contexto de seguridad. | **E1:** Given timbre activado, When graba, Then se genera un archivo .mp3 de 5 segundos. <br> **E2:** Given micrófono silenciado, When inicia evento, Then el sistema muestra alerta de silencio. | 3 | 5 |
+| 13 | **US13** | Transmitir al servidor | **Como** Developer, **quiero** envío automático, **para** disponibilidad inmediata. | **E1:** Given paquete multimedia listo, When finaliza evento, Then se transmite vía REST API. <br> **E2:** Given pérdida de Wi-Fi, When intenta enviar, Then el sistema encola los datos localmente. | 3 | 5 |
+| 14 | **US14** | Asociar multimedia | **Como** Portero, **quiero** multimedia ligado al registro, **para** auditoría. | **E1:** Given ID de visita activo, When recibe multimedia, Then el sistema vincula los archivos. <br> **E2:** Given archivo corrupto, When asocia, Then el sistema pide reenvío desde el IoT. | 3 | 3 |
+| 15 | **US15** | Visualizar espera | **Como** Portero, **quiero** lista en tiempo real, **para** organizar la atención. | **E1:** Given eventos entrantes, When el portero mira el panel, Then se ven en orden FIFO. <br> **E2:** Given lista vacía, When no hay eventos, Then se muestra mensaje "Sin visitas en espera". | 4 | 3 |
+| 16 | **US16** | Visualizar foto | **Como** Portero/Residente, **quiero** ver la foto, **para** identificar al visitante. | **E1:** Given foto almacenada, When abre detalle, Then la imagen se despliega en HD. <br> **E2:** Given link roto, When intenta abrir, Then el sistema muestra imagen por defecto. | 4 | 2 |
+| 17 | **US17** | Reproducir audio | **Como** Portero/Residente, **quiero** oír el audio, **para** verificar la declaración. | **E1:** Given audio grabado, When pulsa play, Then se reproduce el sonido completo. <br> **E2:** Given error de códec, When intenta oír, Then el sistema lanza alerta de formato. | 4 | 2 |
+| 18 | **US18** | Comparar datos | **Como** Developer, **quiero** match de DNI automático, **para** reducir carga. | **E1:** Given DNI capturado igual a DNI pre-registrado, When compara, Then marca como "Match". <br> **E2:** Given DNI no registrado, When compara, Then marca como "Desconocido". | 4 | 5 |
+| 19 | **US19** | Registrar acceso OK | **Como** Developer, **quiero** log de acceso, **para** trazabilidad. | **E1:** Given aprobación del residente, When se procesa, Then se crea log "Acceso Concedido". <br> **E2:** Given error en BD, When intenta grabar log, Then el sistema reintenta la operación. | 4 | 3 |
+| 20 | **US20** | Registrar rechazo | **Como** Developer, **quiero** log de denegación, **para** seguridad. | **E1:** Given rechazo del residente, When se procesa, Then se guarda log "Acceso Denegado". <br> **E2:** Given rechazo manual de portero, When guarda, Then incluye motivo del rechazo. | 4 | 3 |
+| 21 | **US21** | Sincronizar decisión | **Como** Portero, **quiero** ver decisión del residente, **para** abrir puerta. | **E1:** Given residente acepta en App, When el portero mira web, Then el estado cambia a Verde. <br> **E2:** Given residente rechaza en App, When el portero mira web, Then el estado cambia a Rojo. | 4 | 3 |
+| 22 | **US22** | Enviar Notificación | **Como** Developer, **quiero** Push Notifications, **para** alertar al residente. | **E1:** Given visitante para depto 101, When el IoT timbra, Then el móvil 101 recibe notificación. <br> **E2:** Given residente offline, When envía push, Then el sistema reintenta vía Firebase FCM. | 5 | 5 |
+| 23 | **US23** | Datos en App | **Como** residente, **quiero** ver DNI/Nombre en alerta, **para** saber quién es. | **E1:** Given datos disponibles, When recibe alerta, Then el cuerpo del mensaje muestra el DNI. <br> **E2:** Given datos nulos, When recibe alerta, Then el mensaje indica "Visitante sin DNI". | 5 | 2 |
+| 24 | **US24** | Foto en App | **Como** residente, **quiero** ver la foto en la App, **para** seguridad. | **E1:** Given foto en Cloud, When abre notificación, Then se muestra el thumbnail en la alerta. <br> **E2:** Given fallo de red, When intenta ver foto, Then el sistema muestra botón "Recargar". | 5 | 2 |
+| 25 | **US25** | Log de visualización | **Como** Developer, **quiero** registro de lectura, **para** auditoría. | **E1:** Given notificación abierta, When el usuario pulsa, Then se guarda fecha y hora de lectura. <br> **E2:** Given notificación ignorada, When pasan 5 min, Then el log marca "No atendida". | 5 | 2 |
+| 26 | **US26** | Historial residente | **Como** residente, **quiero** ver mis alertas pasadas, **para** control personal. | **E1:** Given historial activo, When el usuario abre lista, Then se muestran eventos del mes. <br> **E2:** Given historial vacío, When consulta, Then el sistema muestra "Sin registros". | 5 | 3 |
+| 27 | **US27** | Detalle completo | **Como** residente, **quiero** evidencia total, **para** decidir mejor. | **E1:** Given vista detallada, When usuario entra, Then ve foto, audio y datos de una vez. <br> **E2:** Given multimedia no cargada, When entra, Then el sistema muestra spinners de carga. | 5 | 2 |
+| 28 | **US28** | Acciones App | **Como** residente, **quiero** botones Aprobar/Rechazar, **para** abrir remoto. | **E1:** Given botón Aprobar presionado, When procesa, Then el hardware activa el relé de puerta. <br> **E2:** Given botón Rechazar presionado, When procesa, Then se cierra el evento en portería. | 5 | 3 |
+| 29 | **US29** | Detectar presencia | **Como** Portero, **quiero** saber si hay gente en puerta, **para** atención proactiva. | **E1:** Given sensor detecta persona, When supera 10 seg, Then la web marca "Gente en puerta". <br> **E2:** Given cese de movimiento, When pasa tiempo, Then el estado vuelve a "Puerta Libre". | 6 | 5 |
+| 30 | **US30** | Estado de puerta | **Como** Portero, **quiero** saber si puerta está abierta, **para** seguridad. | **E1:** Given contacto magnético abierto, When se rompe el circuito, Then la web muestra "ALERTA". <br> **E2:** Given contacto cerrado, When está normal, Then se muestra icono de candado cerrado. | 6 | 3 |
+| 31 | **US31** | Logs de hardware | **Como** administrador, **quiero** auditoría de puerta física, **para** seguridad. | **E1:** Given apertura física, When ocurre el evento, Then se guarda log con ID de dispositivo. <br> **E2:** Given cierre físico, When ocurre el evento, Then se guarda log de tiempo de apertura. | 6 | 3 |
+| 32 | **US32** | Historial portería | **Como** Portero, **quiero** ver todas las visitas, **para** administración. | **E1:** Given búsqueda por fecha, When el portero filtra, Then se muestran todas las visitas del día. <br> **E2:** Given búsqueda por residente, When filtra, Then muestra visitas a ese departamento. | 6 | 3 |
+| 33 | **US33** | Modificar clave | **Como** residente, **quiero** cambiar mis credenciales, **para** protección. | **E1:** Given clave antigua correcta, When cambia clave, Then se actualiza el hash en BD. <br> **E2:** Given clave antigua incorrecta, When intenta cambiar, Then el sistema bloquea el cambio. | 7 | 5 |
+| 34 | **US34** | Recuperar cuenta | **Como** residente, **quiero** resetear clave por email, **para** recuperar acceso. | **E1:** Given correo registrado, When solicita reset, Then el sistema envía token al email. <br> **E2:** Given token expirado, When intenta usarlo, Then el sistema deniega el cambio de clave. | 7 | 5 |
+| 35 | **US35** | Hashing BCrypt | **Como** Developer, **quiero** encriptar claves, **para** seguridad de datos. | **E1:** Given registro de usuario, When guarda clave, Then el sistema aplica BCrypt con salt. <br> **E2:** Given intento de lectura BD, When se mira tabla, Then las claves son ilegibles. | 7 | 3 |
+| 36 | **US36** | Roles y Permisos | **Como** Developer, **quiero** validación RBAC, **para** proteger recursos. | **E1:** Given residente logueado, When intenta entrar a panel web, Then el sistema da Error 403. <br> **E2:** Given portero logueado, When intenta registrar visita ajena, Then el sistema lo permite. | 7 | 5 |
+| 37 | **US37** | Visualizar información | **Como** interesado, **quiero** ver el propósito en la Landing, **para** conocer NexBell. | **E1:** Given acceso a Landing Page, When carga la web, Then visualiza el eslogan y objetivo. <br> **E2:** Given scroll hacia abajo, When navega, Then encuentra la descripción de la seguridad IoT. | 8 | 3 |
+| 38 | **US38** | Visualizar funciones | **Como** interesado, **quiero** conocer funciones web, **para** entender el flujo. | **E1:** Given sección de funciones, When el usuario entra, Then ve lista de captura y alertas. <br> **E2:** Given clic en ícono funcional, When interactúa, Then se despliega la descripción técnica. | 8 | 2 |
+| 39 | **US39** | Visualizar beneficios | **Como** interesado, **quiero** ver ventajas principales, **para** valor agregado. | **E1:** Given sección beneficios, When revisa texto, Then visualiza ahorro de tiempo y seguridad. <br> **E2:** Given sección comparativa, When lee, Then entiende la diferencia con sistemas clásicos. | 8 | 2 |
+| 40 | **US40** | Visualizar contacto | **Como** interesado, **quiero** ver datos de contacto, **para** comunicación técnica. | **E1:** Given llegada al footer, When busca soporte, Then visualiza correos y redes sociales. <br> **E2:** Given formulario contacto, When envía mensaje, Then recibe confirmación de recepción. | 8 | 1 |
+| 41 | **US41** | Navegar entre secciones | **Como** interesado, **quiero** moverme fácilmente, **para** acceso sin fricciones. | **E1:** Given clic en menú superior, When pulsa "Inicio", Then el navegador hace scroll al tope. <br> **E2:** Given clic en "Beneficios", When pulsa, Then el navegador se desliza a la sección central. | 8 | 2 |
 
 ## 3.2. Impact Mapping
 
@@ -1611,7 +1611,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gQpmrNG.png" alt="Container" width="1100">
+<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
@@ -2179,16 +2179,20 @@ Esta capa implementa la persistencia del historial de accesos mediante EF Core y
 ## 5.1.1 General Style Guidelines
 
 La presente guía de estilo establece los fundamentos visuales y comunicacionales para todos
-los productos digitales de **Nexbell**. El objetivo principal es garantizar una experiencia
+los productos digitales de **Nextbell**. El objetivo principal es garantizar una experiencia
 de usuario consistente, profesional y coherente, sentando las bases de un sistema de diseño escalable.
 Para ello, se ha decidido adoptar **Material Design 3 de Google** como sistema de diseño base, adaptándolo 
 a la identidad de nuestra marca.
 
+### 5.1.1 General Style Guidelines.
+
+
+
 #### **Branding y Tono de Comunicación**
 
-La identidad de **Nexbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
+La identidad de **Nextbell** se construye sobre una base de precisión técnica y sofisticación residencial, valores críticos para la seguridad de alta gama .
 
-* *Personalidad de la Marca:** Nexbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
+* *Personalidad de la Marca:** Nextbell se proyecta bajo el concepto de **"Vigilant Elegance"**, combinando la exactitud estéril de la tecnología avanzada con la calidez sofisticada de un entorno de lujo .
 * *Estilo Visual:** Se utiliza una estética **"Deep Tech"** minimalista, donde una base de negro puro permite que la luminosidad turquesa guíe la atención del usuario, evocando protección de vanguardia y control sin esfuerzo .
 * *Tono de Comunicación:** El lenguaje debe reflejar tensión tipográfica y claridad técnica :
 * *Intelectual y de Alto Nivel:** Para las declaraciones heroicas y mensajes editoriales .
@@ -2237,123 +2241,47 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
 
-A continuación, se presenta la aplicación detallada de los 12 pasos de diseño IoT para el prototipo de NexBell, estructurada de forma clara y alineada con la arquitectura "Zero Hardware" en departamentos:
+### Paso 1: Definición de los requisitos del sistema
+* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
+* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
 
-**1. Definition of the System Requirements**
+### Paso 2: Selección de la tipología del sistema IoT
+* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
 
-| Categoría | Especificación |
-|-----------|----------------|
-| **Objetivo Principal** | Control de accesos inteligente, videoportería virtual y notificación en tiempo real para edificios residenciales. |
-| **Parámetros a Medir** | Presencia humana (movimiento), proximidad del visitante, estado físico de la puerta (abierta/cerrada), nivel de audio ambiental. |
-| **Requisitos Funcionales** | • Detección y notificación de visitantes en tiempo real<br>• Apertura remota de cerraduras<br>• Transmisión inalámbrica WiFi<br>• Indicación visual de estado. |
-| **Requisitos No Funcionales** | • Tiempo de envío de alerta < 5 segundos<br>• Operación 24/7 en punto de control<br>• Resistente a condiciones típicas de recepción (0-50°C). |
+### Paso 3: Definición de los requisitos de la capa física
+* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
+* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
 
-**2. Selection of the IoT System Typology**
+### Paso 4: Definición de los requisitos de la capa de intercambio
+* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
+* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
 
-| Aspecto | Descripción |
-|---------|-------------|
-| **Tipo de Sistema** | **Real-time Access Control IoT System** con arquitectura Edge-Cloud. |
-| **Topología** | Nodo perimetral (ESP32) conectado vía WiFi a un Edge Gateway o directamente al Cloud. |
-| **Procesamiento** | Validación rápida local (Edge) para apertura rápida, y Cloud para enrutamiento de notificaciones, registro de auditoría y almacenamiento multimedia. |
-| **Resiliencia** | Capacidad asíncrona temporal si falla internet, permitiendo control por conserjería física local. |
+### Paso 5: Definición de los requisitos de la capa de información
+* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
+* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
 
-**3. Definition of Physical Layer Requirements**
+### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
+* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
 
-| Componente | Especificaciones Técnicas |
-|------------|---------------------------|
-| **Sensor de Movimiento (PIR)** | • Salida digital (HIGH/LOW) para eventos de llegada.<br>• Rango de cono ajustable (3-7 metros). |
-| **Sensor Ultrasónico HC-SR04** | • Validación de distancia analítica (reducir falsos positivos del PIR).<br>• Precisión de 2cm a 400cm. |
-| **Sensor Magnético (Simulado/Pot)**| • Monitorea el estado físico de la puerta (Abierta/Cerrada). |
-| **Módulo de Audio/Captura** | • Sensor de sonido para captura preliminar/activación por voz. En el modelo final incluye hardware multimedia. |
-| **LED Panel / Indicador** | • Feedback visual para el visitante (encendido, error, puerta abierta). |
+### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
+* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
 
-**4. Definition of Exchange Layer Requirements**
+### Paso 8: Selección de los sensores y actuadores
+* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
+* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
 
-| Capa | Protocolo | Descripción |
-|-----------|-----------|-------------|
-| **Embedded → Cloud/Edge** | MQTT (TLS) / HTTP REST | Envío de telemetría de sensores y recepción de comandos de apertura remota. |
-| **Cloud → Mobile App** | FCM / APNS | Push Notifications de baja latencia a los residentes. |
-| **Conectividad** | WiFi 802.11 b/g/n | Módulo integrado en el ESP32. |
-| **Formato Datos** | JSON | Payload: `device_id`, `event_type`, `distance_cm`, `door_status`, `timestamp`. |
-| **Seguridad** | Hashing, JWT, TLS 1.2 | Protección contra suplantación física y cifrado extremo a extremo. |
+### Paso 9: Selección del microcontrolador y transceptores de radio
+* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
 
-**5. Definition of Information Layer Requirements**
+### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
+* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
+* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
 
-| Proceso | Detalle |
-|---------|---------|
-| **Adquisición Datos** | GPIO para PIR y Ultrasonido. ADC de 12-bits para sensores analógicos. |
-| **Lógica de Fusión** | Se cruza la detección del PIR con el HC-SR04 (< 1 metro) para confirmar "Visitante Presente". |
-| **Estructura JSON** | `{"device":"gate_01", "event":"visitor_detected", "door":"closed"}` |
-| **Buffer Local** | Cola local de eventos físicos durante caídas temporales de WiFi. |
-| **Sincronización** | Estampado de tiempo (NTP) en cada paquete generado. |
+### Paso 11: Análisis del tiempo de procesamiento
+* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
 
-**6. Definition of Application Service Layer Requirements**
-
-| Interfaz | Funcionalidades |
-|----------|----------------|
-| **Mobile App (Residente)** | • Alertas push interactivas: "Aprobar" / "Rechazar".<br>• Visualización de imagen/audio y apertura remota de chapa. |
-| **Web Dashboard (Conserje)** | • Cola priorizada de visitantes (FIFO).<br>• Monitoreo de estado de todas las puertas del edificio.<br>• Accionamiento de apertura e historial. |
-| **API REST / Cloud** | • Búsqueda en directorio, asociación de departamento a residente y registro auditable (log). |
-
-**7. Selection of the Architectures of Data Exchange and Information Integration Layers**
-
-| Componente | Tecnología | Función |
-|------------|------------|---------|
-| **Cloud API Gateways** | .NET / C# Web API | Enrutamiento seguro, RBAC, exposición de módulos del Bounded Context. |
-| **Microservicios (DDD)** | .NET / C# | Contextos: IAM, Directory, Security (Core), Audit, Intercom. |
-| **Database** | SQL Server / PostgreSQL | Tablas transaccionales de visitas, logs de auditoría inmutables, directorio de residentes. |
-| **Message Broker** | MQTT Broker / SignalR | Manejo asíncrono para señales del hardware IoT y websockets para UI del conserje en tiempo real. |
-| **External Services** | Firebase (FCM) | Entrega de notificaciones ricas al smartphone del residente. |
-
-**8. Selection of the Sensors and the Actuators**
-
-| Componente | Rol en NexBell | Especificaciones Clave |
-|------------|----------------|------------------------|
-| **PIR y HC-SR04** | Activadores de flujo | Detonantes del escenario sin intervención táctil (Touchless). |
-| **Relé Electromagnético** | Actuador / Cerradura | Recibe pulso (HIGH) desde el ESP32 para liberar el mecanismo de puerta (5V/12V). |
-| **Contacto Magnético** | Auditoría y Seguridad | Detecta aperturas forzadas o puertas dejadas abiertas. |
-| **Módulo Multimedia** | Evidencia | (Proyección) Micrófono / Cámara para validación visual pre-apertura. |
-
-**9. Selection of the Microcontroller**
-
-| Aspecto | Especificaciones (ESP32 DevKit C V4) |
-|---------|--------------------------------------|
-| **Microcontrolador** | Dual-core Xtensa LX6 @ 240MHz. Potencia suficiente para preprocesar audio básico. |
-| **Conectividad** | WiFi integrado + Bluetooth (para aprovisionamiento inicial). |
-| **Pines y E/S** | Múltiples GPIOs soportan interrupciones hardware (PIR), I2C, SPI para pantallas o cámaras (OV2640 futuro). |
-| **Alimentación** | 5V vía USB o Vin constantes desde la fuente de la portería central. |
-
-**10. Definition of the Data Processing for Each Node and in Cloud**
-
-**Procesamiento Embedded (ESP32):**
-1. Interrupción activada por PIR.
-2. Comprobación cruzada de distancia vía HC-SR04.
-3. Empaquetado JSON: Envío de HTTP POST / Mensaje MQTT al Cloud marcando "Event: Visitor_Arrival".
-4. Recepción de comando "Unlock" desde la nube y disparo del relé de 3 segundos.
-
-**Procesamiento in Cloud (.NET):**
-1. Enrutamiento del evento: Identifica qué residente/departamento asociar a esa puerta.
-2. Consulta de permisos (Security BC): Solo los usuarios del depto destino pueden aprobar.
-3. Despacho notificaciones: Usa Firebase FCM enviando la alerta con metadata.
-4. Auditoría (Audit BC): Registra cada intento de interacción con el dispositivo IoT.
-
-**11. Analysis of the Processing Time**
-
-| Operación | Capa | Latencia Estimada |
-|-----------|------|-------------------|
-| Detección Hardware (PIR + Ultrasonido) | Embedded | < 100 ms |
-| Enrutamiento API + Búsqueda de Usuario | Cloud | < 300 ms |
-| Entrega Firebase (Push) al celular | Network | 1 a 3 segundos |
-| Apertura operada por usuario | Cloud → Embedded | < 500 ms tras botón de 'Aprobar' |
-| **Latencia Total de Experiencia** | End-to-End | **< 4 segundos (Detección a Smartphone)** |
-
-**12. Definition of the Graphical User Interface**
-
-| Dispositivo / App | Componentes Clave de UI |
-|-------------------|--------------------------|
-| **NexBell Mobile (Residente)** | • Lock Screen Notification interactiva (Botones contextuales de Aprobar/Rechazar).<br>• Visor en vivo con datos del visitante (DNI provisto si hubo pre-registro). |
-| **Nexora Dashboard (Web/Conserje)**| • Tabla visual de visitas pendientes (modo grilla o fila).<br>• Botón masivo para "Abrir Puerta".<br>• Indicador Semáforo universal (Rojo=Cerrado/Alarma, Verde=Abierta, Amarillo=Visitante). |
-| **Punto IoT Físico (Embedded)** | • Indicación minimalista mediante un LED verde parpadeando durante procesamiento, rojo en denegado. |
+### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
+* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
 
 #### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
 Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
@@ -2369,12 +2297,11 @@ Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacc
 * **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
 * **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
 
-
 ### 5.2. Information Architecture
 
 #### 5.2.1. Organization Systems
 
-Para garantizar que los usuarios de **Nexbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
+Para garantizar que los usuarios de **Nextbell** puedan navegar y procesar la información de seguridad de manera eficiente, la arquitectura de la información se ha estructurado aplicando sistemas de organización visual y de categorización de contenido adaptados al entorno residencial.
 
 ##### **Sistemas de Organización Visual**
 
@@ -2396,9 +2323,14 @@ Para garantizar que los usuarios de **Nexbell** puedan navegar y procesar la inf
     - El **Residente** dispondrá de una vista simplificada en su móvil para recibir videollamadas, autorizar accesos y revisar su historial personal de visitas.
     - El **Administrador del Edificio** tendrá acceso a métricas de uso, auditorías de seguridad y gestión de pagos de la plataforma.
 
+Siguiendo el proceso metodológico estandarizado en las pautas generales de diseño (*General Style*), se procede a la aplicación, adaptación y especialización de dichos lineamientos para los entornos técnicos de los primeros entregables del sistema: **Web 1** y **Mobile 1**. 
+
+Este proceso garantiza que la identidad de marca ("Vigilant Elegance") y los principios de diseño basados en *Material Design 3* se desplieguen de forma óptima según las restricciones y capacidades de cada plataforma.
+
+  
 #### 5.2.2. Labelling Systems
 
-El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
+El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz predecible que evite ambigüedades en situaciones donde la rapidez de respuesta es vital.
 
 ##### **Etiquetas de Navegación Principal**
 
@@ -2438,23 +2370,23 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 
 ##### **SEO Tags para el Landing Page**
 
-- **Title Tag:** `Nexbell | Videoportería Inteligente y Citofonía Virtual en Perú`
+- **Title Tag:** `Nextbell | Videoportería Inteligente y Citofonía Virtual en Perú`
     - **Sustento:** Incluye la marca y términos clave ("Videoportería", "Citofonía Virtual") para captar administradores buscando modernizar sus edificios.
 
-- **Meta Description:** `Moderniza la seguridad de tu edificio con Nexbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
+- **Meta Description:** `Moderniza la seguridad de tu edificio con Nextbell. Videoportería IoT, control de accesos desde el móvil y gestión de visitas en tiempo real sin cableado tradicional.`
     - **Sustento:** Resalta el beneficio principal (sin cableado) y las funciones clave para incentivar el interés de juntas de propietarios.
 
 - **Meta Keywords:** `videoportero inteligente, intercomunicador wifi edificio, citofonia virtual peru, control de accesos residencial, seguridad edificios lima, app para condominios`
 
 ##### **ASO (App Store Optimization) para la Aplicación Móvil**
 
-- **App Title:** `Nexbell: Videoportería y Seguridad`
+- **App Title:** `Nextbell: Videoportería y Seguridad`
 - **App Subtitle:** `Atiende tu puerta desde el celular.`
 - **App Keywords:** `intercomunicador, timbre, video, seguridad, edificio, condominio, residente, acceso, portero, lima`
 - **App Description:** - **Corta:** `Atiende visitas, visualiza quién toca tu puerta y autoriza ingresos desde donde estés.`
-    - **Larga:** `Nexbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
+    - **Larga:** `Nextbell transforma el intercomunicador de tu edificio en una experiencia digital y segura. Recibe videollamadas de tus visitas directamente en tu smartphone, incluso si no estás en casa.
 
-      Con Nexbell podrás:
+      Con Nextbell podrás:
         - Ver y hablar con tus visitantes en tiempo real.
         - Pre-autorizar invitados con códigos QR o invitaciones digitales.
         - Recibir alertas de encomiendas y paquetes en recepción.
@@ -2493,128 +2425,19 @@ El sistema de etiquetado de **Nexbell** busca construir un lenguaje de interfaz 
 - **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
 - **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
 
-## 5.3. Landing Page UI Design.
-
-En esta sección se presenta el diseño de interfaz de usuario (UI) de alta fidelidad para la Landing Page de Nexora. Este diseño consolida la identidad visual de la startup, utilizando una paleta de colores y tipografías que transmiten seguridad, modernidad y eficiencia tecnológica.
-
-El diseño UI se ha optimizado para guiar al usuario a través de un flujo narrativo claro, desde el reconocimiento de la problemática de los sistemas analógicos hasta la adopción del ecosistema NexBell. Se han aplicado principios de Responsive Design para garantizar que la experiencia sea consistente tanto en navegadores de escritorio como en dispositivos móviles, asegurando que los elementos de interacción (CTA) sean accesibles y visualmente destacados para maximizar la conversión de clientes potenciales.
-
+#### 5.3. Landing Page UI Design.
 #### 5.3.1. Landing Page Wireframe.
-
-El wireframe de la Landing Page de Nexora ha sido diseñado bajo un enfoque de baja fidelidad, priorizando la jerarquía de la información y la experiencia de usuario (UX) para los dos segmentos interesados: juntas de propietarios que buscan modernización y administradores de edificios. La estructura se divide en módulos clave que comunican la propuesta de valor de NexBell:
-
- - Header (Navegación): Se implementa un Sticky Header que facilita el acceso rápido a las secciones de "Cómo Funciona", "Planes de Suscripción", "Seguridad IoT" y un botón de "Contacto Comercial" destacado para la conversión.
-
- - Sección Hero: En la parte superior se presenta el eslogan principal y el objetivo de la startup, destacando la eliminación de cableado analógico y la transición hacia una portería inteligente basada en la nube.
-
- - Módulo de Funciones Principales: Mediante el uso de tarjetas informativas e íconos, se describen las capacidades técnicas del sistema, tales como la captura de evidencia multimedia, el enrutamiento de llamadas al smartphone y la gestión de alertas en tiempo real.
-
- - Sección de Beneficios: Se detallan las ventajas competitivas de la solución, enfocándose en el ahorro de costos operativos (CAPEX), la valorización del patrimonio inmobiliario y la mejora en la seguridad mediante el registro auditable de visitas.
-
- - Sección de Planes (Pricing): Un módulo comparativo que presenta el modelo de negocio Software as a Service (SaaS), permitiendo a los interesados visualizar las opciones de membresía según el tamaño del condominio o edificio.
-
- - Footer: Contiene enlaces secundarios a soporte técnico, políticas de privacidad y el acceso directo al portal de administración para usuarios ya registrados.
-
-Este diseño asegura que el usuario interesado comprenda el flujo de trabajo de la solución IoT y los beneficios de reemplazar la infraestructura tradicional por el ecosistema digital de Nexora.
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778710148/landing_i7zhsy.png" width="1000">
-</p> 
-
 #### 5.3.2. Landing Page Mock-up.
-
-En esta sección se presenta el Mock-up de la Landing Page, proporcionando una representación visual realista de cómo interactúa la interfaz de Nexora en un entorno de escritorio. A diferencia del diseño UI plano, el mock-up permite visualizar la profundidad, las texturas y la disposición final de los elementos en un contexto de uso real.
-
-Este recurso es fundamental para validar la estética del producto y asegurar que el mensaje de innovación de NexBell se comunique de forma impactante. La composición resalta la claridad del dashboard de administración y la facilidad con la que un propietario puede entender el servicio desde el primer contacto visual.
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
-</p> 
-
 #### 5.4. Applications UX/UI Design.
-
-En esta sección se detalla el diseño de la interfaz y la experiencia de usuario para la plataforma web de NexBell. El enfoque se centra en la eficiencia operativa, permitiendo que tanto administradores como personal de seguridad gestionen los accesos, visualicen registros multimedia y administren la base de datos de residentes de manera intuitiva y centralizada.
-
-### 5.4.1. Applications Wireframes.
-
-Se presentan los wireframes de baja fidelidad que definen la arquitectura de información y el flujo de navegación de la aplicación web. Estos esquemas permiten validar la disposición de los módulos de control, el tablero de monitoreo y las secciones de auditoría sin distracciones visuales. El objetivo principal es asegurar que las funcionalidades críticas sean accesibles con la menor cantidad de clics posibles, optimizando el tiempo de respuesta ante eventos de seguridad.
-
-*- Vista de Inicio de sesion*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_8_jfrjwg.png" width="1000">
-</p> 
-
-*- Vista de Bienvenida*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682627/Html_Body_9_lyxci3.png" width="1000">
-</p> 
-
-*- Vista de Dashboard*
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682628/Html_Body_13_sj51ug.png" width="1000">
-</p> 
-
-*- Vista de Historial* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_11_feosk2.png" width="1000">
-</p> 
-
-*- Vista de Verificación* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_12_dzpzun.png" width="1000">
-</p> 
-
-*- Vista de Perfil* 
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_10_uofxgt.png" width="1000">
-</p> 
+#### 5.4.1. Applications Wireframes.
+#### 5.4.2. Applications Wireflow Diagrams.
+#### 5.4.2. Applications Mock-ups.
+#### 5.4.3. Applications User Flow Diagrams.
+#### 5.5. Applications Prototyping.
+#### 5.6. IoT Device Design.
 
 
-### 5.4.2. Applications Wireflow Diagrams.
-
-En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
-
-El prototipo se ha estructurado en cinco grupos de flujos operativos independientes para validar la usabilidad y la eficiencia del sistema antes de proceder con el desarrollo del software.
-
----
-
-#### Grupo 1: Flujo de Acceso, Registro e Inicialización de Jornada
-Este diagrama mapea el ciclo de vida de la autenticación de los operarios y la inicialización segura del entorno de monitoreo.
-
-**Descripción del Proceso:**
-1. **Validación de Credenciales:** El flujo inicia en la pantalla *Iniciar sesión*, donde el portero ingresa sus credenciales de acceso. El sistema valida los datos contra el módulo de usuarios.
-2. **Recuperación de Contraseña:** Desde el Login, el flujo permite una bifurcación hacia la interfaz de *Recuperar contraseña* en caso de que el usuario requiera restablecer sus credenciales de seguridad.
-3. **Creación de Cuenta:** Si el usuario no tiene una cuenta activa, se le redirige al formulario de *Registro*, donde captura sus datos personales y selecciona el rol operativo (*Portero*). Al completar el proceso con éxito, el sistema muestra una pantalla intermedia de *Registro exitoso*.
-4. **Inicialización de Jornada (Welcome):** Tras una autenticación o registro exitoso, el flujo redirige a la interfaz de bienvenida (*"Bienvenido de vuelta, José Peralta"*). Aquí el sistema realiza una carga dinámica de datos contextuales en tiempo real: ubicación del módulo (*Main Gate - Edificio San Martín*), fecha/hora del servidor, y el estado perimetral inicial (puerta *Cerrada*, sensores *Activos* y *2 visitantes* en cola). El flujo concluye cuando el operador presiona el botón principal **"Iniciar turno →"**, cambiando su estado a activo en el backend e inicializando el dashboard principal.
-
-   
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699506/Captura_de_pantalla_2026-05-13_a_la_s_2.11.40_p._m._nqqqbw.png" width="1000">
-</p> 
-
----
-
-#### Grupo 2: Flujo de Gestión de Notificaciones y Configuración del Sistema
-Este diagrama detalla cómo el operador interactúa con las alertas del entorno y gestiona los ajustes operativos globales de la plataforma.
-
-**Descripción del Proceso:**
-1. **Procesamiento de Alertas:** Al ingresar al sistema, el portero visualiza el módulo de *Notificaciones*. El sistema clasifica y ordena los eventos automáticamente. Se validan las transiciones para alertas de tipo informativo rutinario (ej. *"Nuevo visitante registrado"*) y alertas de advertencia de vulnerabilidad técnica o física (ej. *"Batería Baja: Sensor Perimetral 08"*), las cuales forzan un estado visual diferenciado para asegurar la atención inmediata del operador.
-2. **Configuración Global:** El operador puede acceder a la interfaz de *Ajustes*, donde el flujo permite interactuar con los *toggles* funcionales para habilitar/deshabilitar alertas sonoras y notificaciones de escritorio, así como seleccionar el idioma base de la interfaz.
-3. **Soporte Técnico:** Si el operador requiere asistencia, el flujo se bifurca hacia el *Centro de Ayuda y Soporte*, desplegando guías rápidas de resolución de problemas y un formulario integrado para enviar tickets de soporte al equipo técnico de NexBell.
-
----
-
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778699582/Captura_de_pantalla_2026-05-13_a_la_s_2.12.57_p._m._pv9ufz.png" width="1000">
-</p> 
-
----
+# Conclusiones
 
 #### Grupo 3: Flujo de Mantenimiento de Cuenta y Seguridad del Operador
 Este diagrama valida el flujo de actualización de la información personal de los porteros y la seguridad de sus credenciales de acceso.
@@ -2809,275 +2632,6 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 
 <div style="page-break-after: always;"></div>
 
-# Capítulo VI: Product Implementation, Validation & Deployment
-
-## 6.1. Software Configuration Management
-
-### 6.1.1. Software Development Environment Configuration.
-
-| Actividad | Producto o Herramienta | Propósito de uso | Ruta (SaaS/Descarga) |
-|---|---|---|---|
-| Project Management | Jira | Gestión de tareas, seguimiento del progreso mediante tableros Kanban y control de sprints. | [https://www.atlassian.com/software/jira](https://www.atlassian.com/software/jira) |
-| Requirements Management | Trello | Centralización de historias de usuario, matriz de trazabilidad y especificación de requerimientos funcionales. | [https://trello.com](https://trello.com) |
-| Product Design | Figma | Diseño de prototipos de alta fidelidad, wireframes de la interfaz móvil y web, y flujos de usuario (UX). | [https://www.figma.com](https://www.figma.com) |
-| Software Development | Visual Studio Code | Entorno de desarrollo integrado (IDE) principal para la codificación del backend y frontend. | [https://code.visualstudio.com](https://code.visualstudio.com) |
-| IoT Hardware Simulation | Wokwi | Simulación de circuitos electrónicos, microcontroladores (ESP32) y sensores para validar la lógica del Edge antes de la implementación física. | [https://wokwi.com](https://wokwi.com/) |
-| Software Deployment | Microsoft Azure | Plataforma de nube para el despliegue de microservicios, base de datos MySQL y hosting de la web. | [https://azure.microsoft.com](https://azure.microsoft.com) |
-| Software Testing | Postman | Pruebas funcionales de la API, validación de endpoints y automatización de colecciones de pruebas manuales. | [https://www.postman.com](https://www.postman.com) |
-| Database Management | MySQL Workbench | Modelado de datos (DER), administración de la base de datos remota en Azure y ejecución de scripts SQL. | [https://www.mysql.com](https://www.mysql.com) |
-| Software Documentation | GitHub Wiki | Documentación técnica detallada de la arquitectura, manuales de usuario y guías de instalación. | [https://github.com](https://github.com/) |
-
-### 6.1.2. Source Code Management
-
-En esta sección se definen los mecanismos y el plan de organización técnica que el equipo de Nexora empleará para el control y seguimiento de los cambios en el ecosistema NexBell. La gestión del código fuente es una pieza crítica para garantizar la integridad de una solución IoT de este tipo, ya que requiere la sincronización precisa entre el software de borde (Edge API), la lógica de negocio en el backend y la interfaz de usuario web.
-
-Para asegurar un desarrollo paralelo eficiente y una trazabilidad completa de cada iteración, se utilizará GitHub como plataforma centralizada de control de versiones. Esto permitirá mantener un historial detallado de las mejoras en la seguridad de los accesos y la gestión de video en tiempo real, facilitando la colaboración continua y el despliegue escalable de la solución.
-
-A continuación, se detallan los repositorios que alojan el código fuente de los componentes de la solución NexBell, abarcando desde la lógica del dispositivo IoT hasta los servicios web:
-
-| Producto | Repositorio | Descripción |
-|---|---|---|
-| Landing Page | [https://github.com/Nexora-solution/NexBell-LandingPage](https://github.com/Nexora-solution/Nexbell-LandingPage) | Contiene el código fuente del sitio web público de NexBell, enfocado en el marketing digital, la presentación de la propuesta de valor y el contacto para potenciales clientes. |
-| Frontend | [https://github.com/Nexora-solution/NexBell-FrontendWeb](https://github.com/Nexora-solution/Nexbell-FrontendWeb) | Aloja la interfaz web de la aplicación principal, diseñada para el personal de conserjería y administración. Incluye el dashboard de gestión de accesos, monitoreo de video y control de residentes. |
-| Backend | [https://github.com/Nexora-solution/NexBell-WebServices](https://github.com/Nexora-solution/NexBell-WebServices) | Repositorio del núcleo de la solución. Implementa la lógica de negocio, la API RESTful para la persistencia de datos en MySQL, el manejo de notificaciones y la autenticación de usuarios. |
-| Edge API | [https://github.com/Nexora-solution/NexBell-EdgeAPI](https://github.com/Nexora-solution/NexBell-EdgeAPI) | Contiene el firmware y la lógica de borde para los dispositivos IoT. Gestiona la interacción con sensores, el control del videoportero y la comunicación de eventos hacia la nube. |
-| Report | [https://github.com/Nexora-solution/NexBell-ProjectReport](https://github.com/Nexora-solution/NexBell-ProjectReport) | Repositorio central de documentación del proyecto. Almacena los entregables académicos y el informe final del curso. |
-| Testing | [https://github.com/Nexora-solution/NexBell-Testing](https://github.com/Nexora-solution/NexBell-Testing) | Repositorio de pruebas y archivos feature de la solución. |
-
-#### Estrategia de Trabajo y Versionamiento
-
-El equipo adopta el modelo GitFlow de Vincent Driessen para organizar el flujo de trabajo. Este esquema permite separar claramente el código en desarrollo de las versiones estables listas para producción.
-* **Main Branch (Rama Principal):** Contiene el código fuente que se encuentra actualmente en producción. Cada commit en esta rama corresponde a una versión estable y etiquetada.
-* **Develop Branch (Rama de Desarrollo):** Es la rama de integración principal. Aquí se consolidan todas las funcionalidades terminadas antes de pasar a una fase de lanzamiento.
-* **Feature Branches (feature/…):** Ramas temporales creadas para desarrollar una funcionalidad específica. Se originan en develop y se reintegran a ella al finalizar la tarea.
-* **Release Branches (release/…):** Se utilizan para preparar una nueva versión de producción. Permiten correcciones menores y preparación de metadatos antes de fusionarse en main y develop.
-* **Hotfix Branches (hotfix/…):** Ramas de emergencia destinadas a solucionar errores críticos detectados en producción. Se originan directamente en main y se reintegran tanto a main como a develop.
-
-Para el control de versiones, se aplica el Versionamiento Semántico (SemVer) bajo el formato MAJOR.MINOR.PATCH:
-* **MAJOR:** Cambios incompatibles con versiones previas (ej. cambio estructural en la Edge API).
-* **MINOR:** Nuevas funcionalidades compatibles (ej. nueva vista en el Frontend).
-* **PATCH:** Corrección de errores menores.
-
-Se adopta el estándar de Conventional Commits para asegurar que el historial de cambios sea legible y automatizable. La estructura de cada mensaje debe ser:
-* **Estructura:** \<tipo\>(\<alcance\>): \<descripción\>
-* **Cuerpo (Opcional):** \<descripción detallada del cambio\>
-
-Tipos comunes: feat (nueva funcionalidad), fix (corrección de error), docs (cambios en documentación), refactor (mejora de código sin cambiar funciones).
-> Ejemplo: feat(edge): add motion sensor trigger for video recording
-
-### 6.1.3. Source Code Style Guide & Conventions
-
-El equipo Nexora se compromete a mantener un estándar de código limpio, profesional y uniforme para la solución NexBell. Dado que el proyecto integra múltiples entornos (Edge, Backend y Frontend), se adoptan las siguientes normativas transversales:
-* **Nomenclatura en Inglés:** Todos los elementos de programación (clases, variables, métodos, componentes y comentarios técnicos) deben nombrarse estrictamente en inglés para mantener estándares internacionales.
-* **Clean Code:** Se aplican principios de responsabilidad única y legibilidad para facilitar la integración entre los componentes de hardware y software.
-* **Gherkin Conventions:** Las especificaciones de pruebas de aceptación en archivos .feature seguirán un formato estandarizado para asegurar la validación de los flujos de seguridad del videoportero.
-
-A continuación, se detallan las convenciones específicas para cada tecnología del ecosistema NexBell:
-
-| Lenguaje / Framework | Convención de nombres | Guía referencial |
-| --- | --- | --- |
-| **HTML / CSS** | `kebab-case` para IDs, clases y nombres de archivos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
-| **JavaScript (Vue.js)** | `camelCase` para variables y funciones. `PascalCase` para nombres de componentes (`.vue`). | [Vue.js Official Style Guide](https://vuejs.org/style-guide/) |
-| **C# (EF Core 9)** | `PascalCase` para clases, métodos y propiedades. `camelCase` para variables locales y parámetros. | [Microsoft C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
-| **C++ (IoT / ESP32)** | `camelCase` para variables y sensores. `PascalCase` para funciones de control de hardware. | [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html) |
-| **MySQL** | `snake_case` para nombres de tablas y columnas. `UPPERCASE` para palabras clave SQL. | [SQL Style Guide](https://www.sqlstyle.guide/) |
-
-#### Pruebas de Comportamiento (Behavior-Driven Development)
-
-Para la redacción de los criterios de aceptación y las pruebas de la solución IoT, se aplican los estándares de Gherkin. Esto garantiza que las interacciones entre el residente y el videoportero NexBell sean comprendidas tanto por el equipo técnico como por los stakeholders:
-
-* **Estilo Declarativo:** Se prioriza describir el comportamiento del sistema sobre la implementación técnica.
-* **Estructura Base:** Uso riguroso de las palabras clave: Feature, Scenario, Given (Dado que), When (Cuando), Then (Entonces) y And (Y).
-* **Idioma:** Redacción obligatoria en inglés para mantener consistencia con los repositorios de código.
-
-### 6.1.4. Software Deployment Configuration
-
-En esta sección se describe el flujo de despliegue y la configuración de infraestructura para el sistema de NexBell. El equipo Nexora ha optado por una estrategia de despliegue híbrida que aprovecha las fortalezas de diferentes proveedores de nube para optimizar la latencia, la escalabilidad y la disponibilidad de la solución.
-
-El proceso de entrega continua inicia con la integración del código en GitHub, activando flujos de trabajo que automatizan la publicación de la Landing Page y la Web Application en Netlify, garantizando una distribución global eficiente. Por otro lado, la lógica de negocio y la persistencia de datos se centralizan en Microsoft Azure, proporcionando un entorno robusto para el procesamiento de los Web Services. Este esquema asegura que cada componente de NexBell opere en un entorno optimizado para su función específica, facilitando el mantenimiento y la trazabilidad del producto final.
-
-<p align="center">
-  <img src="https://i.imgur.com/bvfbnD0.png" alt="Deployment Diagram - NexBell Solution">
-</p>
-
-## 6.2. Landing Page, Services & Applications Implementation
-
-### 6.2.1. Sprint 1
-
-#### 6.2.1.1. Sprint Planning 1
-
-| Sprint # | Sprint 1 |
-|---|---|
-| Sprint Planning Background |
-| Date | 06/05/2026 |
-| Time | 3:30 PM |
-| Location | Virtual |
-| Prepared by | Gómez Flores, Daniela Araceli |
-| Attendees (to planned meeting) | Gómez Flores, Daniela Araceli / Bellido Salas, Raúl / Borja Molina, Gabriel Sebastián / Suárez Romero, Santiago Manuel / Burga Loarte, Anaely Zarely |
-| Sprint Goal & User Stories |
-| Sprint 1 Goal | **Nuestro objetivo es** consolidar la presencia digital de NexBell y validar la experiencia de usuario principal para la administración. <br> **Creemos que** esto permite a los potenciales clientes residenciales comprender claramente nuestra propuesta de valor y ofrece al personal de seguridad una visión general del flujo de trabajo de gestión. <br> **Esto se confirmará cuando** un visitante pueda navegar por la página de inicio completa para conocer los beneficios del sistema, y ​​cuando un usuario administrador pueda interactuar con el panel principal, visualizando registros de visitantes ficticios e interfaces de videoportero simuladas, todo ello implementado en un entorno web. |
-| Sprint 1 Velocity | 30 |
-| Sum of Story Points |  24 |
-
-#### 6.2.1.2. Aspect Leaders and Collaborators
-
-| Team Member | GitHub Username | Identidad Visual y Diseño UX/UI | Desarrollo de la Landing Page | Arquitectura de Frontend y Mocking de Datos | Configuración de CI/CD y Despliegue | Gestión de Documentación e Informe Final |
-|---|---|---|---|---|---|---|
-| Bellido Salas, Raúl             | raulbellidosalas | L | C | C | C | C |
-| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | C | L |
-| Suárez Romero, Santiago Manuel  | SDarXx | C | C | L | C | C |
-| Gómez Flores, Daniela Araceli   | DanieGF1 | C | L | C | C | C |
-| Burga Loarte, Anaely Zarely     | userxx1000 | C | C | C | L | C |
-
-#### 6.2.1.3. Sprint Backlog 1
-
-| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| **US37** | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
-| **US37** | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
-| **US38** | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
-| **US39** | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
-| **US40** | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
-| **US41** | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
-| **US01, US02** | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
-| **US03** | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
-| **US15** | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
-| **US15** | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
-| **US16** | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
-| **General** | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
-| **General** | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
-
-#### 6.2.1.4. Development Evidence for Sprint Review
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited On |
-|---|---|---|--|---|---|
-| Nexbell-LandingPage | main | f74d36f9be37815f4d4269f066925e176ac228bc | feat: landing page nexbell redesign | - | 11/05/2026 |
-| Nexbell-FrontendWeb | main | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
-| Nexbell-FrontendWeb | develop | adae769981822605f367ed6a61c290aad7185450 | feat: initial project setup | - | 10/05/2026 |
-| Nexbell-FrontendWeb | develop | b7d65c0066ed41c231604d237e7c271e195c3282 | feat: build NexBell doorman web app from Figma mockups | Setup Tailwind CSS v3 with NexBell color palette and Space Grotesk/Geist fonts <br> Configure Vue Router with all routes for auth and doorman flows <br> Create DoormanLayout with sidebar navigation and logout modal <br> Auth views: Login (split layout), Register, RegisterSuccess, ForgotPassword <br> Doorman views: Welcome, Dashboard, Visitors (verify/approve/reject), History (with date filter modal), Profile, EditProfile, Settings, Support <br> Build compiles cleanly with zero TypeScript errors | 11/05/2026 |
-| Nexbell-FrontendWeb | develop | d6aa9ab87999c3f50c5516b43ab7a96e3144da78 | feat: add stores, composables, data layer and fix dependencies | Add Pinia stores: authStore (login/register/logout) and visitorsStore (approve/reject) <br> Add composables: useI18n and useTheme with localStorage persistence <br> Add seed data: users.json, visitors.json, accessHistory.json <br> Add i18n locales: en.ts and es.ts <br> Add TypeScript types: User, Visitor, AccessRecord, DoorEvent <br> Add pinia and lucide-vue-next as official dependencies | 11/05/2026 |
-| Nexbell-FrontendWeb | develop | 2935d471dbbbfbf22427cf6599acbf0384387088 | feat: integrate Pinia for state management, enhance visitor registration, and improve UI components | - | 11/05/2026 |
-| Nexbell-FrontendWeb | develop | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026 |
-| Nexbell-FrontendWeb | feature/login | eac4a5dd51bad9650954b6be5a10f2a487474ca2 | feat: complete doorman web app - i18n, theme, charts, profile, notification | - | 12/05/2026
-| Nexbell-FrontendWeb | develop | fc500aaba60edf64b7ffd3c2a9baa60b3e2f4a65 | Merge pull request #1 from Nexora-solution/feature/login | - | 12/05/2026 |
-
-#### 6.2.1.5. Testing Suite Evidence for Sprint Review
-
-En esta sección se presentan las evidencias correspondientes a la suite de pruebas diseñada bajo el enfoque BDD. Para ello, se elaboraron archivos .feature utilizando el lenguaje Gherkin. Esta estructura permite describir el comportamiento esperado del sistema de forma clara, verificable y alineada con los criterios de aceptación establecidos para cada historia de usuario.
-
-<p align="center">
-  <img src="https://i.imgur.com/plIOw2P.jpeg" alt="g1" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/kIirKpZ.jpeg" alt="g2" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/M6YPG6h.jpeg" alt="g3" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/kNMYB9O.jpeg" alt="g4" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/rF2gxey.jpeg" alt="g5" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/LihbDFc.jpeg" alt="g6" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/l1EaB5H.jpeg" alt="g7" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/2qmdERQ.jpeg" alt="g8" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/DROK0Wj.jpeg" alt="g9" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/HxUPvdN.jpeg" alt="g10" width="1000">
-</p>
-
-#### 6.2.1.6. Execution Evidence for Sprint Review
-
-Durante el presente Sprint, el equipo Nexora ha logrado la transición crítica de la fase de diseño hacia una infraestructura funcional y desplegada. Los hitos alcanzados incluyen la consolidación de la identidad visual en una Landing Page de alto impacto y la implementación del núcleo de la aplicación web administrativa. Se ha logrado establecer un flujo de despliegue continuo (CD) mediante Netlify, permitiendo que los componentes de la solución sean accesibles de forma pública y estén preparados para la integración con los servicios IoT en los próximos ciclos de desarrollo.
-
-Logros Alcanzados en el Desarrollo Web:
-
- - Módulo de Autenticación (Login): Implementación de acceso seguro para los distintos roles del sistema.
-
- - Dashboard Principal: Panel de control centralizado con métricas clave y estado del sistema en tiempo real.
-
- - Historial de Visitas: Interfaz de consulta avanzada para la auditoría de entradas y salidas con soporte multimedia.
-
- - Verificación de Visitas: Sistema de validación activa para la confirmación de identidad de visitantes desde la plataforma.
-
- - Perfil de Usuario: Sección de gestión de datos personales y configuración de preferencias para residentes y administradores.
-
-Evidencias de Navegación y Funcionalidad
-Las capturas de pantalla a continuación muestran la fidelidad visual y la disposición final de los componentes en la Web App, demostrando una experiencia de usuario fluida y coherente con la identidad de Nexora:
-
-Video de Demostración y Navegación
-Para complementar la evidencia visual, se ha grabado una demostración que ilustra el flujo de navegación logrado, la interactividad de los componentes desplegados y la correcta visualización de la plataforma en distintos dispositivos.
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715071/Captura_mq3rt2.jpg" width="1000">
-</p> 
-
-Link del video: https://goo.su/2U9eS   
-
-#### 6.2.1.7. Services Documentation Evidence for Sprint Review
-
-Durante el presente sprint no se realizaron actividades de desarrollo sobre el Backend, por lo que no se generaron nuevos endpoints ni modificaciones en las rutas de servicios existentes. En consecuencia, esta sección se conserva como evidencia de referencia documental, indicando que no aplica la inclusión de una tabla de endpoints para este incremento. La implementación de servicios web será incorporada en sprints posteriores, cuando se aborde el desarrollo del backend correspondiente.
-
-#### 6.2.1.8. Software Deployment Evidence for Sprint Review
-Durante el presente Sprint, el equipo Nexora ha establecido las bases de la infraestructura de entrega continua (CD) para los componentes públicos y administrativos de la solución NexBell. Las actividades de despliegue se centraron en el aprovisionamiento de recursos en la plataforma Netlify, seleccionada por su eficiencia en la distribución de contenido estático y SPA (Single Page Applications).
-
-El proceso incluyó la creación de la organización del proyecto, la vinculación directa con los repositorios de GitHub para habilitar Continuous Deployment y la configuración de las variables de entorno necesarias para la ejecución de los componentes desarrollados en Vue.js. A continuación, se detallan los enlaces de acceso y las evidencias del despliegue exitoso para cada producto digital:
-
-##### NexBell Landing Page Deployment
-<p align="center">
-  <img src="https://i.imgur.com/hHFvYN9.png" alt="landing-page" width="1000">
-</p>
-
-Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell.netlify.app/)
-
-##### NexBell Web Application (Frontend) Deployment
-
-Se ha completado el despliegue de la interfaz administrativa de NexBell, la cual centraliza el control de accesos y la gestión de usuarios del sistema. Para asegurar un entorno de pruebas estable durante el Sprint Review, se configuró un pipeline de despliegue automatizado que sincroniza cada actualización del repositorio con la instancia en producción. Esta configuración garantiza que el personal de seguridad y los administradores puedan interactuar con una aplicación web de alta disponibilidad, optimizada para la gestión de eventos IoT y la visualización de registros en tiempo real.
-
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778712864/WhatsApp_Image_2026-05-13_at_5.54.05_PM_fh34gl.jpg" alt="landing-page" width="1000">
-</p>
-
-Link de acceso a la Landing Page: [https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)
-
-#### 6.2.1.9. Team Collaboration Insights during Sprint
-A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
-
-<p align="center">
-  <img src="https://i.imgur.com/YvS9aeV.jpeg" alt="team-collaboration" width="1000">
-</p>
-
-<div style="page-break-after: always;"></div>
-
-# Conclusiones
-
-El éxito del TB1 radica en la rigurosidad del análisis inicial. Al emplear herramientas como Empathy Maps y User Journeys, el equipo no solo identificó fallas técnicas en los intercomunicadores tradicionales, sino que comprendió la frustración del usuario ante la falta de movilidad y seguridad. Esta investigación permitió que la propuesta de NexBell no sea solo una mejora técnica, sino una respuesta directa a la demanda de mayor trazabilidad y comodidad en entornos residenciales modernos.
-
-La adopción de Domain-Driven Design (DDD) ha sido el pilar fundamental para organizar la lógica de negocio de Nexora. Al delimitar contextos como IAM, Security y Audit, se ha logrado una arquitectura donde cada módulo tiene una responsabilidad única y clara. La definición detallada de entidades y eventos de dominio asegura que el sistema pueda crecer en el futuro sin comprometer la integridad de la base de código, demostrando una aplicación avanzada de patrones de diseño de software.
-
-La estructuración del Product Backlog bajo el formato Gherkin eleva el estándar de calidad del proyecto. Al definir criterios de aceptación precisos, el equipo ha eliminado ambigüedades en el desarrollo, facilitando pruebas automatizadas y una validación de negocio constante. Contar con diagramas de componentes y modelos de bases de datos alineados con estas historias de usuario garantiza que la transición hacia las fases de codificación y despliegue sea fluida, minimizando riesgos técnicos y optimizando el tiempo de entrega.
-
-<div style="page-break-after: always;"></div>
-
 # Bibliografía
 * Asociación Peruana de Empresas de Seguros. (2024, 18 de diciembre). *Una de cada diez viviendas sufrió un robo o intentaron robarla este año*. APESEG. Recuperado el 16 de abril de 2026, de [https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/](https://www.apeseg.org.pe/2024/12/una-de-cada-diez-viviendas-sufrio-un-robo-o-intentaron-robarla-este-ano/)
 * Cámara Peruana de la Construcción (2019, Octubre). *Costos y Presupuestos en Edificación*. CAPECO. Recuperado el 6 de mayo de 2026, de [https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf](https://topodata.com/wp-content/uploads/2019/10/Costos-y-Presupuestos-en-Edificacion-CAPECO.pdf)
@@ -3090,8 +2644,10 @@ La estructuración del Product Backlog bajo el formato Gherkin eleva el estánda
 
 <div style="page-break-after: always;"></div>
 
-# Anexos
+# Conclusiones
 
 * Big Picture Event Storming: [https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434](https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434)
-* Link del Keynote: [https://canva.link/cl8g7tmc1d2a1fn](https://canva.link/cl8g7tmc1d2a1fn)
-* Link del figma:[ https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=165-12&t=XUEg778me78BasJ6-1]( https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=165-12&t=XUEg778me78BasJ6-1)
+* Link del Keynote:
+[https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
+* Link del Video de exposición:
+[https://1drv.ms/v/c/efacef44bdb3cff4/IQBm1zy7b_qNSbRAuI_wKHYxAbjVaCgbniIWZQCTtqWtAcU?e=rZWk2d](https://canva.link/i6aikeu52j3nqwg)
