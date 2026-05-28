@@ -1611,7 +1611,7 @@ Este diagrama describe los límites del sistema y sus interdependencias estraté
 </p>
 
 <p align="center">
-<img src="https://i.imgur.com/gQpmrNG.png" alt="3" width="1100">
+<img src="https://i.imgur.com/rmBuaG2.png" alt="3" width="1100">
 </p>
 
 #### 4.1.3.3. Software Architecture Deployment Diagrams
@@ -2241,47 +2241,7 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
 
-### Paso 1: Definición de los requisitos del sistema
-* **Suministro de energía:** El sistema debe garantizar un bajo consumo para maximizar la autonomía de los dispositivos en los puntos de acceso, considerando que el uso de NB-IoT puede extender la vida útil de las baterías hasta por 10 años en condiciones óptimas.
-* **Restricciones de tiempo de respuesta:** La validación de acceso es una aplicación de tiempo real que requiere que el envío de notificaciones y la recepción de video ocurran en menos de 5 segundos para no afectar la fluidez del ingreso.
 
-### Paso 2: Selección de la tipología del sistema IoT
-* El sistema se clasifica como un **Battery-powered and real-time IoT system**, ya que requiere movilidad para su instalación sin cableado interno y debe gestionar alertas de seguridad inmediatas ante la presencia de visitantes.
-
-### Paso 3: Definición de los requisitos de la capa física
-* **Nodos y Sensores:** Se requieren sensores de movimiento para la activación automática de la cámara, micrófonos para la grabación de audio del visitante y actuadores (cerraduras inteligentes) para la apertura remota.
-* **Capacidad de procesamiento (Edge):** El dispositivo de entrada debe ser capaz de capturar imágenes y clips de audio, procesarlos localmente y transmitirlos al servidor central.
-
-### Paso 4: Definición de los requisitos de la capa de intercambio
-* **Tipo de comunicación:** Se prioriza una comunicación inalámbrica mediante **NB-IoT** o **Wi-Fi** para eliminar la necesidad de cableado físico complejo entre departamentos.
-* **Topología de red:** El dispositivo IoT actúa como un nodo que se comunica con una plataforma en la nube a través de un gateway de internet.
-
-### Paso 5: Definición de los requisitos de la capa de información
-* **Usuarios finales:** Definidos como Residentes (validación móvil), Porteros (gestión operativa) y Administradores (auditoría y gestión de edificios).
-* **Servicios integrados:** Incluye la visualización de video en tiempo real, registro automático de cada ingreso y almacenamiento de evidencia multimedia en la nube.
-
-### Paso 6: Definición de los requisitos de la capa de servicio de aplicación
-* **Interfaz de usuario:** Se requiere una aplicación móvil nativa para los residentes y un dashboard web centralizado para el personal de conserjería.
-
-### Paso 7: Selección de las arquitecturas de las capas de intercambio e información
-* Se adopta una arquitectura orientada a servicios en la nube que integre un **Broker de mensajería (como MQTT)** para la comunicación con el hardware y una base de datos centralizada para la trazabilidad de accesos.
-
-### Paso 8: Selección de los sensores y actuadores
-* **Sensores:** Detectores de movimiento infrarrojos, cámaras de alta resolución y sensores magnéticos para monitorear el estado de la puerta (abierta/cerrada).
-* **Actuadores:** Cerraduras electromecánicas integradas al dispositivo IoT para ejecutar comandos de apertura remota.
-
-### Paso 9: Selección del microcontrolador y transceptores de radio
-* El dispositivo debe contar con un microcontrolador con capacidades multimedia y soporte para protocolos de red inalámbrica, asegurando el cumplimiento de la política de seguridad y encriptación de datos.
-
-### Paso 10: Definición del procesamiento de datos en el nodo y en la nube
-* **En el nodo:** Captura automática de imagen ante detección de presencia y empaquetado de datos en formato JSON.
-* **En la nube:** Análisis de eventos para generar notificaciones push selectivas y almacenamiento inmutable de la bitácora de auditoría.
-
-### Paso 11: Análisis del tiempo de procesamiento
-* Se debe analizar la latencia de procesamiento desde que el sensor detecta movimiento hasta que el residente recibe la videollamada, asegurando que la latencia de red no degrade la comunicación bidireccional.
-
-### Paso 12: Definición de la interfaz gráfica de usuario (GUI)
-* La interfaz móvil debe ser intuitiva para permitir la aprobación o rechazo de visitas con un solo toque, mientras que la interfaz del portero debe mostrar una cola de atención organizada cronológicamente.
 
 #### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
 Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
@@ -2296,6 +2256,132 @@ Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacc
 * **Zonas de Control y Áreas Seguras (Safe Areas):** El layout se diseña sobre una grilla móvil simplificada (4 columnas). Se respeta estrictamente el uso de espacios negativos en los extremos de la pantalla y márgenes de seguridad para evitar superposiciones con los *notches* físicos de los dispositivos móviles o las barras de navegación del sistema operativo.
 * **Densidad e Interacción Táctil:** Aunque se mantiene la geometría redondeada en botones y campos de entrada (*Pill-shaped*), los objetivos de selección (*Touch Targets*) se configuran con un tamaño mínimo de `48px × 48px` para garantizar la precisión táctil de los dedos, implementando respuestas visuales instantáneas al presionar.
 * **Optimización de Elementos Críticos Móviles:** El despliegue de las alertas críticas de seguridad utiliza el color de error (*Error Red* `#ffb4ab`), maximizando el contraste sobre el fondo negro puro (`#000000`) de la aplicación. Las tipografías funcionales como *Body Medium (Geist)* a `16px` y *Label Caps* a `12px` se configuran con interlineados generosos para facilitar una lectura veloz en situaciones de alerta en el celular.
+
+
+
+# 5.1.2.3. Diseño de la Solución IoT: NexBell (SafeTower Access)
+
+**1. Definition of the System Requirements**
+
+| Categoría | Especificación |
+|-----------|----------------|
+| **Objetivo Principal** | Control de accesos inteligente, videoportería virtual automatizada y seguridad perimetral para edificios residenciales bajo la premisa de "Zero Hardware" en departamentos. |
+| **Parámetros a Medir** | Distancia del visitante (presencia estática en el umbral), vibración/impactos estructurales (forcejeo de la puerta), estado físico de los botones de conserje y residente. |
+| **Requisitos Funcionales** | • Detección automática de visitantes por proximidad.<br>• Alerta inmediata ante intentos de forcejeo o vandalismo.<br>• Control dinámico bajo demanda de los flujos multimedia (Cámara/Micrófono).<br>• Accionamiento de apertura remota mediante interfaces dedicadas.<br>• Flujo automatizado de registro de edificios con enrolamiento obligatorio de residentes.<br>• Registro flexible de visitantes según el nivel de privacidad del usuario. |
+| **Requisitos No Funcionales** | • Tiempo de envío de alerta push < 4 segundos.<br>• Operación 24/7 en punto de control residencial.<br>• Cifrado extremo a extremo para flujos de vídeo y audio de la cámara y micrófono.<br>• Resiliencia local para almacenar logs de vibración si ocurre desconexión de red. |
+
+**2. Selection of the IoT System Typology**
+
+| Aspecto | Descripción |
+|---------|-------------|
+| **Tipo de Sistema** | **Real-time Event-Driven & Multimedia Access Control IoT System** con arquitectura Edge-Cloud. |
+| **Topología** | Nodo perimetral (ESP32 con sensores y periféricos de captura) conectado vía WiFi directamente hacia el NexBell API Core en el Cloud. |
+| **Procesamiento** | **Edge Local:** Muestreo continuo del sensor de distancia y vibración; conmutación física (encendido/apagado) de la cámara y el micrófono para optimizar recursos y resguardar la privacidad. **Cloud:** Lógica transaccional de registro de edificaciones, orquestación de notificaciones enriquecidas e intercambio distribuido de flujos multimedia dinámicos hacia los clientes. |
+| **Resiliencia** | Búfer local en el nodo perimetral para registrar alarmas críticas de vibración por forcejeo aun si el servicio Cloud se interrumpe temporalmente. |
+
+**3. Definition of Physical Layer Requirements**
+
+| Componente | Especificaciones Técnicas |
+|------------|---------------------------|
+| **Sensor de Distancia (Ultrasónico HC-SR04)** | • Determina de manera analítica si hay alguien parado en la puerta.<br>• Precisión de 2cm a 400cm, calibrado para reducir falsos positivos de peatones casuales. |
+| **Sensor de Vibración (SW-420 / Piezoeléctrico)** | • Determina si alguien está forcejeando la puerta mediante la medición de impactos continuos.<br>• Salida digital con umbral de sensibilidad ajustable. |
+| **Botón de Conserje** | • Pulsador físico de hardware instalado en la garita operativa para control manual inmediato (Mapeado a GPIO con interrupción). |
+| **Botón de Residente** | • Pulsador físico/simulado para pruebas de laboratorio que simula la solicitud interna o de emergencia (Mapeado a GPIO). |
+| **Cámara Integrada (Actuador)** | • Dispositivo multimedia de captura visual. Recibe comandos para prenderse y apagarse bajo demanda (solo cuando hay presencia confirmada o el usuario lo solicita). |
+| **Micrófono Integrada (Actuador)** | • Transductor de audio bidireccional. Recibe comandos electrónicos para prenderse y apagarse bajo demanda para entablar comunicación activa. |
+
+**4. Definition of Exchange Layer Requirements**
+
+| Capa | Protocolo / Tecnología | Descripción |
+|-----------|-----------|-------------|
+| **Embedded → Cloud** | HTTPS / MQTT (TLS) | Publicación de telemetría del sensor ultrasónico, alarmas de vibración y estado de los botones. |
+| **Multimedia Streaming** | WebRTC / RTSP sobre HTTP | Transmisión dinámica bajo demanda de los flujos de la cámara y micrófono activados hacia las aplicaciones cliente. |
+| **Cloud → Interfaces** | WebSockets (SignalR) / FCM | SignalR para el dashboard del conserje (con todo en tiempo real); Firebase Cloud Messaging para alertas móviles a residentes. |
+| **Formato Datos** | JSON | Payload estructurado con flags dinámicos: `distance_cm`, `tampering_vibration`, `conserje_btn_pressed`, `residente_btn_pressed`, `camera_status`, `mic_status`. |
+| **Seguridad** | Hashing, JWT, TLS 1.2 | Protección contra suplantación física del hardware y cifrado de los flujos multimedia. |
+
+**5. Definition of Information Layer Requirements**
+
+| Proceso | Detalle |
+|---------|---------|
+| **Adquisición Datos** | GPIO para lectura de botones e interrupción de vibración. Pulsos de Trigger/Echo para el sensor ultrasónico de distancia. |
+| **Lógica de Fusión** | El nodo perimetral procesa los datos del sensor ultrasónico; si detecta que la distancia es menor a 1 metro de forma sostenida, confirma que "hay alguien parado en la puerta" y habilita la orden para prender la cámara. Si el sensor de vibración supera el límite programado, interrumpe el ciclo común para emitir una alerta inmediata de forcejeo. |
+| **Estructura JSON** | `{"device":"gate_01", "distance_cm":45, "forcejeo_alarm":true, "buttons":{"conserje":false, "residente":false}, "actuators":{"camera":"on", "mic":"off"}}` |
+| **Buffer Local** | Cola local en memoria no volátil para asegurar el registro de alarmas por forcejeo durante caídas de red. |
+| **Sincronización** | Estampado de tiempo mediante servidores NTP para garantizar la inmutabilidad de los logs de auditoría. |
+
+**6. Definition of Application Service Layer Requirements**
+
+Se definen estrictamente dos perfiles de interfaz de usuario con capacidades y funciones diferenciadas según su rol operativo:
+
+| Interfaz | Funcionalidades |
+|----------|----------------|
+| **Conserje (Web Dashboard - Con Todo)** | • Monitoreo centralizado y total de todos los accesos en grillas de tiempo real.<br>• Transmisión y control absoluto del flujo multimedia (conmutadores virtuales para prender y apagar la cámara y el micrófono remotamente).<br>• Visualización de la cola priorizada de visitas, paneles para entrada manual y alertas parpadeantes/sonoras inmediatas cuando el sensor de vibración detecta que están forcejeando la puerta.<br>• Accionamiento maestro de apertura y lectura del estado de los botones físicos. |
+| **Usuario / Residente (Móvil - Menos Funciones)** | • Interfaz simplificada acotada exclusivamente al control del departamento correspondiente.<br>• Recepción de notificaciones push interactivas basadas en la presencia detectada por el sensor de distancia.<br>• Activación temporal bajo demanda de la cámara y el micrófono (prender/apagar) para validar la identidad de su invitado antes de autorizar.<br>• Acciones rápidas para aprobar o rechazar el ingreso a la torre. |
+
+**7. Selection of the Architectures of Data Exchange and Information Integration Layers**
+
+| Componente | Tecnología | Función |
+|------------|------------|---------|
+| **Cloud API Gateway** | .NET / C# Web API | NexBell API Core centralizado para el enrutamiento seguro, RBAC y exposición de los microservicios. |
+| **Microservicios (DDD)** | .NET / C# | Contextos especializados: IAM, Directory, Security (Core), Audit e Intercom (orquestador de los switches multimedia). |
+| **Database** | SQL Server / PostgreSQL | Tablas transaccionales de topología de edificios, logs de forcejeo inmutables, directorio de residentes y credenciales. |
+| **Message Broker / RT** | MQTT Broker / SignalR | Canal de comunicación bidireccional en tiempo real para transmitir datos de sensores y propagar comandos para prender y apagar actuadores de manera instantánea. |
+| **External Services** | Firebase (FCM) / SMTP | Despacho de notificaciones push móviles para residentes y envío automático de correos institucionales de confirmación. |
+
+**8. Selection of the Sensors and the Actuators**
+
+| Componente | Rol en NexBell | Especificaciones Clave |
+|------------|----------------|------------------------|
+| **Sensor Ultrasónico** | Activador de flujo | Determina si hay alguien parado en la puerta de forma continua para dar inicio al flujo touchless. |
+| **Sensor de Vibración** | Alerta de Seguridad | Monitorea el marco de la entrada para disparar alarmas inmediatas ante un forcejeo físico. |
+| **Botones de Hardware** | Entrada de control manual | Pulsadores físicos (conserje/residente) integrados al sistema para interactuar directamente desde el punto de control. |
+| **Cámara Integrada** | Actuador Multimedia | Periférico de captura visual controlable. Cambia de estado (se prende y apaga) electrónicamente según la presencia o solicitud de la UI. |
+| **Micrófono y Altavoz** | Actuador de Audio | Periférico de comunicación bidireccional controlable. Cambia de estado (se prende y apaga) bajo demanda del operador. |
+| **Relé Electromagnético**| Actuador de Apertura | Recibe el pulso eléctrico desde el microcontrolador para liberar la chapa física de la puerta tras una aprobación. |
+
+**9. Selection of the Microcontroller**
+
+| Aspecto | Especificaciones (ESP32-WROVER-E / ESP32-CAM) |
+|---------|--------------------------------------|
+| **Microcontrolador** | Dual-core Xtensa LX6 @ 240MHz con un mínimo de 4MB/8MB de PSRAM externa. |
+| **Justificación Periféricos**| La PSRAM adicional es estrictamente necesaria para sostener los buffers de video e hilos de procesamiento dedicados a prender y apagar la cámara y el micrófono de forma dinámica sin provocar desbordamientos de memoria. |
+| **Pines y E/S** | GPIOs con soporte de interrupciones de hardware dedicados al sensor de vibración (SW-420) y a las lecturas en tiempo real de los botones de conserje y residente. |
+| **Alimentación** | 5V constantes a través de una fuente regulada para sostener los picos de corriente cuando los actuadores multimedia se prenden simultáneamente. |
+
+**10. Definition of the Data Processing for Each Node and in Cloud**
+
+### Flujo de Registro de Edificio (Ecosistema Cloud e Interfaces)
+1. **Ingreso al Formulario:** La empresa administradora entra al formulario web de registro público e ingresa obligatoriamente tres datos esenciales: *Dirección del edificio*, *Número de departamentos* y el *Correo electrónico del representante*.
+2. **Generación de Credenciales Temporales:** El Cloud procesa la solicitud, estructura la topología habitacional y autogenera una lista de usuarios iniciales asociados a cada departamento con **credenciales basura** (contraseñas provisorias de un solo uso).
+3. **Despacho del Correo:** Le llega un correo electrónico automatizado de confirmación al representante legal conteniendo el listado completo de estas credenciales basura para su distribución interna.
+4. **Enrolamiento Obligatorio del Residente:** Cada residente ingresa por primera vez a la *Mobile App* utilizando su respectiva credencial basura. El sistema detecta este estado y bloquea la navegación, siendo **obligatorio ingresar sus credenciales reales** (correo personal y contraseña definitiva) para activar la cuenta y poder usar el sistema.
+
+### Estructura de Datos para el Registro de Visitante
+El sistema opera con un esquema flexible de pre-registro (móvil) o registro directo (conserjería) adaptado a los siguientes campos en la base de datos:
+* **Nombre** (Obligatorio - String)
+* **DNI** (Opcional - String)
+* **Imagen / Fotografía** (Opcional - URL / Blob)
+* **Teléfono** (Recontra opcional - String)
+
+**11. Analysis of the Processing Time**
+
+| Operación | Capa | Latencia Estimada |
+|-----------|------|-------------------|
+| Cálculo analítico de presencia (Sensor Ultrasónico) | Embedded | < 80 ms |
+| Detección de impacto continuo e interrupción (Vibración/Forcejeo) | Embedded | < 30 ms |
+| Procesamiento del evento en API Core y enrutamiento | Cloud | < 250 ms |
+| Despacho y entrega Push (FCM) al smartphone del usuario | Network | 1 a 2.5 segundos |
+| Conmutación electrónica para prender/apagar Cámara o Micrófono | Embedded | < 150 ms tras la orden de la UI |
+| **Latencia Total de Experiencia** | End-to-End | **< 3.5 segundos (Detección a Smartphone)** |
+
+**12. Definition of the Graphical User Interface**
+
+| Dispositivo / App | Componentes Clave de UI |
+|-------------------|--------------------------|
+| **Conserje (Web Dashboard - Con Todo)**| • Panel principal tipo centro de control con cuadrículas de video continuas.<br>• Conmutadores virtuales (switches interactivos ON/OFF) para prender y apagar remotamente la cámara y el micrófono del punto físico.<br>• Tabla en tiempo real de la cola de visitas, controles para el registro manual de visitantes (Nombre, DNI opcional, Imagen opcional, Teléfono) e indicadores visuales semafóricos parpadeantes que alertan sobre un forcejeo detectado por el sensor de vibración.<br>• Botón masivo para "Abrir Puerta" y visualización del estado de los botones de hardware. |
+| **Usuario / Residente (Móvil - Menos Funciones)** | • Vista minimalista enfocada en la recepción pasiva y pre-registro de sus invitados.<br>• Modal interactivo ante la llegada de visitas (alertadas por el sensor de distancia) que le permite al usuario prender o mantener apagada la cámara y micrófono mediante toggles en la pantalla antes de accionar los botones de "Aprobar" o "Rechazar" el acceso. |
+| **Formularios del Sistema** | • Formulario web corporativo de registro para empresas (Dirección, Número de departamentos y Correo del representante).<br>• Pantalla restrictiva de bloqueo en el primer inicio de sesión del residente con la leyenda obligatoria: *"Actualización de seguridad requerida: Ingrese sus credenciales reales para activar su cuenta"*. |
 
 ### 5.2. Information Architecture
 
@@ -2730,59 +2816,69 @@ Enlace del video: https://tinyurl.com/yc3c7emm
 
 - **Editor:** Wokwi
 - **Microcontrolador:** ESP32 DevKit C V4
-- **Sensores y actuadores:** PIR, ultrasonico HC-SR04, sensor de sonido (simulado), electromagnetico (simulado), LED de estado
+- **Sensores y actuadores:** Ultrasónico HC-SR04 (distancia), sensor de vibración (SW-420), botón de conserje, botón de residente, cámara controlable, micrófono controlable, LED de estado.
 
-### Componentes y proposito
+### Componentes y propósito
 
-| Componente | Rol en NexBell | Descripcion tecnica |
+| Componente | Rol en NexBell | Descripción técnica |
 |-----------|-----------------|---------------------|
-| **ESP32 DevKit C V4** | Nodo principal | WiFi integrado, ADC para sensores analogicos, GPIO para control de actuadores |
-| **PIR Motion Sensor** | Deteccion de presencia | Dispara evento de llegada de visitante |
-| **HC-SR04** | Proximidad/confirmacion | Valida distancia a puerta y reduce falsos positivos |
-| **Potenciometro “Electromag”** | Estado de puerta (simulado) | Simula lectura de sensor magnetico en la puerta |
-| **Potenciometro “Sound Sensor”** | Evidencia de audio (simulada) | Simula nivel de ruido/voz en la puerta |
-| **LED** | Estado local | Indicador de alertas o estado de conexion |
+| **ESP32 DevKit C V4** | Nodo principal | WiFi integrado, control de periféricos de entrada/salida y procesamiento en el Edge de estados multimedia. |
+| **HC-SR04 (Ultrasonico)** | Distancia / Presencia | Determina con precisión si hay alguien parado en la puerta para activar el flujo automatizado de atención. |
+| **Sensor de Vibración** | Seguridad perimetral | Determina si alguien está forcejeando la puerta mediante la detección de impactos mecánicos o vandalismo. |
+| **Botón de Conserje** | Entrada manual | Pulsador físico que permite al conserje interactuar directamente o forzar la apertura desde su garita. |
+| **Botón de Residente** | Entrada manual | Pulsador físico/simulado para pruebas de laboratorio que activa comandos internos desde el entorno residencial. |
+| **Cámara** | Actuador multimedia | Módulo de captura de video que se prende y apaga electrónicamente a solicitud del sistema o las aplicaciones cliente. |
+| **Micrófono** | Actuador multimedia | Módulo de captura de audio bidireccional que se prende y apaga bajo demanda operativa para resguardar la privacidad. |
+| **LED de estado** | Indicador local | Ofrece feedback visual rápido sobre el procesamiento, errores o el estado de apertura de la cerradura. |
 
-### Conexiones principales 
+### Conexiones principales
 
-| Sensor/Actuador | Pin ESP32 | Tipo de senal |
+| Sensor/Actuador | Pin ESP32 | Tipo de señal |
 |----------------|-----------|---------------|
 | LED (con resistencia) | GPIO 2 | Digital (salida) |
-| PIR OUT | GPIO 13 | Digital (entrada) |
 | HC-SR04 TRIG | GPIO 5 | Digital (salida) |
 | HC-SR04 ECHO | GPIO 18 | Digital (entrada) |
-| Electromag (pot) | GPIO 34 | Analogica (entrada) |
-| Sound sensor (pot) | GPIO 32 | Analogica (entrada) |
+| Sensor de Vibración OUT | GPIO 13 | Digital (entrada / interrupción) |
+| Botón de Conserje | GPIO 12 | Digital (entrada) |
+| Botón de Residente | GPIO 14 | Digital (entrada) |
+| Cámara (Pin de Control) | GPIO 21 | Digital (salida - se prende y apaga) |
+| Micrófono (Pin de Control) | GPIO 22 | Digital (salida - se prende y apaga) |
 
-### Constraints para NexBell 
+### Arquitectura de software en el dispositivo
 
-1. **Instalacion sin cableado interno:** El dispositivo no debe requerir cableado hacia departamentos. Se prioriza WiFi local.
-2. **Latencia operativa:** La deteccion y notificacion debe ocurrir en segundos (flujo visitante → alerta).
-3. **Robustez en porteria:** Sensores deben resistir uso diario y cambios de iluminacion/ruido.
-4. **Consumo moderado:** Operacion continua en puntos de acceso sin sobrecargar energia.
-5. **Escalabilidad modular:** Sensores pueden reemplazarse o mejorarse sin afectar el firmware base.
+1. **Monitoreo Eficiente:** El firmware utiliza interrupciones de hardware específicas en el GPIO para capturar eventos de vibración (forcejeo) al instante sin bloquear el bucle principal.
+2. **Control Energético y de Privacidad:** La cámara y el micrófono permanecen en estado inactivo por defecto y cambian de estado (se prenden y apagan) de manera dinámica de acuerdo con los umbrales de presencia física u órdenes remotas.
+3. **Filtro de Ruido:** Lecturas continuas del sensor ultrasónico para evitar falsas alarmas provocadas por peatones que transitan fuera del rango crítico de la puerta.
+
+### Especificaciones técnicas adicionales
+
+1. **Instalación sin cableado interno:** El dispositivo no requiere cableado hacia los departamentos. Centraliza toda la comunicación mediante WiFi local directamente hacia el NexBell API Core.
+2. **Latencia operativa:** Diseñado para que la telemetría crítica de distancia y forcejeo se despache en milisegundos hacia el backend.
+3. **Robustez en portería:** Uso de sensores mecánicos y ultrasónicos de alta fidelidad estables ante fluctuaciones de luz y ruido ambiental.
+4. **Interfaces de Usuario Diferenciadas:** - *Conserje (Web, con todo):* Panel de administración central que consolida el streaming multimedia, registros de visitas, alarmas por forcejeo, manipulación remota de actuadores (prender/apagar cámara y micrófono) y control de accesos.
+    - *Usuario (Móvil, menos funciones):* Aplicación acotada estrictamente a la gestión de su departamento, pre-registro de visitas y recepción de alertas de proximidad con habilitación multimedia bajo demanda.
+5. **Flujo de Registro de Edificio:** - La empresa administradora accede a un formulario de registro web e ingresa: *Dirección del edificio*, *Número de departamentos* y *Correo electrónico del representante*.
+    - El sistema procesa y envía un correo de confirmación al representante con el listado de usuarios iniciales asociados a contraseñas provisorias (*credenciales basura*).
+    - En el primer ingreso de cada residente a la plataforma móvil, el sistema obliga de manera mandatoria a sustituir el acceso provisional por *credenciales reales* y definitivas para activar la cuenta.
+6. **Esquema de Registro de Visitante:** Estructura de datos flexible adaptada a los requerimientos de privacidad:
+    - *Nombre* (Obligatorio)
+    - *DNI* (Opcional)
+    - *Imagen* (Opcional)
+    - *Teléfono* (Recontra opcional)
 
 ### Flujos de IoT soportados
 
-- **Deteccion de llegada:** PIR activa evento inicial.
-- **Confirmacion de presencia:** HC-SR04 valida distancia.
-- **Estado de puerta:** Lectura analogica simula estado abierto/cerrado.
-- **Evidencia local:** Sensor de sonido simula captura de audio ambiente.
-- **Indicacion local:** LED senala estado del sistema o alerta.
+- **Determinación de presencia:** El sensor ultrasónico analiza la proximidad; si detecta que hay alguien parado en la puerta, notifica a la nube y prepara los actuadores.
+- **Detección de Forcejeo:** El sensor de vibración evalúa impactos anómalos continuos en la estructura física y dispara una alerta de seguridad prioritaria en el dashboard del conserje.
+- **Accionamiento Manual:** Los botones físicos de hardware permiten registrar conmutaciones locales directas del conserje o del residente en el punto de control.
+- **Gestión Multimedia bajo demanda:** Recepción y ejecución de comandos remotos para prender y apagar la cámara y el micrófono según los requerimientos de la llamada de videoportería en curso.
 
-### Validacion preliminar
+### Validación preliminar
 
-- Lecturas analogicas estables en GPIO 32/34.
-- Activacion y lectura digital de PIR.
-- Medicion de distancia con HC-SR04 funcional.
-- LED responde a eventos locales como prueba de estados.
-
-### Observaciones
-
-- En esta fase, sensores de puerta y sonido se simulan con potenciometros. En la version fisica se reemplazaran por sensor magnetico real y microfono con preamplificador.
-- La arquitectura esta preparada para evolucionar hacia captura multimedia real (camara + microfono), manteniendo el ESP32 como nodo de control.
-
-<div style="page-break-after: always;"></div>
+- Lecturas del sensor ultrasónico calibradas de forma analítica en centímetros.
+- Interrupción digital del sensor de vibración validada ante impactos continuos simulados.
+- Entrada digital limpia de los pulsadores físicos con lógica anti-rebote (debounce).
+- Control de los pines analógicos y digitales encargados de prender y apagar los actuadores multimedia emulado con éxito mediante estados lógicos (HIGH/LOW).
 
 # Capítulo VI: Product Implementation, Validation & Deployment
 
