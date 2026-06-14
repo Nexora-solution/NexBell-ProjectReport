@@ -3439,6 +3439,113 @@ A través del análisis de las métricas de GitHub, se evidencia la sinergia alc
 
 <div style="page-break-after: always;"></div>
 
+
+### 6.2.2. Sprint 2
+#### 6.2.2.1.Sprint Planning 2.
+
+El segundo sprint de este proyecto representa la etapa de consolidación, madurez e integración integral de la solución NexBell. Las evidencias e implementaciones presentadas a continuación reflejan un avance significativo en la tangibilidad del producto, optimizando la experiencia digital en todos sus puntos de contacto y garantizando un sistema robusto, alineado con las expectativas técnicas y operativas planteadas para esta iteración.
+
+| Campo | Detalle |
+| --- | --- |
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | En el Sprint 2 decidimos reunirnos virtualmente para realizar una auditoría cruzada del avance individual y grupal tras el cierre de la primera entrega (TB1). Evaluamos la consolidación de la presencia digital (Landing Page) y las interfaces del Frontend, y planificamos las acciones inmediatas para iniciar la integración con la lógica táctica del backend y la simulación del hardware IoT. |
+| **Date** | 2026-06-08 |
+| **Time** | 4:00 PM |
+| **Location** | Virtual (Google Meet Call) |
+| **Prepared By** | Gómez Flores, Daniela Araceli |
+| **Attendees (to planning meeting)** | <ul><li>Gómez Flores, Daniela Araceli</li><li>Bellido Salas, Raúl</li><li>Borja Molina, Gabriel Sebastián</li><li>Suárez Romero, Santiago Manuel</li><li>Burga Loarte, Anaely Zarely</li></ul> |
+| **Sprint n - Review Summary** | Revisamos el despliegue del Frontend en Netlify, confirmando que la maquetación de la Landing Page y las interfaces visuales (UI) del panel del portero con datos simulados (Mocks) se completaron con éxito (Done). Discutimos las guías de estilo aplicadas (PascalCase en Vue) y el estado de la arquitectura táctica. Identificamos retrasos en la conexión de servicios reales y hardware, lo que nos obligó a mover las tareas complejas de IoT y persistencia a este nuevo ciclo. |
+| **Sprint n - Retrospective Summary** | **Start:**<br><ul><li>Iniciar el diseño táctico DDD del backend (Bounded Contexts) y la configuración del entorno IoT en Wokwi de forma paralela a la UI.</li><li>Documentar los criterios de aceptación de las historias de usuario de backend desde el primer día.</li></ul><br>**Stop:**<br><ul><li>Dejar de trabajar con datos simulados (Mocks) de forma permanente; es necesario empezar a persistir datos de manera real.</li><li>Evitar posponer las pruebas de hardware físico/simulado para el final del ciclo.</li></ul><br>**Continue:**<br><ul><li>Mantener el flujo de despliegue continuo (CI/CD) automatizado en Netlify.</li><li>Realizar auditorías de código constantes para asegurar los estándares de nomenclatura y limpieza del proyecto.</li></ul> |
+| **Sprint Goal & User Stories** | **Sprint 2 Goal:**<br>Nuestro objetivo es pasar de interfaces estáticas a la funcionalidad lógica y simulación del ecosistema NexBell.<br>Creemos que esto nos permitirá validar el núcleo de seguridad del sistema mediante la captura automatizada de datos y el control de accesos.<br>Esto se confirmará cuando la simulación del hardware en Wokwi (ESP32 con sensores) envíe alertas de presencia exitosas y la arquitectura táctica del backend autentique y procese correctamente las credenciales y roles del personal de seguridad. |
+| **Sprint 2 Velocity** | 35 |
+| **Sum of Story Points** | 26 |
+
+#### 6.2.2.2.Aspect Leaders and Collaborators.
+
+Con el objetivo de garantizar una ejecución eficiente y mantener la alta calidad en los entregables del proyecto durante el Sprint 2, se han redistribuido las responsabilidades técnicas del equipo de acuerdo con las especialidades y competencias individuales de sus miembros. La siguiente tabla detalla la organización interna del equipo, identificando mediante las siglas L (Leader) a la persona responsable de la dirección estratégica de cada componente, y con la sigla C (Collaborator) a quienes brindaron soporte activo en su co-desarrollo e implementación.
+
+| Team Member | GitHub Username | Identidad Visual y Diseño UX/UI | Desarrollo de la Landing Page | Arquitectura de Frontend y Mocking de Datos | Desarrollo de Backend y API | Desarrollo de Aplicación Móvil | Arquitectura de Edge y Software Embebido | Configuración de CI/CD y Despliegue | Gestión de Documentación e Informe Final |
+|---|---|---|---|---|---|---|---|---|---|
+| Bellido Salas, Raúl | raulbellidosalas | C | C | C | L | C | C | C | C |
+| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | C | L | C | C | L |
+| Suárez Romero, Santiago Manuel | SDarXx | C | C | C | C | C | L | C | C |
+| Gómez Flores, Daniela Araceli | DanieGF1 | L | L | L | C | C | C | C | C |
+| Burga Loarte, Anaely Zarely | userxx1000 | C | C | C | C | C | C | C | L |
+
+#### 6.2.2.3.Sprint Backlog 2.
+
+Se priorizaron los requerimientos asociados al procesamiento lógico en el backend, la comunicación bidireccional mediante APIs, el desarrollo de la interfaz móvil nativa para la recepción de alertas por parte de los residentes, y la programación del software embebido (Edge) en el microcontrolador. Cada tarea ha sido estimada en horas de esfuerzo y asignada de forma colaborativa, asegurando la trazabilidad del desarrollo desde el requerimiento del usuario hasta su despliegue final en producción. A continuación, se presenta la matriz detallada de ejecución del Sprint 2:
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| US37 | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Anaely Burga | Done |
+| US37 | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Anaely Burga | Done |
+| US38 | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Anaely Burga | Done |
+| US39 | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Santiago Suárez | Done |
+| US40 | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Anaely Burga | Done |
+| US41 | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Daniela Gómez | Done |
+| US01, US02 | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Santiago Suárez | Done |
+| US03 | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Santiago Suárez | Done |
+| US15 | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Raúl Bellido | Done |
+| US15 | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Raúl Bellido / Daniela Gómez | Done |
+| US16 | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Santiago Suárez | Done |
+| General | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Gabriel Borja | Done |
+| General | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Daniela Gómez | Done |
+| US10, US11 | Captura IoT | TS14 | IoT Hardware Simulation (Wokwi) | Configuración del entorno simulado en Wokwi usando ESP32, sensores PIR y lógica de comunicación básica MQTT/HTTP. | 12 | Gabriel Borja | In Progress |
+| US35, US36 | Seguridad | TS15 | IAM Tactic Architecture & BCrypt | Diseño de la capa de persistencia, hashing de contraseñas con BCrypt y definición de roles (RBAC) para el backend. | 14 | Raúl Bellido | In Progress |
+
+#### 6.2.2.4.Development Evidence for Sprint Review.
+
+Con la finalidad de garantizar la transparencia, la trazabilidad técnica y el cumplimiento de las metodologías ágiles, a continuación se presenta la bitácora de evidencias de desarrollo correspondientes al Sprint 2. Los datos recopilados en la presente matriz provienen directamente de los repositorios oficiales de la organización Nexora en GitHub y reflejan el historial de confirmaciones (commits) efectuados por el equipo de ingeniería.
+
+#### 6.2.2.5.Testing Suite Evidence for Sprint Review.
+
+
+
+#### 6.2.2.6.Execution Evidence for Sprint Review.
+
+En este Sprint 2, el equipo Nexora ha finalizado con éxito la integración vertical y el desarrollo integral del ecosistema NexBell. Se ha logrado trascender las interfaces estáticas del ciclo anterior para consolidar un sistema completamente interactivo y funcional en tiempo real. Este hito representa la convergencia del 100% de los componentes críticos de la solución: el procesamiento lógico en el backend, el aplicativo móvil para residentes y el comportamiento del software embebido en el hardware de portería.
+
+Logros Alcanzados en la Integración del Sistema:
+
+**Ecosistema Backend y API Rest:** Despliegue de los servicios lógicos y bases de datos transaccionales, permitiendo el procesamiento e intercambio de información real entre todos los nodos del sistema.
+
+**Aplicativo Móvil Residencial:** Implementación completa de la app móvil nativa para los residentes, habilitando la recepción de notificaciones push asíncronas para el control de accesos.
+
+**Conectividad IoT / Edge:** Programación y puesta en marcha del software embebido en el microcontrolador de portería, logrando capturar los eventos físicos de ingreso y enrutarlos hacia la nube.
+
+**Sincronización en Tiempo Real:** Validación de flujos críticos integrados, donde una acción iniciada en el hardware se refleja instantáneamente en el panel web de conserjería y activa la alerta en el smartphone del usuario.
+
+Se presenta un video demostrativo que registra el flujo completo de la solución: desde la interacción inicial con el dispositivo IoT en portería, el procesamiento y almacenamiento de los datos en el backend, hasta la recepción de la alerta multimedia y posterior autorización de acceso en el aplicativo móvil del residente.
+
+<p align="center">
+  <img src="" alt="XD" width="1000">
+</p>
+Link del video: []()
+
+#### 6.2.2.7.Services Documentation Evidence for Sprint Review.
+
+En este segundo ciclo, el equipo ha culminado el diseño, desarrollo e implementación de la capa de servicios y lógica de negocio centralizada en el Backend de NexBell. Para garantizar que los servicios web sean escalables, seguros y fácilmente consumibles por el aplicativo móvil y la plataforma web, se ha estructurado una arquitectura de microservicios/APIs RESTful debidamente documentada bajo el estándar OpenAPI (Swagger).
+
+A continuación, se presentan las evidencias técnicas que respaldan la viabilidad y correcto funcionamiento de los servicios desarrollados durante el Sprint 2:
+
+<p align="center">
+  <img src="" alt="XD" width="1000">
+</p>
+
+#### 6.2.2.8.Software Deployment Evidence for Sprint Review.
+
+Durante el presente Sprint 2, el equipo Nexora ha expandido la infraestructura de despliegue y entrega continua (CI/CD) para soportar la arquitectura distribuida del ecosistema NexBell. Las actividades de aprovisionamiento pasaron de la distribución de contenido estático a la configuración de entornos en la nube capaces de soportar servicios web transaccionales, persistencia de datos y la distribución del aplicativo móvil residencial.
+
+El proceso abarcó la automatización de canalizaciones que compilan, prueban y despliegan el código de forma automática ante cada cambio en las ramas principales de Git. A continuación, se detallan los entornos de producción activos, sus respectivos enlaces de acceso y las evidencias de despliegue exitoso para cada componente de la solución:
+
+#### 6.2.2.9.Team Collaboration Insights during Sprint.
+## 6.3. Validation Interviews.
+### 6.3.1. Diseño de Entrevistas.
+### 6.3.2. Registro de Entrevistas.
+### 6.3.3. Evaluaciones según heurísticas.
+## 6.4. Video About-the-Product.
+
 # Conclusiones
 
 Fundamentación Estratégica y Centrada en el Usuario:
