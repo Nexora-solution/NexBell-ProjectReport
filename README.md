@@ -2582,6 +2582,8 @@ En esta sección se detalla el diseño de la interfaz y la experiencia de usuari
 
 #### 5.4.1. Applications Wireframes.
 
+Web Application:
+
 Se presentan los wireframes de baja fidelidad que definen la arquitectura de información y el flujo de navegación de la aplicación web. Estos esquemas permiten validar la disposición de los módulos de control, el tablero de monitoreo y las secciones de auditoría sin distracciones visuales. El objetivo principal es asegurar que las funcionalidades críticas sean accesibles con la menor cantidad de clics posibles, optimizando el tiempo de respuesta ante eventos de seguridad.
 
 *- Vista de Inicio de sesion*
@@ -2619,7 +2621,143 @@ Se presentan los wireframes de baja fidelidad que definen la arquitectura de inf
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682629/Html_Body_10_uofxgt.png" width="1000">
 </p> 
-#### 5.4.2. Applications Wireflow Diagrams.
+
+
+**Interfaz Móvil**
+
+El diseño estructural se ha centrado en la inmediatez operativa, ubicando los botones de acción crítica —como la autorización o denegación de acceso— en zonas de fácil alcance táctil (zona del pulgar). A continuación, se presentan los esquemas estructurales desarrollados en Figma, los cuales delimitan los espacios para la recepción de alertas asíncronas, el área de registro del visitante y la organización del módulo de historial de visitas; áreas que conforman el correcto funcionamiento del aplicativo para los residentes, garantizando una navegación intuitiva y libre de fricciones para cualquier tipo de usuario.
+
+*- Inicio:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194711_uuvsgy.png" width="200">
+</p>
+
+*- Presentación:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194738_u1liki.png" width="200">
+</p>
+
+*- Presentación 2:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194756_kewl5m.png" width="200">
+</p>
+
+*- Inicio de sesión:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194820_vxayck.png" width="200">
+</p>
+
+*- Solicitud de credenciales:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194842_f0amgc.png" width="200">
+</p>
+
+*- Solicitud aprobada:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194905_flkz87.png" width="200">
+</p>
+
+*- Inicio de sesión:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194927_p8jqgr.png" width="200">
+</p>
+
+*- Home:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401896/Pasted_image_20260613194951_oou0sw.png" width="200">
+</p>
+
+*- Notificaciones:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401605/Pasted_image_20260613203638_t3vqvv.png" width="200">
+</p>
+
+*- Historial de Visitas:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401606/Pasted_image_20260613203659_pm0tm1.png" width="200">
+</p>
+
+*- Historial de Visitas: Filtrar por tipo "Delibery"*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401606/Pasted_image_20260613203714_iw4c5t.png" width="200">
+</p>
+
+*- Historial de Visitas: Filtrar por tipo "Personal"*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401606/Pasted_image_20260613203735_kggeqp.png" width="200">
+</p>
+
+*- Detalles de Visita:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401606/Pasted_image_20260613203752_tpek5v.png" width="200">
+</p>
+
+*- Registro de visitantes:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401607/Pasted_image_20260613203946_ytv0ur.png" width="200">
+</p>
+
+*- Confirmación de registro:* 
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401608/Pasted_image_20260613204032_qtkfpe.png" width="200">
+</p>
+
+*- Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401608/Pasted_image_20260613204200_b014w1.png" width="200">
+</p>
+
+*- Gestionar Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401609/Pasted_image_20260613204219_sdztlp.png" width="200">
+</p>
+
+*- Editar Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401610/Pasted_image_20260613204238_nhtgnq.png" width="200">
+</p>
+
+*- Contraseña y Seguridad:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401610/Pasted_image_20260613204320_fwih4d.png" width="200">
+</p>
+
+*- Actualizar Contraseña:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401610/Pasted_image_20260613204258_ghplj6.png" width="200">
+</p>
+
+*- Contraseña Actualizada:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401611/Pasted_image_20260613204337_c8ytjc.png" width="200">
+</p>
+
+*- Notificaciones:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401612/Pasted_image_20260613204348_oz2iex.png" width="200">
+</p>
+
+*- Idioma:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401612/Pasted_image_20260613204410_e58xtm.png" width="200">
+</p>
+
+*- Sobre Nosotros:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401613/Pasted_image_20260613204444_vglkx3.png" width="200">
+</p>
+
+*- Tema:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401613/Pasted_image_20260613204458_y4lzra.png" width="200">
+</p>
+
+*- Ayuda y Soporte:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781401614/Pasted_image_20260613204511_gtppy8.png" width="200">
+</p>
+
+
 #### 5.4.2. Applications Mock-ups.
 
 Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
@@ -2748,6 +2886,7 @@ Este diagrama valida la jerarquía visual del panel de control central y el fluj
 
 Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
 
+Interfaz Web:
 
 *- Vista de Inicio de sesion*
 
@@ -2784,6 +2923,140 @@ Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación we
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_4_jk0muo.png" width="1000">
 </p> 
+
+**Interfaz Móvil**
+
+El flujo de pantallas de la aplicación ha sido estructurado meticulosamente para garantizar una experiencia de usuario (UX) intuitiva ante eventos críticos. Los diseños presentados a continuación ilustran los componentes clave del aplicativo, los cuales incluyen: el sistema de notificaciones push en tiempo real ante la llegada de visitas, el registro de los visitantes con todos los datos necesarios, los controles táctiles e inmediatos para la autorización o denegación de acceso, y el historial personalizado de visitantes. Esto consolida una experiencia ágil que traslada la seguridad del hogar directamente al smartphone del usuario.
+
+*- Inicio:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390876/Pasted_image_20260609235254_my5swt.png" width="200">
+</p>
+
+*- Presentación:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260609235359_ill6ae.png" width="200">
+</p>
+
+*- Presentación 2:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260609235626_mfakvp.png" width="200">
+</p>
+
+*- Inicio de sesión:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260609235741_ytu0mq.png" width="200">
+</p>
+
+*- Solicitud de credenciales:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260609235814_wea28z.png" width="200">
+</p>
+
+*- Solicitud aprobada:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260609235916_dzaitq.png" width="200">
+</p>
+
+*- Inicio de sesión:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260610000402_semsuq.png" width="200">
+</p>
+
+*- Home:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390877/Pasted_image_20260610000552_mtfylw.png" width="200">
+</p>
+
+*- Notificaciones:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610000832_tjtdze.png" width="200">
+</p>
+
+*- Historial de Visitas:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610001041_kkqvdz.png" width="200">
+</p>
+
+*- Historial de Visitas: Filtrar por tipo "Delibery"*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610001301_fytuvw.png" width="200">
+</p>
+
+*- Historial de Visitas: Filtrar por tipo "Personal"*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610001348_nkz7iz.png" width="200">
+</p>
+
+*- Detalles de Visita:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610001500_yikahu.png" width="200">
+</p>
+
+*- Registro de visitantes:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390878/Pasted_image_20260610001719_sjig0m.png" width="200">
+</p>
+
+*- Confirmación de registro:* 
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002125_dhwuyc.png" width="200">
+</p>
+
+*- Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002250_obc1me.png" width="200">
+</p>
+
+*- Gestionar Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002331_yomkvh.png" width="200">
+</p>
+
+*- Editar Perfil:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002437_k6r1nz.png" width="200">
+</p>
+
+*- Contraseña y Seguridad:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390880/Pasted_image_20260610004032_t6edxs.png" width="200">
+</p>
+
+*- Actualizar Contraseña:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002612_w3jygu.png" width="200">
+</p>
+
+*- Contraseña Actualizada:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390880/Pasted_image_20260610004122_uhfdjb.png" width="200">
+</p>
+
+*- Notificaciones:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610002928_m2je2k.png" width="200">
+</p>
+
+*- Idioma:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610003012_akavg4.png" width="200">
+</p>
+
+*- Sobre Nosotros:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390879/Pasted_image_20260610003106_d1aqhz.png" width="200">
+</p>
+
+*- Tema:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390880/Pasted_image_20260610003421_a8uamy.png" width="200">
+</p>
+
+*- Ayuda y Soporte:*
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781390880/Pasted_image_20260610003351_qybnuz.png" width="200">
+</p>
 
 ### 5.4.4. Applications User Flow Diagrams.
 
