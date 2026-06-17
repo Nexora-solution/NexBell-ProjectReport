@@ -3090,11 +3090,23 @@ Para validar la arquitectura de información, la consistencia visual y la usabil
 
 Nos aseguramos de consolidar toda la experiencia interactiva en un flujo continuo y unificado, eliminando puntos de inicio (*Flow starting points*) redundantes para garantizar que las pruebas de usuario y las simulaciones de navegación reflejen el comportamiento real del sistema en un entorno de producción.
 
+#### Web
+
 <p align="center">
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778696916/Captura_de_pantalla_2026-05-13_a_la_s_1.27.28_p._m._batmyt.png" width="1000">
 </p> 
 
 Enlace del video: https://tinyurl.com/yc3c7emm
+
+
+#### Mobile
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781670400/Captura_de_pantalla_2026-06-16_a_la_s_11.26.35_p._m._wij4oq.png" width="1000">
+</p> 
+
+
+Enlace del video: https://tinyurl.com/4h9xntt3
 
 #### Criterios de diseño e interacción implementados:
 
