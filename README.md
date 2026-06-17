@@ -2806,6 +2806,8 @@ s.
 
 En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
 
+**Interfaz Web**
+
 El prototipo se ha estructurado en cinco grupos de flujos operativos independientes para validar la usabilidad y la eficiencia del sistema antes de proceder con el desarrollo del software.
 
 ---
@@ -2881,6 +2883,100 @@ Este diagrama valida la jerarquía visual del panel de control central y el fluj
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778700345/Captura_de_pantalla_2026-05-13_a_la_s_2.25.39_p._m._houger.png" width="1000">
 </p> 
 
+**Interfaz Móvil**
+
+El prototipo móvil se ha estructurado en seis grupos de flujos operativos independientes orientados a la experiencia del usuario residente y la gestión remota de accesos, validando la usabilidad en dispositivos portátiles antes de proceder con el desarrollo de software de NexBell.
+
+---
+
+#### Grupo 1: Flujo de Onboarding, Registro de Credenciales e Inicio de Sesión
+Este diagrama mapea el ciclo de inducción del usuario, la solicitud formal de credenciales vinculadas al edificio y el acceso seguro a la plataforma móvil.
+
+**Descripción del Proceso:**
+1. **Pantalla de Inicio (Splash Screen):** El flujo inicia con la carga de la identidad visual de *Nexora / NexBell*, estableciendo la conexión base segura del sistema IoT.
+2. **Onboarding Secuencial:** El usuario navega a través de pantallas de presentación dinámicas (*"Mira quién llama"* y *"Acceso Inteligente"*), las cuales exponen las capacidades de videoportería digital y desbloqueo perimetral en tiempo real.
+3. **Solicitud de Credenciales:** En la vista *Tu edificio, digitalizado*, si el residente no cuenta con accesos, se bifurca hacia el formulario de *Registro de credenciales*. Aquí selecciona su unidad inmobiliaria (*Elegir edificio...*), número de departamento y correo electrónico. Al presionar **"Solicitar Credenciales →"**, el sistema procesa los datos y despliega el estado de *¡Solicitud Procesada!*, enviando las claves al buzón verificado.
+4. **Autenticación (Login):** Una vez obtenidas las credenciales, el flujo converge en la pantalla de *Inicio de Sesión (Nexbell Resident)*, donde el usuario ingresa su correo y contraseña estructurada. El backend valida el token e inicializa la sesión móvil.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672123/Captura_de_pantalla_2026-06-16_a_la_s_11.55.17_p._m._z1zzas.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 2: Flujo de Monitoreo Home y Procesamiento de Alertas en Tiempo Real
+Este diagrama detalla la interacción del residente con el panel principal y el control inmediato de solicitudes de acceso mediante notificaciones push.
+
+**Descripción del Proceso:**
+1. **Dashboard Home:** Al autenticarse, el residente accede a la pantalla *Home ("Hola, Julián")*, la cual renderiza dinámicamente los datos de su unidad (*Depto. 402 - Residencia San Martín*). Dispone de un componente de calendario interactivo para consultar el histórico y una lista breve de *Visitas de hoy* con estados en tiempo real (*Pendiente*).
+2. **Centro de Notificaciones:** Al presionar el isotipo de alerta, el flujo transiciona hacia la vista de *Notificaciones*. El sistema segrega las alertas cronológicamente (*Ahora*, *Hoy*, *Ayer*).
+3. **Control de Acceso IoT (Módulo Crítico):** Ante un evento activo de *Visita en puerta*, el sistema despliega una tarjeta de acción requerida con la identidad del visitante (*Roberto García*) y el portero asignado. El residente interactúa con dos disparadores de alta prioridad: **"Rechazar"** o **"Admitir"**. La aprobación dispara una instrucción síncrona al hardware de la cerradura, registrando el evento como *Laura G. fue admitida* o *Marco P. no pudo ingresar* según corresponda.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672616/Captura_de_pantalla_2026-06-17_a_la_s_12.03.31_a._m._wouy4l.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 3: Flujo de Consulta Histórica y Detalle Multimedia de Visitas
+Este diagrama valida la jerarquía visual del registro de auditoría perimetral y el desglose de metadatos de control de accesos.
+
+**Descripción del Proceso:**
+1. **Historial Central:** Desde la barra de navegación inferior fija, el usuario activa el módulo de *Actividad*, accediendo a la pantalla *Historial de visitas*. El sistema implementa filtros rápidos por pestañas de segmentación (*Todos*, *Delivery*, *Personal*).
+2. **Trazabilidad Visual:** Cada registro muestra el avatar del visitante, nombre, tipo de servicio, la hora exacta del evento y un tag de estado visual diferenciado (*Aprobado*, *Rechazado*, *No atendido*).
+3. **Ficha de Detalle de Visita:** Al presionar cualquier registro de la lista (ej. *Carlos Mendoza*), el flujo ejecuta una transición limpia hacia una pantalla extendida de auditoría. El sistema renderiza la fotografía en alta resolución del rostro, el DNI enmascarado por seguridad ($4***5678$), la fecha programada, la hora exacta de llegada (14:28), el operador que autorizó el ingreso (*Portero Pedro L.*) y el botón de acción para auditar el flujo histórico completo.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672496/Captura_de_pantalla_2026-06-17_a_la_s_12.01.30_a._m._wdjpzo.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 4: Flujo de Pre-registro y Programación Concurrente de Visitas Anticipadas
+Este diagrama describe el flujo lógico que sigue el residente para dar de alta un nuevo visitante en el sistema, optimizando el tiempo de procesamiento en la garita principal.
+
+**Descripción del Proceso:**
+1. **Formulario de Registro:** Desde el módulo *Visitas* del menú inferior, se despliega la interfaz *Registro de Visitantes*. El usuario captura de forma secuencial el nombre, documento de identidad (DNI) y carga una fotografía de referencia desde el almacenamiento del dispositivo.
+2. **Programación Cronológica:** El sistema interactúa con un modal flotante de selección de fecha y hora aproximada de llegada, permitiendo definir el bloque temporal de vigencia de la autorización.
+3. **Lógica de Concurrencia (Frecuencia):** El flujo incluye un componente *toggle* interactivo para parametrizar la recurrencia de la visita (*¿Repetir esta visita?*). Al activarse, abre un selector de días de la semana (L, M, M, J, V, S, D) y un calendario extendido para fijar la fecha límite de la autorización recurrente.
+4. **Persistencia en Backend:** Al presionar **"CREAR VISITA"**, el sistema valida la estructura de los campos y ejecuta un modal de éxito con el estado *¡VISITA AÑADIDA CON ÉXITO!*, actualizando instantáneamente la bitácora del portero en la interfaz web y concluyendo con el disparador *"Entendido"*.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672408/Captura_de_pantalla_2026-06-17_a_la_s_12.00.04_a._m._ytkvlg.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 5: Flujo de Configuración Global, Ajustes del Sistema y Soporte Directo
+Este diagrama mapea el panel de control del perfil del residente, la gestión de preferencias de la aplicación móvil y los canales de asistencia técnica.
+
+**Descripción del Proceso:**
+1. **Menú de Perfil:** Accesible desde la barra de navegación, la pantalla *Perfil* centraliza la gestión de la cuenta bajo el identificador único del usuario (*Julian Draxler*). Estructura los accesos hacia: *Gestionar Perfil*, *Contraseña y Seguridad*, *Notificaciones*, e *Idioma*.
+2. **Ajustes de la Aplicación:** El flujo permite interactuar con los submódulos de configuración:
+   * **Notificaciones:** *Toggles* funcionales para activar/desactivar permisos de alertas push, sonido de alerta y vibración del hardware móvil.
+   * **Idioma:** Selectores excluyentes de idioma base (Español / Inglés).
+   * **Tema:** Selección del entorno visual (Modo Oscuro optimizado para reducir la fatiga visual en pantallas OLED y conservar batería).
+3. **Centro de Soporte:** Si el usuario experimenta fallas con el intercomunicador o el streaming de video, se redirige al módulo *Ayuda y Soporte*. Este incluye un buscador parametrizado por temas populares y un panel de *Soporte Directo* con botones interactivos para enviar mensajes de texto de soporte o iniciar una llamada técnica automatizada 24/7.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672346/Captura_de_pantalla_2026-06-16_a_la_s_11.59.02_p._m._ibdsbs.png" width="1000">
+</p> 
+
+---
+
+#### Grupo 6: Flujo de Mantenimiento de Perfil y Actualización Segura de Credenciales
+Este diagrama detalla los pasos críticos para la edición de datos personales del residente y el flujo síncrono de reajuste de contraseñas.
+
+**Descripción del Proceso:**
+1. **Edición de Ficha Personal:** Al activar la interfaz *Editar Perfil*, el sistema habilita campos de entrada de texto estructurado para el Nombre Completo, Correo Electrónico y Teléfono celular. La propiedad de *Unidad Residencial* se renderiza bloqueada con un candado de seguridad para evitar modificaciones no autorizadas por la administración. El usuario confirma los cambios mediante el disparador **"Guardar Cambios"**.
+2. **Actualización de Clave de Seguridad:** Desde el menú de seguridad, el flujo guía al usuario a través de la interfaz de cambio de contraseña, solicitando la clave actual y validando la nueva credencial en dos campos idénticos para mitigar errores de tipeo.
+3. **Cierre de Sesión por Seguridad:** Al presionar **"Actualizar Contraseña"**, el sistema ejecuta una transición hacia la pantalla de éxito *¡CONTRASEÑA ACTUALIZADA!*. Por directivas de seguridad informática, el sistema destruye el token de sesión activo local y fuerza una redirección síncrona mediante el botón **"Ir al Panel de Control"** hacia la pantalla de login inicial, obligando al usuario a reautenticarse con sus nuevas credenciales.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781672308/Captura_de_pantalla_2026-06-16_a_la_s_11.58.24_p._m._gslqty.png" width="1000">
+</p>
+
+---
 
 ### 5.4.4. Applications Mock-ups.
 
