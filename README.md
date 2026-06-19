@@ -96,6 +96,39 @@ A continuación, se presenta la métrica de contribuciones que evidencia la part
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715882/IGNJLK_ilsgmc.jpg" alt="PI5" width="1000">
 </p> 
 
+<ins>**AV2:**</ins>
+Para la consolidación de este sprint, el equipo Nexora pasó de gestionar el avance en un único repositorio documental a coordinar el trabajo simultáneamente en cuatro repositorios independientes en GitHub: backend, aplicación web, aplicación móvil y edge-service del dispositivo IoT. Este flujo de trabajo distribuido permitió un control de versiones más granular por componente, facilitando el seguimiento individual de cada integración mediante ramas específicas (como feature/conections) y asegurando la trazabilidad de cada avance en la conexión real entre servicios, la evaluación de usabilidad y las entrevistas de validación documentadas en este informe.
+
+**- FrontedWeb**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="landing-page" width="400">
+</p>
+
+**- WebServices**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="landing-page" width="400">
+</p>
+
+**- Mobile**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="landing-page" width="400">
+</p>
+
+**- Embedded code**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="landing-page" width="400">
+</p>
+
+**- EdgeAPI**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="400">
+</p>
+
 
 <div style="page-break-after: always;"></div>
 
@@ -4224,14 +4257,11 @@ Link del video: https://goo.su/U4bQ8
 
 # Conclusiones
 
-Fundamentación Estratégica y Centrada en el Usuario:
-El éxito del TB1 radica en la rigurosidad del análisis inicial. Al emplear herramientas como Empathy Maps y User Journeys, el equipo no solo identificó fallas técnicas en los intercomunicadores tradicionales, sino que comprendió la frustración del usuario ante la falta de movilidad y seguridad. Esta investigación permitió que la propuesta de NexBell no sea solo una mejora técnica, sino una respuesta directa a la demanda de mayor trazabilidad y comodidad en entornos residenciales modernos.
+Validación Continua Centrada en el Usuario: El avance de este sprint confirma que la investigación inicial no fue un ejercicio aislado, sino una base que el equipo siguió retroalimentando. Las nuevas entrevistas de validación con porteros y junta de propietarios, junto con la evaluación de usabilidad bajo heurísticas de Nielsen, permitieron contrastar la propuesta de NexBell contra la experiencia real de uso, identificando puntos críticos como la falta de notificaciones reales y la ausencia de confirmaciones antes de acciones irreversibles. Esto demuestra que el proceso de Lean UX se mantuvo activo más allá de la fase de diseño, ajustando decisiones de producto con evidencia concreta en lugar de supuestos.
 
-Excelencia en la Gestión de Complejidad Mediante DDD:
-La adopción de Domain-Driven Design (DDD) ha sido el pilar fundamental para organizar la lógica de negocio de Nexora. Al delimitar contextos como IAM, Security y Audit, se ha logrado una arquitectura donde cada módulo tiene una responsabilidad única y clara. La definición detallada de entidades y eventos de dominio asegura que el sistema pueda crecer en el futuro sin comprometer la integridad de la base de código, demostrando una aplicación avanzada de patrones de diseño de software.
+De la Arquitectura al Sistema Funcional: Si en TB1 el mérito estuvo en delimitar correctamente los Bounded Contexts mediante DDD, en este sprint el logro central fue materializar esa arquitectura en un sistema real y conectado. La implementación de las entidades de dominio para IAM, Directory, Intercom y Security dejó de ser un modelo teórico para convertirse en endpoints funcionando, consumidos simultáneamente por el frontend web, la aplicación móvil y el backend. Esta transición —de datos simulados a servicios reales distribuidos en cuatro repositorios independientes— evidencia que el diseño táctico definido previamente fue lo suficientemente sólido como para soportar una integración multiplataforma sin requerir rediseños mayores.
 
-Preparación para la Ejecución y Calidad del Software:
-La estructuración del Product Backlog bajo el formato Gherkin eleva el estándar de calidad del proyecto. Al definir criterios de aceptación precisos, el equipo ha eliminado ambigüedades en el desarrollo, facilitando pruebas automatizadas y una validación de negocio constante. Contar con diagramas de componentes y modelos de bases de datos alineados con estas historias de usuario garantiza que la transición hacia las fases de codificación y despliegue sea fluida, minimizando riesgos técnicos y optimizando el tiempo de entrega.
+Preparación Progresiva hacia el Despliegue Completo: El equipo avanzó de forma responsable hacia la puesta en producción, priorizando primero la estabilidad funcional sobre el despliegue prematuro. Por ello, solo la Landing Page se encuentra públicamente desplegada con sus mejoras de diseño, mientras que la web y el backend permanecen en proceso de despliegue hasta finalizar la integración completa con el hardware IoT (cámara, micrófono y sensores). Esta decisión refleja una gestión madura del riesgo técnico: exponer un sistema a usuarios reales sin sus funcionalidades críticas habría comprometido la percepción de calidad del producto, por lo que el equipo optó por consolidar primero la conexión end-to-end antes de avanzar hacia un entorno productivo estable.
 
 <div style="page-break-after: always;"></div>
 
