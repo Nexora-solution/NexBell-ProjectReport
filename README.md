@@ -3881,39 +3881,44 @@ Evalúa NexBell desde la perspectiva de quien gestiona varios edificios a la vez
 
 **Entrevista \#2:** 
 
-* **Nombre:**  
-* **Apellido:**
-* **Distrito:**
+* **Nombre:**  Mariel
+* **Apellido:** Casoida
+* **Distrito:** Lince
 
 *Entrevista \#2 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781902360/mariel_ksjbcb.png" width="1000">
 </p>
 
-* **URL:** 
-* **Inicio:**
-* **Fin:**
+* **URL:** https://goo.su/azYMZt
+* **Inicio:** 0:09
+* **Fin:** 5:15
 * **Resumen:**
+
+Su perspectiva está marcada por la lógica de un edificio pequeño, donde cualquier gasto de mantenimiento se siente mucho más al dividirse entre pocos vecinos. Valora en NexBell justamente lo que su sistema actual no le ofrece: ser inalámbrico (sin romper paredes para instalarlo), apertura remota desde el celular y un registro fotográfico de quien ingresa, que hoy depende solo de la memoria del portero. También señala como problema la mala calidad de audio y la falta de movilidad de los residentes, muchos de los cuales viajan y no pueden atender el intercomunicador si no están físicamente en el departamento — algo que la app móvil de NexBell resolvería al permitir responder desde cualquier lugar. 
 
 
 **Entrevista \#3:** 
 
-* **Nombre:**
-* **Apellido:**
-* **Distrito:** 
+* **Nombre:** Jose   
+* **Apellido:** Rodriguez 
+* **Distrito:** Lince
+
+**Figura 4** 
 
 *Entrevista \#3 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781903628/anaely_j2hcpn.png" width="1000">
 </p> 
 
-* **URL:** 
-* **Inicio:** 
-* **Fin:**
+* **URL:** https://goo.su/ui0ETm
+* **Inicio:** 0:02
+* **Fin:** 6:17
 * **Resumen:**
 
+Su validación parte de un problema de seguridad concreto: el sistema actual (intercomunicador y Excel) falla cuando llegan visitas simultáneas y, al no tener ningún respaldo visual, permite casos de suplantación de identidad. Por eso valora especialmente que NexBell incluya verificación por imagen e historial fotográfico de cada visita, algo que su sistema actual no contempla en absoluto. También destaca el acceso remoto como una forma de reducir su carga operativa diaria, y ve en la digitalización del control de visitas una solución directa al cableado deteriorado que hoy le genera gastos recurrentes en reparaciones. Para su perfil, compuesto principalmente por residentes jóvenes, la prioridad es la seguridad por encima de otros factores, seguida de cerca por el costo de mantenimiento.
 
 ---
 
