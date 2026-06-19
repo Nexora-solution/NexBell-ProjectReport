@@ -116,12 +116,12 @@ A continuación, se presenta la métrica de contribuciones que evidencia la part
       * [1.3. Segmentos objetivo](#13-segmentos-objetivo)
   - [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
       * [2.1. Competidores](#21-competidores)
-          * [2.1.1. Análisis competitivo](#211-an%C3%A1lisis-competitivo)
-          * [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-t%C3%A1cticas-frente-a-competidores)
+          * [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+          * [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
       * [2.2. Entrevistas](#22-entrevistas)
-          * [2.2.1. Diseño de entrevistas](#221-dise%C3%B1o-de-entrevistas)
+          * [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
           * [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
-          * [2.2.3. Análisis de entrevistas](#223-an%C3%A1lisis-de-entrevistas)
+          * [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
       * [2.3. Needfinding](#23-needfinding)
           * [2.3.1. User Personas](#231-user-personas)
           * [2.3.2. User Task Matrix](#232-user-task-matrix)
@@ -254,6 +254,21 @@ A continuación, se presenta la métrica de contribuciones que evidencia la part
               * [6.2.1.7 Services Documentation Evidence for Sprint Review](#6217-services-documentation-evidence-for-sprint-review)
               * [6.2.1.8 Software Deployment Evidence for Sprint Review](#6218-software-deployment-evidence-for-sprint-review)
               * [6.2.1.9 Team Collaboration Insights during Sprint](#6219-team-collaboration-insights-during-sprint)
+          * [6.2.2 Sprint 2](#622-sprint-2)
+              * [6.2.2.1 Sprint Planning 2](#6221-sprint-planning-2)
+              * [6.2.2.2 Aspect Leaders and Collaborators](#6222-aspect-leaders-and-collaborators)
+              * [6.2.2.3 Sprint Backlog 2](#6223-sprint-backlog-2)
+              * [6.2.2.4 Development Evidence for Sprint Review](#6224-development-evidence-for-sprint-review)
+              * [6.2.2.5 Testing Suite Evidence for Sprint Review](#6225-testing-suite-evidence-for-sprint-review)
+              * [6.2.2.6 Execution Evidence for Sprint Review](#6226-execution-evidence-for-sprint-review)
+              * [6.2.2.7 Services Documentation Evidence for Sprint Review](#6227-services-documentation-evidence-for-sprint-review)
+              * [6.2.2.8 Software Deployment Evidence for Sprint Review](#6228-software-deployment-evidence-for-sprint-review)
+              * [6.2.2.9 Team Collaboration Insights during Sprint](#6229team-collaboration-insights-during-sprint)
+      * [6.3 Validation Interviews](#63-validation-interviews)
+          * [6.3.1 Diseño de Entrevistas](#631-diseño-de-entrevistas)
+          * [6.3.2 Registro de Entrevistas](#632-registro-de-entrevistas)
+          * [6.3.3 Evaluaciones según heurísticas](#633-evaluaciones-según-heurísticas)
+      * [6.4 Video About-the-Product](#64-video-about-the-product)
   - [Conclusiones](#conclusiones)
   - [Bibliografía](#bibliografía)
   - [Anexos](#anexos)
@@ -3323,6 +3338,8 @@ Enlace del video: https://tinyurl.com/4h9xntt3
 - Entrada digital limpia de los pulsadores físicos con lógica anti-rebote (debounce).
 - Control de los pines analógicos y digitales encargados de prender y apagar los actuadores multimedia emulado con éxito mediante estados lógicos (HIGH/LOW).
 
+<div style="page-break-after: always;"></div>
+
 # Capítulo VI: Product Implementation, Validation & Deployment
 
 ## 6.1. Software Configuration Management
@@ -4146,14 +4163,15 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 **Recomendación:**  Mientras la función no esté implementada, deshabilitar visualmente la opción o mostrar una etiqueta "Próximamente"; una vez implementada, debe generar un archivo descargable (PDF/Excel) con retroalimentación de progreso.
 
-
 ## 6.4. Video About-the-Product.
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781864189/NEXBELLL_fu8zj1.png" width="850">
 </p>
 
-Link del video: https://goo.su/U4bQ8 
+Link del video: https://goo.su/U4bQ8
+
+<div style="page-break-after: always;"></div>
 
 # Conclusiones
 
