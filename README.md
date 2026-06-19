@@ -3694,7 +3694,56 @@ Con la finalidad de garantizar la transparencia, la trazabilidad técnica y el c
 
 #### 6.2.2.5 Testing Suite Evidence for Sprint Review.
 
+A continuación, se describen los escenarios de prueba ejecutados sobre el backend del sistema utilizando la extensión REST Client. Todas las solicitudes HTTP fueron procesadas con éxito por los controladores correspondientes, confirmando el correcto funcionamiento de las reglas de negocio y flujos de datos.
 
+**1. Registrar una nueva solicitud de visita (Visit Request)**
+* **Método y Endpoint:** `POST /api/intercom/visit-requests`
+* **Descripción:** Esta prueba valida la creación automática de una solicitud de visita cuando un visitante interactúa con el hardware en el punto de acceso. Se envía un cuerpo JSON con el nombre de la persona y el identificador del departamento de destino.
+* **Resultado obtenido:** Respuesta exitosa del servidor (`HTTP 201 Created`). El backend registró la solicitud en la base de datos de manera íntegra, quedando disponible para su atención en la cola del intercomunicador.
+
+<p align="center">
+  <img src="https://i.imgur.com/gu5yThy.png" alt="api test 1">
+</p>
+
+**2. Adjuntar evidencia de la visita**
+
+* **Método y Endpoint:** `POST /api/intercom/visit-requests/{id}/evidence`
+* **Descripción:** Simula el comportamiento del dispositivo IoT al capturar y transmitir la evidencia del visitante. Modifica la solicitud creada previamente adjuntando los recursos multimedia (enlace de la fotografía guardada temporalmente y audio del entorno) esenciales para la seguridad.
+* **Resultado obtenido:** Respuesta exitosa (`HTTP 200 OK`). Los archivos multimedia quedaron correctamente asociados al identificador de la visita, garantizando la disponibilidad del registro visual necesario para la posterior decisión de acceso.
+
+<p align="center">
+  <img src="https://i.imgur.com/bDsMuyf.png" alt="api test 2" width="1000">
+</p>
+
+**3. Consultar el estado de la visita creada**
+
+* **Método y Endpoint:** `GET /api/intercom/visit-requests/{id}`
+* **Descripción:** Realiza una consulta dirigida para obtener el detalle de visita utilizando el identificador único de la solicitud. Permite comprobar si el sistema consolida correctamente los datos de identidad y la evidencia adjunta en los pasos previos.
+* **Resultado obtenido:** Respuesta exitosa (`HTTP 200 OK`) devolviendo un objeto JSON con la información unificada del visitante, su estado actual y las URLs de la evidencia multimedia cargada.
+
+<p align="center">
+  <img src="https://i.imgur.com/yMS6exy.png" alt="api test 3" width="1000">
+</p>
+
+**4. Consultar visitas pendientes (Cola del intercomunicador)**
+
+* **Método y Endpoint:** `GET /api/intercom/queue/pending`
+* **Descripción:** Evalúa la capacidad del sistema para listar todas las solicitudes de acceso que se encuentran activas y en tiempo de espera. Este endpoint proporciona la fuente de información en tiempo real para el dashboard en portería.
+* **Resultado obtenido:** Respuesta exitosa (`HTTP 200 OK`) con un arreglo JSON que contiene las solicitudes en cola, validando el correcto funcionamiento de las consultas asíncronas para la interfaz del conserje.
+
+<p align="center">
+  <img src="https://i.imgur.com/Qr55USR.png" alt="api test 4" width="1000">
+</p>
+
+**5. Registrar decisión de acceso (Aprobar ingreso)**
+
+* **Método y Endpoint:** `POST /api/intercom/visit-requests/{id}/decision`
+* **Descripción:** Esta prueba ejecuta la transmisión de la decisión de acceso emitida de forma remota por el residente. Se envía una petición con el estado `"APPROVED"` para autorizar de manera lógica el ingreso y gatillar físicamente la apertura de la puerta.
+* **Resultado obtenido:** Respuesta exitosa (`HTTP 200 OK`). El sistema procesó la aprobación, actualizó el estado de la solicitud y generó el correspondiente registro de acceso inmutable en el historial de accesos.
+
+<p align="center">
+  <img src="https://i.imgur.com/O5Gbz1L.png" alt="api test 5" width="1000">
+</p>
 
 #### 6.2.2.6 Execution Evidence for Sprint Review.
 
