@@ -4180,6 +4180,12 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 ## 6.4. Video About-the-Product.
 
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781864189/NEXBELLL_fu8zj1.png" width="850">
+</p>
+
+Link del video: https://goo.su/U4bQ8 
+
 # Conclusiones
 
 Fundamentación Estratégica y Centrada en el Usuario:
