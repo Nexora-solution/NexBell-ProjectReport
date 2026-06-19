@@ -3945,7 +3945,7 @@ Enfocada en la usabilidad y eficiencia del panel para el ritmo de trabajo de por
 *Entrevista \#5 para NexBell*
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781892951/deni_g3e7jn.pngv" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781892951/deni_g3e7jn.png" width="1000">
 </p>
 
 * **URL:** https://goo.su/GnyG3J
