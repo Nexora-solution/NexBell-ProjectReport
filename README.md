@@ -3583,6 +3583,7 @@ A través del análisis de las métricas de GitHub, se evidencia la sinergia alc
 
 
 ### 6.2.2. Sprint 2
+
 #### 6.2.2.1 Sprint Planning 2.
 
 El segundo sprint de este proyecto representa la etapa de consolidación, madurez e integración integral de la solución NexBell. Las evidencias e implementaciones presentadas a continuación reflejan un avance significativo en la tangibilidad del producto, optimizando la experiencia digital en todos sus puntos de contacto y garantizando un sistema robusto, alineado con las expectativas técnicas y operativas planteadas para esta iteración.
@@ -3640,7 +3641,6 @@ Se priorizaron los requerimientos asociados al procesamiento lógico en el backe
 
 Con la finalidad de garantizar la transparencia, la trazabilidad técnica y el cumplimiento de las metodologías ágiles, a continuación se presenta la bitácora de evidencias de desarrollo correspondientes al Sprint 2. Los datos recopilados en la presente matriz provienen directamente de los repositorios oficiales de la organización Nexora en GitHub y reflejan el historial de confirmaciones (commits) efectuados por el equipo de ingeniería.
 
-6.2.1.4. Development Evidence for Sprint Review
 
 | Repository | Branch | Commit Id | Commit Message |
 |---|---|---|---|
@@ -3785,34 +3785,34 @@ Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell
 
 Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una consolidación del trabajo en equipo de Nexora, ahora distribuido entre cuatro repositorios independientes (mobile, web, backend y edge-service). Los Insights reflejan un avance más especializado por integrante, donde cada miembro asumió un componente específico del sistema, lo que permitió paralelizar el desarrollo sin perder coherencia entre las distintas capas de la arquitectura. La integración de endpoints reales entre el backend, la aplicación móvil y el frontend web evidencia una coordinación efectiva del equipo para sincronizar criterios técnicos entre repositorios separados, resolviendo de manera oportuna los ajustes necesarios en cada capa. Este esfuerzo conjunto se tradujo en la conexión funcional del ecosistema completo de NexBell, marcando un avance significativo hacia la integración total del producto.
 
-**- Nexbell - FrontedWeb**
+**- FrontedWeb**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="landing-page" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="landing-page" width="400">
 </p>
 
-**- Nexbell - WebServices**
+**- WebServices**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="landing-page" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="landing-page" width="400">
 </p>
 
-**- Nexbell - Mobile**
+**- Mobile**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="landing-page" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="landing-page" width="400">
 </p>
 
-**- Nexbell - Embedded code**
+**- Embedded code**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="landing-page" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="landing-page" width="400">
 </p>
 
-**- Nexbell - EdgeAPI**
+**- EdgeAPI**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="400">
 </p>
 
 ## 6.3. Validation Interviews.
