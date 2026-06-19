@@ -3817,8 +3817,367 @@ Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una c
 
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
+
+**Segmento objetivo \#1: Juntas de propietarios y administradores de inmuebles**
+
+1. ¿Consideras que el proceso de registro del edificio y la asignación de porteros y residentes es un flujo que una junta de propietarios podría gestionar sin asistencia técnica?
+
+2. ¿Consideras que el sistema de pre-registro de visitas, donde el residente registra desde su celular a quién espera, reduce la carga de trabajo del portero y mejora el control de acceso?
+
+3. ¿Consideras que el historial de accesos con registros por fecha, estado y departamento es suficiente para que la junta pueda hacer seguimiento de la seguridad del edificio?
+
+4. ¿Consideras que tener una aplicación móvil para los residentes que les permite autorizar visitas y controlar la puerta desde su celular es un diferencial relevante frente a sistemas de portería tradicionales?
+
+5. ¿Consideras que los sensores definidos en el sistema, como el detector de vibración para intentos de forzar la puerta y el sensor de presencia, agregan valor real a la seguridad del edificio?
+
+6. Al ver que las funciones de cámara en vivo y notificaciones push al residente aún dependen del hardware y configuración final, ¿entiendes que estas son funciones previstas para la versión completa del producto?
+
+7. Después de ver NexBell, ¿lo considerarías como una solución a proponer en su edificio o conjunto residencial? ¿Por qué?
+
+
+**Segmento objetivo \#2: Personal de seguridad o conserjería** 
+
+
+1. ¿Consideras que el proceso de inicio de sesión para acceder al panel del portero es claro desde una primera impresión?
+
+2. ¿Consideras que el panel principal te da una visión clara de lo que está pasando en el edificio en ese momento?
+
+3. ¿Consideras que el proceso de verificar un visitante, buscar su departamento destino y aprobar o denegar el acceso, es fácil de seguir durante tu turno?
+
+4. ¿Consideras que el historial de visitas con sus filtros por estado y fecha es útil para tu trabajo diario?
+
+5. ¿Consideras que la sección de residentes con su información y el historial de visitas por departamento es información que usarías frecuentemente?
+
+6. Al ver que la cámara y el micrófono del dispositivo en puerta aún no están conectados en esta versión, ¿entiendes que esas funciones dependerán del hardware físico en la versión final?
+
+7. Después de ver esta versión del sistema, ¿usarías NexBell como herramienta de apoyo en tu trabajo como portera? ¿Por qué?
+
+
 ### 6.3.2. Registro de Entrevistas.
+
+
+**Segmento objetivo \#1: Juntas de propietarios y administradores de inmuebles**  
+
+**Entrevista \#1:** 
+
+* **Nombre:** 
+* **Apellido:** 
+* **Distrito:**
+
+*Entrevista \#1 para NexBell* 
+
+<p align="center">
+  <img src="" width="1000">
+</p>
+
+* **URL:**  
+* **Inicio:** 
+* **Fin:**
+* **Resumen:**
+
+
+**Entrevista \#2:** 
+
+* **Nombre:**  
+* **Apellido:**
+* **Distrito:**
+
+*Entrevista \#2 para NexBell* 
+
+<p align="center">
+  <img src="" width="1000">
+</p>
+
+* **URL:** 
+* **Inicio:**
+* **Fin:**
+* **Resumen:**
+
+
+**Entrevista \#3:** 
+
+* **Nombre:** Gustavo 
+* **Apellido:** Roman
+* **Distrito:** Jesus Maria
+
+*Entrevista \#3 para NexBell* 
+
+<p align="center">
+  <img src="" width="1000">
+</p> 
+
+* **URL:** 
+* **Inicio:** 
+* **Fin:**
+* **Resumen:**
+
+Evalúa el sistema desde una perspectiva de gestión y seguridad institucional más que operativa. Destaca el pre-registro de visitas, el control desde el celular del residente y los sensores de seguridad (vibración y presencia) como diferenciadores frente a la portería tradicional. Pide un nivel adicional de trazabilidad (exportar reportes) y condiciona su decisión final a que las funciones de cámara y notificaciones push estén completamente operativas.
+
+---
+
+**Segmento objetivo \#2: Personal de seguridad o conserjería**
+
+**Entrevista \#4:** 
+
+* **Nombre:** Kylie
+* **Apellido:** Pizarrp
+* **Distrito:** Pueblo Libre
+
+*Entrevista \#4 para NexBell* 
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781850901/entrvista_con_kylie_skuxif.png" width="1000">
+</p>
+
+* **URL:** https://goo.su/QQxXG
+* **Inicio:** 0:17
+* **Fin:** 15:50
+* **Resumen:**
+
+Enfocada en la usabilidad y eficiencia del panel para el ritmo de trabajo de portería. Valora la claridad visual (colores por estado), la búsqueda rápida de departamentos y la posibilidad de recibir alertas en tiempo real sin tener que estar físicamente en la entrada. La función de eliminar visitas del historial le parece secundaria, usada con poca frecuencia. Identifica la cámara en vivo como la pieza que le daría sentido completo al sistema.
+
+
+**Entrevista \#5:** 
+
+* **Nombre:** Denisse
+* **Apellido:** Ortega
+* **Distrito:** San Miguel
+
+*Entrevista \#5 para NexBell*
+
+<p align="center">
+  <img src="" width="1000">
+</p>
+
+* **URL:**
+* **Inicio:**
+* **Fin:**
+* **Resumen:**
+
+Reacción general positiva hacia el flujo operativo diario: login, panel principal, verificación de visitantes e historial le resultan claros y rápidos de usar. Valora especialmente el ahorro de tiempo frente al registro manual. Su única reserva es la falta de cámara y micrófono activos, que identifica como la función más útil del sistema una vez implementada. Conclusión: validaría el uso del sistema en su trabajo diario, condicionado a que la cámara funcione en la versión final.
+
+
+**Entrevista \#6:** 
+
+* **Nombre:**  
+* **Apellido:**
+* **Distrito:**
+
+*Entrevista \#6 para NexBell* 
+
+<p align="center">
+  <img src="" width="1000">
+</p> 
+
+* **URL:** 
+* **Inicio:**
+* **Fin:**
+* **Resumen:**
+
+
 ### 6.3.3. Evaluaciones según heurísticas.
+
+<p align="center"><strong>UX Heuristics & Principles Evaluation</strong></p>
+<p align="center"><strong>Usability – Inclusive Design – Information Architecture</strong></p>
+
+**CARRERA:** Ingeniería de Software  
+
+**CURSO:** Desarrollo de Soluciones IoT
+
+**SECCIÓN:** 6785
+
+**CLIENTE(S):** 
+
+Kylie Pizarro
+
+Gustavo Roman
+
+Dennise Ortega
+
+***SITE o APP A EVALUAR:*** NexBell	
+
+***ESCALA DE SEVERIDAD:***  
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
+| Nivel | Descripción |
+|----|----------|
+|1 | Problema superficial: puede ser fácilmente superador por el usuario ó ocurre con muy poco frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo.|
+|2 |Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente reléase |
+|3 |Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlos. Es importante que sean corregidos y se les debe asignar una prioridad alta.|
+|4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+
+***TABLA RESUMEN:***
+| # | Problema |Escala de severidad | Heurística/Principio violada(o) |
+|----|----------|-----------|---------------------|  
+| 1 | El botón "Notificar al residente" no envía ninguna notificación real; la respuesta del residente se genera aleatoriamente, sin reflejar el estado real del sistema.| 4 | Visibilidad del estado del sistema (Nielsen #1)|
+| 2 | No existe actualización en tiempo real (SSE/polling) en el panel del portero; un nuevo visitante solo aparece si se busca manualmente el código de apartamento.| 3 | Visibilidad del estado del sistema (Nielsen #1)|
+| 3 | La acción de "Eliminar" en el historial de visitas borra el registro inmediatamente sin pedir confirmación.| 4 | Prevención de errores (Nielsen #5)|
+| 4 | La lista de residentes se carga mediante múltiples llamadas API encadenadas (edificios → apartamentos → residente) sin paginación.| 2 | Eficiencia y uso de recursos|
+| 5 | El botón de bloqueo/desbloqueo de puerta en mobile no se deshabilita mientras espera respuesta del servidor, permitiendo doble toque y comandos duplicados.| 3 | Prevención de errores (Nielsen #5)|
+| 6 | El formulario de inicio de sesión solo muestra un error genérico ("Correo o contraseña incorrectos"), sin indicar qué campo falló.| 2 | Ayuda a reconocer y resolver errores (Nielsen #9)|
+| 7 | El selector de idioma tiene dos implementaciones inconsistentes: texto abreviado en login vs. bandera y nombre completo en ajustes.| 2 | Consistencia y estándares (Nielsen #4)|
+| 8 | El botón "Exportar registro" en el historial no tiene funcionalidad real; solo cierra el menú sin generar ningún archivo.| 3 | Visibilidad del estado del sistema (Nielsen #1)|
+<hr>
+
+***PROBLEMA 1:***
+
+**Severidad:** 4
+
+**Heurística:** Visibilidad del estado del sistema (Nielsen #1)
+
+**Problema:** En la vista de verificación de visitantes, el botón "Notificar al residente" no envía ninguna notificación real al backend. Internamente, el código espera 1.2 segundos con un temporizador y luego decide aleatoriamente si el residente "aceptó" o "rechazó" la visita (80%/20% de probabilidad), sin que exista comunicación real con el residente. Esto rompe completamente la confianza del portero en lo que el sistema le está mostrando, ya que cree estar viendo una respuesta real cuando en realidad es generada al azar.
+
+*Problema 1*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Conectar el botón a un endpoint real que dispare una notificación push verdadera al residente, y reflejar el estado pendiente ("Esperando respuesta...") hasta recibir la decisión real vía actualización en tiempo real, no con temporizadores simulados.
+
+
+
+***PROBLEMA 2:***
+
+**Severidad:** 3
+
+**Heurística:** Visibilidad del estado del sistema (Nielsen #1)
+
+**Problema:** El panel del portero no cuenta con ningún mecanismo de actualización en tiempo real (SSE o polling). Si llega un nuevo visitante a la puerta, el portero solo se entera si busca manualmente el código de apartamento o recarga la página. El sistema no le avisa proactivamente que hay una visita esperando.
+
+*Problema 2*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Implementar una conexión persistente (EventSource/SSE) al endpoint de cola de visitantes para que el panel se actualice automáticamente y notifique sonora o visualmente al portero cuando llegue un nuevo visitante.
+
+
+
+***PROBLEMA 3:***
+
+**Severidad:** 4
+
+**Heurística:** Prevención de errores (Nielsen #5)
+
+**Problema:** En el historial de visitas, la opción "Eliminar" del menú de tres puntos ejecuta el borrado del registro de manera inmediata al hacer clic, sin ningún modal de confirmación. Un clic accidental elimina datos de auditoría de forma permanente e irreversible.
+ 
+*Problema 3*
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Agregar un modal de confirmación ("¿Estás seguro de eliminar este registro? Esta acción no se puede deshacer") antes de ejecutar la llamada al backend.
+
+
+
+***PROBLEMA 4:***
+
+**Severidad:** 2
+
+**Heurística:** Eficiencia y uso de recursos (relacionado a Nielsen #7 — Flexibilidad y eficiencia de uso)
+
+**Problema:** La vista de residentes carga los datos mediante un patrón de llamadas encadenadas: primero obtiene los edificios, luego por cada edificio obtiene sus apartamentos, y luego por cada apartamento obtiene el residente asociado. En un edificio con muchos departamentos esto genera decenas de peticiones simultáneas y no existe paginación en la lista resultante, lo que puede generar lentitud perceptible al cargar la vista.
+ 
+*Problema 4*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Crear un endpoint backend que devuelva directamente los residentes de un edificio en una sola llamada, y agregar paginación o scroll virtual en el frontend para edificios con muchos departamentos.
+
+
+
+***PROBLEMA 5:***
+
+**Severidad:** 3
+
+**Heurística:** Prevención de errores (Nielsen #5)
+
+**Problema:** En el panel de control de puerta de la app móvil, el botón de bloquear/desbloquear no se deshabilita mientras espera la respuesta del servidor. Esto permite que el residente toque varias veces consecutivas, generando comandos duplicados de apertura/cierre que pueden confundir el estado real de la cerradura.
+ 
+*Problema 5*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:** Deshabilitar el botón y mostrar un indicador de carga (spinner) mientras la petición está en curso, habilitándolo nuevamente solo tras recibir la confirmación del backend.
+
+
+
+***PROBLEMA 6:***
+
+**Severidad:** 2
+
+**Heurística:** Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de errores (Nielsen #9)
+
+**Problema:** El formulario de inicio de sesión, tanto en web como en mobile, solo muestra un mensaje de error genérico como "Correo o contraseña incorrectos" en un banner superior, sin señalar visualmente qué campo específico contiene el error ni ofrecer sugerencias de recuperación más allá del enlace genérico de "olvidé mi contraseña".
+
+*Problema 6*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:**  Resaltar visualmente el campo con error (borde rojo) y diferenciar el mensaje según el tipo de fallo (correo no registrado vs. contraseña incorrecta), sin comprometer la seguridad de la cuenta.
+
+
+
+***PROBLEMA 7:***
+
+**Severidad:** 2
+
+**Heurística:** Consistencia y estándares (Nielsen #4)
+
+**Problema:** El selector de idioma presenta dos implementaciones distintas dentro del mismo sistema: en la pantalla de login aparece como un texto abreviado "EN"/"ES" sin íconos ni contexto adicional, mientras que en la pantalla de configuración aparece con bandera emoji y nombre completo del idioma ("🇪🇸 Español"). Esta inconsistencia puede generar confusión sobre cómo se representa la misma función en distintas pantallas.
+
+*Problema 6*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:**  Unificar el componente de selección de idioma en un solo diseño reutilizable que se use consistentemente en toda la plataforma.
+
+
+
+***PROBLEMA 8:***
+
+**Severidad:** 3
+
+**Heurística:** Visibilidad del estado del sistema (Nielsen #1)
+
+**Problema:** En el historial de visitas, la opción "Exportar registro" dentro del menú de acciones no tiene ninguna funcionalidad implementada; al hacer clic simplemente cierra el menú sin generar ningún archivo ni mostrar mensaje alguno. El usuario no tiene forma de saber que la función no está disponible todavía.
+
+*Problema 6*
+
+<p align="center">
+  <img src="" width="850">
+</p>
+
+*Nota.* Elaboración propia.
+
+**Recomendación:**  Mientras la función no esté implementada, deshabilitar visualmente la opción o mostrar una etiqueta "Próximamente"; una vez implementada, debe generar un archivo descargable (PDF/Excel) con retroalimentación de progreso.
+
+
 ## 6.4. Video About-the-Product.
 
 # Conclusiones
