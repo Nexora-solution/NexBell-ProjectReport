@@ -4251,7 +4251,15 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781864189/NEXBELLL_fu8zj1.png" width="850">
 </p>
 
-Link del video: https://goo.su/U4bQ8
+Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
+
+## 6.4. Video About-the-Team.
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
+</p>
+
+Link del video: https://goo.su/bNJI9
 
 <div style="page-break-after: always;"></div>
 
