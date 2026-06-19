@@ -3896,9 +3896,9 @@ Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una c
 
 **Entrevista \#3:** 
 
-* **Nombre:** Gustavo 
-* **Apellido:** Roman
-* **Distrito:** Jesus Maria
+* **Nombre:**
+* **Apellido:**
+* **Distrito:** 
 
 *Entrevista \#3 para NexBell* 
 
@@ -3911,7 +3911,6 @@ Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una c
 * **Fin:**
 * **Resumen:**
 
-Evalúa el sistema desde una perspectiva de gestión y seguridad institucional más que operativa. Destaca el pre-registro de visitas, el control desde el celular del residente y los sensores de seguridad (vibración y presencia) como diferenciadores frente a la portería tradicional. Pide un nivel adicional de trazabilidad (exportar reportes) y condiciona su decisión final a que las funciones de cámara y notificaciones push estén completamente operativas.
 
 ---
 
@@ -3946,12 +3945,12 @@ Enfocada en la usabilidad y eficiencia del panel para el ritmo de trabajo de por
 *Entrevista \#5 para NexBell*
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781892951/deni_g3e7jn.pngv" width="1000">
 </p>
 
-* **URL:**
-* **Inicio:**
-* **Fin:**
+* **URL:** https://goo.su/GnyG3J
+* **Inicio:** 0:07
+* **Fin:** 14:16
 * **Resumen:**
 
 Reacción general positiva hacia el flujo operativo diario: login, panel principal, verificación de visitantes e historial le resultan claros y rápidos de usar. Valora especialmente el ahorro de tiempo frente al registro manual. Su única reserva es la falta de cámara y micrófono activos, que identifica como la función más útil del sistema una vez implementada. Conclusión: validaría el uso del sistema en su trabajo diario, condicionado a que la cámara funcione en la versión final.
@@ -3959,9 +3958,9 @@ Reacción general positiva hacia el flujo operativo diario: login, panel princip
 
 **Entrevista \#6:** 
 
-* **Nombre:**  
-* **Apellido:**
-* **Distrito:**
+* **Nombre:** Gustavo 
+* **Apellido:** Roman
+* **Distrito:** Jesus Maria
 
 *Entrevista \#6 para NexBell* 
 
@@ -3973,6 +3972,8 @@ Reacción general positiva hacia el flujo operativo diario: login, panel princip
 * **Inicio:**
 * **Fin:**
 * **Resumen:**
+
+Evalúa el sistema desde una perspectiva de gestión y seguridad institucional más que operativa. Destaca el pre-registro de visitas, el control desde el celular del residente y los sensores de seguridad (vibración y presencia) como diferenciadores frente a la portería tradicional. Pide un nivel adicional de trazabilidad (exportar reportes) y condiciona su decisión final a que las funciones de cámara y notificaciones push estén completamente operativas.
 
 
 ### 6.3.3. Evaluaciones según heurísticas.
