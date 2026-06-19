@@ -3684,6 +3684,42 @@ El proceso abarcó la automatización de canalizaciones que compilan, prueban y 
 #### 6.2.2.9.Team Collaboration Insights during Sprint.
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
+
+**Segmento objetivo \#1: Juntas de propietarios y administradores de inmuebles**
+
+1. ¿Consideras que el proceso de registro del edificio y la asignación de porteros y residentes es un flujo que una junta de propietarios podría gestionar sin asistencia técnica?
+
+2. ¿Consideras que el sistema de pre-registro de visitas, donde el residente registra desde su celular a quién espera, reduce la carga de trabajo del portero y mejora el control de acceso?
+
+3. ¿Consideras que el historial de accesos con registros por fecha, estado y departamento es suficiente para que la junta pueda hacer seguimiento de la seguridad del edificio?
+
+4. ¿Consideras que tener una aplicación móvil para los residentes que les permite autorizar visitas y controlar la puerta desde su celular es un diferencial relevante frente a sistemas de portería tradicionales?
+
+5. ¿Consideras que los sensores definidos en el sistema, como el detector de vibración para intentos de forzar la puerta y el sensor de presencia, agregan valor real a la seguridad del edificio?
+
+6. Al ver que las funciones de cámara en vivo y notificaciones push al residente aún dependen del hardware y configuración final, ¿entiendes que estas son funciones previstas para la versión completa del producto?
+
+7. Después de ver NexBell, ¿lo considerarías como una solución a proponer en su edificio o conjunto residencial? ¿Por qué?
+
+
+**Segmento objetivo \#2: Personal de seguridad o conserjería** 
+
+
+1. ¿Consideras que el proceso de inicio de sesión para acceder al panel del portero es claro desde una primera impresión?
+
+2. ¿Consideras que el panel principal te da una visión clara de lo que está pasando en el edificio en ese momento?
+
+3. ¿Consideras que el proceso de verificar un visitante, buscar su departamento destino y aprobar o denegar el acceso, es fácil de seguir durante tu turno?
+
+4. ¿Consideras que el historial de visitas con sus filtros por estado y fecha es útil para tu trabajo diario?
+
+5. ¿Consideras que la sección de residentes con su información y el historial de visitas por departamento es información que usarías frecuentemente?
+
+6. Al ver que la cámara y el micrófono del dispositivo en puerta aún no están conectados en esta versión, ¿entiendes que esas funciones dependerán del hardware físico en la versión final?
+
+7. Después de ver esta versión del sistema, ¿usarías NexBell como herramienta de apoyo en tu trabajo como portera? ¿Por qué?
+
+
 ### 6.3.2. Registro de Entrevistas.
 ### 6.3.3. Evaluaciones según heurísticas.
 ## 6.4. Video About-the-Product.
