@@ -3583,7 +3583,8 @@ A través del análisis de las métricas de GitHub, se evidencia la sinergia alc
 
 
 ### 6.2.2. Sprint 2
-#### 6.2.2.1.Sprint Planning 2.
+
+#### 6.2.2.1 Sprint Planning 2.
 
 El segundo sprint de este proyecto representa la etapa de consolidación, madurez e integración integral de la solución NexBell. Las evidencias e implementaciones presentadas a continuación reflejan un avance significativo en la tangibilidad del producto, optimizando la experiencia digital en todos sus puntos de contacto y garantizando un sistema robusto, alineado con las expectativas técnicas y operativas planteadas para esta iteración.
 
@@ -3602,7 +3603,7 @@ El segundo sprint de este proyecto representa la etapa de consolidación, madure
 | **Sprint 2 Velocity** | 35 |
 | **Sum of Story Points** | 26 |
 
-#### 6.2.2.2.Aspect Leaders and Collaborators.
+#### 6.2.2.2 Aspect Leaders and Collaborators.
 
 Con el objetivo de garantizar una ejecución eficiente y mantener la alta calidad en los entregables del proyecto durante el Sprint 2, se han redistribuido las responsabilidades técnicas del equipo de acuerdo con las especialidades y competencias individuales de sus miembros. La siguiente tabla detalla la organización interna del equipo, identificando mediante las siglas L (Leader) a la persona responsable de la dirección estratégica de cada componente, y con la sigla C (Collaborator) a quienes brindaron soporte activo en su co-desarrollo e implementación.
 
@@ -3614,7 +3615,7 @@ Con el objetivo de garantizar una ejecución eficiente y mantener la alta calida
 | Gómez Flores, Daniela Araceli | DanieGF1 | L | L | L | C | C | C | C | C |
 | Burga Loarte, Anaely Zarely | userxx1000 | C | C | C | C | C | C | C | L |
 
-#### 6.2.2.3.Sprint Backlog 2.
+#### 6.2.2.3 Sprint Backlog 2.
 
 Se priorizaron los requerimientos asociados al procesamiento lógico en el backend, la comunicación bidireccional mediante APIs, el desarrollo de la interfaz móvil nativa para la recepción de alertas por parte de los residentes, y la programación del software embebido (Edge) en el microcontrolador. Cada tarea ha sido estimada en horas de esfuerzo y asignada de forma colaborativa, asegurando la trazabilidad del desarrollo desde el requerimiento del usuario hasta su despliegue final en producción. A continuación, se presenta la matriz detallada de ejecución del Sprint 2:
 
@@ -3636,15 +3637,48 @@ Se priorizaron los requerimientos asociados al procesamiento lógico en el backe
 | US10, US11 | Captura IoT | TS14 | IoT Hardware Simulation (Wokwi) | Configuración del entorno simulado en Wokwi usando ESP32, sensores PIR y lógica de comunicación básica MQTT/HTTP. | 12 | Gabriel Borja | In Progress |
 | US35, US36 | Seguridad | TS15 | IAM Tactic Architecture & BCrypt | Diseño de la capa de persistencia, hashing de contraseñas con BCrypt y definición de roles (RBAC) para el backend. | 14 | Raúl Bellido | In Progress |
 
-#### 6.2.2.4.Development Evidence for Sprint Review.
+#### 6.2.2.4 Development Evidence for Sprint Review.
 
 Con la finalidad de garantizar la transparencia, la trazabilidad técnica y el cumplimiento de las metodologías ágiles, a continuación se presenta la bitácora de evidencias de desarrollo correspondientes al Sprint 2. Los datos recopilados en la presente matriz provienen directamente de los repositorios oficiales de la organización Nexora en GitHub y reflejan el historial de confirmaciones (commits) efectuados por el equipo de ingeniería.
 
-#### 6.2.2.5.Testing Suite Evidence for Sprint Review.
+
+| Repository | Branch | Commit Id | Commit Message |
+|---|---|---|---|
+| NexBell-Mobile | main | b276c60 | Initial commit |
+| NexBell-Mobile | main | e3b29d1 | First commit |
+| NexBell-Mobile | main | 7046e24 | Initial commit |
+| NexBell-Mobile | main | 29a9f84 | Merge develop into main |
+| NexBell-Mobile | main | a59452a | Implement Auth features and refactor UI folder structure |
+| NexBell-Mobile | main | 9bedb8e | feat: added dynamic data |
+| NexBell-Mobile | main | b49023e | Implement domain entities, data sources, and repositories for IAM, Directory, Intercom, and Security modules |
+| NexBell-Mobile | main | a608389 | Update README.md |
+| NexBell-Mobile | main | 9dc34e7 | visitor register connections |
+| NexBell-Mobile | main | d0815d2 | fixed attend page |
+| Nexbell-FrontendWeb | develop | 50535c1 | feat: implement building registration and payment flow with transitions |
+| Nexbell-FrontendWeb | develop | 9ea785b | Merge pull request #11 from Nexora-solution/feature/login |
+| Nexbell-FrontendWeb | develop | 0180828 | feat: add changes |
+| Nexbell-FrontendWeb | develop | 8b839be | feat: design changes |
+| Nexbell-FrontendWeb | develop | b37550f | Merge pull request #12 from Nexora-solution/feature/login |
+| Nexbell-FrontendWeb | develop | 21d2ade | feat: changes contract view |
+| Nexbell-FrontendWeb | develop | 1210d45 | Merge pull request #13 from Nexora-solution/feature/contract |
+| Nexbell-FrontendWeb | develop | 7d08c92 | feat: added dynamic data |
+| Nexbell-FrontendWeb | develop | 797313a | visitor register connections |
+| Nexbell-FrontendWeb | develop | d91d11d | fixed attend page |
+| NexBell-EdgeService | develop | 3932d1b | feat: added edge-service |
+| NexBell-EdgeService | develop | 7e96222 | Delete edge-service directory |
+| NexBell-EdgeService | develop | e0bce16 | feat: added edge-service |
+| NexBell-WebServices | feature/conections | 57a2dee | Initial commit |
+| NexBell-WebServices | feature/conections | 5ff45cc | Initial commit: Proyecto Maven base para NexBell-WebServices |
+| NexBell-WebServices | feature/conections | 2e042c7 | feat: fixed pom |
+| NexBell-WebServices | feature/conections | 5e63bfa | feat: conected endpoints to the mobile app and frontend |
+| NexBell-WebServices | feature/conections | 0700bbc | visitor register connections |
+| NexBell-WebServices | feature/conections | f3780d4 | feat: added embedded endpoints |
+
+#### 6.2.2.5 Testing Suite Evidence for Sprint Review.
 
 
 
-#### 6.2.2.6.Execution Evidence for Sprint Review.
+#### 6.2.2.6 Execution Evidence for Sprint Review.
 
 En este Sprint 2, el equipo Nexora ha finalizado con éxito la integración vertical y el desarrollo integral del ecosistema NexBell. Se ha logrado trascender las interfaces estáticas del ciclo anterior para consolidar un sistema completamente interactivo y funcional en tiempo real. Este hito representa la convergencia del 100% de los componentes críticos de la solución: el procesamiento lógico en el backend, el aplicativo móvil para residentes y el comportamiento del software embebido en el hardware de portería.
 
@@ -3665,23 +3699,122 @@ Se presenta un video demostrativo que registra el flujo completo de la solución
 </p>
 Link del video: []()
 
-#### 6.2.2.7.Services Documentation Evidence for Sprint Review.
+#### 6.2.2.7 Services Documentation Evidence for Sprint Review.
 
-En este segundo ciclo, el equipo ha culminado el diseño, desarrollo e implementación de la capa de servicios y lógica de negocio centralizada en el Backend de NexBell. Para garantizar que los servicios web sean escalables, seguros y fácilmente consumibles por el aplicativo móvil y la plataforma web, se ha estructurado una arquitectura de microservicios/APIs RESTful debidamente documentada bajo el estándar OpenAPI (Swagger).
+Durante este sprint, el enfoque principal se centró en el desarrollo e integración del backend de la aplicación NexBell, así como en el establecimiento de la conexión efectiva entre el frontend web, la aplicación móvil y el backend. Esta integración permitió comenzar a consumir servicios reales desde ambas interfaces, lo cual marca un hito importante en la funcionalidad del sistema.
 
-A continuación, se presentan las evidencias técnicas que respaldan la viabilidad y correcto funcionamiento de los servicios desarrollados durante el Sprint 2:
+Las funcionalidades desarrolladas previamente —como la gestión de usuarios, edificios, apartamentos y residentes— se consolidaron y quedaron completamente implementadas y operativas. Además, durante este sprint se incorporaron nuevas funcionalidades que amplían el alcance y robustez del sistema, incluyendo: gestión de visitas e intercomunicador, control de seguridad y dispositivos IoT, y auditoría de accesos.
 
-<p align="center">
-  <img src="" alt="XD" width="1000">
-</p>
+A continuación, se detallan las funcionalidades implementadas para cada uno de los Bounded Contexts definidos en la arquitectura de NexBell, junto con sus respectivas tablas en la base de datos.
 
-#### 6.2.2.8.Software Deployment Evidence for Sprint Review.
+**1. Autenticación y Seguridad de Acceso (IAM):**
+* **Tabla:** UserAccounts
+* **Operaciones CRUD:**
+  * **GET:** Obtener usuario autenticado (/me)
+  * **POST:** Registrar usuario, iniciar sesión, refrescar token, cerrar sesión, solicitar reset de contraseña, confirmar reset de contraseña, cambiar contraseña
+* **Descripción:** Gestión completa de identidad y acceso del sistema. Maneja la autenticación basada en JWT (access + refresh token), el registro de cuentas con roles (RESIDENT, DOORMAN) y la recuperación de contraseñas.
+
+**2. Gestión de Edificios (Buildings):**
+* **Tabla:** Buildings
+* **Operaciones CRUD:**
+  * **GET:** Obtener todos los edificios, obtener edificio por ID, obtener apartamentos de un edificio
+  * **POST:** Crear edificio, asignar portero a edificio
+* **Descripción:** Administración de los edificios registrados en la plataforma, incluyendo la asignación de porteros responsables de cada edificio mediante la tabla DoormanBuildings.
+
+**3. Gestión de Apartamentos (Apartments):**
+* **Tabla:** Apartments
+* **Operaciones CRUD:**
+  * **GET:** Obtener apartamento por código, obtener apartamentos por edificio, resolver residente asociado a un apartamento
+  * **POST:** Crear apartamento
+  * **PUT:** Actualizar código de apartamento
+* **Descripción:** Manejo de las unidades habitacionales de cada edificio, vinculadas a un residente y filtradas por edificio para garantizar el aislamiento de datos entre distintas propiedades.
+
+**4. Gestión de Residentes (Residents):**
+* **Tabla:** ResidentDirectoryProfiles
+* **Operaciones CRUD:**
+  * **GET:** Obtener perfil de residente por ID
+  * **POST:** Crear perfil de residente
+  * **PUT:** Actualizar nombre completo, contacto y código de apartamento del residente
+* **Descripción:** Directorio de residentes del edificio, con datos de contacto, documento de identidad y relación con su apartamento asignado. Permite al residente actualizar su propia información desde la app móvil.
+
+**5. Gestión de Visitas e Intercomunicador (Intercom):**
+* **Tablas:** VisitRequests, IntercomQueueItems, VisitorEvidences, PreRegisteredVisits, NotificationDispatches
+* **Operaciones CRUD:**
+  * **GET:** Obtener cola de visitas pendientes, obtener visita por ID, obtener stream de video/audio de una visita, obtener visitas pre-registradas por edificio, obtener notificaciones por apartamento
+  * **POST:** Registrar nueva solicitud de visita (ingreso desde dispositivo IoT), adjuntar evidencia (foto/audio), registrar decisión (aprobado/rechazado), crear pre-registro de visita
+  * **PUT:** Actualizar pre-registro, marcar notificación como leída
+  * **DELETE:** Eliminar pre-registro de visita
+* **Descripción:** Núcleo funcional del sistema. Gestiona el flujo completo desde que un visitante toca el timbre hasta la decisión final del residente, incluyendo la cola en tiempo real (Server-Sent Events) y el pre-registro de visitas esperadas desde la app móvil.
+
+**6. Seguridad y Dispositivos IoT (Security):**
+* **Tablas:** DoorCommands, SecurityAlarms, IoTDevices
+* **Operaciones CRUD:**
+  * **GET:** Obtener estado actual de la puerta, obtener estado de cámara/micrófono de un dispositivo
+  * **POST:** Enviar comando de apertura/cierre de puerta, registrar alarma de manipulación (sensor de vibración), registrar alerta de presencia (sensor ultrasónico), activar/desactivar cámara o micrófono, autorizar permisos por rol
+* **Descripción:** Control del hardware de seguridad instalado en la puerta del edificio. Gestiona los comandos enviados al dispositivo ESP32 (cerradura), el estado de los sensores físicos y la habilitación de cámara/micrófono por dispositivo.
+
+**7. Auditoría de Accesos (Audit):**
+* **Tablas:** AccessRecords, AccessTimelineEntries
+* **Operaciones CRUD:**
+  * **GET:** Obtener todos los registros de acceso, obtener historial por residente, obtener detalle de un registro, obtener logs de actividad de hardware
+  * **POST:** Registrar nuevo registro de acceso sellado
+  * **DELETE:** Eliminar registro de acceso
+* **Descripción:** Bitácora inmutable de todas las decisiones de acceso tomadas en el sistema (aprobaciones y rechazos), vinculada por correlationId a la solicitud de visita original. Cada registro mantiene una línea de tiempo (timeline) de los eventos asociados, como el envío de la señal de apertura de puerta.
+
+#### 6.2.2.8 Software Deployment Evidence for Sprint Review.
 
 Durante el presente Sprint 2, el equipo Nexora ha expandido la infraestructura de despliegue y entrega continua (CI/CD) para soportar la arquitectura distribuida del ecosistema NexBell. Las actividades de aprovisionamiento pasaron de la distribución de contenido estático a la configuración de entornos en la nube capaces de soportar servicios web transaccionales, persistencia de datos y la distribución del aplicativo móvil residencial.
 
-El proceso abarcó la automatización de canalizaciones que compilan, prueban y despliegan el código de forma automática ante cada cambio en las ramas principales de Git. A continuación, se detallan los entornos de producción activos, sus respectivos enlaces de acceso y las evidencias de despliegue exitoso para cada componente de la solución:
+El proceso abarcó la automatización de canalizaciones que compilan, prueban y despliegan el código de forma automática ante cada cambio en las ramas principales de Git. Por el momento, el entorno de producción activo corresponde únicamente a la landing page del proyecto, la cual ya se encuentra desplegada con las mejoras de diseño implementadas durante este sprint. El despliegue de la aplicación web del portero y del backend (Spring Boot) se encuentra actualmente en proceso de configuración, ya que se ha priorizado completar primero la integración total con el hardware IoT (cámara, micrófono y sensores del dispositivo ESP32) antes de exponer estos servicios en un entorno productivo estable. Una vez finalizada esta integración, se procederá con el despliegue formal de ambos componentes y se documentarán sus respectivos enlaces de acceso y evidencias.
+
+A continuación, se detallan los entornos de producción activos, sus respectivos enlaces de acceso y las evidencias de despliegue exitoso para cada componente de la solución:
+
+##### NexBell Landing Page Deployment
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/netlify_deploy_dwsjlt.png" alt="landing-page" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/nexbell_landing_iyz95z.png" alt="landing-page" width="1000">
+</p>
+
+Link de acceso a la Landing Page: [https://nexbell.netlify.app/](https://nexbell.netlify.app/)
 
 #### 6.2.2.9.Team Collaboration Insights during Sprint.
+
+Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una consolidación del trabajo en equipo de Nexora, ahora distribuido entre cuatro repositorios independientes (mobile, web, backend y edge-service). Los Insights reflejan un avance más especializado por integrante, donde cada miembro asumió un componente específico del sistema, lo que permitió paralelizar el desarrollo sin perder coherencia entre las distintas capas de la arquitectura. La integración de endpoints reales entre el backend, la aplicación móvil y el frontend web evidencia una coordinación efectiva del equipo para sincronizar criterios técnicos entre repositorios separados, resolviendo de manera oportuna los ajustes necesarios en cada capa. Este esfuerzo conjunto se tradujo en la conexión funcional del ecosistema completo de NexBell, marcando un avance significativo hacia la integración total del producto.
+
+**- FrontedWeb**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="landing-page" width="400">
+</p>
+
+**- WebServices**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="landing-page" width="400">
+</p>
+
+**- Mobile**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="landing-page" width="400">
+</p>
+
+**- Embedded code**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="landing-page" width="400">
+</p>
+
+**- EdgeAPI**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="400">
+</p>
+
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
 ### 6.3.2. Registro de Entrevistas.
