@@ -4011,14 +4011,14 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 | # | Problema |Escala de severidad | Heurística/Principio violada(o) |
 |----|----------|-----------|---------------------|  
 | 1 | El botón "Notificar al residente" no envía ninguna notificación real; la respuesta del residente se genera aleatoriamente, sin reflejar el estado real del sistema.| 4 | Visibilidad del estado del sistema (Nielsen #1)|
-| 2 | No existe actualización en tiempo real (SSE/polling) en el panel del portero; un nuevo visitante solo aparece si se busca manualmente el código de apartamento.| 3 | Visibilidad del estado del sistema (Nielsen #1)|
-| 3 | La acción de "Eliminar" en el historial de visitas borra el registro inmediatamente sin pedir confirmación.| 4 | Prevención de errores (Nielsen #5)|
-| 4 | La lista de residentes se carga mediante múltiples llamadas API encadenadas (edificios → apartamentos → residente) sin paginación.| 2 | Eficiencia y uso de recursos|
-| 5 | El botón de bloqueo/desbloqueo de puerta en mobile no se deshabilita mientras espera respuesta del servidor, permitiendo doble toque y comandos duplicados.| 3 | Prevención de errores (Nielsen #5)|
-| 6 | El formulario de inicio de sesión solo muestra un error genérico ("Correo o contraseña incorrectos"), sin indicar qué campo falló.| 2 | Ayuda a reconocer y resolver errores (Nielsen #9)|
-| 7 | El selector de idioma tiene dos implementaciones inconsistentes: texto abreviado en login vs. bandera y nombre completo en ajustes.| 2 | Consistencia y estándares (Nielsen #4)|
-| 8 | El botón "Exportar registro" en el historial no tiene funcionalidad real; solo cierra el menú sin generar ningún archivo.| 3 | Visibilidad del estado del sistema (Nielsen #1)|
+| 2 | La acción de "Eliminar" en el historial de visitas borra el registro inmediatamente sin pedir confirmación.| 4 | Prevención de errores (Nielsen #5)|
+| 3 | El botón de bloqueo/desbloqueo de puerta en mobile no se deshabilita mientras espera respuesta del servidor, permitiendo doble toque y comandos duplicados.| 3 | Prevención de errores (Nielsen #5)|
+| 4 | El formulario de inicio de sesión solo muestra un error genérico ("Correo o contraseña incorrectos"), sin indicar qué campo falló.| 2 | Ayuda a reconocer y resolver errores (Nielsen #9)|
+| 5 | El selector de idioma tiene dos implementaciones inconsistentes: texto abreviado en login vs. bandera y nombre completo en ajustes.| 2 | Consistencia y estándares (Nielsen #4)|
+| 6 | El botón "Exportar registro" en el historial no tiene funcionalidad real; solo cierra el menú sin generar ningún archivo.| 3 | Visibilidad del estado del sistema (Nielsen #1)|
 <hr>
+
+
 
 ***PROBLEMA 1:***
 
@@ -4031,7 +4031,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 *Problema 1*
 
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889028/Pasted_image_20260619115954_k3yonb.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
@@ -4042,26 +4042,6 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 ***PROBLEMA 2:***
 
-**Severidad:** 3
-
-**Heurística:** Visibilidad del estado del sistema (Nielsen #1)
-
-**Problema:** El panel del portero no cuenta con ningún mecanismo de actualización en tiempo real (SSE o polling). Si llega un nuevo visitante a la puerta, el portero solo se entera si busca manualmente el código de apartamento o recarga la página. El sistema no le avisa proactivamente que hay una visita esperando.
-
-*Problema 2*
-
-<p align="center">
-  <img src="" width="850">
-</p>
-
-*Nota.* Elaboración propia.
-
-**Recomendación:** Implementar una conexión persistente (EventSource/SSE) al endpoint de cola de visitantes para que el panel se actualice automáticamente y notifique sonora o visualmente al portero cuando llegue un nuevo visitante.
-
-
-
-***PROBLEMA 3:***
-
 **Severidad:** 4
 
 **Heurística:** Prevención de errores (Nielsen #5)
@@ -4070,7 +4050,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
  
 *Problema 3*
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889027/Pasted_image_20260619120123_qhlsqk.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
@@ -4079,27 +4059,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 
 
-***PROBLEMA 4:***
-
-**Severidad:** 2
-
-**Heurística:** Eficiencia y uso de recursos (relacionado a Nielsen #7 — Flexibilidad y eficiencia de uso)
-
-**Problema:** La vista de residentes carga los datos mediante un patrón de llamadas encadenadas: primero obtiene los edificios, luego por cada edificio obtiene sus apartamentos, y luego por cada apartamento obtiene el residente asociado. En un edificio con muchos departamentos esto genera decenas de peticiones simultáneas y no existe paginación en la lista resultante, lo que puede generar lentitud perceptible al cargar la vista.
- 
-*Problema 4*
-
-<p align="center">
-  <img src="" width="850">
-</p>
-
-*Nota.* Elaboración propia.
-
-**Recomendación:** Crear un endpoint backend que devuelva directamente los residentes de un edificio en una sola llamada, y agregar paginación o scroll virtual en el frontend para edificios con muchos departamentos.
-
-
-
-***PROBLEMA 5:***
+***PROBLEMA 3:***
 
 **Severidad:** 3
 
@@ -4110,7 +4070,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 *Problema 5*
 
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889027/Pasted_image_20260619120958_y3memq.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
@@ -4119,7 +4079,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 
 
-***PROBLEMA 6:***
+***PROBLEMA 4:***
 
 **Severidad:** 2
 
@@ -4130,7 +4090,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 *Problema 6*
 
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889027/Pasted_image_20260619120417_dpzqmd.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
@@ -4139,7 +4099,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 
 
-***PROBLEMA 7:***
+***PROBLEMA 5:***
 
 **Severidad:** 2
 
@@ -4150,7 +4110,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 *Problema 6*
 
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889027/Pasted_image_20260619120527_s97pgv.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
@@ -4159,7 +4119,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 
 
-***PROBLEMA 8:***
+***PROBLEMA 6:***
 
 **Severidad:** 3
 
@@ -4170,7 +4130,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 *Problema 6*
 
 <p align="center">
-  <img src="" width="850">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781889027/Pasted_image_20260619120554_eheich.png" width="500">
 </p>
 
 *Nota.* Elaboración propia.
