@@ -3945,7 +3945,7 @@ Enfocada en la usabilidad y eficiencia del panel para el ritmo de trabajo de por
 *Entrevista \#5 para NexBell*
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781892951/deni_g3e7jn.png" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781894092/deni_iru0hg.png" width="1000">
 </p>
 
 * **URL:** https://goo.su/GnyG3J
@@ -3965,12 +3965,12 @@ Reacción general positiva hacia el flujo operativo diario: login, panel princip
 *Entrevista \#6 para NexBell* 
 
 <p align="center">
-  <img src="" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781896233/luis_mfqimy.png" width="1000">
 </p> 
 
-* **URL:** 
-* **Inicio:**
-* **Fin:**
+* **URL:** https://goo.su/rh2AjI
+* **Inicio:** 0:01
+* **Fin:** 13:00
 * **Resumen:**
 
 Evalúa el sistema desde una perspectiva de gestión y seguridad institucional más que operativa. Destaca el pre-registro de visitas, el control desde el celular del residente y los sensores de seguridad (vibración y presencia) como diferenciadores frente a la portería tradicional. Pide un nivel adicional de trazabilidad (exportar reportes) y condiciona su decisión final a que las funciones de cámara y notificaciones push estén completamente operativas.
