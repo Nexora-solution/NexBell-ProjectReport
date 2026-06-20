@@ -3790,14 +3790,11 @@ Logros Alcanzados en la Integración del Sistema:
 
 **Conectividad IoT / Edge:** Programación y puesta en marcha del software embebido en el microcontrolador de portería, logrando capturar los eventos físicos de ingreso y enrutarlos hacia la nube.
 
-**Sincronización en Tiempo Real:** Validación de flujos críticos integrados, donde una acción iniciada en el hardware se refleja instantáneamente en el panel web de conserjería y activa la alerta en el smartphone del usuario.
-
-Se presenta un video demostrativo que registra el flujo completo de la solución: desde la interacción inicial con el dispositivo IoT en portería, el procesamiento y almacenamiento de los datos en el backend, hasta la recepción de la alerta multimedia y posterior autorización de acceso en el aplicativo móvil del residente.
 
 <p align="center">
-  <img src="" alt="XD" width="1000">
+  <img src="" alt="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781916134/milagro_isoclw.jpg" width="1000">
 </p>
-Link del video: []()
+
 
 #### 6.2.2.7 Services Documentation Evidence for Sprint Review.
 
@@ -4265,7 +4262,7 @@ Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
 </p>
 
-Link del video: https://goo.su/bNJI9
+Link del video: https://goo.su/cg1bFB
 
 <div style="page-break-after: always;"></div>
 
