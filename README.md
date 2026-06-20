@@ -4260,7 +4260,7 @@ Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
 </p>
 
-Link del video: https://goo.su/cg1bFB
+Link del video: https://goo.su/WP1Es
 
 <div style="page-break-after: always;"></div>
 
