@@ -3790,11 +3790,9 @@ Logros Alcanzados en la Integración del Sistema:
 
 **Conectividad IoT / Edge:** Programación y puesta en marcha del software embebido en el microcontrolador de portería, logrando capturar los eventos físicos de ingreso y enrutarlos hacia la nube.
 
-
 <p align="center">
-  <img src="" alt="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781916134/milagro_isoclw.jpg" width="1000">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781916134/milagro_isoclw.jpg" alt="api test 5" width="1000">
 </p>
-
 
 #### 6.2.2.7 Services Documentation Evidence for Sprint Review.
 
