@@ -4102,6 +4102,12 @@ Gustavo Roman
 
 Dennise Ortega
 
+Nicolas Neira
+
+Mariel Casoide
+
+Jose Rodriguez
+
 ***SITE o APP A EVALUAR:*** NexBell	
 
 ***ESCALA DE SEVERIDAD:***  
@@ -4290,3 +4296,5 @@ Preparación Progresiva hacia el Despliegue Completo: El equipo avanzó de forma
 * Big Picture Event Storming: [https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434](https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434)
 * Link del Keynote:
 [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
++ Link del video de exposiciòn:
+https://goo.su/eQDAt 
