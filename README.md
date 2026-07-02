@@ -3643,7 +3643,7 @@ Se ha completado el despliegue de la interfaz administrativa de NexBell, la cual
 Link de acceso a la Landing Page: [https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)
 
 #### 6.2.1.9. Team Collaboration Insights during Sprint
-A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de Fluxus.
+A través del análisis de las métricas de GitHub, se evidencia la sinergia alcanzada por el equipo de Nexora durante este primer ciclo de desarrollo. Los Insights reflejan una distribución equitativa del trabajo y una resolución ágil de conflictos mediante revisiones constantes. Esta cohesión permitió superar los obstáculos técnicos iniciales en la arquitectura, transformando los desafíos en un esfuerzo colectivo que culminó con la entrega exitosa de la primera versión funcional de NexBell.
 
 
 <p align="center">
@@ -3692,21 +3692,21 @@ Se priorizaron los requerimientos asociados al procesamiento lógico en el backe
 
 | User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| US37 | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Anaely Burga | Done |
-| US37 | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Anaely Burga | Done |
-| US38 | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Anaely Burga | Done |
-| US39 | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Santiago Suárez | Done |
-| US40 | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Anaely Burga | Done |
-| US41 | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Daniela Gómez | Done |
-| US01, US02 | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Santiago Suárez | Done |
-| US03 | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Santiago Suárez | Done |
-| US15 | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Raúl Bellido | Done |
-| US15 | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Raúl Bellido / Daniela Gómez | Done |
-| US16 | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Santiago Suárez | Done |
-| General | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Gabriel Borja | Done |
-| General | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Daniela Gómez | Done |
-| US10, US11 | Captura IoT | TS14 | IoT Hardware Simulation (Wokwi) | Configuración del entorno simulado en Wokwi usando ESP32, sensores PIR y lógica de comunicación básica MQTT/HTTP. | 12 | Gabriel Borja | In Progress |
-| US35, US36 | Seguridad | TS15 | IAM Tactic Architecture & BCrypt | Diseño de la capa de persistencia, hashing de contraseñas con BCrypt y definición de roles (RBAC) para el backend. | 14 | Raúl Bellido | In Progress |
+| US37 | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
+| US37 | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
+| US38 | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
+| US39 | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
+| US40 | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
+| US41 | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
+| US01, US02 | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
+| US03 | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
+| US15 | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
+| US15 | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
+| US16 | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
+| General | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
+| General | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
+| US10, US11 | Captura IoT | TS14 | IoT Hardware Simulation (Wokwi) | Configuración del entorno simulado en Wokwi usando ESP32, sensores PIR y lógica de comunicación básica MQTT/HTTP. | 12 | Developer Team | In Progress |
+| US35, US36 | Seguridad | TS15 | IAM Tactic Architecture & BCrypt | Diseño de la capa de persistencia, hashing de contraseñas con BCrypt y definición de roles (RBAC) para el backend. | 14 | Developer Team | In Progress |
 
 #### 6.2.2.4 Development Evidence for Sprint Review.
 
@@ -3948,8 +3948,8 @@ El segundo sprint de este proyecto representa la etapa de consolidación, madure
 | **Sprint n - 1 Review Summary** | Revisamos el avance del Sprint 2, confirmando la implementación exitosa de la arquitectura táctica (DDD) en el backend y la correcta persistencia de datos reales en la base de datos, eliminando la dependencia de Mocks. La simulación inicial del hardware IoT en Wokwi (ESP32 con sensores) logró comunicarse con la API REST enviando telemetría de presencia y alertas de seguridad. Sin embargo, la integración total de estos flujos con la aplicación móvil y el despliegue final del Edge API físico se trasladaron como prioridad máxima para este último sprint. |
 | **Sprint n - 1 Retrospective Summary** | **Start:**<br><ul><li>Ejecutar pruebas de integración End-to-End (E2E) cruzando el hardware IoT, el Backend, la App Móvil y el Dashboard Web.</li><li>Configurar y ejecutar el despliegue a producción de la aplicación móvil utilizando Firebase.</li></ul><br>**Stop:**<br><ul><li>Desarrollar y probar módulos de forma aislada; es momento de validar el ecosistema completo funcionando en conjunto.</li></ul><br>**Continue:**<br><ul><li>Mantener la rigurosidad en los despliegues continuos automatizados (Netlify para la web).</li><li>Preservar la calidad de la documentación (API Tests, Gherkin) y los estándares de Clean Code hasta la entrega final del producto.</li></ul> |
 | **Sprint Goal & User Stories** | **Sprint 3 Goal:**<br>Nuestro objetivo es culminar e integrar la versión definitiva de todo el ecosistema tecnológico de NexBell (Web, Móvil, Backend e IoT). Creemos que al consolidar esta arquitectura distribuida, entregaremos una solución de videoportería inteligente completamente funcional y escalable. Esto se confirmará cuando la aplicación móvil esté desplegada y operativa en Firebase, la aplicación web en Netlify, el backend en la nube responda con latencia óptima y el prototipo físico (Embedded App) ejecute correctamente los comandos de control de accesos, logrando flujos completos sin fallos. |
-| **Sprint 2 Velocity** |  |
-| **Sum of Story Points** |  |
+| **Sprint 3 Velocity** | 38 |
+| **Sum of Story Points** | 36 |
 
 #### 6.2.3.2. Aspect Leaders and Collaborators
 
@@ -3967,7 +3967,19 @@ Con el objetivo de garantizar una ejecución eficiente y culminar con éxito la 
 
 | User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-|  |  |  |  |  |  |  |  |
+| **US29** | Detectar presencia en la puerta | TS16 | IoT Presence Detection Sensor Integration | Integrar y calibrar el sensor de distancia ultrasónico HC-SR04 para detectar visitantes frente a la puerta. | 10 | Developer Team | Done |
+| **US30** | Visualizar estado de la puerta | TS17 | Door State Telemetry & UI | Desarrollar transmisión en tiempo real del estado de la puerta (abierta/cerrada) por MQTT. | 8 | Developer Team | Done |
+| **US31** | Registrar eventos de apertura y cierre de la puerta | TS18 | Door Access Logger & API | Implementar persistencia en base de datos para cada evento físico de cambio de estado de la puerta. | 6 | Developer Team | Done |
+| **US32** | Visualizar historial de visitas | TS19 | Access History Search & Filters | Agregar filtros de fecha, nombre de visitante y estado en el panel web y móvil de historial. | 8 | Developer Team | Done |
+| **US06** | Registrar una visita | TS20 | Resident Visitor Pre-Registration UI | Desarrollar flujos y pantallas de pre-registro en la app móvil de residente y validación en API. | 10 | Developer Team | Done |
+| **US09** | Gestionar visita registrada | TS21 | Manage Pre-Registered Visits | Implementar funcionalidades para editar o cancelar pre-registros de visitas en la app móvil. | 8 | Developer Team | Done |
+| **US28** | Permitir aprobar o rechazar visita | TS22 | E2E Interactive Door Unlock | Conectar acción de notificaciones móviles con API para activar el relay físico del ESP32. | 12 | Developer Team | Done |
+| **US04** | Cerrar sesión en el sistema | TS23 | Secure Session Termination | Desarrollar eliminación de tokens JWT y expiración segura en cliente web, móvil y backend. | 4 | Developer Team | Done |
+| **US05** | Editar datos del perfil | TS24 | Profile Details Editor | Implementar formularios para modificar datos personales y subir fotos de perfil (Cloudinary). | 6 | Developer Team | Done |
+| **US33** | Modificar datos de autenticación | TS25 | Change Password & Security | Agregar validaciones de credenciales y hashing con BCrypt para la modificación de la cuenta. | 8 | Developer Team | Done |
+| **US34** | Recuperar contraseña | TS26 | Password Recovery & SMTP Flow | Integrar servicio de correo para envío de tokens y códigos de verificación de restablecimiento. | 10 | Developer Team | Done |
+| **General** | Final Deployments | TS27 | Netlify & Firebase Live Deployments | Desplegar backend en Azure, dashboard web en Netlify y aplicación móvil en Firebase Distribution. | 10 | Developer Team | Done |
+| **General** | Documentation | TS28 | Final Report & Wiki Update | Consolidar y finalizar documentación del proyecto, manuales de usuario y guías de instalación. | 8 | Developer Team | Done |
 
 #### 6.2.3.4. Development Evidence for Sprint Review
 
