@@ -1,20 +1,28 @@
 <p align="center">
-  <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=100px>
+  <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=150px>
 </p>
 
-<p align="center"><b>Universidad Peruana de Ciencias Aplicadas</b></p>
-<p align="center"><b>Facultad de Ingenieria</b></p>
+<p align="center">Universidad Peruana de Ciencias Aplicadas</p>
+<p align="center">Facultad de Ingenieria</p>
 <br>
 
-<p align="center">Curso: 1ASI0572 - Desarrollo y Soluciones IOT</p>
-<p align="center"><b>NRC:</b> 6785</p>
+<p align="center"><b>1ASI0572</b></p>
+<p align="center"><b>Desarrollo y Soluciones IOT</b></p>
 <br>
-<p align="center"><b>Nombre del profesor:</b> Marco Antonio León Baca</p>
+<p align="center">NRC</p>
+<p align="center"><b>6785</b></p>
+<br>
 
 ### <p align="center"><b>"Informe del Trabajo Final"</b></p>
 <br>
-<p align="center"><b>Nombre del grupo:</b> Nexora</p>
-<p align="center"><b>Nombre del producto:</b> NexBell</p>
+<p align="center">Docente</p>
+<p align="center"><b>Marco Antonio León Baca</b></p>
+<br>
+<p align="center">Equipo</p>
+<p align="center"><b>Nexora</b></p>
+<br>
+<p align="center">Proyecto</p>
+<p align="center"><b>NexBell</b></p>
 <br>
 
 <p align="center">Integrantes:</p>
@@ -52,8 +60,10 @@
 </table>
 
 <br>
-<hr>
 
+<p align="center">Periodo 202610</p>
+
+<hr>
 <div style="page-break-after: always;"></div>
 
 # <p align="center">Registro de Versiones del Informe</p>
@@ -297,6 +307,16 @@ Para la consolidación de este sprint, el equipo Nexora pasó de gestionar el av
               * [6.2.2.7 Services Documentation Evidence for Sprint Review](#6227-services-documentation-evidence-for-sprint-review)
               * [6.2.2.8 Software Deployment Evidence for Sprint Review](#6228-software-deployment-evidence-for-sprint-review)
               * [6.2.2.9 Team Collaboration Insights during Sprint](#6229team-collaboration-insights-during-sprint)
+          * [6.2.3 Sprint 3](#623-sprint-3)
+              * [6.2.3.1 Sprint Planning 3](#6231-sprint-planning-3)
+              * [6.2.3.2 Aspect Leaders and Collaborators](#6232-aspect-leaders-and-collaborators)
+              * [6.2.3.3 Sprint Backlog 3](#6233-sprint-backlog-3)
+              * [6.2.3.4 Development Evidence for Sprint Review](#6234-development-evidence-for-sprint-review)
+              * [6.2.3.5 Testing Suite Evidence for Sprint Review](#6235-testing-suite-evidence-for-sprint-review)
+              * [6.2.3.6 Execution Evidence for Sprint Review](#6236-execution-evidence-for-sprint-review)
+              * [6.2.3.7 Services Documentation Evidence for Sprint Review](#6237-services-documentation-evidence-for-sprint-review)
+              * [6.2.3.8 Software Deployment Evidence for Sprint Review](#6238-software-deployment-evidence-for-sprint-review)
+              * [6.2.3.9 Team Collaboration Insights during Sprint](#6239team-collaboration-insights-during-sprint)
       * [6.3 Validation Interviews](#63-validation-interviews)
           * [6.3.1 Diseño de Entrevistas](#631-diseño-de-entrevistas)
           * [6.3.2 Registro de Entrevistas](#632-registro-de-entrevistas)
@@ -3910,6 +3930,60 @@ Durante este segundo ciclo de desarrollo, las métricas de GitHub muestran una c
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="400">
 </p>
 
+### 6.2.3. Sprint 3
+
+#### 6.2.3.1. Sprint Planning 3
+
+El segundo sprint de este proyecto representa la etapa de consolidación, madurez e integración integral de la solución NexBell. Las evidencias e implementaciones presentadas a continuación reflejan un avance significativo en la tangibilidad del producto, optimizando la experiencia digital en todos sus puntos de contacto y garantizando un sistema robusto, alineado con las expectativas técnicas y operativas planteadas para esta iteración.
+
+| Campo | Detalle |
+| --- | --- |
+| **Sprint #** | Sprint 3 |
+| **Sprint Planning Background** | En el Sprint 3 decidimos reunirnos virtualmente para estructurar el cierre definitivo del proyecto y la entrega final de NexBell. Evaluamos el estado de la integración entre las interfaces previamente desarrolladas y la lógica táctica del servidor, y planificamos las acciones críticas para presentar la versión definitiva de todo el ecosistema: la plataforma Web, la aplicación Móvil y la arquitectura del Backend. Asimismo, coordinamos los últimos ajustes para la culminación del prototipo físico IoT (Embedded App y Edge API) y establecimos la estrategia de despliegue total en producción, asegurando la publicación de la aplicación móvil en Firebase y la plataforma web en Netlify para garantizar la operatividad integral de la solución. |
+| **Date** | 2026-06-22 |
+| **Time** | 3:00 PM |
+| **Location** | Virtual (Google Meet Call) |
+| **Prepared By** | Gómez Flores, Daniela Araceli |
+| **Attendees (to planning meeting)** | <ul><li>Gómez Flores, Daniela Araceli</li><li>Bellido Salas, Raúl</li><li>Borja Molina, Gabriel Sebastián</li><li>Suárez Romero, Santiago Manuel</li><li>Burga Loarte, Anaely Zarely</li></ul> |
+| **Sprint n - 1 Review Summary** | Revisamos el avance del Sprint 2, confirmando la implementación exitosa de la arquitectura táctica (DDD) en el backend y la correcta persistencia de datos reales en la base de datos, eliminando la dependencia de Mocks. La simulación inicial del hardware IoT en Wokwi (ESP32 con sensores) logró comunicarse con la API REST enviando telemetría de presencia y alertas de seguridad. Sin embargo, la integración total de estos flujos con la aplicación móvil y el despliegue final del Edge API físico se trasladaron como prioridad máxima para este último sprint. |
+| **Sprint n - 1 Retrospective Summary** | **Start:**<br><ul><li>Ejecutar pruebas de integración End-to-End (E2E) cruzando el hardware IoT, el Backend, la App Móvil y el Dashboard Web.</li><li>Configurar y ejecutar el despliegue a producción de la aplicación móvil utilizando Firebase.</li></ul><br>**Stop:**<br><ul><li>Desarrollar y probar módulos de forma aislada; es momento de validar el ecosistema completo funcionando en conjunto.</li></ul><br>**Continue:**<br><ul><li>Mantener la rigurosidad en los despliegues continuos automatizados (Netlify para la web).</li><li>Preservar la calidad de la documentación (API Tests, Gherkin) y los estándares de Clean Code hasta la entrega final del producto.</li></ul> |
+| **Sprint Goal & User Stories** | **Sprint 3 Goal:**<br>Nuestro objetivo es culminar e integrar la versión definitiva de todo el ecosistema tecnológico de NexBell (Web, Móvil, Backend e IoT). Creemos que al consolidar esta arquitectura distribuida, entregaremos una solución de videoportería inteligente completamente funcional y escalable. Esto se confirmará cuando la aplicación móvil esté desplegada y operativa en Firebase, la aplicación web en Netlify, el backend en la nube responda con latencia óptima y el prototipo físico (Embedded App) ejecute correctamente los comandos de control de accesos, logrando flujos completos sin fallos. |
+| **Sprint 2 Velocity** |  |
+| **Sum of Story Points** |  |
+
+#### 6.2.3.2. Aspect Leaders and Collaborators
+
+Con el objetivo de garantizar una ejecución eficiente y culminar con éxito la integración total del ecosistema tecnológico de NexBell durante este Sprint 3, se han reestructurado las responsabilidades del equipo, enfocándose en las fases finales de desarrollo, despliegue en producción y validación E2E. La siguiente tabla detalla la organización interna del equipo para este último ciclo, identificando mediante la sigla L (Leader) a la persona responsable de la dirección técnica de cada componente crítico, y con la sigla C (Collaborator) a quienes brindaron soporte activo en su implementación, pruebas y cierre final.
+
+| Team Member | GitHub Username | Desarrollo e Integración del Backend (REST API) | Desarrollo y Despliegue de App Móvil (Firebase) | Implementación IoT y Hardware (Edge API) | Pruebas End-to-End (E2E) y Despliegue Cloud | Consolidación del Informe Final y Documentación |
+| --- | --- | --- | --- | --- | --- | --- |
+| Bellido Salas, Raúl | raulbellidosalas | L | C | C | C | C |
+| Borja Molina, Gabriel Sebastián | borj410 | C | C | C | L | C |
+| Suárez Romero, Santiago Manuel | SDarXx | C | C | L | C | C |
+| Gómez Flores, Daniela Araceli | DanieGF1 | C | L | C | C | C |
+| Burga Loarte, Anaely Zarely | userxx1000 | C | C | C | C | L |
+
+#### 6.2.3.3. Sprint Backlog 3
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+|  |  |  |  |  |  |  |  |
+
+#### 6.2.3.4. Development Evidence for Sprint Review
+
+| Repository | Branch | Commit Id | Commit Message |
+|---|---|---|---|
+
+#### 6.2.3.5. Testing Suite Evidence for Sprint Review
+
+#### 6.2.3.6. Execution Evidence for Sprint Review
+
+#### 6.2.3.7. Services Documentation Evidence for Sprint Review
+
+#### 6.2.3.8. Software Deployment Evidence for Sprint Review
+
+#### 6.2.3.9. Team Collaboration Insights during Sprint
+
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
 
@@ -4187,7 +4261,6 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 **Recomendación:** Deshabilitar el botón y mostrar un indicador de carga (spinner) mientras la petición está en curso, habilitándolo nuevamente solo tras recibir la confirmación del backend.
 
 
-
 ***PROBLEMA 4:***
 
 **Severidad:** 2
@@ -4263,6 +4336,8 @@ Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
 Link del video: https://goo.su/WP1Es
 
 <div style="page-break-after: always;"></div>
+
+##
 
 # Conclusiones
 
