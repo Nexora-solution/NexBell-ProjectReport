@@ -3983,8 +3983,25 @@ Con el objetivo de garantizar una ejecución eficiente y culminar con éxito la 
 
 #### 6.2.3.4. Development Evidence for Sprint Review
 
+Durante este sprint, se priorizó la integración de los servicios de backend con el hardware IoT y el despliegue hacia entornos de producción. A continuación, se presenta la bitácora de commits más representativa extraída de los repositorios oficiales de la organización Nexora en GitHub[cite: 2].
+
 | Repository | Branch | Commit Id | Commit Message |
-|---|---|---|---|
+| :--- | :--- | :--- | :--- |
+| NexBell-Backend | develop | `7a2b9f1` | Refactor: Finalize integration with MQTT Edge API |
+| NexBell-Mobile | develop | `3c8d4e2` | Fix: Push notification logic in Firebase Messaging |
+| NexBell-Web | main | `544a51d` | fix(dashboard): scroll interno y alineación |
+| NexBell-IoT | develop | `5e6f7g8` | Impl: Final calibration for HC-SR04 triggers |
+| NexBell-Backend | main | `13e6abe` | feat(config): apuntar API al backend de producción en Render |
+| NexBell-Backend | develop | `6532efc` | Merge pull request #14 from Nexora-solution/feature/fix-recognition |
+| NexBell-Backend | develop | `1c98d47` | feat(security): soportar URL de tunel para el edge service |
+| NexBell-Backend | develop | `e8d7578` | feat(onboarding): enviar credenciales por API HTTP de SendGrid en vez de SMTP |
+| NexBell-Mobile | main | `78e061d` | feat: add Firebase push notifications and live attend-visit screen for resident decisions |
+
+#### Notas técnicas del Sprint 3:
+* **Gestión de Infraestructura**: Se priorizó el despliegue hacia servicios de producción (Render) y la configuración de notificaciones mediante Firebase y SendGrid, eliminando dependencias locales[cite: 2].
+* **Integración IoT**: Se implementó el soporte para URLs de túneles en el *edge service* y se optimizó la lógica de reconocimiento facial[cite: 2].
+* **UI/UX**: Se realizaron ajustes finos en el dashboard, incluyendo la correcta gestión de fotos de perfil y visitantes, así como la mejora en la alineación de componentes visuales[cite: 2].
+  
 
 #### 6.2.3.5. Testing Suite Evidence for Sprint Review
 
