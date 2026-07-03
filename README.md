@@ -4013,6 +4013,50 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 
 #### 6.2.3.9. Team Collaboration Insights during Sprint
 
+Durante este segundo ciclo de desarrollo, las métricas de GitHub y la dinámica operativa del equipo reflejan una maduración significativa en la organización de Nexora. El trabajo se consolidó a través de la especialización de roles sobre cuatro repositorios independientes (Mobile, Web, Backend, Edge-Service), permitiendo una ejecución paralela altamente eficiente.
+
+#### Dinámica de Trabajo y Sincronización
+La colaboración durante este Sprint 2 se caracterizó por una estructura de "Dueño de Componente", donde cada integrante asumió la propiedad técnica de un módulo específico. Esta estrategia eliminó las dependencias bloqueantes y permitió que el equipo sincronizara criterios técnicos complejos entre repositorios separados, resolviendo de manera proactiva los ajustes necesarios en las interfaces de comunicación entre capas (Frontend, Backend, Móvil).
+
+#### Distribución de Esfuerzo (Repositorios)
+* **FrontedWeb**: Enfocado en la transición de interfaces estáticas a dinámicas, integrando los servicios reales de API mediante el consumo de endpoints definidos en el backend.
+* **WebServices**: Este componente centralizó la lógica táctica del sistema (DDD), permitiendo la interconexión con el frontend, la aplicación móvil y los dispositivos IoT.
+* **Mobile**: Consolidó la recepción de notificaciones y la gestión de permisos del usuario residente, logrando una sincronización efectiva con el backend.
+* **Embedded code / EdgeAPI**: Se avanzó en la lógica de programación del microcontrolador (ESP32) para la captura de eventos físicos, estableciendo el puente necesario entre el hardware de portería y la nube.
+
+#### Resultados de Colaboración
+La integración de endpoints reales entre todos los nodos del ecosistema NexBell al finalizar este sprint es la prueba fehaciente de una comunicación técnica fluida. La capacidad del equipo para identificar y corregir discrepancias en los contratos de datos (JSON schemas) en tiempo real permitió avanzar desde una etapa de simulación (Mocks) hacia una funcionalidad real y operativa. Este esfuerzo conjunto subraya el alto compromiso del equipo con la calidad y la metodología ágil, preparando el camino para la culminación del proyecto en el Sprint 3.
+
+**- FrontedWeb**
+
+<p align="center">
+  <img src="" alt="landing-page" width="400">
+</p>
+
+**- WebServices**
+
+<p align="center">
+  <img src="" alt="landing-page" width="400">
+</p>
+
+**- Mobile**
+
+<p align="center">
+  <img src="" alt="landing-page" width="400">
+</p>
+
+**- Embedded code**
+
+<p align="center">
+  <img src="" alt="landing-page" width="400">
+</p>
+
+**- EdgeAPI**
+
+<p align="center">
+  <img src="" alt="landing-page" width="400">
+</p>
+
 ## 6.3. Validation Interviews.
 ### 6.3.1. Diseño de Entrevistas.
 
