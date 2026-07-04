@@ -4009,6 +4009,43 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 
 #### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
+Durante este tercer sprint, el enfoque se centró en la **consolidación total de la API REST** y la exposición de servicios mediante una arquitectura de *Bounded Contexts* plenamente operativa y validada. La documentación ha sido estandarizada bajo el esquema **OpenAPI 3.1**, facilitando la integración nativa entre el frontend web, la aplicación móvil y el firmware del dispositivo IoT (Edge).
+
+A continuación, se detalla el catálogo de servicios finales implementados y validados en el entorno de producción (`onrender.com`):
+
+#### 1. Gestión de Identidad y Acceso (IAM)
+* **Endpoints principales:** `/api/iam/login`, `/api/iam/refresh`, `/api/iam/users/me`, `/api/iam/users/me/fcm-token`.
+* **Propósito:** Gestión de sesiones basada en JWT, actualización segura de tokens y registro de tokens de Firebase (FCM) para notificaciones push en tiempo real.
+
+#### 2. Gestión de Directorio y Onboarding
+* **Endpoints principales:** `/api/directory/*`, `/api/onboarding/*`.
+* **Descripción:** Servicios para el aprovisionamiento de contratos, reclamación de credenciales mediante API de terceros (SendGrid) y resolución de perfiles de residentes/porteros vinculados a edificios y apartamentos.
+
+#### 3. Intercomunicador y Gestión de Visitas
+* **Endpoints principales:** `/api/intercom/visit-requests`, `/api/intercom/pre-registered-visits`, `/api/intercom/queue/*`.
+* **Descripción:** Núcleo funcional. Maneja la cola de visitas en tiempo real, el flujo de pre-registro por parte de los residentes y la notificación asíncrona de eventos de ingreso.
+
+#### 4. Seguridad, IoT y Reconocimiento Facial
+* **Endpoints principales:** `/api/security/face/*`, `/api/security/iot/*`, `/api/security/door/*`.
+* **Descripción:** Integración avanzada con el hardware. Incluye endpoints para el procesamiento de eventos de reconocimiento facial, estados de sensores físicos (presencia, puerta abierta/cerrada), control de cerradura (lock/unlock) y administración de streams de video/audio.
+
+#### 5. Auditoría y Logs de Hardware
+* **Endpoints principales:** `/api/audit/*`, `/api/security/alarms/*`.
+* **Descripción:** Bitácora inmutable de eventos de acceso y alertas de seguridad (tampering/vibración), garantizando trazabilidad completa mediante logs de actividad.
+
+#### Tabla Resumen de Bounded Contexts y Exposición API
+
+| Contexto | Funcionalidad Clave | Estado |
+| :--- | :--- | :--- |
+| **IAM** | Autenticación y FCM Tokens | Operativo |
+| **Directory** | Perfiles y Relaciones Edificio-Residente | Operativo |
+| **Onboarding** | Provisión de contratos y credenciales | Operativo |
+| **Intercom** | Cola de visitas y streaming de video | Operativo |
+| **Security** | Control de puerta, Alarma y Face Rec | Operativo |
+| **Audit** | Logs de acceso y telemetría | Operativo |
+
+> **Nota técnica:** La documentación interactiva (Swagger UI) se encuentra disponible en tiempo real en la siguiente URL de producción: [https://nexbell-webservices.onrender.com/swagger-ui/index.html](https://nexbell-webservices.onrender.com/swagger-ui/index.html). Cada endpoint ha sido testeado bajo condiciones de concurrencia y validado contra el esquema de seguridad JWT.
+> 
 #### 6.2.3.8. Software Deployment Evidence for Sprint Review
 
 Durante el Sprint 3, el equipo Nexora ha completado la transición de la infraestructura de desarrollo a un entorno de producción totalmente operativo. Se ha materializado la arquitectura distribuida del ecosistema NexBell, integrando de manera efectiva el backend transaccional, el portal web del portero, la aplicación móvil y la lógica de hardware IoT.
