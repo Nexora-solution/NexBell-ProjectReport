@@ -4005,6 +4005,35 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 
 #### 6.2.3.5. Testing Suite Evidence for Sprint Review
 
+### 6.2.3.5. Testing Suite Evidence for Sprint Review
+
+Durante este tercer sprint, la estrategia de pruebas se elevó de la validación de componentes aislados a la **verificación integral del sistema en entornos de producción**. Se han ejecutado pruebas de integración *end-to-end* (E2E) que garantizan que el flujo de seguridad, desde el sensor físico hasta la notificación en la aplicación móvil y la respuesta en el Dashboard, opera bajo los parámetros de calidad definidos.
+
+#### Estrategia de Pruebas: Validación de Flujos Críticos
+La suite de pruebas se centró en asegurar la integridad de los servicios críticos del sistema, utilizando la herramienta REST Client sobre el entorno de producción (`render.com`). Estas pruebas confirman la correcta interacción entre los servicios de intercomunicador, la persistencia de datos y los disparadores de seguridad.
+
+**1. Simulación de Interacción IoT e Ingesta de Evidencia**
+*   **Endpoint:** `POST /api/intercom/visit-requests` y `POST /api/intercom/visit-requests/{id}/evidence`.
+*   **Descripción:** Esta prueba valida la creación de una solicitud de visita y la carga de evidencia multimedia. Confirmamos que el backend recibe la señal del dispositivo, registra los datos y vincula correctamente la evidencia fotográfica en el almacenamiento.
+
+**2. Verificación de Cola y Estado del Sistema**
+*   **Endpoint:** `GET /api/intercom/visit-requests/{id}` y `GET /api/intercom/queue/pending`.
+*   **Descripción:** Se comprueba que la consulta de solicitudes individuales y el listado de la cola de espera devuelven datos consistentes y actualizados, validando la sincronización de la base de datos en tiempo real.
+
+**3. Automatización de Decisiones de Acceso**
+*   **Endpoint:** `POST /api/intercom/visit-requests/{id}/decision`.
+*   **Descripción:** Esta prueba crítica simula la decisión del residente ("APPROVED"). El sistema responde con éxito (`HTTP 200 OK`), actualiza el estado de la visita y genera el registro en la bitácora de auditoría.
+
+**4. Validación de Notificaciones y Flujo de Lectura**
+*   **Endpoint:** `GET /api/intercom/notifications/apartment/{id}` y `PUT /api/notifications/1/read`.
+*   **Descripción:** Se valida la capacidad del sistema para listar notificaciones pendientes y marcar su estado como leído, cerrando el ciclo de comunicación con el usuario.
+
+#### Resumen de Calidad del Sistema
+* **Pruebas BDD**: Los escenarios definidos mediante Gherkin mantienen la alineación del comportamiento esperado ante casos de uso reales.
+* **Entorno de Ejecución**: Todas las pruebas fueron ejecutadas exitosamente contra el servidor de producción, validando la conectividad total y la latencia aceptable del ecosistema NexBell.
+
+Los resultados obtenidos en estas pruebas confirman la robustez del backend bajo condiciones de uso real, garantizando la consistencia de los datos entre el hardware físico (ESP32) y la plataforma en la nube.
+
 #### 6.2.3.6. Execution Evidence for Sprint Review
 
 #### 6.2.3.7. Services Documentation Evidence for Sprint Review
