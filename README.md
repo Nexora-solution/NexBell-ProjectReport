@@ -4011,6 +4011,26 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 
 #### 6.2.3.8. Software Deployment Evidence for Sprint Review
 
+Durante el Sprint 3, el equipo Nexora ha completado la transición de la infraestructura de desarrollo a un entorno de producción totalmente operativo. Se ha materializado la arquitectura distribuida del ecosistema NexBell, integrando de manera efectiva el backend transaccional, el portal web del portero, la aplicación móvil y la lógica de hardware IoT.
+
+#### Infraestructura de Despliegue y CI/CD
+
+Durante el Sprint 3, el equipo Nexora ha completado la transición de la infraestructura de desarrollo a un entorno de producción totalmente operativo. Se ha materializado la arquitectura distribuida del ecosistema NexBell, integrando de manera efectiva el backend transaccional, el portal web del portero, la aplicación móvil y la lógica de hardware IoT.
+
+#### Infraestructura de Despliegue y CI/CD
+
+El proceso de despliegue se consolidó mediante la automatización de *pipelines* de integración y entrega continua (CI/CD). Cada cambio en las ramas principales (`main`/`develop`) activa un flujo automatizado que incluye la compilación, ejecución de pruebas y despliegue hacia los servicios en la nube. Esta automatización asegura que el sistema sea escalable, resiliente y capaz de manejar datos reales de telemetría y seguridad en tiempo real.
+
+#### Entornos de Producción
+A continuación, se detallan los accesos a los servicios desplegados:
+
+| Componente | Plataforma | Estado | Acceso |
+| :--- | :--- | :--- | :--- |
+| **Landing Page** | Netlify | Producción | [https://nexbell.netlify.app/](https://nexbell.netlify.app/)|
+| **Panel Web (Portero)** | Netlify | Producción |[https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)|
+| **Backend API** | Render | Producción | [https://nexbell-api.onrender.com/](https://nexbell-webservices.onrender.com/swagger-ui/index.html)|
+| **Aplicación Móvil** | Firebase | Distribución Beta | Instalación directa (Vía App Distribution)|
+
 #### 6.2.3.9. Team Collaboration Insights during Sprint
 
 Durante este segundo ciclo de desarrollo, las métricas de GitHub y la dinámica operativa del equipo reflejan una maduración significativa en la organización de Nexora. El trabajo se consolidó a través de la especialización de roles sobre cuatro repositorios independientes (Mobile, Web, Backend, Edge-Service), permitiendo una ejecución paralela altamente eficiente.
