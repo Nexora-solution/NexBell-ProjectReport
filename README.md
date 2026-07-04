@@ -4009,96 +4009,365 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 
 #### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
-Durante este tercer sprint, el enfoque se centró en la **consolidación total de la API REST** y la exposición de servicios mediante una arquitectura de *Bounded Contexts* plenamente operativa y validada. La documentación ha sido estandarizada bajo el esquema **OpenAPI 3.1**, facilitando la integración nativa entre el frontend web, la aplicación móvil y el firmware del dispositivo IoT (Edge).
+Durante este Sprint, el enfoque se centró en la implementación e integración del web service para el sistema NexBell, un portero inteligente basado en IoT. A lo largo de este Sprint, integramos los servicios backend con el frontend web, la aplicación móvil, el servicio Edge y el firmware del dispositivo ESP32-S3, asegurando la conectividad con una base de datos real que gestiona las diversas operaciones del sistema. Las funcionalidades de identidad y accesos, directorio de edificios y residentes, onboarding, intercomunicador, seguridad con reconocimiento facial y auditoría están completamente implementadas y operativas.
 
-A continuación, se detalla el catálogo de servicios finales implementados y validados en el entorno de producción (`onrender.com`):
+A continuación, se detallan las funcionalidades implementadas para cada una de las entidades definidas en la arquitectura de NexBell y sus correspondientes tablas en la base de datos:
 
-#### 1. Gestión de Identidad y Acceso (IAM)
-* **Endpoints principales:** `/api/iam/login`, `/api/iam/refresh`, `/api/iam/users/me`, `/api/iam/users/me/fcm-token`.
-* **Propósito:** Gestión de sesiones basada en JWT, actualización segura de tokens y registro de tokens de Firebase (FCM) para notificaciones push en tiempo real.
+1. **Cuentas de Usuario (UserAccount)**:
+* **Tabla user_accounts**
+* **Operaciones CRUD**
+  * GET: Obtener el usuario autenticado (/me).
+  * POST: Iniciar sesión (login), refrescar token de acceso o registrar el token FCM del dispositivo.
+* **Descripción**: Gestión de las cuentas de usuario (residentes y porteros) con autenticación basada en JWT, credenciales de acceso y registro de dispositivos para notificaciones push.
 
-#### 2. Gestión de Directorio y Onboarding
-* **Endpoints principales:** `/api/directory/*`, `/api/onboarding/*`.
-* **Descripción:** Servicios para el aprovisionamiento de contratos, reclamación de credenciales mediante API de terceros (SendGrid) y resolución de perfiles de residentes/porteros vinculados a edificios y apartamentos.
+2. **Sesiones de Usuario (UserSession)**:
+* **Tabla user_sessions**
+* **Operaciones CRUD**
+  * POST: Iniciar sesión, refrescar sesión o cerrar sesión (logout).
+* **Descripción**: Manejo de sesiones activas mediante tokens de acceso y de refresco, permitiendo mantener y cerrar sesiones de forma segura.
 
-#### 3. Intercomunicador y Gestión de Visitas
-* **Endpoints principales:** `/api/intercom/visit-requests`, `/api/intercom/pre-registered-visits`, `/api/intercom/queue/*`.
-* **Descripción:** Núcleo funcional. Maneja la cola de visitas en tiempo real, el flujo de pre-registro por parte de los residentes y la notificación asíncrona de eventos de ingreso.
+3. **Restablecimiento de Contraseña (PasswordResetTicket)**:
+* **Tabla password_reset_tickets**
+* **Operaciones CRUD**
+  * POST: Solicitar restablecimiento de contraseña o confirmar el restablecimiento.
+  * PUT: Cambiar la contraseña.
+* **Descripción**: Recuperación y actualización de credenciales mediante tickets de restablecimiento enviados por correo.
 
-#### 4. Seguridad, IoT y Reconocimiento Facial
-* **Endpoints principales:** `/api/security/face/*`, `/api/security/iot/*`, `/api/security/door/*`.
-* **Descripción:** Integración avanzada con el hardware. Incluye endpoints para el procesamiento de eventos de reconocimiento facial, estados de sensores físicos (presencia, puerta abierta/cerrada), control de cerradura (lock/unlock) y administración de streams de video/audio.
+4. **Edificios (BuildingDirectory)**:
+* **Tabla building_directories**
+* **Operaciones CRUD**
+  * GET: Obtener todos los edificios u obtener los departamentos de un edificio.
+  * POST: Crear un nuevo edificio.
+* **Descripción**: Registro y consulta de los edificios administrados por el sistema, junto con su estructura de departamentos.
 
-#### 5. Auditoría y Logs de Hardware
-* **Endpoints principales:** `/api/audit/*`, `/api/security/alarms/*`.
-* **Descripción:** Bitácora inmutable de eventos de acceso y alertas de seguridad (tampering/vibración), garantizando trazabilidad completa mediante logs de actividad.
+5. **Departamentos (Apartment)**:
+* **Tabla apartments**
+* **Operaciones CRUD**
+  * GET: Obtener el residente de un departamento o buscar un departamento por residente.
+  * POST: Crear un nuevo departamento.
+  * PUT: Asignar o actualizar el residente de un departamento.
+* **Descripción**: Gestión de las unidades de vivienda de cada edificio y su relación con los residentes asignados.
 
-#### Tabla Resumen de Bounded Contexts y Exposición API
+6. **Perfiles de Residente (ResidentDirectoryProfile)**:
+* **Tabla resident_directory_profiles**
+* **Operaciones CRUD**
+  * GET: Obtener el perfil de un residente por ID.
+  * PUT: Actualizar los datos de contacto del residente.
+* **Descripción**: Información personal y de contacto de los residentes, utilizada para las notificaciones y la gestión de visitas.
 
-| Contexto | Funcionalidad Clave | Estado |
-| :--- | :--- | :--- |
-| **IAM** | Autenticación y FCM Tokens | Operativo |
-| **Directory** | Perfiles y Relaciones Edificio-Residente | Operativo |
-| **Onboarding** | Provisión de contratos y credenciales | Operativo |
-| **Intercom** | Cola de visitas y streaming de video | Operativo |
-| **Security** | Control de puerta, Alarma y Face Rec | Operativo |
-| **Audit** | Logs de acceso y telemetría | Operativo |
+7. **Porteros por Edificio (DoormanBuilding)**:
+* **Tabla doorman_buildings**
+* **Operaciones CRUD**
+  * GET: Obtener un portero por usuario.
+  * POST: Registrar un portero en un edificio.
+  * PUT: Actualizar los datos del portero.
+* **Descripción**: Asignación y administración de los porteros responsables de cada edificio.
 
-> **Nota técnica:** La documentación interactiva (Swagger UI) se encuentra disponible en tiempo real en la siguiente URL de producción: [https://nexbell-webservices.onrender.com/swagger-ui/index.html](https://nexbell-webservices.onrender.com/swagger-ui/index.html). Cada endpoint ha sido testeado bajo condiciones de concurrencia y validado contra el esquema de seguridad JWT.
-> 
+8. **Onboarding y Contratación (Onboarding)**:
+* **Operaciones**
+  * GET: Obtener edificios disponibles u obtener los departamentos de un edificio.
+  * POST: Registrar un contrato de edificio, reclamar credenciales de portero o reclamar credenciales de residente.
+* **Descripción**: Proceso de alta de nuevos clientes: contratación del servicio, generación automática de credenciales y su envío al correo personal mediante la API HTTP de SendGrid.
+
+9. **Solicitudes de Visita (VisitRequest)**:
+* **Tabla visit_requests**
+* **Operaciones CRUD**
+  * GET: Obtener el detalle de una visita o transmitirla en tiempo real (SSE).
+  * POST: Registrar una solicitud de visita desde el IoT o registrar la decisión del residente.
+* **Descripción**: Núcleo del intercomunicador. Registra las visitas generadas al tocar el timbre y procesa la autorización o denegación de acceso del residente.
+
+10. **Evidencia de Visitantes (VisitorEvidence)**:
+* **Tabla visitor_evidences**
+* **Operaciones CRUD**
+  * POST: Subir la evidencia (foto) de la visita.
+* **Descripción**: Almacenamiento de la fotografía capturada por la cámara del ESP32 al momento de la visita, asociada a su solicitud.
+
+11. **Cola del Intercomunicador (IntercomQueueItem)**:
+* **Tabla intercom_queue_items**
+* **Operaciones CRUD**
+  * GET: Obtener las visitas pendientes en cola, transmitir la cola en tiempo real (SSE) o consultar el estado y el stream del video en vivo.
+* **Descripción**: Administra la cola de atención del portero, mostrando en tiempo real las visitas pendientes y el video en vivo de la cámara.
+
+12. **Visitas Pre-registradas (PreRegisteredVisit)**:
+* **Tabla pre_registered_visits**
+* **Operaciones CRUD**
+  * GET: Obtener las visitas pre-registradas u obtener una por ID.
+  * POST: Crear una visita pre-registrada o notificar una visita.
+  * PUT: Actualizar una visita o registrar la decisión sobre ella.
+  * DELETE: Eliminar una visita pre-registrada.
+* **Descripción**: Permite a los residentes programar visitas por adelantado (autorizadas o rechazadas), reconocidas automáticamente al llegar el visitante.
+
+13. **Notificaciones (NotificationDispatch)**:
+* **Tabla notification_dispatches**
+* **Operaciones CRUD**
+  * GET: Obtener las notificaciones por departamento.
+  * PUT: Marcar una notificación como leída.
+* **Descripción**: Registro y control de las notificaciones push enviadas a los residentes (visitas, decisiones y alertas) mediante Firebase Cloud Messaging.
+
+14. **Políticas de Acceso (AccessPolicy)**:
+* **Tabla access_policies**
+* **Operaciones CRUD**
+  * POST: Autorizar un acceso.
+* **Descripción**: Definición y evaluación de los permisos de acceso (por ejemplo, quién puede abrir la puerta) dentro del sistema de seguridad.
+
+15. **Control de Puerta (DoorCommand)**:
+* **Tabla door_commands**
+* **Operaciones CRUD**
+  * GET: Obtener el estado físico de la puerta (sensor magnético) o el estado del control de puerta.
+  * POST: Abrir (unlock) o cerrar (lock) la puerta.
+* **Descripción**: Control y monitoreo de la puerta física. Lee el sensor magnético y envía comandos de apertura/cierre al ESP32 a través del servicio Edge.
+
+16. **Reconocimiento Facial (ResidentFace)**:
+* **Tabla resident_faces**
+* **Operaciones CRUD**
+  * GET: Obtener los residentes con cara registrada o transmitir los eventos faciales en tiempo real (SSE).
+  * POST: Registrar la cara de un residente (enroll), activar/desactivar el reconocimiento, recibir un evento facial del IoT o limpiar las caras registradas.
+* **Descripción**: Gestión del reconocimiento facial ejecutado en el ESP32. Registra las caras de los residentes, las asocia a su perfil y procesa los eventos de reconocimiento en tiempo real.
+
+17. **Dispositivos IoT (IoTDevice)**:
+* **Tabla iot_devices**
+* **Operaciones CRUD**
+  * GET: Obtener el estado de la cámara y el micrófono.
+  * POST: Activar/desactivar la cámara y el micrófono, o recibir eventos de presencia y de estado de puerta del IoT.
+* **Descripción**: Configuración y estado de los dispositivos IoT (cámara, micrófono, sensores). Sirve de puente entre el backend y el hardware físico.
+
+18. **Alarmas de Seguridad (SecurityAlarm)**:
+* **Tabla security_alarms**
+* **Operaciones CRUD**
+  * GET: Obtener las alarmas activas o transmitirlas en tiempo real (SSE).
+  * POST: Registrar una alarma de manipulación (tampering).
+* **Descripción**: Detección y registro de alarmas de seguridad, como la manipulación indebida del dispositivo (sensor de vibración), con notificación en tiempo real.
+
+19. **Registros de Acceso y Auditoría (AccessRecord)**:
+* **Tabla access_records, access_timeline_entries**
+* **Operaciones CRUD**
+  * GET: Obtener todos los registros de acceso, obtener uno por ID, obtener por residente u obtener los logs del hardware.
+  * POST: Crear un registro de acceso.
+  * DELETE: Eliminar un registro de acceso.
+* **Descripción**: Registro histórico y trazabilidad de todos los accesos y eventos del hardware, con una línea de tiempo detallada para el seguimiento y la revisión.
+
 #### 6.2.3.8. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 3, el equipo Nexora ha completado la transición de la infraestructura de desarrollo a un entorno de producción totalmente operativo. Se ha materializado la arquitectura distribuida del ecosistema NexBell, integrando de manera efectiva el backend transaccional, el portal web del portero, la aplicación móvil y la lógica de hardware IoT.
+<ins>**Procesos de Deployment realizados durante el Sprint**</ins>
 
-#### Infraestructura de Despliegue y CI/CD
+Durante el presente sprint, implementamos una estrategia de despliegue completa y multiplataforma para el sistema **NexBell**, un portero inteligente (smart intercom) basado en IoT. El backend fue desarrollado en **Spring Boot (Java 24)** con **Spring Data JPA/Hibernate** y **PostgreSQL**, desplegado en la nube mediante contenedores **Docker**. El objetivo principal fue exponer APIs RESTful accesibles desde internet para el frontend web, la aplicación móvil y el servicio Edge que comunica con el hardware físico (ESP32-S3).
 
-Durante el Sprint 3, el equipo Nexora ha completado la transición de la infraestructura de desarrollo a un entorno de producción totalmente operativo. Se ha materializado la arquitectura distribuida del ecosistema NexBell, integrando de manera efectiva el backend transaccional, el portal web del portero, la aplicación móvil y la lógica de hardware IoT.
+**Arquitectura de Despliegue Multiplataforma**
 
-#### Infraestructura de Despliegue y CI/CD
+Dado que NexBell es un sistema distribuido de varios componentes, cada uno se desplegó en la plataforma más adecuada:
 
-El proceso de despliegue se consolidó mediante la automatización de *pipelines* de integración y entrega continua (CI/CD). Cada cambio en las ramas principales (`main`/`develop`) activa un flujo automatizado que incluye la compilación, ejecución de pruebas y despliegue hacia los servicios en la nube. Esta automatización asegura que el sistema sea escalable, resiliente y capaz de manejar datos reales de telemetría y seguridad en tiempo real.
+| Componente | Tecnología | Plataforma de Despliegue |
+|---|---|---|
+| **Backend (Web Services)** | Spring Boot / Java 24 | Render (Docker) |
+| **Base de Datos** | PostgreSQL 18 | Render (Managed PostgreSQL) |
+| **Frontend Web (Portero)** | Vue 3 / Vite | Netlify |
+| **Aplicación Móvil (Residente)** | Flutter | Firebase App Distribution (APK) |
+| **Edge Service** | Node.js / TypeScript | Local (LAN) + túnel ngrok |
+| **Firmware IoT** | C++ / PlatformIO | ESP32-S3 (dispositivo físico) |
 
-#### Entornos de Producción
-A continuación, se detallan los accesos a los servicios desplegados:
+**Implementación de Backend Spring Boot en Render**
 
-| Componente | Plataforma | Estado | Acceso |
-| :--- | :--- | :--- | :--- |
-| **Landing Page** | Netlify | Producción | [https://nexbell.netlify.app/](https://nexbell.netlify.app/)|
-| **Aplicación Web (Portero)** | Netlify | Producción |[https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)|
-| **Backend API** | Render | Producción | [https://nexbell-api.onrender.com/](https://nexbell-webservices.onrender.com/swagger-ui/index.html)|
-| **Aplicación Móvil** | Firebase | Distribución Beta | Instalación directa (Vía App Distribution)|
+Decidimos desplegar el backend en **Render**, una plataforma en la nube (PaaS) que ejecuta nuestra imagen **Docker** directamente desde el repositorio de GitHub. Esta decisión nos permitió obtener HTTPS automático, despliegue continuo (auto-deploy) ante cada commit y un entorno de producción sin necesidad de administrar servidores manualmente.
 
-##### NexBell Landing Page Deployment
-
+**Figura**  
+*Render — Servicio Web del backend de NexBell*
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/netlify_deploy_dwsjlt.png" alt="landing-page" width="1000">
+<img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1783129551/deploy_de_backend_dndrln.png" alt="NexBell Backend Render" width="850">
 </p>
 
+*Nota.* Elaboración propia.
+
+**URL base del API:**
+```
+https://nexbell-webservices.onrender.com/api/
+```
+
+**Documentación Swagger:**
+```
+https://nexbell-webservices.onrender.com/swagger-ui/index.html
+```
+
+**Configuración de la Infraestructura**
+
+- **Especificaciones del Servicio (Render Web Service)**
+  - **Plataforma:** Render (PaaS, Docker runtime)
+  - **Plan:** Free
+  - **RAM:** 512 MB
+  - **CPU:** 0.1 vCPU
+  - **Región:** Oregon (US West)
+  - **HTTPS/TLS:** Automático (certificado gestionado por Render)
+  - **Dominio:** nexbell-webservices.onrender.com
+
+- **Base de Datos (Render Managed PostgreSQL)**
+  - **Motor:** PostgreSQL 18
+  - **Plan:** Free (1 GB de almacenamiento)
+  - **Región:** Oregon (US West)
+  - **Conexión:** interna (misma región que el backend) mediante variables de entorno
+
+- **Stack Tecnológico Implementado**
+  - **Spring Boot (Java 24):** Framework principal del backend
+  - **Spring Data JPA / Hibernate:** ORM para el manejo de la base de datos
+  - **PostgreSQL 18:** Sistema de gestión de base de datos
+  - **Docker (multi-stage):** Containerización de la aplicación
+  - **SpringDoc / Swagger (OpenAPI):** Documentación automática de las APIs
+  - **JWT (HS256):** Autenticación y autorización
+  - **SendGrid (API HTTP):** Envío de credenciales por correo
+  - **Firebase Cloud Messaging:** Notificaciones push al móvil
+  - **Server-Sent Events (SSE):** Eventos en tiempo real (visitas, alarmas, reconocimiento)
+
+**Servicios API Implementados**
+
+| Método HTTP | Endpoint | Descripción |
+|---|---|---|
+| **Autenticación y Usuarios (IAM)** |||
+| POST | `/api/iam/login` | Autenticar usuario y abrir sesión |
+| POST | `/api/iam/refresh` | Refrescar el token de acceso |
+| POST | `/api/iam/logout` | Cerrar sesión activa |
+| GET | `/api/iam/users/me` | Obtener el perfil del usuario autenticado |
+| POST | `/api/iam/users/me/fcm-token` | Registrar el token FCM del dispositivo |
+| PUT | `/api/iam/password/change` | Cambiar la contraseña |
+| POST | `/api/iam/password/request-reset` | Solicitar restablecimiento de contraseña |
+| **Directorio (Directory)** |||
+| GET | `/api/directory/buildings` | Listar todos los edificios |
+| POST | `/api/directory/buildings` | Registrar un nuevo edificio |
+| POST | `/api/directory/buildings/{id}/doormen` | Asignar un portero a un edificio |
+| POST | `/api/directory/apartments` | Registrar un departamento |
+| PUT | `/api/directory/apartments/{id}/resident` | Asignar residente a un departamento |
+| GET | `/api/directory/residents/{id}` | Obtener perfil de un residente |
+| PUT | `/api/directory/doormen/{userId}` | Actualizar perfil del portero |
+| **Onboarding** |||
+| POST | `/api/onboarding/contracts` | Provisionar un edificio completo desde un contrato |
+| POST | `/api/onboarding/credentials/claim` | Reclamar credenciales de portero por correo |
+| POST | `/api/onboarding/credentials/claim-resident` | Reclamar credenciales de residente |
+| GET | `/api/onboarding/buildings` | Lista pública de edificios |
+| **Intercomunicador (Intercom)** |||
+| POST | `/api/intercom/visit-requests` | El IoT registra una visita al tocar el timbre |
+| POST | `/api/intercom/visit-requests/{id}/evidence` | Subir foto/evidencia del visitante |
+| POST | `/api/intercom/visit-requests/{id}/decision` | Registrar la decisión del residente |
+| GET | `/api/intercom/queue/pending` | Obtener visitas pendientes en cola |
+| GET | `/api/intercom/queue/stream` | Cola en tiempo real (SSE) |
+| GET | `/api/intercom/video-stream` | Stream de video en vivo (MJPEG) |
+| GET/POST/PUT/DELETE | `/api/intercom/pre-registered-visits` | Gestionar visitas pre-registradas |
+| GET | `/api/intercom/notifications/apartment/{id}` | Notificaciones de un departamento |
+| **Seguridad (Security)** |||
+| POST | `/api/security/authorize` | Evaluar permisos de un rol |
+| POST | `/api/security/door/unlock` | Enviar señal de apertura de puerta al ESP32 |
+| GET | `/api/security/door/physical-state` | Estado físico de la puerta (sensor magnético) |
+| POST | `/api/security/face/enroll` | Registrar la cara de un residente |
+| POST | `/api/security/face/recognition` | Activar/desactivar el reconocimiento facial |
+| GET | `/api/security/face/stream` | Eventos faciales en tiempo real (SSE) |
+| POST | `/api/security/iot/presence` | Reportar detección de presencia (ultrasónico) |
+| POST | `/api/security/iot/door-state` | Reportar estado de puerta (sensor MC38) |
+| POST | `/api/security/alarms/tampering` | Señalar alarma de manipulación (vibración) |
+| GET | `/api/security/alarms/stream` | Alarmas de seguridad en tiempo real (SSE) |
+| **Auditoría (Audit)** |||
+| POST | `/api/audit/access-records` | Registrar un acceso en la bitácora |
+| GET | `/api/audit/access-records` | Listar/buscar registros de acceso |
+| GET | `/api/audit/hardware-logs` | Obtener los logs del hardware |
+
+> *La documentación completa de todos los endpoints se detalla en la sección 5.2.4.6.*
+
+**Proceso de Containerización**
+
+- **Dockerfile Multi-stage**
+
+Implementamos un **Dockerfile multi-stage** que separa la compilación de la ejecución para reducir el tamaño de la imagen final:
+  - **Stage 1 (Build):** usa `maven:3.9-eclipse-temurin-24` para compilar el proyecto y empaquetar el `.jar`.
+  - **Stage 2 (Runtime):** usa `eclipse-temurin:24-jre` (solo el runtime de Java) para ejecutar la aplicación.
+
+```dockerfile
+# ---- Build stage ----
+FROM maven:3.9-eclipse-temurin-24 AS build
+WORKDIR /app
+COPY pom.xml .
+RUN mvn -B -q dependency:go-offline
+COPY src ./src
+RUN mvn -B -q clean package -DskipTests
+
+# ---- Run stage ----
+FROM eclipse-temurin:24-jre
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+```
+
+**Configuración de CI/CD (Auto-Deploy de Render)**
+
+En lugar de un pipeline manual, aprovechamos la integración nativa de **Render con GitHub**. Cada vez que se hace *push* a la rama `develop`, Render detecta el cambio, reconstruye la imagen Docker y redespliega automáticamente:
+
+- **Auto-Deploy:** On Commit (rama `develop`)
+- **Build:** Render ejecuta el `Dockerfile` automáticamente
+- **Puerto:** Render inyecta la variable `PORT`; la aplicación la lee con `server.port=${PORT:8080}`
+
+**Configuración de Base de Datos**
+
+- **PostgreSQL 18 (Render Managed)**
+  - **Base de datos:** nexbell
+  - **Conexión:** vía variables de entorno (`SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`)
+  - **Esquema:** generado automáticamente por Hibernate en el primer arranque
+
+```properties
+spring.jpa.hibernate.ddl-auto=update
+```
+
+**Configuración de Seguridad**
+
+- **Variables de Entorno Seguras (en Render)**
+  - `SPRING_DATASOURCE_URL / USERNAME / PASSWORD` — credenciales de la base de datos
+  - `AUTH_JWT_SECRET` — clave de firma JWT (≥ 32 caracteres)
+  - `SENDGRID_API_KEY` — clave de la API de correo (SendGrid)
+  - `NEXBELL_MAIL_*` — configuración de envío de credenciales
+  - `NEXBELL_EDGE_BASE_URL` — URL del túnel hacia el Edge (reconocimiento facial)
+- **Secret Files:** el archivo `firebase-service-account.json` se cargó como *Secret File* (no se sube al repositorio).
+- **HTTPS/TLS:** todas las peticiones viajan cifradas (certificado automático de Render).
+- **CORS:** configurado para aceptar peticiones del frontend web y la app móvil.
+- **JWT:** protege todos los endpoints por defecto (`anyRequest().authenticated()`).
+  Solo son públicos los endpoints de acceso (login, refresh, password), el
+  onboarding (`/api/onboarding/**`), el listado público de edificios, la
+  documentación Swagger y los endpoints de ingesta del IoT/Edge (presencia,
+  estado de puerta, tampering, eventos faciales, creación de visitas y streams).
+- **CSRF:** deshabilitado y sesiones **STATELESS**, apropiado para una API REST con JWT.
+
+**Entrega de Correos y Notificaciones**
+
+- **SendGrid (API HTTP):** como Render bloquea el tráfico SMTP saliente en su plan gratuito, las credenciales se envían mediante la **API HTTP de SendGrid** (puerto 443), garantizando la entrega desde la nube.
+- **Firebase Cloud Messaging:** las notificaciones push al residente (visita, decisión, alarmas) se envían mediante FCM usando el service account cargado como Secret File.
+
+**Conectividad con el Hardware IoT (Edge + Túnel)**
+
+Debido a que el broker MQTT, el servicio Edge y el dispositivo ESP32-S3 operan en la red local (LAN), se implementó un **túnel seguro con ngrok** que expone el servicio Edge a internet. Esto permite que el backend en la nube (Render) alcance el hardware local para comandos como el registro de caras (enroll) y el reconocimiento facial:
+
+```
+Web / Móvil → Backend (Render) → Túnel ngrok → Edge Service (LAN) → MQTT → ESP32-S3
+```
+
+La variable `NEXBELL_EDGE_BASE_URL` en Render apunta a la URL pública del túnel.
+
+**Entorno de Producción Configurado**
+
+  **URLs de Acceso**
+- **API Base:** [https://nexbell-webservices.onrender.com/api/](https://nexbell-webservices.onrender.com/api/)
+- **Swagger UI:** [https://nexbell-webservices.onrender.com/swagger-ui/index.html](https://nexbell-webservices.onrender.com/swagger-ui/index.html)
+
+**Figura**  
+*Swagger UI — NexBell Web Services API*
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/nexbell_landing_iyz95z.png" alt="landing-page" width="1000">
+<img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1783129615/web_backend_ewdvcx.png" alt="NexBell Swagger" width="850">
 </p>
 
-##### NexBell Aplicación Web Deployment
+*Nota.* Elaboración propia.
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124323/Captura_de_pantalla_2026-07-03_a_la_s_7.18.39_p._m._plcx7f.png" alt="Aplicación-Web" width="1000">
-</p>
+**Características del Despliegue**
 
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124546/Captura_de_pantalla_2026-07-03_a_la_s_7.22.21_p._m._he72b0.png" alt="Aplicación-Movil" width="1000">
-</p>
-
-
-##### NexBell Backend Deployment
-
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124296/Captura_de_pantalla_2026-07-03_a_la_s_7.18.07_p._m._ugkbyc.png" alt="Aplicación-Movil" width="1000">
-</p>
-
-<p align="center">
-  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124501/Captura_de_pantalla_2026-07-03_a_la_s_7.21.34_p._m._lxgaz7.png" alt="Aplicación-Web" width="1000">
-</p>
-
+| Característica | Valor |
+|---|---|
+| **Protocolo** | HTTPS (TLS automático) |
+| **Despliegue continuo** | Auto-deploy en cada commit a `develop` |
+| **Tiempo de build** | ~3–6 minutos (Docker multi-stage) |
+| **Región del servidor** | Oregon (US West) |
+| **Base de datos** | PostgreSQL 18 gestionada |
+| **Documentación viva** | Swagger UI accesible públicamente |
 
 #### 6.2.3.9. Team Collaboration Insights during Sprint
 
