@@ -4388,31 +4388,31 @@ La integración de endpoints reales entre todos los nodos del ecosistema NexBell
 **- FrontedWeb**
 
 <p align="center">
-  <img src="" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783126100/Captura_de_pantalla_2026-07-03_a_la_s_7.48.15_p._m._ivgox5.png" alt="landing-page" width="400">
 </p>
 
 **- WebServices**
 
 <p align="center">
-  <img src="" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125936/Captura_de_pantalla_2026-07-03_a_la_s_7.45.28_p._m._jogmoo.png" alt="landing-page" width="400">
 </p>
 
 **- Mobile**
 
 <p align="center">
-  <img src="" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125721/Captura_de_pantalla_2026-07-03_a_la_s_7.41.54_p._m._abcl30.png" alt="landing-page" width="400"> 
 </p>
 
 **- Embedded code**
 
 <p align="center">
-  <img src="" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125618/Captura_de_pantalla_2026-07-03_a_la_s_7.40.12_p._m._qtgjke.png" alt="landing-page" width="400">
 </p>
 
 **- EdgeAPI**
 
 <p align="center">
-  <img src="" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125552/Captura_de_pantalla_2026-07-03_a_la_s_7.39.06_p._m._lzptxh.png" alt="landing-page" width="400">
 </p>
 
 ## 6.3. Validation Interviews.
