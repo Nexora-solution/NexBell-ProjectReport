@@ -4027,9 +4027,41 @@ A continuación, se detallan los accesos a los servicios desplegados:
 | Componente | Plataforma | Estado | Acceso |
 | :--- | :--- | :--- | :--- |
 | **Landing Page** | Netlify | Producción | [https://nexbell.netlify.app/](https://nexbell.netlify.app/)|
-| **Panel Web (Portero)** | Netlify | Producción |[https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)|
+| **Aplicación Web (Portero)** | Netlify | Producción |[https://nexbell-front.netlify.app/](https://nexbell-front.netlify.app/)|
 | **Backend API** | Render | Producción | [https://nexbell-api.onrender.com/](https://nexbell-webservices.onrender.com/swagger-ui/index.html)|
 | **Aplicación Móvil** | Firebase | Distribución Beta | Instalación directa (Vía App Distribution)|
+
+##### NexBell Landing Page Deployment
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/netlify_deploy_dwsjlt.png" alt="landing-page" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781854981/nexbell_landing_iyz95z.png" alt="landing-page" width="1000">
+</p>
+
+##### NexBell Aplicación Web Deployment
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124323/Captura_de_pantalla_2026-07-03_a_la_s_7.18.39_p._m._plcx7f.png" alt="Aplicación-Web" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124546/Captura_de_pantalla_2026-07-03_a_la_s_7.22.21_p._m._he72b0.png" alt="Aplicación-Movil" width="1000">
+</p>
+
+
+##### NexBell Backend Deployment
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124296/Captura_de_pantalla_2026-07-03_a_la_s_7.18.07_p._m._ugkbyc.png" alt="Aplicación-Movil" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783124501/Captura_de_pantalla_2026-07-03_a_la_s_7.21.34_p._m._lxgaz7.png" alt="Aplicación-Web" width="1000">
+</p>
+
 
 #### 6.2.3.9. Team Collaboration Insights during Sprint
 
