@@ -4003,30 +4003,60 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 * **UI/UX**: Se realizaron ajustes finos en el dashboard, incluyendo la correcta gestión de fotos de perfil y visitantes, así como la mejora en la alineación de componentes visuales[cite: 2].
   
 
-#### 6.2.3.5. Testing Suite Evidence for Sprint Review
-
 ### 6.2.3.5. Testing Suite Evidence for Sprint Review
 
-Durante este tercer sprint, la estrategia de pruebas se elevó de la validación de componentes aislados a la **verificación integral del sistema en entornos de producción**. Se han ejecutado pruebas de integración *end-to-end* (E2E) que garantizan que el flujo de seguridad, desde el sensor físico hasta la notificación en la aplicación móvil y la respuesta en el Dashboard, opera bajo los parámetros de calidad definidos.
+Durante este tercer sprint, la estrategia de pruebas se elevó de la validación de componentes aislados a la verificación integral del sistema en entornos de producción.
+A continuación, se describen los escenarios de prueba unitaria y de integración ejecutados sobre el backend del sistema. Estas pruebas validan de manera automatizada el correcto funcionamiento de las reglas de negocio en el modelo de dominio, la lógica de los servicios y la seguridad de los controladores, asegurando la robustez de la integración con el hardware IoT y las interfaces cliente.
 
-#### Estrategia de Pruebas: Validación de Flujos Críticos
-La suite de pruebas se centró en asegurar la integridad de los servicios críticos del sistema, utilizando la herramienta REST Client sobre el entorno de producción (`render.com`). Estas pruebas confirman la correcta interacción entre los servicios de intercomunicador, la persistencia de datos y los disparadores de seguridad.
+**1. Verificación del ciclo de vida de la solicitud (VisitRequestTest)**
 
-**1. Simulación de Interacción IoT e Ingesta de Evidencia**
-*   **Endpoint:** `POST /api/intercom/visit-requests` y `POST /api/intercom/visit-requests/{id}/evidence`.
-*   **Descripción:** Esta prueba valida la creación de una solicitud de visita y la carga de evidencia multimedia. Confirmamos que el backend recibe la señal del dispositivo, registra los datos y vincula correctamente la evidencia fotográfica en el almacenamiento.
+* **Tipo de Prueba:** Prueba Unitaria de Dominio
+* **Descripción:** Verifica el ciclo de vida y las reglas de expiración de las solicitudes de visita del intercomunicador. Se valida que cada solicitud generada mantenga un tiempo límite de espera por defecto de 3 minutos. Si el residente no registra una respuesta en ese lapso, la prueba confirma que el modelo de dominio marca automáticamente la llamada como expirada.
+* **Resultado obtenido:** Ejecución exitosa. La entidad de dominio gestiona de forma autónoma los tiempos de expiración, garantizando la consistencia del estado de las solicitudes.
 
-**2. Verificación de Cola y Estado del Sistema**
-*   **Endpoint:** `GET /api/intercom/visit-requests/{id}` y `GET /api/intercom/queue/pending`.
-*   **Descripción:** Se comprueba que la consulta de solicitudes individuales y el listado de la cola de espera devuelven datos consistentes y actualizados, validando la sincronización de la base de datos en tiempo real.
+<p align="center">
+  <img src="https://i.imgur.com/1LYw7JY.png" alt="testing - 1">
+</p>
 
-**3. Automatización de Decisiones de Acceso**
-*   **Endpoint:** `POST /api/intercom/visit-requests/{id}/decision`.
-*   **Descripción:** Esta prueba crítica simula la decisión del residente ("APPROVED"). El sistema responde con éxito (`HTTP 200 OK`), actualiza el estado de la visita y genera el registro en la bitácora de auditoría.
+**2. Evaluación de lógica de comandos de seguridad (SecurityCommandServiceImplTest)**
 
-**4. Validación de Notificaciones y Flujo de Lectura**
-*   **Endpoint:** `GET /api/intercom/notifications/apartment/{id}` y `PUT /api/notifications/1/read`.
-*   **Descripción:** Se valida la capacidad del sistema para listar notificaciones pendientes y marcar su estado como leído, cerrando el ciclo de comunicación con el usuario.
+* **Tipo de Prueba:** Prueba Unitaria de Servicio (Business Logic)
+* **Descripción:** Prueba la lógica de negocio encargada de orquestar los comandos hacia el hardware IoT. Evalúa el despacho correcto para el bloqueo/desbloqueo de puertas, la activación remota de periféricos multimedia (cámara y micrófono) y la generación automática de registros en el historial de accesos cuando los sensores físicos emiten alarmas críticas (forcejeo o detección de movimiento).
+* **Resultado obtenido:** Ejecución exitosa. El servicio de seguridad procesa adecuadamente las órdenes y actualiza los estados esperados del dispositivo físico en el sistema.
+
+<p align="center">
+  <img src="https://i.imgur.com/mF4a64o.png" alt="testing - 2">
+</p>
+
+**3. Orquestación de intercomunicación y visitas (IntercomCommandServiceImplTest)**
+
+* **Tipo de Prueba:** Prueba Unitaria de Servicio (Business Logic)
+* **Descripción:** Analiza las transacciones entre los residentes, conserjes y el sistema de validación. Valida la correcta creación, edición y cancelación de visitas pre-autorizadas, el adjunto de evidencia del visitante (foto y audio) y la actualización de la cola de atención en tiempo real, confirmando que un visitante es removido de la cola una vez que se emite una decisión de acceso (Aprobado/Rechazado).
+* **Resultado obtenido:** Ejecución exitosa. El servicio centraliza y resuelve correctamente las interacciones sociales y operativas del módulo de portería.
+
+<p align="center">
+  <img src="https://i.imgur.com/3QV508h.png" alt="testing - 3">
+</p>
+
+**4. Validación de comunicación IoT máquina-a-máquina (IoTIngressControllerIntegrationTest)**
+
+* **Tipo de Prueba:** Prueba de Integración (API E2E)
+* **Descripción:** Simula las peticiones HTTP emitidas directamente por el hardware en el punto de acceso (ESP32) hacia el servidor Cloud. Comprueba que los endpoints de entrada (`/api/intercom/visit-requests`) sean capaces de recibir solicitudes iniciales y adjuntar evidencia del visitante de forma segura mediante credenciales de dispositivo, sin requerir un token JWT de usuario tradicional.
+* **Resultado obtenido:** Respuestas HTTP exitosas por parte del controlador. La API Ingress procesa correctamente los payloads simulados del microcontrolador.
+
+<p align="center">
+  <img src="https://i.imgur.com/yO1qmFc.png" alt="testing - 4">
+</p>
+
+**5. Control de acceso sobre cerraduras físicas (DoorControlControllerIntegrationTest)**
+
+* **Tipo de Prueba:** Prueba de Integración de Seguridad (RBAC)
+* **Descripción:** Verifica el cumplimiento de las políticas de seguridad sobre los endpoints críticos responsables de accionar las cerraduras del edificio. Se ejecutan múltiples peticiones simulando diferentes perfiles para asegurar que únicamente los usuarios con el rol `ROLE_DOORMAN` puedan liberar las puertas o auditar el estado magnético.
+* **Resultado obtenido:** Validación de seguridad exitosa. El controlador bloquea correctamente las solicitudes de residentes o usuarios no autenticados devolviendo códigos `HTTP 401 Unauthorized` o `HTTP 403 Forbidden`, permitiendo la ejecución solo al rol autorizado.
+
+<p align="center">
+  <img src="https://i.imgur.com/xtPuPJM.png" alt="testing - 5">
+</p>
 
 #### Resumen de Calidad del Sistema
 * **Pruebas BDD**: Los escenarios definidos mediante Gherkin mantienen la alineación del comportamiento esperado ante casos de uso reales.
