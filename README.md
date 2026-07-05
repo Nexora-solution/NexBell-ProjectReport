@@ -4060,7 +4060,7 @@ A continuación, se presenta el video con la demostración del producto NexBell 
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1783265063/demo_mfqj9k.png" alt="testing - 5">
 </p>
 
-Link del video: https://goo.su/nMWjuPZ
+Link del video: [https://goo.su/nMWjuPZ](https://goo.su/nMWjuPZ)
 
 #### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
@@ -4829,7 +4829,7 @@ En este video presentamos al equipo detrás de NexBell, dando a conocer a cada i
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
 </p>
 
-Link del video: https://goo.su/IYmY
+Link del video: [https://goo.su/IYmY](https://goo.su/IYmY)
 
 <div style="page-break-after: always;"></div>
 
@@ -4860,10 +4860,10 @@ Despliegue Completo y Conexión End-to-End Lograda: A diferencia del sprint ante
 # Anexos
 
 * Big Picture Event Storming: [https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434](https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434)
-* Link del Figma: https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=0-1&t=fSyFWe1WrYIL8yWy-1 
-* Link del Keynote: https://canva.link/fa9bdzvcx6th7ng 
-* Link del video de exposiciòn: https://goo.su/jNL6wO
-* Link video About the team: https://goo.su/IYmY  
-* Link video About the product: https://goo.su/bNJI9
+* Link del Figma: [https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=0-1&t=fSyFWe1WrYIL8yWy-1](https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=0-1&t=fSyFWe1WrYIL8yWy-1) 
+* Link del Keynote: [https://canva.link/fa9bdzvcx6th7ng](https://canva.link/fa9bdzvcx6th7ng) 
+* Link del video de exposiciòn: [https://goo.su/jNL6wO](https://goo.su/jNL6wO)
+* Link video About the team: [https://goo.su/IYmY](https://goo.su/IYmY)  
+* Link video About the product: [https://goo.su/bNJI9](https://goo.su/bNJI9)
 
 
