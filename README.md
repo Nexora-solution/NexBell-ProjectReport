@@ -4864,7 +4864,7 @@ Despliegue Completo y Conexión End-to-End Lograda: A diferencia del sprint ante
 * Link del Figma: https://www.figma.com/design/daS87v3aZzV0RAy2vBYj7u/NexBell?node-id=0-1&t=fSyFWe1WrYIL8yWy-1 
 * Link del Keynote: https://canva.link/fa9bdzvcx6th7ng 
 * Link del video de exposiciòn: https://goo.su/jNL6wO
-* Link video About the team: https://goo.su/zaoZy 
+* Link video About the team: https://goo.su/IYmY  
 * Link video About the product: https://goo.su/bNJI9
 
 
