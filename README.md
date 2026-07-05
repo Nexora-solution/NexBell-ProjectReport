@@ -1,4 +1,4 @@
-fxs<p align="center">
+<p align="center">
   <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=150px>
 </p>
 
