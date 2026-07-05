@@ -4830,7 +4830,7 @@ En este video presentamos al equipo detrás de NexBell, dando a conocer a cada i
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
 </p>
 
-Link del video: https://goo.su/zaoZy 
+Link del video: https://goo.su/IYmY
 
 <div style="page-break-after: always;"></div>
 
