@@ -80,8 +80,8 @@
 
 # Project Report Collaboration Insights
 
-Elaboramos el informe de nuestro proyecto en un repositorio llamado “ProjectReport” en nuestra organización llamada “Nexora” porque ahí desarrollaremos el producto de nuestra startup.  
-Enlace del repositorio “ProjectReport”: [https://github.com/Nexora-solution/NexBell-ProjectReport.git](https://github.com/Nexora-solution/NexBell-ProjectReport.git)   
+Elaboramos el informe de nuestro proyecto en un repositorio llamado "ProjectReport" en nuestra organización llamada "Nexora" porque ahí desarrollaremos el producto de nuestra startup.  
+Enlace del repositorio "ProjectReport": [https://github.com/Nexora-solution/NexBell-ProjectReport.git](https://github.com/Nexora-solution/NexBell-ProjectReport.git)
 
 <ins>**AV1:**</ins>  
 Para poder lograr la elaboración grupal de este informe del proyecto, creamos primero un documento en google y posteriormente agregamos las partes en GitHub en formato markdown. A continuación, se mostrará una imagen de los insights de los commits realizados por cada miembro en dicho repositorio.  
@@ -89,54 +89,87 @@ Para poder lograr la elaboración grupal de este informe del proyecto, creamos p
 *Insights de ProjectReports*  
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1777073710/WhatsApp_Image_2026-04-24_at_6.33.33_PM_fw4cbs.jpg" alt="PI5" width="1000">
-</p> 
+</p>
 
 <ins>**TB1:**</ins>  
 Para la consolidación de este informe final, el equipo Nexora evolucionó de un entorno colaborativo en Google Docs hacia una gestión integral basada en Git y GitHub. Este flujo de trabajo permitió un control de versiones preciso para el desarrollo del Markdown, asegurando la trazabilidad de cada avance en el diseño de arquitectura, la documentación de los Bounded Contexts y la implementación de las interfaces de usuario.
 
-A continuación, se presenta la métrica de contribuciones que evidencia la participación activa y equitativa de todos los miembros en la construcción del repositorio, reflejando el progreso desde la ideación hasta la entrega del frontend completo y la documentación técnica del ecosistema NexBell.
+A continuación, se presenta la métrica de contribuciones que evidencia la participación activa y equitativa de todos los miembros en la construcción del repositorio, reflejando el progreso desde la ideación hasta la entrega del frontend completo y la documentación técnica del ecosistema NexBell.  
 **Figura 2**  
 *Insights de ProjectReports*  
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715882/IGNJLK_ilsgmc.jpg" alt="PI5" width="1000">
-</p> 
+</p>
 
 *Insights de Frontend Web*  
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715882/IGNJLK_ilsgmc.jpg" alt="PI5" width="1000">
-</p> 
+</p>
 
-<ins>**AV2:**</ins>
+<ins>**AV2:**</ins>  
 Para la consolidación de este sprint, el equipo Nexora pasó de gestionar el avance en un único repositorio documental a coordinar el trabajo simultáneamente en cuatro repositorios independientes en GitHub: backend, aplicación web, aplicación móvil y edge-service del dispositivo IoT. Este flujo de trabajo distribuido permitió un control de versiones más granular por componente, facilitando el seguimiento individual de cada integración mediante ramas específicas (como feature/conections) y asegurando la trazabilidad de cada avance en la conexión real entre servicios, la evaluación de usabilidad y las entrevistas de validación documentadas en este informe.
 
 **- FrontedWeb**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/front_qid8wx.png" alt="frontend-web" width="400">
 </p>
 
 **- WebServices**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/back_kein4m.png" alt="web-services" width="400">
 </p>
 
 **- Mobile**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/mobile_ytun4t.png" alt="mobile" width="400">
 </p>
 
 **- Embedded code**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/enbedded_hffalm.png" alt="embedded" width="400">
 </p>
 
 **- EdgeAPI**
 
 <p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="landing-page" width="400">
+  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781857117/edge_l3f33v.png" alt="edge-api" width="400">
+</p>
+
+<ins>**TB2:**</ins>  
+Para esta entrega final, el equipo Nexora consolidó el trabajo distribuido en los cinco repositorios del ecosistema NexBell: aplicación web, web services (backend), aplicación móvil, embedded code y edge-service. Este sprint se centró en el despliegue completo del sistema en producción y en la integración end-to-end con el hardware IoT, por lo que las contribuciones reflejan tareas como el despliegue del backend en la nube, la conexión en tiempo real con los sensores y la cámara, la implementación del reconocimiento facial y las notificaciones push, y la puesta a punto final del producto. A continuación, se presentan las métricas de contribución de cada repositorio, que evidencian la participación activa y equitativa de todos los miembros en esta etapa de cierre.
+
+**- FrontedWeb**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783126100/Captura_de_pantalla_2026-07-03_a_la_s_7.48.15_p._m._ivgox5.png" alt="frontend-web" width="400">
+</p>
+
+**- WebServices**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125936/Captura_de_pantalla_2026-07-03_a_la_s_7.45.28_p._m._jogmoo.png" alt="web-services" width="400">
+</p>
+
+**- Mobile**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125721/Captura_de_pantalla_2026-07-03_a_la_s_7.41.54_p._m._abcl30.png" alt="mobile" width="400">
+</p>
+
+**- Embedded code**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125618/Captura_de_pantalla_2026-07-03_a_la_s_7.40.12_p._m._qtgjke.png" alt="embedded" width="400">
+</p>
+
+**- EdgeAPI**
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125552/Captura_de_pantalla_2026-07-03_a_la_s_7.39.06_p._m._lzptxh.png" alt="edge-api" width="400">
 </p>
 
 
@@ -339,8 +372,8 @@ El curso contribuye al cumplimiento del Student Outcome **ABET: ABET – EAC - S
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Bellido Salas, Raúl**<br>• AV1: Redacción de historias de usuario, definición de estrategias técnicas y conducción de entrevistas.<br>• TB1: Liderazgo en diseño táctico (DDD) para módulos IAM y Security, mapeo de Container Diagrams y modelos de base de datos.<br>• AV2: Liderazgo en la integración real de endpoints entre el backend y la aplicación móvil, conectando el flujo de atención de visitas (attend page) y la sincronización de datos dinámicos entre ambas capas.<br>• **TB2: Liderazgo en la gestión de despliegue en producción (CI/CD) y orquestación de la integración final entre el hardware IoT y el backend.**<br><br>**Borja Molina, Gabriel Sebastián**<br>• AV1: Liderazgo en investigación de problemáticas, diseño de Event Storming y Bounded Context Canvas.<br>• TB1: Liderazgo técnico en diseño de dispositivo IoT "Clair" en Wokwi, definición de hardware (ESP32) y capas de datos (MQTT/HTTP).<br>• AV2: Liderazgo en la implementación de las entidades de dominio, fuentes de datos y repositorios para los módulos IAM, Directory, Intercom y Security, sentando la base funcional del backend conectado.<br>• **TB2: Liderazgo en el ajuste de protocolos de comunicación bidireccional (MQTT/REST) para garantizar la latencia mínima entre el dispositivo físico y la plataforma.**<br><br>**Suárez Romero, Santiago Manuel**<br>• AV1: Análisis de antecedentes y liderazgo en la delimitación de Bounded Contexts.<br>• TB1: Liderazgo en diseño visual y UX/UI (wireframes/mockups) bajo el concepto "Vigilant Elegance".<br>• AV2: Liderazgo en el ajuste de los flujos de interfaz a partir de los hallazgos de las entrevistas de validación, priorizando mejoras de usabilidad en los módulos críticos identificados por porteros y residentes.<br>• **TB2: Liderazgo en la validación de la experiencia de usuario final en el entorno de despliegue real, asegurando que las interacciones críticas fueran intuitivas.**<br><br>**Gomez Flores, Daniela Araceli**<br>• AV1: Definición del problema central, coordinación de Needfinding (User Personas/Journey Maps) y Product Backlog.<br>• TB1: Liderazgo en Arquitectura de Información, sistemas de navegación, etiquetado y búsqueda.<br>• AV2: Liderazgo en la conexión funcional del frontend web con el backend real, integrando los flujos de verificación de visitantes, historial de accesos y gestión de residentes por edificio.<br>• **TB2: Liderazgo en la gestión de métricas de rendimiento del sistema y supervisión del backlog final, asegurando el cumplimiento de los requerimientos de calidad.**<br><br>**Burga Loarte, Anaely Zarely**<br>• AV1: Liderazgo en diagramas de arquitectura de alto nivel (Landscape/Context/Deployment) y apoyo en historias de usuario.<br>• TB1: Diseño UI/UX de Landing Page, configuración SEO/ASO e integración de los 12 pasos de diseño IoT.<br>• AV2: Liderazgo en el despliegue de la Landing Page con las mejoras de diseño implementadas, manteniendo la coherencia visual mientras los demás componentes avanzan hacia su despliegue completo.<br>• **TB2: Liderazgo en la documentación técnica integral del Sprint 3 y consolidación de las evidencias de pruebas de aceptación y retrospectiva del ciclo final.** | AV1 - Objetivo: Establecer una base de liderazgo compartido para avanzar de forma coordinada en la estructuración.<br>AV1 - Conclusión: El equipo demostró liderazgo conjunto al distribuir responsabilidades según fortalezas, logrando una propuesta sólida y coherente.<br><br>TB1 - Objetivo: Profundizar en el diseño técnico (táctico, IoT y UX/UI) distribuyendo el liderazgo para una evolución consistente.<br>TB1 - Conclusión: Se consolidó la visión técnica, logrando que el backend, las interfaces y el hardware IoT empataran de forma fluida y acelerada.<br><br>AV2 - Objetivo: Distribuir el liderazgo técnico entre los distintos repositorios (backend, mobile, web y edge-service) para lograr la conexión real del ecosistema NexBell.<br>AV2 - Conclusión: El equipo evidenció un liderazgo más especializado por componente, lo que permitió pasar de un sistema con datos simulados a uno con servicios reales conectados entre sus distintas capas.<br><br>**TB2 - Objetivo: Consolidar la madurez del ecosistema mediante la integración final del hardware y la puesta en producción del sistema completo.<br>TB2 - Conclusión: Se logró la integración total entre el dispositivo físico y la plataforma, demostrando un liderazgo técnico maduro que permitió el despliegue exitoso y validado del producto final.** |
-| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos** | **Bellido Salas, Raúl**<br>• AV1: Planificación de tareas y metas. Integración de perspectivas en la toma de decisiones técnicas.<br>• TB1: Coordinación de sesiones de revisión de arquitectura para unificar expectativas entre la API y la aplicación móvil.<br>• AV2: Coordinación directa con el equipo de backend para validar que los endpoints conectados respondieran correctamente a las necesidades reales de la app móvil, ajustando la integración de forma iterativa.<br>• **TB2: Coordinación de la resolución de bugs críticos detectados durante las pruebas de integración final.**<br><br>**Borja Molina, Gabriel Sebastián**<br>• AV1: Generación de base de conocimiento común mediante hallazgos de investigación y diagramas compartidos.<br>• TB1: Síntesis y comunicación de restricciones técnicas de hardware y esquemas JSON con el equipo de software.<br>• AV2: Comunicación constante de la estructura de dominio del backend al resto del equipo, asegurando que el avance del módulo de seguridad e intercomunicador fuera comprendido antes de su consumo desde el frontend y mobile.<br>• **TB2: Comunicación de riesgos técnicos finales y resolución de conflictos de integración entre el edge-service y la nube.**<br><br>**Suárez Romero, Santiago Manuel**<br>• AV1: Documentación clara de contextos para reducir ambigüedades y conflictos de criterio.<br>• TB1: Ciclos de feedback continuo sobre prototipos visuales, fortaleciendo el compromiso con la calidad final.<br>• AV2: Recopilación y discusión grupal de los resultados de las entrevistas de validación con porteros y junta de propietarios, traduciendo los hallazgos en metas concretas de mejora para el siguiente ciclo.<br>• **TB2: Facilitación de sesiones de feedback post-validación, integrando las observaciones de los usuarios finales en los ajustes de último minuto.**<br><br>**Gomez Flores, Daniela Araceli**<br>• AV1: Promoción de entorno inclusivo compartiendo hallazgos de investigación para toma de decisiones informada.<br>• TB1: Alineación entre la investigación UX y la arquitectura de información con las historias de usuario aprobadas.<br>• AV2: Seguimiento del cumplimiento de los objetivos de conexión del frontend web, documentando los avances y comunicando al equipo el estado real de cada módulo integrado.<br>• **TB2: Seguimiento estricto del cronograma de despliegue, asegurando que todos los entregables cumplieran con los estándares definidos.**<br><br>**Burga Loarte, Anaely Zarely**<br>• AV1: Creación de referencias visuales comunes (diagramas de arquitectura) para alinear al equipo.<br>• TB1: Gestión de la consistencia del reporte final, integrando software, hardware e interfaces en una única voz grupal.<br>• AV2: Consolidación de la evidencia de despliegue y del avance del equipo en un reporte único, manteniendo la trazabilidad de metas cumplidas y pendientes de cara al despliegue completo del sistema.<br>• **TB2: Gestión de la trazabilidad de los objetivos alcanzados en el Sprint 3 y preparación del repositorio para la entrega final.** | AV1 - Objetivo: Construir un entorno de trabajo colaborativo para planificar y cumplir tareas alineadas.<br>AV1 - Conclusión: La distribución clara de tareas y la integración de resultados individuales evidenciaron una planificación efectiva y cumplimiento de metas.<br><br>TB1 - Objetivo: Integrar eficientemente decisiones de hardware, interfaz y backend mediante comunicación transparente.<br>TB1 - Conclusión: La alta interdependencia demandó gran colaboración. La planificación iterativa garantizó que cada avance técnico complementara el entregable final satisfactoriamente.<br><br>AV2 - Objetivo: Mantener un entorno colaborativo durante la conexión real de los servicios, cumpliendo las metas de integración planteadas para este sprint.<br>AV2 - Conclusión: El equipo gestionó de forma ordenada la transición de un sistema con datos simulados a uno funcional, cumpliendo los objetivos planteados y dejando claramente identificadas las tareas pendientes para el cierre del proyecto.<br><br>**TB2 - Objetivo: Asegurar la calidad operativa y el despliegue final mediante una planificación rigurosa y un entorno de trabajo colaborativo.<br>TB2 - Conclusión: La cohesión del equipo permitió resolver los retos de integración final y despliegue, cumpliendo todos los objetivos del Sprint 3 y asegurando la entrega de un producto robusto y funcional.** |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Bellido Salas, Raúl**<br>• AV1: Redacción de historias de usuario, definición de estrategias técnicas y conducción de entrevistas.<br>• TB1: Liderazgo en diseño táctico (DDD) para módulos IAM y Security, mapeo de Container Diagrams y modelos de base de datos.<br>• AV2: Liderazgo en la integración real de endpoints entre el backend y la aplicación móvil, conectando el flujo de atención de visitas (attend page) y la sincronización de datos dinámicos entre ambas capas.<br>• **TB2: Liderazgo en la gestión de despliegue en producción (CI/CD) y orquestación de la integración final entre el hardware IoT y el backend.**<br><br>**Borja Molina, Gabriel Sebastián**<br>• AV1: Liderazgo en investigación de problemáticas, diseño de Event Storming y Bounded Context Canvas.<br>• TB1: Liderazgo técnico en diseño de dispositivo IoT "Clair" en Wokwi, definición de hardware (ESP32) y capas de datos (MQTT/HTTP).<br>• AV2: Liderazgo en la implementación de las entidades de dominio, fuentes de datos y repositorios para los módulos IAM, Directory, Intercom y Security, sentando la base funcional del backend conectado.<br>• TB2: Liderazgo en el ajuste de protocolos de comunicación bidireccional (MQTT/REST) para garantizar la latencia mínima entre el dispositivo físico y la plataforma.<br><br>**Suárez Romero, Santiago Manuel**<br>• AV1: Análisis de antecedentes y liderazgo en la delimitación de Bounded Contexts.<br>• TB1: Liderazgo en diseño visual y UX/UI (wireframes/mockups) bajo el concepto "Vigilant Elegance".<br>• AV2: Liderazgo en el ajuste de los flujos de interfaz a partir de los hallazgos de las entrevistas de validación, priorizando mejoras de usabilidad en los módulos críticos identificados por porteros y residentes.<br>• **TB2: Liderazgo en la validación de la experiencia de usuario final en el entorno de despliegue real, asegurando que las interacciones críticas fueran intuitivas.**<br><br>**Gomez Flores, Daniela Araceli**<br>• AV1: Definición del problema central, coordinación de Needfinding (User Personas/Journey Maps) y Product Backlog.<br>• TB1: Liderazgo en Arquitectura de Información, sistemas de navegación, etiquetado y búsqueda.<br>• AV2: Liderazgo en la conexión funcional del frontend web con el backend real, integrando los flujos de verificación de visitantes, historial de accesos y gestión de residentes por edificio.<br>• TB2: Liderazgo en la gestión de métricas de rendimiento del sistema y supervisión del backlog final, asegurando el cumplimiento de los requerimientos de calidad.<br><br>**Burga Loarte, Anaely Zarely**<br>• AV1: Liderazgo en diagramas de arquitectura de alto nivel (Landscape/Context/Deployment) y apoyo en historias de usuario.<br>• TB1: Diseño UI/UX de Landing Page, configuración SEO/ASO e integración de los 12 pasos de diseño IoT.<br>• AV2: Liderazgo en el despliegue de la Landing Page con las mejoras de diseño implementadas, manteniendo la coherencia visual mientras los demás componentes avanzan hacia su despliegue completo.<br>• TB2: Liderazgo en la documentación técnica integral del Sprint 3 y consolidación de las evidencias de pruebas de aceptación y retrospectiva del ciclo final. | AV1 - Objetivo: Establecer una base de liderazgo compartido para avanzar de forma coordinada en la estructuración.<br>AV1 - Conclusión: El equipo demostró liderazgo conjunto al distribuir responsabilidades según fortalezas, logrando una propuesta sólida y coherente.<br><br>TB1 - Objetivo: Profundizar en el diseño técnico (táctico, IoT y UX/UI) distribuyendo el liderazgo para una evolución consistente.<br>TB1 - Conclusión: Se consolidó la visión técnica, logrando que el backend, las interfaces y el hardware IoT empataran de forma fluida y acelerada.<br><br>AV2 - Objetivo: Distribuir el liderazgo técnico entre los distintos repositorios (backend, mobile, web y edge-service) para lograr la conexión real del ecosistema NexBell.<br>AV2 - Conclusión: El equipo evidenció un liderazgo más especializado por componente, lo que permitió pasar de un sistema con datos simulados a uno con servicios reales conectados entre sus distintas capas.<br><br>**TB2 - Objetivo: Consolidar la madurez del ecosistema mediante la integración final del hardware y la puesta en producción del sistema completo.<br>TB2 - Conclusión: Se logró la integración total entre el dispositivo físico y la plataforma, demostrando un liderazgo técnico maduro que permitió el despliegue exitoso y validado del producto final.** |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos** | **Bellido Salas, Raúl**<br>• AV1: Planificación de tareas y metas. Integración de perspectivas en la toma de decisiones técnicas.<br>• TB1: Coordinación de sesiones de revisión de arquitectura para unificar expectativas entre la API y la aplicación móvil.<br>• AV2: Coordinación directa con el equipo de backend para validar que los endpoints conectados respondieran correctamente a las necesidades reales de la app móvil, ajustando la integración de forma iterativa.<br>• **TB2: Coordinación de la resolución de bugs críticos detectados durante las pruebas de integración final.**<br><br>**Borja Molina, Gabriel Sebastián**<br>• AV1: Generación de base de conocimiento común mediante hallazgos de investigación y diagramas compartidos.<br>• TB1: Síntesis y comunicación de restricciones técnicas de hardware y esquemas JSON con el equipo de software.<br>• AV2: Comunicación constante de la estructura de dominio del backend al resto del equipo, asegurando que el avance del módulo de seguridad e intercomunicador fuera comprendido antes de su consumo desde el frontend y mobile.<br>• **TB2: Comunicación de riesgos técnicos finales y resolución de conflictos de integración entre el edge-service y la nube.**<br><br>**Suárez Romero, Santiago Manuel**<br>• AV1: Documentación clara de contextos para reducir ambigüedades y conflictos de criterio.<br>• TB1: Ciclos de feedback continuo sobre prototipos visuales, fortaleciendo el compromiso con la calidad final.<br>• AV2: Recopilación y discusión grupal de los resultados de las entrevistas de validación con porteros y junta de propietarios, traduciendo los hallazgos en metas concretas de mejora para el siguiente ciclo.<br>• TB2: Facilitación de sesiones de feedback post-validación, integrando las observaciones de los usuarios finales en los ajustes de último minuto.<br><br>**Gomez Flores, Daniela Araceli**<br>• AV1: Promoción de entorno inclusivo compartiendo hallazgos de investigación para toma de decisiones informada.<br>• TB1: Alineación entre la investigación UX y la arquitectura de información con las historias de usuario aprobadas.<br>• AV2: Seguimiento del cumplimiento de los objetivos de conexión del frontend web, documentando los avances y comunicando al equipo el estado real de cada módulo integrado.<br>• TB2: Seguimiento estricto del cronograma de despliegue, asegurando que todos los entregables cumplieran con los estándares definidos.<br><br>**Burga Loarte, Anaely Zarely**<br>• AV1: Creación de referencias visuales comunes (diagramas de arquitectura) para alinear al equipo.<br>• TB1: Gestión de la consistencia del reporte final, integrando software, hardware e interfaces en una única voz grupal.<br>• AV2: Consolidación de la evidencia de despliegue y del avance del equipo en un reporte único, manteniendo la trazabilidad de metas cumplidas y pendientes de cara al despliegue completo del sistema.<br>• **TB2:** Gestión de la trazabilidad de los objetivos alcanzados en el Sprint 3 y preparación del repositorio para la entrega final. | AV1 - Objetivo: Construir un entorno de trabajo colaborativo para planificar y cumplir tareas alineadas.<br>AV1 - Conclusión: La distribución clara de tareas y la integración de resultados individuales evidenciaron una planificación efectiva y cumplimiento de metas.<br><br>TB1 - Objetivo: Integrar eficientemente decisiones de hardware, interfaz y backend mediante comunicación transparente.<br>TB1 - Conclusión: La alta interdependencia demandó gran colaboración. La planificación iterativa garantizó que cada avance técnico complementara el entregable final satisfactoriamente.<br><br>AV2 - Objetivo: Mantener un entorno colaborativo durante la conexión real de los servicios, cumpliendo las metas de integración planteadas para este sprint.<br>AV2 - Conclusión: El equipo gestionó de forma ordenada la transición de un sistema con datos simulados a uno funcional, cumpliendo los objetivos planteados y dejando claramente identificadas las tareas pendientes para el cierre del proyecto.<br><br>**TB2** - Objetivo: Asegurar la calidad operativa y el despliegue final mediante una planificación rigurosa y un entorno de trabajo colaborativo.<br>TB2 - Conclusión: La cohesión del equipo permitió resolver los retos de integración final y despliegue, cumpliendo todos los objetivos del Sprint 3 y asegurando la entrega de un producto robusto y funcional. |
 
 <div style="page-break-after: always;"></div>
                                            
@@ -773,8 +806,6 @@ Se presenta la elaboración de guías de preguntas estructuradas, dirigidas a lo
 * **Apellido:** Deza
 * **Distrito:** Miraflores
 
-**Figura** 
-
 *Entrevista \#1 para NexBell* 
 
 <p align="center">
@@ -795,8 +826,6 @@ El entrevistado es Nicolás, administrador en una empresa de gestión inmobiliar
 * **Apellido:** Casoida Alegria
 * **Distrito:** San Borja 
 
-**Figura 3** 
-
 *Entrevista \#2 para NexBell* 
 
 <p align="center">
@@ -816,8 +845,6 @@ La entrevistada es Mariel, quien cumple el doble rol de administradora y tesorer
 * **Nombre:** Jose   
 * **Apellido:** Rodriguez 
 * **Distrito:** Lince
-
-**Figura 4** 
 
 *Entrevista \#3 para NexBell* 
 
@@ -842,8 +869,6 @@ El entrevistado es un administrador de 32 años que gestiona un edificio de 28 d
 * **Apellido:** Polanco
 * **Distrito:** Surco
 
-**Figura 5** 
-
 *Entrevista \#4 para NexBell* 
 
 <p align="center">
@@ -864,8 +889,6 @@ El entrevistado es un conserje de 49 años con amplia experiencia en seguridad q
 * **Apellido:** Pizarro
 * **Distrito:** Pueblo Libre
 
-**Figura 6** 
-
 *Entrevista \#5 para NexBell*
 
 <p align="center">
@@ -885,8 +908,6 @@ La entrevistada es Kylie Pizarro, conserje de 23 años que trabaja en turno noct
 * **Nombre:** Mario  
 * **Apellido:** Villafuentes   
 * **Distrito:** Cercado de Lima
-
-**Figura 7** 
 
 *Entrevista \#6 para NexBell* 
 
@@ -2340,7 +2361,6 @@ Se implementa un sistema basado en una **cuadrícula de 4px** para mantener un r
 ### 5.1.2 Web, Mobile and IoT Style Guidelines.
 
 
-
 #### 5.1.2.1. Aplicación del Proceso para Web 1 (Landing Page & Dashboard)
 Para el entorno web inicial, enfocado en capturar el interés de potenciales clientes y proveer la interfaz de gestión base, las directrices generales se adaptan bajo los siguientes parámetros técnicos:
 
@@ -2357,7 +2377,7 @@ Para el entorno móvil inicial, cuyo propósito crítico es permitir la interacc
 
 
 
-# 5.1.2.3. Diseño de la Solución IoT: NexBell (SafeTower Access)
+#### 5.1.2.3. Diseño de la Solución IoT: NexBell (SafeTower Access)
 
 **1. Definition of the System Requirements**
 
@@ -2481,7 +2501,7 @@ El sistema opera con un esquema flexible de pre-registro (móvil) o registro dir
 | **Usuario / Residente (Móvil - Menos Funciones)** | • Vista minimalista enfocada en la recepción pasiva y pre-registro de sus invitados.<br>• Modal interactivo ante la llegada de visitas (alertadas por el sensor de distancia) que le permite al usuario prender o mantener apagada la cámara y micrófono mediante toggles en la pantalla antes de accionar los botones de "Aprobar" o "Rechazar" el acceso. |
 | **Formularios del Sistema** | • Formulario web corporativo de registro para empresas (Dirección, Número de departamentos y Correo del representante).<br>• Pantalla restrictiva de bloqueo en el primer inicio de sesión del residente con la leyenda obligatoria: *"Actualización de seguridad requerida: Ingrese sus credenciales reales para activar su cuenta"*. |
 
-### 5.2. Information Architecture
+## 5.2. Information Architecture
 
 #### 5.2.1. Organization Systems
 
@@ -2609,7 +2629,7 @@ El sistema de etiquetado de **Nextbell** busca construir un lenguaje de interfaz
 - **Navegación Primaria (Sticky Header):** Secciones de `Cómo Funciona`, `Planes`, `Seguridad` y el botón `Contacto Comercial`.
 - **Navegación Secundaria (Footer):** Enlaces a `Soporte Técnico`, `Políticas de Privacidad` y acceso al **Portal de Administración**.
 
-#### 5.3. Landing Page UI Design.
+## 5.3. Landing Page UI Design.
 
 En esta sección se presenta el diseño de interfaz de usuario (UI) de alta fidelidad para la Landing Page de Nexora. Este diseño consolida la identidad visual de la startup, utilizando una paleta de colores y tipografías que transmiten seguridad, modernidad y eficiencia tecnológica.
 
@@ -2647,7 +2667,7 @@ Este recurso es fundamental para validar la estética del producto y asegurar qu
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778682636/Html_Body_7_ehhk4i.png" width="1000">
 </p> 
 
-#### 5.4. Applications UX/UI Design.
+## 5.4. Applications UX/UI Design.
 
 En esta sección se detalla el diseño de la interfaz y la experiencia de usuario para la plataforma web de NexBell. El enfoque se centra en la eficiencia operativa, permitiendo que tanto administradores como personal de seguridad gestionen los accesos, visualicen registros multimedia y administren la base de datos de residentes de manera intuitiva y centralizada.
 
@@ -2698,40 +2718,6 @@ Se presentan los wireframes de baja fidelidad que definen la arquitectura de inf
 
 El diseño estructural se ha centrado en la inmediatez operativa, ubicando los botones de acción crítica —como la autorización o denegación de acceso— en zonas de fácil alcance táctil (zona del pulgar). A continuación, se presentan los esquemas estructurales desarrollados en Figma, los cuales delimitan los espacios para la recepción de alertas asíncronas, el área de registro del visitante y la organización del módulo de historial de visitas; áreas que conforman el correcto funcionamiento del aplicativo para los residentes, garantizando una navegación intuitiva y libre de fricciones para cualquier tipo de usuario.
 
-*- Inicio:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194711_uuvsgy.png" width="200">
-</p>
-
-*- Presentación:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194738_u1liki.png" width="200">
-</p>
-
-*- Presentación 2:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194756_kewl5m.png" width="200">
-</p>
-
-*- Inicio de sesión:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398604/Pasted_image_20260613194820_vxayck.png" width="200">
-</p>
-
-*- Solicitud de credenciales:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194842_f0amgc.png" width="200">
-</p>
-
-*- Solicitud aprobada:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194905_flkz87.png" width="200">
-</p>
-
-*- Inicio de sesión:*
-<p align="center">
-  <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781398605/Pasted_image_20260613194927_p8jqgr.png" width="200">
-</p>
 
 *- Home:*
 <p align="center">
@@ -2870,10 +2856,8 @@ Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación we
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778681904/Html_Body_4_jk0muo.png" width="1000">
 </p> 
 s.
-#### 5.4.3. Applications User Flow Diagrams.
 
-
-#### 5.4.3. Applications Wireflow Diagrams.
+### 5.4.3. Applications Wireflow Diagrams.
 
 En esta sección detallamos los diagramas de *wireflow* de la aplicación **NexBell** para el Edificio San Martín, mapeando la arquitectura de información, la distribución de componentes y el flujo de navegación interactiva entre las interfaces diseñadas para el personal de portería.
 
@@ -3048,13 +3032,14 @@ Este diagrama detalla los pasos críticos para la edición de datos personales d
 </p>
 
 ---
-fv
-### 5.4.4. Applications Mock-ups.
 
+### 5.4.4. Applications Mock-ups.
 
 Los mock-ups de alta fidelidad muestran la apariencia final de la aplicación web, integrando los componentes visuales de la marca y elementos de interacción detallados. En esta etapa se aplican estilos, tipografías y contrastes de color que mejoran la legibilidad en entornos de trabajo continuo (como centros de control). Estos diseños finales permiten visualizar cómo el sistema presenta las alertas en tiempo real y la gestión de datos, garantizando una herramienta profesional, robusta y fácil de usar.
 
-Interfaz Web:
+**Web Application**
+
+La aplicación web está orientada al portero o personal de conserjería, ofreciéndole un panel de control profesional para gestionar el acceso al edificio en tiempo real. A través de estas vistas de alta fidelidad se presenta la experiencia completa del usuario: desde el inicio de sesión hasta la verificación de visitantes, la gestión de residentes y el seguimiento del historial de accesos. El diseño prioriza la claridad visual y la legibilidad en entornos de uso continuo, garantizando una herramienta robusta y fácil de operar durante toda la jornada laboral.
 
 *- Vista de Inicio de sesion*
 
@@ -3228,7 +3213,7 @@ El flujo de pantallas de la aplicación ha sido estructurado meticulosamente par
 
 ### 5.4.4. Applications User Flow Diagrams
 
-#### Web
+#### Web Application
 
 En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión y el flujo de datos que experimenta el personal de seguridad (portero/vigilante) al interactuar con el sistema **NexBell**. El objetivo de este mapeo es asegurar que las transiciones entre estados del software respondan eficientemente a las operaciones críticas de control residencial en tiempo real.
 
@@ -3253,7 +3238,7 @@ En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778696776/Captura_de_pantalla_2026-05-13_a_la_s_1.26.10_p._m._ow0whu.png" width="1000">
 </p> 
 
-#### Mobile
+#### Interfaz Móvil
 
 En esta sección detallamos la secuencia lógica, las bifurcaciones de decisión y el flujo de datos que experimenta el personal de seguridad (portero/vigilante) al interactuar con el sistema NexBell. El objetivo de este mapeo es asegurar que las transiciones entre estados del software respondan eficientemente a las operaciones críticas de control residencial en tiempo real.
 
@@ -3291,23 +3276,23 @@ Para validar la arquitectura de información, la consistencia visual y la usabil
 
 Nos aseguramos de consolidar toda la experiencia interactiva en un flujo continuo y unificado, eliminando puntos de inicio (*Flow starting points*) redundantes para garantizar que las pruebas de usuario y las simulaciones de navegación reflejen el comportamiento real del sistema en un entorno de producción.
 
-#### Web
+#### Web Application
 
 <p align="center">
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1778696916/Captura_de_pantalla_2026-05-13_a_la_s_1.27.28_p._m._batmyt.png" width="1000">
 </p> 
 
-Enlace del video: https://tinyurl.com/yc3c7emm
+Link del video: https://tinyurl.com/yc3c7emm
 
 
-#### Mobile
+#### Interfaz Móvil
 
 <p align="center">
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1781670400/Captura_de_pantalla_2026-06-16_a_la_s_11.26.35_p._m._wij4oq.png" width="1000">
 </p> 
 
 
-Enlace del video: https://tinyurl.com/4h9xntt3
+Link del video: https://tinyurl.com/4h9xntt3
 
 #### Criterios de diseño e interacción implementados:
 
@@ -3593,29 +3578,30 @@ En esta sección se presentan las evidencias correspondientes a la suite de prue
 
 #### 6.2.1.6. Execution Evidence for Sprint Review
 
-6.2.1.9. Execution Evidence for Sprint Review (04/09/2021)
 En este Sprint, el equipo Nexora ha finalizado con éxito el desarrollo integral del frontend de la plataforma web de NexBell. Se ha logrado transformar los diseños de alta fidelidad en una aplicación funcional y navegable, consolidando todos los módulos necesarios para la gestión operativa del sistema. Este avance representa el 100% de la interfaz de usuario requerida para las interacciones administrativas y de seguridad.
 
-Logros Alcanzados en el Desarrollo Web:
-Módulo de Autenticación (Login): Implementación de acceso seguro para los distintos roles del sistema.
+**Logros Alcanzados en el Desarrollo Web:**
 
-Dashboard Principal: Panel de control centralizado con métricas clave y estado del sistema en tiempo real.
+- **Módulo de Autenticación (Login):** Implementación de acceso seguro para los distintos roles del sistema.
 
-Historial de Visitas: Interfaz de consulta avanzada para la auditoría de entradas y salidas con soporte multimedia.
+- **Dashboard Principal:** Panel de control centralizado con métricas clave y estado del sistema en tiempo real.
 
-Verificación de Visitas: Sistema de validación activa para la confirmación de identidad de visitantes desde la plataforma.
+- **Historial de Visitas:** Interfaz de consulta avanzada para la auditoría de entradas y salidas con soporte multimedia.
 
-Perfil de Usuario: Sección de gestión de datos personales y configuración de preferencias para residentes y administradores.
+- **Verificación de Visitas:** Sistema de validación activa para la confirmación de identidad de visitantes desde la plataforma.
 
-Evidencias de Navegación y Funcionalidad
+- **Perfil de Usuario:** Sección de gestión de datos personales y configuración de preferencias para residentes y administradores.
+
+**Evidencias de Navegación y Funcionalidad**
 Las capturas de pantalla a continuación muestran la fidelidad visual y la disposición final de los componentes en la Web App, demostrando una experiencia de usuario fluida y coherente con la identidad de Nexora:
 
-Video Demostrativo del Frontend Completo
+**Video Demostrativo del Frontend Completo**
 Se presenta un recorrido por todas las secciones mencionadas (Login, Dashboard, Historial, Verificación y Perfil), validando los flujos de navegación y la responsividad de la aplicación.
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1778715071/Captura_mq3rt2.jpg" alt="g10" width="1000">
 </p>
+
 Link del video: [https://1drv.ms/v/c/efacef44bdb3cff4/IQBBPd0BPLsqQrQs3Wowq9KTAaVUlak3NNyLc5RNPRpACYQ?e=aJsrMz](https://1drv.ms/v/c/efacef44bdb3cff4/IQBBPd0BPLsqQrQs3Wowq9KTAaVUlak3NNyLc5RNPRpACYQ?e=aJsrMz)
 
 #### 6.2.1.7. Services Documentation Evidence for Sprint Review
@@ -4003,7 +3989,6 @@ Durante este sprint, se priorizó la integración de los servicios de backend co
 * **Gestión de Infraestructura**: Se priorizó el despliegue hacia servicios de producción (Render) y la configuración de notificaciones mediante Firebase y SendGrid, eliminando dependencias locales[cite: 2].
 * **Integración IoT**: Se implementó el soporte para URLs de túneles en el *edge service* y se optimizó la lógica de reconocimiento facial[cite: 2].
 * **UI/UX**: Se realizaron ajustes finos en el dashboard, incluyendo la correcta gestión de fotos de perfil y visitantes, así como la mejora en la alineación de componentes visuales[cite: 2].
-  
 
 ### 6.2.3.5. Testing Suite Evidence for Sprint Review
 
@@ -4067,6 +4052,14 @@ A continuación, se describen los escenarios de prueba unitaria y de integració
 Los resultados obtenidos en estas pruebas confirman la robustez del backend bajo condiciones de uso real, garantizando la consistencia de los datos entre el hardware físico (ESP32) y la plataforma en la nube.
 
 #### 6.2.3.6. Execution Evidence for Sprint Review
+
+En esta sección presentamos el funcionamiento completo del producto NexBell a través de un video demostrativo. En él se evidencia la ejecución real del sistema de extremo a extremo: desde el registro del edificio y el envío de credenciales, hasta la interacción del portero desde el panel web y del residente desde la aplicación móvil. Asimismo, se muestra la integración con el hardware IoT en funcionamiento —incluyendo la detección mediante sensores, la cámara en vivo, el reconocimiento facial y las notificaciones en tiempo real—, demostrando la conexión efectiva entre el frontend, el backend desplegado en la nube y el dispositivo físico.
+
+A continuación, se presenta el video con la demostración del producto NexBell en pleno funcionamiento:
+
+<p align="center">
+  <img src="" alt="testing - 5">
+</p>
 
 #### 6.2.3.7. Services Documentation Evidence for Sprint Review
 
@@ -4476,10 +4469,15 @@ La integración de endpoints reales entre todos los nodos del ecosistema NexBell
   <img src="https://res.cloudinary.com/dx0i2vioe/image/upload/v1783125552/Captura_de_pantalla_2026-07-03_a_la_s_7.39.06_p._m._lzptxh.png" alt="landing-page" width="400">
 </p>
 
-## 6.3. Validation Interviews.
-### 6.3.1. Diseño de Entrevistas.
+## 6.3. Validation Interviews
+
+### 6.3.1. Diseño de Entrevistas
+
+Con el objetivo de validar la propuesta de valor y la usabilidad de NexBell con usuarios reales, se diseñaron entrevistas dirigidas a dos segmentos clave dentro del ecosistema de un edificio. Las preguntas fueron formuladas para contrastar las funcionalidades desarrolladas contra las necesidades y expectativas reales de cada perfil, permitiendo recoger evidencia concreta que retroalimente las decisiones de producto.
 
 **Segmento objetivo \#1: Juntas de propietarios y administradores de inmuebles**
+
+Este segmento representa a los tomadores de decisión responsables de la seguridad y administración del edificio. Las siguientes preguntas buscan validar si NexBell resulta gestionable, aporta valor diferencial frente a la portería tradicional y responde a sus necesidades de control y seguimiento del acceso.
 
 1. ¿Consideras que el proceso de registro del edificio y la asignación de porteros y residentes es un flujo que una junta de propietarios podría gestionar sin asistencia técnica?
 
@@ -4498,6 +4496,7 @@ La integración de endpoints reales entre todos los nodos del ecosistema NexBell
 
 **Segmento objetivo \#2: Personal de seguridad o conserjería** 
 
+Este segmento representa a los usuarios operativos que interactúan a diario con el sistema durante su turno. Las siguientes preguntas se orientan a evaluar la claridad, facilidad de uso y utilidad práctica del panel del portero en su flujo de trabajo cotidiano.
 
 1. ¿Consideras que el proceso de inicio de sesión para acceder al panel del portero es claro desde una primera impresión?
 
@@ -4811,7 +4810,9 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 **Recomendación:**  Mientras la función no esté implementada, deshabilitar visualmente la opción o mostrar una etiqueta "Próximamente"; una vez implementada, debe generar un archivo descargable (PDF/Excel) con retroalimentación de progreso.
 
-## 6.4. Video About-the-Product.
+## 6.4. Video About-the-Product
+
+En este video presentamos NexBell desde la perspectiva del producto: qué problema resuelve, sus principales funcionalidades y el valor que aporta a los edificios modernos. A través de una demostración del sistema, mostramos cómo la videoportería inteligente basada en IoT permite a los residentes ver, escuchar y autorizar visitas de forma remota, integrando reconocimiento facial, sensores físicos y notificaciones en tiempo real
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781864189/NEXBELLL_fu8zj1.png" width="850">
@@ -4819,13 +4820,15 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad
 
 Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
 
-## 6.4. Video About-the-Team.
+## 6.4. Video About-the-Team
+
+En este video presentamos al equipo detrás de NexBell, dando a conocer a cada integrante, los roles que desempeñamos y las contribuciones realizadas a lo largo del desarrollo del proyecto. Compartimos nuestra experiencia trabajando de forma colaborativa, las dificultades que enfrentamos y cómo esta labor fortaleció tanto nuestras habilidades técnicas como nuestro crecimiento profesional.
 
 <p align="center">
   <img src="https://res.cloudinary.com/df8xwy4xb/image/upload/v1781912345/Pasted_image_20260619183841_pvoalj.png" width="850">
 </p>
 
-Link del video: https://goo.su/WP1Es
+Link del video: [https://goo.su/U4bQ8](https://goo.su/bNJI9)
 
 <div style="page-break-after: always;"></div>
 
@@ -4833,11 +4836,11 @@ Link del video: https://goo.su/WP1Es
 
 # Conclusiones
 
-Validación Continua Centrada en el Usuario: El avance de este sprint confirma que la investigación inicial no fue un ejercicio aislado, sino una base que el equipo siguió retroalimentando. Las nuevas entrevistas de validación con porteros y junta de propietarios, junto con la evaluación de usabilidad bajo heurísticas de Nielsen, permitieron contrastar la propuesta de NexBell contra la experiencia real de uso, identificando puntos críticos como la falta de notificaciones reales y la ausencia de confirmaciones antes de acciones irreversibles. Esto demuestra que el proceso de Lean UX se mantuvo activo más allá de la fase de diseño, ajustando decisiones de producto con evidencia concreta en lugar de supuestos.
+Validación Continua Centrada en el Usuario: El avance de este sprint confirma que la investigación inicial no fue un ejercicio aislado, sino una base que el equipo siguió retroalimentando e implementando. Los puntos críticos identificados en las entrevistas de validación con porteros y junta de propietarios, y en la evaluación de usabilidad bajo las heurísticas de Nielsen —como la falta de notificaciones reales y la ausencia de confirmaciones antes de acciones irreversibles— dejaron de ser hallazgos para convertirse en mejoras concretas del producto. En este sprint se implementaron las notificaciones push reales mediante Firebase Cloud Messaging, la separación de la información por residente y ajustes de interfaz que refuerzan la claridad y el control del usuario. Esto demuestra que el proceso de Lean UX se mantuvo activo más allá de la fase de diseño, cerrando el ciclo entre la evidencia recogida y las decisiones de producto materializadas en el sistema.
 
-De la Arquitectura al Sistema Funcional: Si en TB1 el mérito estuvo en delimitar correctamente los Bounded Contexts mediante DDD, en este sprint el logro central fue materializar esa arquitectura en un sistema real y conectado. La implementación de las entidades de dominio para IAM, Directory, Intercom y Security dejó de ser un modelo teórico para convertirse en endpoints funcionando, consumidos simultáneamente por el frontend web, la aplicación móvil y el backend. Esta transición —de datos simulados a servicios reales distribuidos en cuatro repositorios independientes— evidencia que el diseño táctico definido previamente fue lo suficientemente sólido como para soportar una integración multiplataforma sin requerir rediseños mayores.
+De la Arquitectura al Sistema Funcional y Distribuido: Si en TB1 el mérito estuvo en delimitar correctamente los Bounded Contexts mediante DDD, en este sprint el logro central fue materializar esa arquitectura en un sistema real, conectado y en producción. La implementación de las entidades de dominio para IAM, Directory, Onboarding, Intercom, Security y Audit dejó de ser un modelo teórico para convertirse en endpoints funcionando, consumidos simultáneamente por el frontend web, la aplicación móvil, el servicio Edge y el firmware del dispositivo IoT. Esta transición —de datos simulados a servicios reales distribuidos en repositorios independientes e integrados con hardware físico— evidencia que el diseño táctico definido previamente fue lo suficientemente sólido como para soportar una integración multiplataforma y en tiempo real, sin requerir rediseños mayores de la arquitectura.
 
-Preparación Progresiva hacia el Despliegue Completo: El equipo avanzó de forma responsable hacia la puesta en producción, priorizando primero la estabilidad funcional sobre el despliegue prematuro. Por ello, solo la Landing Page se encuentra públicamente desplegada con sus mejoras de diseño, mientras que la web y el backend permanecen en proceso de despliegue hasta finalizar la integración completa con el hardware IoT (cámara, micrófono y sensores). Esta decisión refleja una gestión madura del riesgo técnico: exponer un sistema a usuarios reales sin sus funcionalidades críticas habría comprometido la percepción de calidad del producto, por lo que el equipo optó por consolidar primero la conexión end-to-end antes de avanzar hacia un entorno productivo estable.
+Despliegue Completo y Conexión End-to-End Lograda: A diferencia del sprint anterior, donde solo la Landing Page se encontraba desplegada y el resto permanecía en proceso, en este sprint el equipo concretó el despliegue completo del sistema en producción: el backend en Render (Spring Boot con PostgreSQL, containerizado con Docker), la aplicación web en Netlify y la aplicación móvil distribuida mediante Firebase App Distribution. El mayor reto técnico fue conectar el backend en la nube con el hardware IoT que opera en la red local; este desafío se resolvió mediante un servicio Edge y un túnel seguro que permitieron la comunicación bidireccional en tiempo real, habilitando el reconocimiento facial, el video en vivo y la lectura de sensores directamente desde el entorno productivo. Asimismo, se superaron limitaciones reales de infraestructura —como el bloqueo de SMTP en la nube, resuelto migrando el envío de credenciales a la API HTTP de SendGrid—. Esta consolidación refleja una gestión madura del riesgo técnico: el equipo priorizó primero la estabilidad funcional y la conexión end-to-end antes de exponer el sistema, logrando finalmente un producto desplegado, integrado y operativo de extremo a extremo.
 
 <div style="page-break-after: always;"></div>
 
@@ -4856,7 +4859,8 @@ Preparación Progresiva hacia el Despliegue Completo: El equipo avanzó de forma
 # Anexos
 
 * Big Picture Event Storming: [https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434](https://miro.com/welcomeonboard/b05EK1NyM2xabzdKenlkS1BLZnJtU2hHSTV6b2dRdWlRb1hmaFhraVpINTk0RTU0eWR4Wll4MisvbDRZV1B6NkQ2VFFpbUZLS3p3cXhIdXVPR0ZwQ1M5RXhhZk9iZ2ptOTR4Rmx2RXpVZkYwMi90WFdlZm05Vkg2TG9LSHZCNkd3VHhHVHd5UWtSM1BidUtUYmxycDRnPT0hdjE=?share_link_id=240856445434)
-* Link del Keynote:
-[https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
-+ Link del video de exposiciòn:
-https://goo.su/eQDAt 
+* Link del Figma: [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
+* Link del Keynote: [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
+* Link del video de exposiciòn: [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
+* Link video About the team: [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
+* Link video About the product: [https://canva.link/i6aikeu52j3nqwg](https://canva.link/i6aikeu52j3nqwg)
