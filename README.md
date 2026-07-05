@@ -1,4 +1,4 @@
-<p align="center">
+fxs<p align="center">
   <img src="https://i.imgur.com/frPdUOx.png" alt="logo" width=150px>
 </p>
 
@@ -3678,24 +3678,23 @@ Con el objetivo de garantizar una ejecución eficiente y mantener la alta calida
 
 Se priorizaron los requerimientos asociados al procesamiento lógico en el backend, la comunicación bidireccional mediante APIs, el desarrollo de la interfaz móvil nativa para la recepción de alertas por parte de los residentes, y la programación del software embebido (Edge) en el microcontrolador. Cada tarea ha sido estimada en horas de esfuerzo y asignada de forma colaborativa, asegurando la trazabilidad del desarrollo desde el requerimiento del usuario hasta su despliegue final en producción. A continuación, se presenta la matriz detallada de ejecución del Sprint 2:
 
-| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| US37 | Visualizar información | TS01 | Project Setup & Landing Framework | Configuración inicial del proyecto Vue.js, estructura de carpetas y layout base de la Landing Page. | 8 | Developer Team | Done |
-| US37 | Visualizar información | TS02 | Hero Section Development | Implementación de la sección principal con eslogan, logo y propuesta de valor de NexBell. | 4 | Developer Team | Done |
-| US38 | Visualizar funciones | TS03 | Features Grid Implementation | Creación de componentes visuales para listar las funciones de captura de video y alertas IoT. | 6 | Developer Team | Done |
-| US39 | Visualizar beneficios | TS04 | Benefits Section Styling | Maquetado de la sección comparativa de seguridad y ahorro de costos usando CSS (kebab-case). | 6 | Developer Team | Done |
-| US40 | Visualizar contacto | TS05 | Contact Form & Footer | Desarrollo del formulario de contacto y footer con enlaces a redes sociales y soporte técnico. | 5 | Developer Team | Done |
-| US41 | Navegar secciones | TS06 | Navigation & Smooth Scroll | Implementación del Navbar responsivo y lógica de desplazamiento suave entre secciones de la página. | 4 | Developer Team | Done |
-| US01, US02 | Registros | TS07 | Registration Views (UI) | Diseño de las vistas de registro para Residentes y Porteros con validaciones de formulario en el lado del cliente. | 10 | Developer Team | Done |
-| US03 | Iniciar sesión | TS08 | Login View (UI) | Creación de la interfaz de inicio de sesión con campos para credenciales y acceso al panel. | 6 | Developer Team | Done |
-| US15 | Visualizar espera | TS09 | Dashboard Layout & Sidebar | Estructura principal del panel administrativo del Portero, incluyendo barra lateral de navegación. | 8 | Developer Team | Done |
-| US15 | Visualizar espera | TS10 | Waiting List Component (Mock) | Desarrollo del componente de lista en tiempo real usando un archivo JSON de datos simulados (Mocks). | 10 | Developer Team | Done |
-| US16 | Visualizar foto | TS11 | Photo Detail Modal | Implementación de la ventana modal para visualizar las capturas HD de los visitantes (con imágenes de prueba). | 7 | Developer Team | Done |
-| General | Deployment | TS12 | Netlify CI/CD Pipeline | Configuración de la automatización en Netlify para que cada commit en GitHub despliegue la versión actual. | 4 | Developer Team | Done |
-| General | Documentation | TS13 | Styles & Conventions Audit | Revisión final de código para asegurar cumplimiento de la guía de estilos (Naming en inglés, PascalCase en Vue). | 6 | Developer Team | Done |
-| US10, US11 | Captura IoT | TS14 | IoT Hardware Simulation (Wokwi) | Configuración del entorno simulado en Wokwi usando ESP32, sensores PIR y lógica de comunicación básica MQTT/HTTP. | 12 | Developer Team | In Progress |
-| US35, US36 | Seguridad | TS15 | IAM Tactic Architecture & BCrypt | Diseño de la capa de persistencia, hashing de contraseñas con BCrypt y definición de roles (RBAC) para el backend. | 14 | Developer Team | In Progress |
+### 3.2.2. Sprint Backlog (Sprint 2)
 
+A continuación, se detalla el Sprint Backlog correspondiente al Sprint 2. Cada una de las User Stories asignadas ha sido descompuesta en sus respectivas Engineering Tasks, asegurando que los esfuerzos estén distribuidos de forma atómica y que ninguna tarea individual supere el límite máximo de estimación de 8 horas.
+
+| User Story Id | Title | Task Id | Task Title | Description | Estimation (Hours) | Assigned To | Status |
+| :--- | :--- | :--- | :--- | :--- | :---: | :--- | :--- |
+| **US01** | Registrar Residente | **TS07-A** | DB Design for Resident Registration | Creación de tablas de migración y configuración de persistencia en Azure para almacenar los datos del residente. | **4** | Developer Team | Done |
+| **US01** | Registrar Residente | **TS07-B** | Backend Endpoint for Resident Signup | Implementación del servicio REST en el backend para procesar, validar y guardar el registro de nuevos residentes. | **6** | Developer Team | Done |
+| **US01** | Registrar Residente | **TS07-C** | Frontend Form UI for Resident | Diseño y maquetado en Vue.js / React de la vista de registro e inclusión de validaciones de entrada del lado del cliente. | **6** | Developer Team | Done |
+| **US02** | Registrar Portero | **TS08-A** | Backend Endpoint for Doorman Signup | Desarrollo de la lógica de negocio, encriptación de credenciales y validaciones para el registro de personal de seguridad. | **5** | Developer Team | Done |
+| **US02** | Registrar Portero | **TS08-B** | Doorman Registration UI Component | Creación de la interfaz de usuario en la aplicación Web para permitir que la administración dé de alta a un portero. | **5** | Developer Team | Done |
+| **US03** | Iniciar sesión | **TS09-A** | Auth Service Token Integration | Implementación de la seguridad JWT (JSON Web Tokens) y lógica de login en el backend conectados a la base de datos. | **5** | Developer Team | Done |
+| **US03** | Iniciar sesión | **TS09-B** | Login View UI & State Management | Integración de la vista de login con el sistema de manejo de estados (Pinia / Redux) para manejar la persistencia de la sesión. | **6** | Developer Team | Done |
+| **US15** | Visualizar espera | **TS10-A** | Real-time Visitor Service Connect | Reemplazo de datos simulados (JSON Mocks) por la conexión real mediante endpoints al backend y manejo de peticiones HTTP. | **6** | Developer Team | Done |
+| **US15** | Visualizar espera | **TS10-B** | Doorman Dashboard UI Updates | Ajuste del componente de lista de espera en el panel del portero para renderizar dinámicamente los datos provenientes del API. | **6** | Developer Team | Done |
+
+*Nota: El estado de cada tarea listada (`To Do`, `In Process`, `To Review`, `Done`) se encuentra totalmente sincronizado con el tablero de seguimiento ágil del proyecto.*
 #### 6.2.2.4 Development Evidence for Sprint Review.
 
 Con la finalidad de garantizar la transparencia, la trazabilidad técnica y el cumplimiento de las metodologías ágiles, a continuación se presenta la bitácora de evidencias de desarrollo correspondientes al Sprint 2. Los datos recopilados en la presente matriz provienen directamente de los repositorios oficiales de la organización Nexora en GitHub y reflejan el historial de confirmaciones (commits) efectuados por el equipo de ingeniería.
